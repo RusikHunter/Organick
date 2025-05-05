@@ -20,10 +20,10 @@ import Footer from './components/Footer/Footer'
 
 function App() {
     return (
-        <div className="app">
-            <Header />
-            <main className="main">
-                <Router>
+        <Router>
+            <div className="app">
+                <Header />
+                <main className="main">
                     <Routes>
                         <Route path="/" element={<MainPage />} />
                         <Route path="/about" element={<AboutPage />} />
@@ -42,10 +42,10 @@ function App() {
                         <Route path="/changelog" element={<ChangelogPage />} />
                         <Route path="/protected" element={<ProtectedPage />} />
                     </Routes>
-                </Router>
-            </main>
-            <Footer />
-        </div>
+                </main>
+                <Footer />
+            </div>
+        </Router >
     )
 }
 

@@ -16,6 +16,10 @@
     @include laptop {
         padding-inline: var(--container-padding-inline);
     }
+
+    @include mobile-small {
+        padding-inline: var(--container-padding-inline-small);
+    }
 }
 
 .row {

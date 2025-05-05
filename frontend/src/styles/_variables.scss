@@ -5,6 +5,8 @@
 :root {
     // Colors
 
+    --color-white: #FFFFFF;
+    --color-black: #000000;
     --color-blue: #274C5B;
     --color-green: #7EB693;
     --color-yellow: #EFD372;
@@ -37,6 +39,7 @@
 
     --container-width-default: 1400px;
     --container-padding-inline: 24px;
+    --container-padding-inline-small: 12px;
 
     //
     // the margins between sections are not set
