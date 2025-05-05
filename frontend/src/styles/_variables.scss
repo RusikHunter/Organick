@@ -1,0 +1,52 @@
+//
+// file with variables
+//
+
+:root {
+    // Colors
+
+    --color-blue: #274C5B;
+    --color-green: #7EB693;
+    --color-yellow: #EFD372;
+    --color-gray: #D4D4D4;
+    --color-dark-gray: #525C60;
+    --color-lightgray: #F9F8F8;
+    --color-gray-alt: #EFF6F1;
+
+    // Borders
+
+    --border-default: 1px solid var(--color-gray);
+    --border-green: 1px solid var(--color-green);
+    --border-bold: 1px solid var(--color-blue);
+
+    //
+    // border radii are not set
+    // because in the layout these values ​​are unique for each component
+    //
+
+    // Fonts
+
+    --font-family: "Roboto", sans-serif;
+    --second-family: "Open Sans", sans-serif;
+    --third-family: "Yellowtail", cursive;
+
+    // Sizes and indents
+
+    --max-viewport-width: 1920px;
+    --min-viewport-width: 320px;
+
+    --container-width-default: 1400px;
+    --container-padding-inline: 24px;
+
+    //
+    // the margins between sections are not set
+    // because in the layout these values ​​are unique for each section
+    //
+
+    --button-padding-block: 28px;
+    --input-padding-block: 28px;
+
+    // Transition
+
+    --transition: 0.3s ease;
+}
