@@ -1,0 +1,219 @@
+//
+// Style normalization file
+// Source - https://github.com/aleksanderlamkov/css-normalize/blob/main/index.css
+//
+
+
+
+/**
+  Normalization of the block model
+ */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/**
+      Remove internal left margins for lis
+      tags that have a class attribute
+     */
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+/**
+      Remove internal left margins for list
+      tags that have a class attribute
+     */
+body,
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+}
+
+/**
+      We remove the outer vertical indents
+      for the necessary tags, which have
+      the class attribute
+     */
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl):where([class]) {
+    margin-block: 0;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+:where(fieldset[class]) {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+}
+
+/**
+      Remove the standard marker for
+      a bulleted list that has
+      a class attribute
+     */
+:where(ul[class]) {
+    list-style: none;
+}
+
+:where(address[class]) {
+    font-style: normal;
+}
+
+/**
+      Zero out the vertical margins of the paragraph,
+      declare a local variable for the margin down,
+      to avoid interaction with a more complex selector
+     */
+p {
+    --paragraphMarginBottom: 24px;
+
+    margin-block: 0;
+}
+
+/**
+      The outer margin down for a paragraph without
+      a class attribute that is not the last
+      among its neighbors
+     */
+p:where(:not([class]):not(:last-child)) {
+    margin-bottom: var(--paragraphMarginBottom);
+}
+
+
+/**
+      Simplifying work with images and videos
+     */
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/**
+      Inherit font properties for input fields
+     */
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+html {
+    /**
+        It will be useful in most situations
+        (for example, when you need to "press"
+        the footer to the bottom of the site)
+       */
+    height: 100%;
+    /**
+        Remove horizontal interface jump when
+        scrollbar appears/disappears
+       */
+    scrollbar-gutter: stable;
+}
+
+/**
+      Smooth scrolling
+     */
+html,
+:has(:target) {
+    scroll-behavior: smooth;
+}
+
+body {
+    /**
+        It will be useful in most situations
+        (for example, when you need to "press"
+        the footer to the bottom of the site)
+       */
+    min-height: 100%;
+    /**
+        Unified leading
+       */
+    line-height: 1.5;
+}
+
+/**
+      Normalize the height of a link element
+      when inspecting it in DevTools
+     */
+a:where([class]) {
+    display: inline-flex;
+}
+
+/**
+      Hand cursor when hovering over an element
+     */
+button,
+label {
+    cursor: pointer;
+}
+
+/**
+      We bring svg elements to a single color
+      (except for those that already have
+      a fill attribute with a value of 'none'
+      or start with 'url')
+     */
+:where([fill]:not([fill="none"],
+        [fill^="url"])) {
+    fill: currentColor;
+}
+
+/**
+      We bring svg elements to a single color
+      (except for those that already have
+      the stroke attribute specified with
+      the value 'none')
+     */
+:where([stroke]:not([stroke="none"],
+        [stroke^="url"])) {
+    stroke: currentColor;
+}
+
+/**
+      Fixing a bug with delayed color
+      change when interacting with svg elements
+     */
+svg * {
+    transition-property: fill, stroke;
+}
+
+/**
+      Bringing table frames to the classic 'collapse' look
+     */
+:where(table) {
+    border-collapse: collapse;
+    border-color: currentColor;
+}
+
+/**
+      Remove all animations and transitions
+      for people who prefer not to use them
+     */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
