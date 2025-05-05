@@ -24,7 +24,7 @@ function Header() {
                                 <li className="header__navigation-list-item">
                                     <button className="header__navigation-button">Pages</button>
 
-                                    <div className="header__dropdown header__dropdown--pages">
+                                    <div className="header__dropdown header__dropdown--pages overlay">
                                         <ul className="header__dropdown-list">
                                             <li className="header__dropdown-list-item">
                                                 <Link className="header__navigation-link" to="/services">Services</Link>
@@ -52,7 +52,7 @@ function Header() {
                     </div>
                     <div className="header__column header__column--3 column">
                         <label htmlFor="headerInputSearch" className="header__search">
-                            <input type="text" id="headerInputSearch" className="header__input" />
+                            <input type="text" id="headerInputSearch" className="header__input header__input--search" />
 
                             <button className="header__button--search">
                                 <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@ function Header() {
                             </button>
                         </label>
 
-                        <div className="header__dropdown header__dropdown--search">
+                        <div className="header__dropdown header__dropdown--search overlay">
                             <ul className="header__dropdown-list">
                                 <li className="header__dropdown-list-item">
                                     <p>abc</p>
@@ -85,10 +85,12 @@ function Header() {
                                 </svg>
                             </span>
 
-                            Cart &#9001;0&#9002;
+                            <span className="header__button--cart-text">
+                                Cart (0)
+                            </span>
                         </button>
 
-                        <div className="header__dropdown header__dropdown--cart">
+                        <div className="header__dropdown header__dropdown--cart overlay">
                             <p>123</p>
                         </div>
                     </div>
