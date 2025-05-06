@@ -22,11 +22,11 @@
         }
 
         @include mobile {
-            padding-block: 29px;
+            padding-block: 29px 115px;
         }
 
         @include mobile-small {
-            padding-block: 19px;
+            padding-block: 19px 95px;
         }
     }
 
@@ -92,6 +92,21 @@
 
     &__search {
         position: relative;
+
+        // HACK: positioning search outside its column
+
+        @include mobile {
+            position: absolute;
+            width: calc(100% - 48px);
+            left: 24px;
+            top: 116px;
+        }
+
+        @include mobile-small {
+            width: calc(100% - 24px);
+            left: 12px;
+            top: 96px;
+        }
     }
 
     &__input {
@@ -113,6 +128,14 @@
         @include tablet {
             width: 320px;
         }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include mobile-small {
+            height: 56px;
+        }
     }
 
     &__input--search {}
@@ -125,6 +148,11 @@
         height: 56px;
         background-color: var(--color-green);
         border-radius: 50%;
+
+        @include mobile-small {
+            width: 46px;
+            height: 46px;
+        }
 
         & svg {
             position: relative;
@@ -151,6 +179,12 @@
         @media (max-width: 1310px) {
             width: 67px;
             padding: 0;
+            border-radius: 50%;
+        }
+
+        @include mobile-small {
+            width: 56px;
+            height: 56px;
         }
     }
 
@@ -159,15 +193,27 @@
         top: 4px;
         left: 5px;
         width: 56px;
-        height: 57px;
+        height: 56px;
         background-color: var(--color-blue);
         border-radius: 50%;
+
+        @include mobile-small {
+            width: 45px;
+            height: 46px;
+        }
 
         svg {
             position: absolute;
             top: 15px;
             left: 13px;
             color: var(--color-white);
+
+            @include mobile-small {
+                width: 20px;
+                height: 20px;
+                top: 12px;
+                left: 12px;
+            }
         }
     }
 

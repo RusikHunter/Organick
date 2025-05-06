@@ -39,7 +39,7 @@ function Header() {
                         </nav>
                     </div>
                     <div className="header__column header__column--3 column">
-                        <label htmlFor="headerInputSearch" className="header__search mobile-hidden">
+                        <label htmlFor="headerInputSearch" className="header__search">
                             <input type="text" id="headerInputSearch" className="header__input header__input--search" />
 
                             <button className="header__button--search">
@@ -63,7 +63,7 @@ function Header() {
                             </ul>
                         </div>
 
-                        <button className="header__button--cart mobile-hidden">
+                        <button className="header__button--cart">
                             <span className="header__button--cart-decoration">
                                 <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11.5689 23.0001C12.2439 23.0001 12.7911 22.4529 12.7911 21.7779C12.7911 21.1029 12.2439 20.5557 11.5689 20.5557C10.8939 20.5557 10.3467 21.1029 10.3467 21.7779C10.3467 22.4529 10.8939 23.0001 11.5689 23.0001Z" fill="white" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
