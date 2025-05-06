@@ -1,6 +1,7 @@
 import "./Header.scss"
 import BurgerButton from "../BurgerButton/BurgerButton"
 import { Link } from "react-router-dom"
+import DropdownPages from "../DropdownPages/DropdownPages"
 import Logo from "../../images/icons/logo.svg"
 
 function Header() {
@@ -23,21 +24,7 @@ function Header() {
                                     <Link className="header__navigation-link" to="/about">About</Link>
                                 </li>
                                 <li className="header__navigation-list-item">
-                                    <button className="header__navigation-button">Pages</button>
-
-                                    <div className="header__dropdown header__dropdown--pages overlay">
-                                        <ul className="header__dropdown-list">
-                                            <li className="header__dropdown-list-item">
-                                                <Link className="header__navigation-link" to="/services">Services</Link>
-                                            </li>
-                                            <li className="header__dropdown-list-item">
-                                                <Link className="header__navigation-link" to="/team">Team</Link>
-                                            </li>
-                                            <li className="header__dropdown-list-item">
-                                                <Link className="header__navigation-link" to="/contact">Contact Us</Link>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <DropdownPages />
                                 </li>
                                 <li className="header__navigation-list-item">
                                     <Link className="header__navigation-link" to="/shop">Shop</Link>
@@ -52,7 +39,7 @@ function Header() {
                         </nav>
                     </div>
                     <div className="header__column header__column--3 column">
-                        <label htmlFor="headerInputSearch" className="header__search mobile-hidden">
+                        <label htmlFor="headerInputSearch" className="header__search">
                             <input type="text" id="headerInputSearch" className="header__input header__input--search" />
 
                             <button className="header__button--search">
@@ -76,7 +63,7 @@ function Header() {
                             </ul>
                         </div>
 
-                        <button className="header__button--cart mobile-hidden">
+                        <button className="header__button--cart">
                             <span className="header__button--cart-decoration">
                                 <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11.5689 23.0001C12.2439 23.0001 12.7911 22.4529 12.7911 21.7779C12.7911 21.1029 12.2439 20.5557 11.5689 20.5557C10.8939 20.5557 10.3467 21.1029 10.3467 21.7779C10.3467 22.4529 10.8939 23.0001 11.5689 23.0001Z" fill="white" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
