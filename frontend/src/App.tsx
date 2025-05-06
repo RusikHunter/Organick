@@ -5,7 +5,7 @@ import MainPage from './pages/MainPage/MainPage'
 import AboutPage from './pages/AboutPage/AboutPage'
 import ShopPage from './pages/ShopPage/ShopPage'
 import ProductPage from './pages/ProductPage/ProductPage'
-import ServicePage from './pages/ServicePage/ServicePage'
+import ServicesPage from './pages/ServicesPage/ServicesPage'
 import QualityPage from './pages/QualityPage/QualityPage'
 import PortfolioPage from './pages/PortfolioPage/PortfolioPage'
 import PortfolioItemPage from './pages/PortfolioItemPage/PortfolioItemPage'
@@ -31,7 +31,7 @@ function App() {
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/shop" element={<ShopPage />} />
                         <Route path="/shop/:id" element={<ProductPage />} />
-                        <Route path="/service" element={<ServicePage />} />
+                        <Route path="/services" element={<ServicesPage />} />
                         <Route path="/quality" element={<QualityPage />} />
                         <Route path="/portfolio" element={<PortfolioPage />} />
                         <Route path="/portfolio/:id" element={<PortfolioItemPage />} />

@@ -67,8 +67,7 @@
 
     &__navigation-list-item {}
 
-    &__navigation-link,
-    &__navigation-button {
+    &__navigation-link {
         @include fluid-text(20, 16);
         @include font(var(--font-family), 700, 1);
         color: var(--color-blue);
@@ -78,15 +77,9 @@
         }
     }
 
-    &__navigation-button {
-        padding: 0;
-    }
-
     &__dropdown {
         display: none; // temp
     }
-
-    &__dropdown--pages {}
 
     &__column--3 {
         flex-direction: row !important;

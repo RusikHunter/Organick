@@ -1,0 +1,58 @@
+@use "../../styles/index" as *;
+
+.header {
+    &__dropdown-wrap {
+        position: relative;
+    }
+
+    &__navigation-button {
+        @include fluid-text(20, 16);
+        @include font(var(--font-family), 700, 1);
+        color: var(--color-blue);
+        padding: 0;
+
+        @media (max-width: 1170px) {
+            @include fluid-text(16, 14);
+        }
+
+        & svg {
+            position: relative;
+            top: -2px;
+            left: 5px;
+            transition: transform var(--transition);
+        }
+    }
+
+    &__navigation-button--active {
+        & svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__dropdown--pages {
+        position: absolute;
+        top: 35px;
+        left: -10px;
+        display: flex;
+        width: 125px;
+        opacity: 0;
+        padding: 10px;
+        background-color: var(--color-lightgray);
+        border-radius: 5px;
+        transition: opacity var(--transition);
+        pointer-events: none;
+        z-index: -999;
+    }
+
+    &__dropdown--pages--active {
+        opacity: 1;
+        pointer-events: all;
+        z-index: 1;
+    }
+
+    &__dropdown-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

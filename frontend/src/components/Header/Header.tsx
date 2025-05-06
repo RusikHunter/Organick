@@ -1,6 +1,7 @@
 import "./Header.scss"
 import BurgerButton from "../BurgerButton/BurgerButton"
 import { Link } from "react-router-dom"
+import DropdownPages from "../DropdownPages/DropdownPages"
 import Logo from "../../images/icons/logo.svg"
 
 function Header() {
@@ -23,21 +24,7 @@ function Header() {
                                     <Link className="header__navigation-link" to="/about">About</Link>
                                 </li>
                                 <li className="header__navigation-list-item">
-                                    <button className="header__navigation-button">Pages</button>
-
-                                    <div className="header__dropdown header__dropdown--pages overlay">
-                                        <ul className="header__dropdown-list">
-                                            <li className="header__dropdown-list-item">
-                                                <Link className="header__navigation-link" to="/services">Services</Link>
-                                            </li>
-                                            <li className="header__dropdown-list-item">
-                                                <Link className="header__navigation-link" to="/team">Team</Link>
-                                            </li>
-                                            <li className="header__dropdown-list-item">
-                                                <Link className="header__navigation-link" to="/contact">Contact Us</Link>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <DropdownPages />
                                 </li>
                                 <li className="header__navigation-list-item">
                                     <Link className="header__navigation-link" to="/shop">Shop</Link>
