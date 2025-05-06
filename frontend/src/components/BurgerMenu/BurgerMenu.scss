@@ -1,0 +1,43 @@
+@use "../../styles/index" as *;
+
+.burger-menu {
+    display: block;
+    position: absolute;
+    transform: translateY(-150%);
+    opacity: 0;
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--color-white);
+    transition: transform var(--transition), opacity var(--transition);
+    padding-block: 25px 75px;
+    z-index: 8;
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__navigation {}
+
+    &__navigation-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    &__navigation-list-item {
+        text-align: center;
+    }
+
+    &__navigation-link {
+        @include fluid-text(24, 24);
+        @include font(var(--font-family), 700, 1);
+        color: var(--color-blue);
+    }
+}
+
+.burger-menu--active {
+    transform: translateY(-5%);
+    opacity: 1;
+}

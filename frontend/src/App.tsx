@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
+import BurgerMenu from './components/BurgerMenu/BurgerMenu'
 import MainPage from './pages/MainPage/MainPage'
 import AboutPage from './pages/AboutPage/AboutPage'
 import ShopPage from './pages/ShopPage/ShopPage'
@@ -23,6 +24,7 @@ function App() {
         <Router>
             <div className="app">
                 <Header />
+                <BurgerMenu />
                 <main className="main">
                     <Routes>
                         <Route path="/" element={<MainPage />} />
