@@ -35,3 +35,8 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
+
+*:focus,
+*:focus-visible {
+    outline: none;
+}

@@ -34,7 +34,25 @@
 
     &__column--1 {}
 
-    &__logo-link {}
+    &__logo-link {
+        transition: transform var(--transition);
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: scale(1.03);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: none;
+            }
+        }
+    }
 
     &__logo {
         @media (max-width: 1644px) {
@@ -71,9 +89,26 @@
         @include fluid-text(20, 16);
         @include font(var(--font-family), 700, 1);
         color: var(--color-blue);
+        transition: transform var(--transition);
 
         @media (max-width: 1170px) {
             @include fluid-text(16, 14);
+        }
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: scale(1.05);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: none;
+            }
         }
     }
 
@@ -148,6 +183,7 @@
         height: 56px;
         background-color: var(--color-green);
         border-radius: 50%;
+        transition: background-color var(--transition);
 
         @include mobile-small {
             width: 46px;
@@ -159,6 +195,22 @@
             top: 3px;
             left: 1px;
             color: var(--color-white);
+        }
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-darkgreen);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-green);
+            }
         }
     }
 
@@ -186,6 +238,39 @@
             width: 56px;
             height: 56px;
         }
+
+        @include desktop-screen {
+
+            .header__button--cart-decoration {
+
+                &:hover,
+                &:focus-visible {
+                    background-color: var(--color-darkblue);
+                }
+            }
+
+            &:focus-visible {
+                .header__button--cart-decoration {
+                    background-color: var(--color-darkblue);
+                }
+            }
+        }
+
+        @include touch-screen {
+
+            .header__button--cart-decoration {
+
+                &:hover {
+                    background-color: var(--color-blue);
+                }
+            }
+
+            &:focus-visible {
+                .header__button--cart-decoration {
+                    background-color: var(--color-blue);
+                }
+            }
+        }
     }
 
     &__button--cart-decoration {
@@ -196,6 +281,7 @@
         height: 56px;
         background-color: var(--color-blue);
         border-radius: 50%;
+        transition: background-color var(--transition);
 
         @include mobile-small {
             width: 45px;

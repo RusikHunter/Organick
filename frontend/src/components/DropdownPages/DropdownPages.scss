@@ -10,6 +10,7 @@
         @include font(var(--font-family), 700, 1);
         color: var(--color-blue);
         padding: 0;
+        transition: transform var(--transition);
 
         @media (max-width: 1170px) {
             @include fluid-text(16, 14);
@@ -20,6 +21,22 @@
             top: -2px;
             left: 5px;
             transition: transform var(--transition);
+        }
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: scale(1.05);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: none;
+            }
         }
     }
 
