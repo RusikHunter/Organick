@@ -18,6 +18,7 @@ button {
     border: none;
     outline: none;
     background-color: transparent;
+    padding: 0;
 }
 
 input {
@@ -35,6 +36,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-main {
-    background-color: red;
+*:focus,
+*:focus-visible {
+    outline: none;
 }

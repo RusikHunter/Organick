@@ -1,0 +1,31 @@
+@use "../../styles/index" as *;
+
+.intro {
+    height: 898px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include laptop {
+        height: 748px;
+    }
+
+    @include tablet {
+        height: 648px;
+    }
+
+    @include mobile {
+        height: 598px;
+    }
+
+    @include mobile-small {
+        height: 548px;
+    }
+
+    &__inner {
+        height: 100% !important;
+        justify-content: center;
+    }
+
+    &__row {}
+}

@@ -41,28 +41,28 @@ function BurgerMenu() {
                 <nav className="burger-menu__navigation">
                     <ul className="burger-menu__navigation-list">
                         <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/">Home</Link>
+                            <Link className="burger-menu__navigation-link" to="/" tabIndex={-1}>Home</Link>
                         </li>
                         <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/about">About</Link>
+                            <Link className="burger-menu__navigation-link" to="/about" tabIndex={-1}>About</Link>
                         </li>
                         <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/services">Services</Link>
+                            <Link className="burger-menu__navigation-link" to="/services" tabIndex={-1}>Services</Link>
                         </li>
                         <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/team">Team</Link>
+                            <Link className="burger-menu__navigation-link" to="/team" tabIndex={-1}>Team</Link>
                         </li>
                         <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/contact">Contact Us</Link>
+                            <Link className="burger-menu__navigation-link" to="/contact" tabIndex={-1}>Contact Us</Link>
                         </li>
                         <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/shop">Shop</Link>
+                            <Link className="burger-menu__navigation-link" to="/shop" tabIndex={-1}>Shop</Link>
                         </li>
                         <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/portfolio">Projects</Link>
+                            <Link className="burger-menu__navigation-link" to="/portfolio" tabIndex={-1}>Projects</Link>
                         </li>
                         <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/blog">News</Link>
+                            <Link className="burger-menu__navigation-link" to="/blog" tabIndex={-1}>News</Link>
                         </li>
                     </ul>
                 </nav>

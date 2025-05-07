@@ -1,0 +1,122 @@
+@use "../../styles/index" as *;
+
+.coupons {
+
+    &__inner {}
+
+    &__row {
+        gap: 36px;
+        padding-block: 155px 190px;
+
+        @include tablet {
+            flex-direction: column !important;
+            padding-block: 120px;
+        }
+
+        @include mobile {
+            padding-block: 90px;
+        }
+
+        @include mobile-small {
+            padding-block: 40px;
+        }
+    }
+
+    &__column {
+        width: 50%;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__column--1 {}
+
+    &__column--2 {}
+
+    &__coupon {
+        width: 100%;
+        border-radius: 36px;
+        background-size: cover;
+        background-position: center;
+        transition: transform var(--transition);
+
+        @include tablet {
+            width: 682px;
+            margin-inline: auto;
+        }
+
+        @include mobile {
+            width: 90%;
+        }
+
+        @include mobile-small {
+            width: 90%;
+        }
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: scale(1.02);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: none;
+            }
+        }
+    }
+
+    &__coupon--1 {
+        background-image: url("../../images/images/coupon-tropical.png");
+
+        & .coupons__info {
+            color: var(--color-white);
+        }
+
+        & .coupons__title {
+            color: var(--color-white);
+        }
+    }
+
+    &__coupon--2 {
+        background-image: url("../../images/images/coupon-forest.png");
+
+        & .coupons__info {
+            color: var(--color-green);
+        }
+
+        & .coupons__title {
+            color: var(--color-blue);
+        }
+    }
+
+    &__coupon-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-block: 110px;
+        width: 260px;
+        margin-left: 55px;
+
+        @include mobile-small {
+            padding-block: 70px;
+            margin-inline: 30px;
+            width: 100%;
+        }
+    }
+
+    &__info {
+        @include fluid-text(36, 32);
+        @include font(var(--third-family), 400, 1);
+    }
+
+    &__title {
+        @include fluid-text(40, 32);
+        @include font(var(--font-family), 800, 1.2);
+    }
+}

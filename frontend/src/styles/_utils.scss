@@ -49,3 +49,10 @@
 .overlay {
     @include overlay;
 }
+
+.button {
+    @include fluid-text(20, 20);
+    @include font(var(--font-family), 700, 1);
+    border-radius: 16px;
+    padding-block: var(--button-padding-block);
+}
