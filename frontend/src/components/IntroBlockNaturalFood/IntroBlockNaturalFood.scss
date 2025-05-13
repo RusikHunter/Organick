@@ -10,17 +10,11 @@
         }
     }
 
-    &__info--natural-food {
-        @include fluid-text(36, 28);
-        @include font(var(--third-family), 400, 1);
-        color: var(--color-green);
+    &__promo--natural-food {
         margin-bottom: 8px;
     }
 
     &__title--natural-food {
-        @include fluid-text(70, 50);
-        @include font(var(--font-family), 800, 1.2);
-        color: var(--color-blue);
         margin-bottom: 23px;
 
         @include mobile-small {
@@ -40,13 +34,6 @@
         width: 220px;
         background-color: var(--color-yellow);
         color: var(--color-blue);
-        transition: background-color var(--transition);
-
-        & svg {
-            position: relative;
-            top: 3px;
-            left: 7px;
-        }
 
         @include desktop-screen {
 

@@ -74,7 +74,7 @@
     &__coupon--1 {
         background-image: url("../../images/images/coupon-tropical.png");
 
-        & .coupons__info {
+        & .coupons__promo {
             color: var(--color-white);
         }
 
@@ -86,7 +86,7 @@
     &__coupon--2 {
         background-image: url("../../images/images/coupon-forest.png");
 
-        & .coupons__info {
+        & .coupons__promo {
             color: var(--color-green);
         }
 
@@ -110,13 +110,10 @@
         }
     }
 
-    &__info {
+    &__promo {
         @include fluid-text(36, 32);
         @include font(var(--third-family), 400, 1);
     }
 
-    &__title {
-        @include fluid-text(40, 32);
-        @include font(var(--font-family), 800, 1.2);
-    }
+    &__title {}
 }

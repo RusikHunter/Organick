@@ -1,0 +1,185 @@
+@use "../../styles/index" as *;
+
+.believe {
+    background-color: var(--color-lightgray);
+
+    @include tablet {
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("../../images/images/accredited-farmers-fruits.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 450px center;
+            opacity: 0.4;
+            z-index: -1;
+        }
+    }
+
+    @include mobile {
+        &::before {
+            background-size: cover;
+            background-position: 250px center;
+        }
+    }
+
+    @include mobile-small {
+        &::before {
+            background-position: 100px center;
+        }
+    }
+
+    &__inner {
+        max-width: 100% !important;
+    }
+
+    &__row {
+        padding-block: 174px 115px;
+
+        @include laptop {
+            padding-block: 140px 100px;
+        }
+
+        @include tablet {
+            padding-block: 100px 80px;
+        }
+
+        @include mobile {
+            padding-block: 80px 60px;
+        }
+
+        @include mobile-small {
+            padding-block: 65px 40px;
+        }
+    }
+
+    &__column {
+        width: 50%;
+    }
+
+    &__column--1 {
+        align-items: end;
+        padding-right: 50px;
+
+        @media (max-width: 1790px) {
+            padding-left: 50px;
+        }
+
+        @include tablet {
+            display: none !important;
+        }
+    }
+
+    // ! todo --> boxshadow
+
+    &__image {}
+
+    &__column--2 {
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__promo {
+        margin-top: 15px;
+    }
+
+    &__title {
+        width: 550px;
+
+        @include laptop {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include mobile-small {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        width: 690px;
+        margin-block: 14px 6px;
+
+        @include laptop {
+            width: 90%;
+        }
+
+        @include mobile-small {
+            width: 100%;
+        }
+    }
+
+    &__feature-wrap {
+        display: flex;
+        width: 570px;
+        margin-top: 30px;
+        gap: 20px;
+
+        @include laptop {
+            width: 80%;
+        }
+
+        @include tablet {
+            width: 60%;
+        }
+
+        @include mobile {
+            width: 80%;
+        }
+
+        @include mobile-small {
+            width: 100%;
+        }
+    }
+
+    &__icon {}
+
+    &__feature-text-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    &__feature-title {}
+
+    &__feature-text {}
+
+    &__button {
+        width: 220px;
+        background-color: var(--color-blue);
+        color: var(--color-white);
+        margin-top: 46px;
+
+        svg {
+            color: #335B6B;
+
+            .believe__svg-arrow {
+                color: var(--color-white);
+            }
+        }
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-darkblue);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-blue);
+            }
+        }
+    }
+}
