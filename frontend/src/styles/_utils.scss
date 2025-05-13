@@ -55,4 +55,59 @@
     @include font(var(--font-family), 700, 1);
     border-radius: 16px;
     padding-block: var(--button-padding-block);
+    transition: background-color var(--transition);
+
+    & svg {
+        position: relative;
+        top: 3px;
+        left: 7px;
+    }
+}
+
+.h1 {
+    @include fluid-text(70, 50);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.h2 {
+    @include fluid-text(50, 40);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.h3 {
+    @include fluid-text(40, 32);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.h4 {
+    @include fluid-text(35, 28);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.h5 {
+    @include fluid-text(30, 24);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.h6 {
+    @include fluid-text(25, 18);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.promo {
+    @include fluid-text(36, 28);
+    @include font(var(--third-family), 400, 1);
+    color: var(--color-green);
+}
+
+.text {
+    @include fluid-text(18, 14);
+    @include font(var(--second-family), 400, 1.65);
+    color: var(--color-darkgray);
 }

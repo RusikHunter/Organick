@@ -4,8 +4,8 @@ import { Link } from "react-router-dom"
 function IntroBlockNaturalFood() {
     return (
         <div className="intro__column intro__column--natural-food column">
-            <span className="intro__info intro__info--natural-food">100% Natural Food</span>
-            <h1 className="intro__title intro__title--natural-food">Choose the best healthier way <span className="intro__title--natural-food-edge">of life</span></h1>
+            <span className="intro__promo intro__promo--natural-food promo">100% Natural Food</span>
+            <h1 className="intro__title intro__title--natural-food h1">Choose the best healthier way <span className="intro__title--natural-food-edge">of life</span></h1>
             <Link to="/shop" className="intro__link intro__link--natural-food" tabIndex={-1}>
                 <button className="intro__button intro__button--natural-food button">
                     Explore Now
