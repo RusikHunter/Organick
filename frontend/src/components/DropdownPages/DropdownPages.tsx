@@ -9,6 +9,7 @@ function DropdownPages() {
     const navRefs = useRef<(HTMLAnchorElement | null)[]>([])
 
     const handleClick = (): void => {
+        console.log('123')
         setIsOpen(prev => !prev)
     }
 
@@ -33,16 +34,23 @@ function DropdownPages() {
         }
     }, [isOpen])
 
-    // ! todo --> bug with the first click on the button
-
     useEffect(() => {
         const handleFocus = (e: FocusEvent): void => {
             if (e.target === navigationButtonRef.current
                 || navRefs.current.includes(e.target as HTMLAnchorElement)
             ) {
-                setIsOpen(true)
+                console.log('a')
+
+                // HACK: when the element gets focus, isOpen becomes true,
+                // but then handleClick is triggered and isOpen becomes false again.
+                // so a delay is added for focusin
+
+                setTimeout(() => {
+                    setIsOpen(true)
+                }, 100)
             }
             else {
+                console.log('b')
                 setIsOpen(false)
             }
         }
