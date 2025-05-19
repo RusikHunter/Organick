@@ -3,6 +3,7 @@ import IntroBlockNaturalFood from "../../components/IntroBlockNaturalFood/IntroB
 import NaturalFoodImage from "../../images/images/natural-food.png"
 import CouponsSection from "../../components/CouponsSection/CouponsSection"
 import BelieveSection from "../../components/BelieveSection/BelieveSection"
+import ReviewsSection from "../../components/ReviewsSection/ReviewsSection"
 
 function MainPage() {
     return (
@@ -10,6 +11,7 @@ function MainPage() {
             <IntroBlock content={<IntroBlockNaturalFood />} backgroundImageURL={NaturalFoodImage} />
             <CouponsSection />
             <BelieveSection />
+            <ReviewsSection />
         </>
     )
 }

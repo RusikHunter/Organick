@@ -80,7 +80,6 @@
 // For links to social networks
 //
 
-@mixin square($size) {
-    width: #{$size * 1px};
-    aspect-ratio: 1;
+@mixin square {
+    aspect-ratio: 1 / 1;
 }
