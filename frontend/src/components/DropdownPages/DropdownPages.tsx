@@ -4,67 +4,79 @@ import "./DropdownPages.scss"
 
 function DropdownPages() {
     const [isOpen, setIsOpen] = useState<boolean>(false)
+    const [isKeyboard, setIsKeyboard] = useState<boolean>(false)
 
+    const wrapperRef = useRef<HTMLDivElement | null>(null)
     const navigationButtonRef = useRef<HTMLButtonElement | null>(null)
-    const navRefs = useRef<(HTMLAnchorElement | null)[]>([])
 
     const handleClick = (): void => {
-        console.log('123')
         setIsOpen(prev => !prev)
     }
 
-    // this useEffect subscribes to an event that ensures
-    // that when the dropdown is open and a button is pressed anywhere,
-    // the dropdown is closed
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Tab') {
+                setIsKeyboard(true)
+            }
+        }
+
+        const handleMouseDown = () => {
+            setIsKeyboard(false)
+        }
+
+        window.addEventListener("keydown", handleKeyDown)
+        window.addEventListener("mousedown", handleMouseDown)
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown)
+            window.removeEventListener("mousedown", handleMouseDown)
+        }
+    }, [])
 
     useEffect(() => {
         if (!isOpen) return
 
-        const handleClickOutside = (): void => {
+        const handleClickOutside = (e: MouseEvent): void => {
+            if (
+                navigationButtonRef.current &&
+                navigationButtonRef.current.contains(e.target as Node)
+            ) {
+                return
+            }
+
             setIsOpen(false)
         }
 
-        const timer: number = setTimeout(() => {
-            window.addEventListener("click", handleClickOutside)
-        }, 0)
-
+        window.addEventListener("click", handleClickOutside)
         return () => {
-            clearTimeout(timer)
             window.removeEventListener("click", handleClickOutside)
         }
     }, [isOpen])
 
-    useEffect(() => {
-        const handleFocus = (e: FocusEvent): void => {
-            if (e.target === navigationButtonRef.current
-                || navRefs.current.includes(e.target as HTMLAnchorElement)
-            ) {
-                console.log('a')
+    const handleFocus = () => {
+        if (isKeyboard) {
+            setIsOpen(true)
+        }
+    }
 
-                // HACK: when the element gets focus, isOpen becomes true,
-                // but then handleClick is triggered and isOpen becomes false again.
-                // so a delay is added for focusin
-
-                setTimeout(() => {
-                    setIsOpen(true)
-                }, 100)
-            }
-            else {
-                console.log('b')
+    const handleBlur = () => {
+        setTimeout(() => {
+            if (wrapperRef.current && !wrapperRef.current.contains(document.activeElement)) {
                 setIsOpen(false)
             }
-        }
-
-        document.addEventListener('focusin', handleFocus)
-
-        return () => {
-            document.removeEventListener('focusin', handleFocus)
-        }
-    }, [])
+        }, 0)
+    }
 
     return (
-        <div className="header__dropdown-wrap">
-            <button className={`header__navigation-button ${isOpen ? `header__navigation-button--active` : ''}`} onClick={handleClick} ref={navigationButtonRef}>
+        <div className="header__dropdown-wrap"
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            ref={wrapperRef}
+        >
+            <button className={`header__navigation-button ${isOpen ? `header__navigation-button--active` : ''}`}
+                onClick={handleClick}
+                ref={navigationButtonRef}
+            >
                 Pages
 
                 <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,13 +87,13 @@ function DropdownPages() {
             <div className={`header__dropdown header__dropdown--pages ${isOpen ? `header__dropdown--pages--active` : ''}`}>
                 <ul className="header__dropdown-list">
                     <li className="header__dropdown-list-item">
-                        <Link className="header__navigation-link" to="/services" ref={el => void (navRefs.current[0] = el)}>Services</Link>
+                        <Link className="header__navigation-link" to="/services">Services</Link>
                     </li>
                     <li className="header__dropdown-list-item">
-                        <Link className="header__navigation-link" to="/team" ref={el => void (navRefs.current[1] = el)}>Team</Link>
+                        <Link className="header__navigation-link" to="/team">Team</Link>
                     </li>
                     <li className="header__dropdown-list-item">
-                        <Link className="header__navigation-link" to="/contact" ref={el => void (navRefs.current[2] = el)}>Contact Us</Link>
+                        <Link className="header__navigation-link" to="/contact">Contact Us</Link>
                     </li>
                 </ul >
             </div >
