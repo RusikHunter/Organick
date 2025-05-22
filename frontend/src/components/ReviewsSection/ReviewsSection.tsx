@@ -26,7 +26,6 @@ function ReviewsSection() {
                             spaceBetween={0}
                             slidesPerView={1}
                             pagination={{ clickable: true }}
-                            onSwiper={(swiper) => console.log('Swiper width:', swiper.width)}
                         >
 
                             {reviews.map((review, index) => (
