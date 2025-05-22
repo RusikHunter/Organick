@@ -4,6 +4,8 @@ import NaturalFoodImage from "../../images/images/natural-food.png"
 import CouponsSection from "../../components/CouponsSection/CouponsSection"
 import BelieveSection from "../../components/BelieveSection/BelieveSection"
 import ReviewsSection from "../../components/ReviewsSection/ReviewsSection"
+import EcoSection from "../../components/EcoSection/EcoSection"
+import CategoriesListSection from "../../components/CategoriesListSection/CategoriesListSection"
 
 function MainPage() {
     return (
@@ -12,6 +14,8 @@ function MainPage() {
             <CouponsSection />
             <BelieveSection />
             <ReviewsSection />
+            <EcoSection />
+            <CategoriesListSection />
         </>
     )
 }

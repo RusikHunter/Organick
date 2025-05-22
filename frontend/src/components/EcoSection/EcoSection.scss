@@ -1,0 +1,98 @@
+@use "../../styles/index" as *;
+
+.eco {
+
+    &__inner {
+        max-width: 100% !important;
+
+        @include laptop {
+            padding: 0 !important;
+        }
+    }
+
+    &__row {
+        @include mobile {
+            position: relative;
+        }
+    }
+
+    &__column {
+        width: 50%;
+    }
+
+    &__column--1 {
+        background-image: url("../../images/images/eco-field.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include mobile {
+            width: 0;
+        }
+    }
+
+    &__column--2 {
+        padding-block: 100px 110px;
+
+        @include tablet {
+            width: 20%;
+        }
+
+        @include mobile {
+            width: 100%;
+            padding-block: 40px;
+            background-image: url("../../images/images/eco-field.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__content {
+        position: relative;
+        left: -90px;
+        background-color: var(--color-white);
+        border-radius: 30px;
+        padding: 80px 90px;
+        width: 800px;
+
+        @media (max-width: 1600px) {
+            width: 100%;
+            left: -140px;
+            padding: 60px 70px;
+        }
+
+        @include tablet {
+            width: 300%;
+            left: -430px;
+        }
+
+        @include mobile {
+            width: 90%;
+            position: static;
+            margin-inline: auto;
+        }
+
+        @include mobile-small {
+            padding: 40px 30px;
+        }
+    }
+
+    &__promo {}
+
+    &__title {
+        margin-top: 8px;
+    }
+
+    &__description-list {}
+
+    &__description-term {
+        margin-top: 35px;
+    }
+
+    &__description-definition {
+        margin-top: 7px;
+    }
+}
