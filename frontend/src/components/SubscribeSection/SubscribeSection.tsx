@@ -8,16 +8,15 @@ function SubscribeSection() {
                     <div className="subscribe__column column">
                         <div className="subscribe__content-block">
                             <div className="subscribe__text-wrap">
-                                <h2 className="subscribe__title h2">Subscribe to our Newsletter
-                                </h2>
+                                <h2 className="subscribe__title h2">Subscribe to our Newsletter</h2>
                             </div>
 
                             <form className="subscribe__form">
-                                <label htmlFor="subscribeInputEmail" className="subscribe__label">
+                                <label htmlFor="subscribeInputEmail" className="subscribe__label subscribe__label--email">
                                     <input type="email" id="subscribeInputEmail" placeholder="Your Email Address" className="subscribe__input subscribe__input--email" />
                                 </label>
 
-                                <label htmlFor="subscribeInputEmail" className="subscribe__label">
+                                <label htmlFor="subscribeInputEmail" className="subscribe__label subscribe__label--submit">
                                     <input type="submit" id="subscribeInputEmail" value="Subscribe" className="subscribe__input subscribe__input--submit button" />
                                 </label>
                             </form>

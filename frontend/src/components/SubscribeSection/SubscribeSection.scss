@@ -20,10 +20,32 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+
+        @include laptop {
+            padding: 95px 60px;
+        }
+
+        @include tablet {
+            padding: 85px 40px;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        @include mobile-small {
+            padding: 70px 20px;
+        }
     }
 
     &__text-wrap {
         width: 27%;
+
+        @include laptop {
+            width: 37%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -34,9 +56,28 @@
         display: flex;
         gap: 6px;
         align-items: center;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: 15px;
+        }
     }
 
-    &__label {}
+    &__label--email {
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__label--submit {
+        @include mobile {
+            width: 100%;
+        }
+    }
 
     &__input {}
 
@@ -48,8 +89,12 @@
         @include fluid-text(18, 14);
         @include font(var(--font-family), 400, 1);
         font-style: italic;
-        color: var(--color-gray);
+        color: var(--color-darkgray);
         transition: background-color var(--transition);
+
+        &::placeholder {
+            color: var(--color-darkgray);
+        }
 
         @include desktop-screen {
 
@@ -65,6 +110,14 @@
             &:focus-visible {
                 background-color: var(--color-white);
             }
+        }
+
+        @include laptop {
+            width: 300px;
+        }
+
+        @include tablet {
+            width: 100%;
         }
     }
 
@@ -88,6 +141,14 @@
             &:focus-visible {
                 background-color: var(--color-blue);
             }
+        }
+
+        @include tablet {
+            width: 220px;
+        }
+
+        @include mobile {
+            width: 100%;
         }
     }
 }
