@@ -1,0 +1,93 @@
+@use "../../styles/index" as *;
+
+.subscribe {
+
+    &__inner {}
+
+    &__row {}
+
+    &__column {
+        width: 100%;
+    }
+
+    &__content-block {
+        display: flex;
+        width: 100%;
+        border-radius: 32px;
+        padding: 105px 70px;
+        justify-content: space-between;
+        background-image: url("../../images/images/ice-orange.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__text-wrap {
+        width: 27%;
+    }
+
+    &__title {
+        color: var(--color-white) !important;
+    }
+
+    &__form {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+    }
+
+    &__label {}
+
+    &__input {}
+
+    &__input--email {
+        width: 350px;
+        padding-block: var(--input-padding-block);
+        padding-inline: 23px;
+        border-radius: 16px;
+        @include fluid-text(18, 14);
+        @include font(var(--font-family), 400, 1);
+        font-style: italic;
+        color: var(--color-gray);
+        transition: background-color var(--transition);
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-lightgray);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-white);
+            }
+        }
+    }
+
+    &__input--submit {
+        width: 220px;
+        background-color: var(--color-blue);
+        color: var(--color-white);
+        cursor: pointer;
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-darkblue);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-blue);
+            }
+        }
+    }
+}
