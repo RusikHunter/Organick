@@ -10,6 +10,12 @@
 
     &__row--1 {
         padding-block: 117px 102px;
+
+        @include mobile {
+            flex-direction: column-reverse !important;
+            padding-block: 100px 90px;
+            gap: 50px;
+        }
     }
 
     &__column {}
@@ -18,12 +24,28 @@
         align-items: end;
         flex: 1;
         padding-right: 50px;
+
+        @include tablet {
+            padding-right: 30px;
+            width: 30%;
+        }
+
+        @include mobile {
+            order: 2;
+            width: 100%;
+            align-items: center;
+            padding-right: 0;
+        }
     }
 
     &__address-info {}
 
     &__title--contact-us {
         text-align: end;
+
+        @include mobile {
+            text-align: center;
+        }
     }
 
     &__description-list {
@@ -35,6 +57,10 @@
 
         & .text {
             font-weight: 700 !important;
+        }
+
+        @include mobile {
+            text-align: center;
         }
     }
 
@@ -61,6 +87,11 @@
                 }
             }
         }
+
+        @include mobile {
+            text-align: center;
+            margin-bottom: 15px;
+        }
     }
 
     &__text {}
@@ -68,6 +99,18 @@
     &__column--2 {
         border-inline: var(--border-default);
         padding-inline: 40px;
+
+        @include tablet {
+            width: 40%;
+            padding-inline: 20px;
+        }
+
+        @include mobile {
+            order: 3;
+            width: 100%;
+            border-inline: none;
+            padding-inline: 0;
+        }
     }
 
     &__logo {
@@ -78,6 +121,19 @@
         width: 540px;
         text-align: center;
         margin-top: 23px;
+
+        @include laptop {
+            width: 400px;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            width: 80%;
+            margin-inline: auto;
+        }
     }
 
     &__list {}
@@ -100,6 +156,11 @@
             color: var(--color-blue);
             fill: #EFF6F1;
             transition: fill var(--transition);
+
+            @include tablet {
+                width: 40px;
+                height: 40px;
+            }
         }
 
         @include desktop-screen {
@@ -126,9 +187,23 @@
     &__column--3 {
         flex: 1;
         padding-left: 50px;
+
+        @include tablet {
+            padding-left: 30px;
+            width: 30%;
+        }
+
+        @include mobile {
+            width: 100%;
+            padding-left: 0;
+        }
     }
 
-    &__title--utility-pages {}
+    &__title--utility-pages {
+        @include mobile {
+            text-align: center;
+        }
+    }
 
     &__list--utility-pages {
         display: flex;
@@ -154,6 +229,11 @@
                     text-decoration: none;
                 }
             }
+        }
+
+        @include mobile {
+            display: flex;
+            justify-content: center;
         }
     }
 

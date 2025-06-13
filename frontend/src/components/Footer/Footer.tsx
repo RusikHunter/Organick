@@ -15,21 +15,21 @@ function Footer() {
                                     <span className="footer__span text">Email</span>
                                 </dt>
                                 <dd className="footer__description-definition">
-                                    <a href="mailto:needhelp@Organia.com" className="footer__text text">needhelp@Organia.com</a>
+                                    <a href="mailto:needhelp@Organia.com" className="footer__link text">needhelp@Organia.com</a>
                                 </dd>
 
                                 <dt className="footer__description-term">
                                     <span className="footer__span text">Phone</span>
                                 </dt>
                                 <dd className="footer__description-definition">
-                                    <a href="tel:666888888" className="footer__text text">666 888 888</a>
+                                    <a href="tel:666888888" className="footer__link text">666 888 888</a>
                                 </dd>
 
                                 <dt className="footer__description-term">
                                     <span className="footer__span text">Address</span>
                                 </dt>
                                 <dd className="footer__description-definition">
-                                    <a href="https://www.google.com/maps/place/88+Brooklyn+Ave,+Brooklyn,+NY+11216,+%D0%A1%D0%A8%D0%90/@40.677099,-73.9470458,653m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89c25b84595d61fd:0xc00ede9005b9a8a5!8m2!3d40.677099!4d-73.9444709!16s%2Fg%2F11csdw1nfp?entry=ttu&g_ep=EgoyMDI1MDYwOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="footer__text text">88 road, borklyn street, USA</a>
+                                    <a href="https://www.google.com/maps/place/88+Brooklyn+Ave,+Brooklyn,+NY+11216,+%D0%A1%D0%A8%D0%90/@40.677099,-73.9470458,653m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89c25b84595d61fd:0xc00ede9005b9a8a5!8m2!3d40.677099!4d-73.9444709!16s%2Fg%2F11csdw1nfp?entry=ttu&g_ep=EgoyMDI1MDYwOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="footer__link text">88 road, borklyn street, USA</a>
                                 </dd>
                             </dl>
                         </address>
