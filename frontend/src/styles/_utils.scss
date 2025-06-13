@@ -100,14 +100,14 @@
     color: var(--color-blue);
 }
 
-.promo {
-    @include fluid-text(36, 28);
-    @include font(var(--third-family), 400, 1);
-    color: var(--color-green);
-}
-
 .text {
     @include fluid-text(18, 14);
     @include font(var(--second-family), 400, 1.65);
     color: var(--color-darkgray);
+}
+
+.promo {
+    @include fluid-text(36, 28);
+    @include font(var(--third-family), 400, 1);
+    color: var(--color-green);
 }

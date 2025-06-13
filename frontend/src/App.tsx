@@ -17,6 +17,7 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 import LicensesPage from './pages/LicensesPage/LicensesPage'
 import ChangelogPage from './pages/ChangelogPage/ChangelogPage'
 import ProtectedPage from './pages/ProtectedPage/ProtectedPage'
+import SubscribeSection from './components/SubscribeSection/SubscribeSection'
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
                         <Route path="/changelog" element={<ChangelogPage />} />
                         <Route path="/protected" element={<ProtectedPage />} />
                     </Routes>
+                    <SubscribeSection />
                 </main>
                 <Footer />
             </div>

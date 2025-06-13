@@ -1,0 +1,154 @@
+@use "../../styles/index" as *;
+
+.subscribe {
+
+    &__inner {}
+
+    &__row {}
+
+    &__column {
+        width: 100%;
+    }
+
+    &__content-block {
+        display: flex;
+        width: 100%;
+        border-radius: 32px;
+        padding: 105px 70px;
+        justify-content: space-between;
+        background-image: url("../../images/images/ice-orange.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include laptop {
+            padding: 95px 60px;
+        }
+
+        @include tablet {
+            padding: 85px 40px;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        @include mobile-small {
+            padding: 70px 20px;
+        }
+    }
+
+    &__text-wrap {
+        width: 27%;
+
+        @include laptop {
+            width: 37%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        color: var(--color-white) !important;
+    }
+
+    &__form {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+    &__label--email {
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__label--submit {
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__input {}
+
+    &__input--email {
+        width: 350px;
+        padding-block: var(--input-padding-block);
+        padding-inline: 23px;
+        border-radius: 16px;
+        @include fluid-text(18, 14);
+        @include font(var(--font-family), 400, 1);
+        font-style: italic;
+        color: var(--color-darkgray);
+        transition: background-color var(--transition);
+
+        &::placeholder {
+            color: var(--color-darkgray);
+        }
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-lightgray);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-white);
+            }
+        }
+
+        @include laptop {
+            width: 300px;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__input--submit {
+        width: 220px;
+        background-color: var(--color-blue);
+        color: var(--color-white);
+        cursor: pointer;
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-darkblue);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                background-color: var(--color-blue);
+            }
+        }
+
+        @include tablet {
+            width: 220px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
