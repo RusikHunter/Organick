@@ -1,0 +1,32 @@
+@use "../../styles/index" as *;
+
+.subintro {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__inner {}
+
+    &__row {
+        padding-block: 195px;
+
+        @include laptop {
+            padding-block: 175px;
+        }
+
+        @include tablet {
+            padding-block: 155px;
+        }
+
+        @include mobile {
+            padding-block: 105px;
+        }
+
+        @include mobile-small {
+            padding-block: 85px;
+        }
+    }
+
+    &__title {
+        margin-inline: auto;
+    }
+}

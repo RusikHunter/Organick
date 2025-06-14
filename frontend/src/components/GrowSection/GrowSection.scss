@@ -1,0 +1,200 @@
+@use "../../styles/index" as *;
+
+.grow {
+
+    &__inner {
+        padding-block: 200px;
+
+        @include laptop {
+            padding-block: 180px;
+        }
+
+        @include tablet {
+            padding-block: 150px;
+        }
+
+        @include mobile {
+            padding-block: 110px;
+        }
+
+        @include mobile-small {
+            padding-block: 70px;
+        }
+    }
+
+    &__row {}
+
+    &__row--1 {}
+
+    &__column {}
+
+    &__column--1 {
+        width: 100%;
+    }
+
+    &__promo {
+        display: block;
+        text-align: center;
+    }
+
+    &__title {
+        margin-inline: auto;
+        width: 490px;
+        text-align: center;
+        margin-block: 8px 45px;
+
+        @include mobile {
+            width: 80%;
+        }
+
+        @include mobile-small {
+            width: 90%;
+        }
+    }
+
+    &__row--2 {}
+
+    &__futures-wrap {}
+
+    &__grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 396px 1fr 396px;
+        grid-template-rows: 244px 184px auto;
+        grid-template-areas: "a g d"
+            "b g e"
+            "c g f";
+        gap: 40px;
+
+        @include laptop {
+            grid-template-columns: 296px 1fr 296px;
+            grid-template-rows: repeat(2, 244px) auto;
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas:
+                "a d"
+                "b e"
+                "c f"
+                "g g";
+            gap: 20px;
+        }
+    }
+
+    &__feature {}
+
+    &__grid-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__image {
+        @include tablet {
+            width: 50%;
+            margin-inline: auto;
+            margin-top: 30px;
+        }
+
+        @include mobile {
+            width: 80%;
+        }
+
+        @include mobile-small {
+            width: 90%;
+        }
+    }
+
+    &__grid-column--a,
+    &__grid-column--b,
+    &__grid-column--c {
+        align-items: end;
+
+        & .grow__feature-description {
+            text-align: end;
+
+            @include tablet {
+                text-align: start;
+            }
+        }
+
+        @include tablet {
+            align-items: start;
+        }
+    }
+
+    &__grid-column--a,
+    &__grid-column--d {
+        margin-top: 60px;
+
+        @include laptop {
+            margin-top: 0;
+        }
+    }
+
+    &__grid-column--a {
+        grid-area: a;
+    }
+
+    &__grid-column--b {
+        grid-area: b;
+    }
+
+    &__grid-column--c {
+        grid-area: c;
+    }
+
+    &__grid-column--g {
+        grid-area: g;
+
+        @include laptop {
+            justify-content: center;
+        }
+    }
+
+    &__grid-column--d {
+        grid-area: d;
+    }
+
+    &__grid-column--e {
+        grid-area: e;
+    }
+
+    &__grid-column--f {
+        grid-area: f;
+    }
+
+    &__feature-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    &__feature-title {}
+
+    &__feature-description {}
+
+    &__row--3 {}
+
+    &__column--2 {
+        width: 100%;
+    }
+
+    &__link {
+        display: block;
+    }
+
+    &__button {
+        display: block;
+        margin-inline: auto;
+
+        @include laptop {
+            margin-top: 60px;
+        }
+
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+}

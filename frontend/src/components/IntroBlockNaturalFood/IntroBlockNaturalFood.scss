@@ -29,27 +29,4 @@
     &__link--natural-food {
         width: 220px;
     }
-
-    &__button--natural-food {
-        width: 220px;
-        background-color: var(--color-yellow);
-        color: var(--color-blue);
-
-        @include desktop-screen {
-
-            &:hover,
-            &:focus-visible {
-                background-color: var(--color-darkyellow);
-            }
-        }
-
-        @include touch-screen {
-
-            &:hover,
-            &:focus-visible {
-                background-color: var(--color-yellow);
-            }
-        }
-    }
-
 }

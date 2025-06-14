@@ -153,33 +153,6 @@
     &__feature-text {}
 
     &__button {
-        width: 220px;
-        background-color: var(--color-blue);
-        color: var(--color-white);
         margin-top: 46px;
-
-        svg {
-            color: #335B6B;
-
-            .believe__svg-arrow {
-                color: var(--color-white);
-            }
-        }
-
-        @include desktop-screen {
-
-            &:hover,
-            &:focus-visible {
-                background-color: var(--color-darkblue);
-            }
-        }
-
-        @include touch-screen {
-
-            &:hover,
-            &:focus-visible {
-                background-color: var(--color-blue);
-            }
-        }
     }
 }
