@@ -1,16 +1,70 @@
 @use "../../styles/index" as *;
 
 .creative {
+    @include mobile {
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("../../images/images/accredited-farmers-fruits.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 250px center;
+            opacity: 0.4;
+            z-index: -1;
+        }
+    }
+
+    @include mobile-small {
+        &::before {
+            background-position: 100px center;
+        }
+    }
 
     &__inner {
         max-width: 100% !important;
         padding-block: 200px 150px;
+
+        @include laptop {
+            padding-block: 170px 130px;
+        }
+
+        @include tablet {
+            padding-block: 120px 90px;
+        }
+
+        @include mobile {
+            padding-block: 90px 70px;
+        }
     }
 
     &__row {}
 
     &__column {
         width: 50%;
+
+        &:first-child {
+            @include tablet {
+                width: 60%;
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        &:last-child {
+            @include tablet {
+                width: 40%;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+        }
     }
 
     &__column--1 {
@@ -27,16 +81,55 @@
     &__title {
         margin-block: 10px;
         width: 50%;
+
+        @include laptop {
+            width: 70%;
+        }
+
+        @include tablet {
+            width: 90%;
+        }
+
+        @include mobile-small {
+            width: 100%;
+        }
     }
 
     &__description {
         margin-bottom: 40px;
         width: 70%;
+
+        @include tablet {
+            width: 90%;
+        }
+
+        @include mobile-small {
+            width: 100%;
+        }
     }
 
     &__list {
         display: flex;
         gap: 65px;
+
+        @include laptop {
+            width: 80%;
+            gap: 30px;
+        }
+
+        @include tablet {
+            width: 90%;
+            flex-direction: column;
+        }
+
+        @include mobile {
+            width: 100%;
+            flex-direction: row;
+        }
+
+        @include mobile-small {
+            flex-direction: column;
+        }
     }
 
     &__list-item {
