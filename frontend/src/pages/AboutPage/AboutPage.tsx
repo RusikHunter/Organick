@@ -1,7 +1,10 @@
+import SubIntroBlock from "../../components/SubIntroBlock/SubIntroBlock"
+import AboutUsBackgroundImage from "../../images/images/background-about-us.png"
+
 function AboutPage() {
     return (
         <>
-            <h1>AboutPage</h1>
+            <SubIntroBlock title="About Us" backgroundImageURL={AboutUsBackgroundImage} />
         </>
     )
 }
