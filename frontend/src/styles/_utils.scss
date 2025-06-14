@@ -64,6 +64,37 @@
     }
 }
 
+.button--blue {
+    width: 220px;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    margin-top: 46px;
+
+    svg {
+        color: #335B6B;
+
+        .button--blue__svg-arrow {
+            color: var(--color-white);
+        }
+    }
+
+    @include desktop-screen {
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-darkblue);
+        }
+    }
+
+    @include touch-screen {
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-blue);
+        }
+    }
+}
+
 .h1 {
     @include fluid-text(70, 50);
     @include font(var(--font-family), 800, 1.2);
