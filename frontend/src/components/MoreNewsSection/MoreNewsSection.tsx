@@ -11,12 +11,12 @@ function MoreNewsSection() {
                     </div>
 
                     <div className="morenews__column morenews__column--2 column">
-                        <button className="morenews__button morenews__button--more button">
+                        <button className="morenews__button morenews__button--more button button--transparent">
                             More News
 
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="9.5" cy="9.5" r="9.5" fill="currentColor" />
-                                <path className="morenews__svg-arrow" d="M9.47641 6.12891L12.871 9.19342L9.47641 12.2579M12.3995 9.19342H5.51611" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+                                <path className="button__svg-arrow" d="M9.47641 6.12891L12.871 9.19342L9.47641 12.2579M12.3995 9.19342H5.51611" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </button>
                     </div>
@@ -39,11 +39,11 @@ function MoreNewsSection() {
                                 </span>
                                 <h6 className="morenews__news-title h6">The Benefits of Vitamin D & How to Get It</h6>
                                 <p className="morenews__news-text text">Simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-                                <button className="morenews__button morenews__button--read button">
+                                <button className="morenews__button morenews__button--read button button--yellow">
                                     Read More
                                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="9.5" cy="9.5" r="9.5" fill="currentColor" />
-                                        <path className="morenews__svg-arrow" d="M9.47641 6.12891L12.871 9.19342L9.47641 12.2579M12.3995 9.19342H5.51611" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path className="button__svg-arrow" d="M9.47641 6.12891L12.871 9.19342L9.47641 12.2579M12.3995 9.19342H5.51611" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </button>
                             </div>
@@ -65,11 +65,11 @@ function MoreNewsSection() {
                                 </span>
                                 <h6 className="morenews__news-title h6">The Benefits of Vitamin D & How to Get It</h6>
                                 <p className="morenews__news-text text">Simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-                                <button className="morenews__button morenews__button--read button">
+                                <button className="morenews__button morenews__button--read button button--yellow">
                                     Read More
                                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="9.5" cy="9.5" r="9.5" fill="currentColor" />
-                                        <path className="morenews__svg-arrow" d="M9.47641 6.12891L12.871 9.19342L9.47641 12.2579M12.3995 9.19342H5.51611" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path className="button__svg-arrow" d="M9.47641 6.12891L12.871 9.19342L9.47641 12.2579M12.3995 9.19342H5.51611" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </button>
                             </div>

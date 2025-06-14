@@ -17,7 +17,7 @@ function SubscribeSection() {
                                 </label>
 
                                 <label htmlFor="subscribeInputEmail" className="subscribe__label subscribe__label--submit">
-                                    <input type="submit" id="subscribeInputEmail" value="Subscribe" className="subscribe__input subscribe__input--submit button" />
+                                    <input type="submit" id="subscribeInputEmail" value="Subscribe" className="subscribe__input subscribe__input--submit button button--blue" />
                                 </label>
                             </form>
                         </div>

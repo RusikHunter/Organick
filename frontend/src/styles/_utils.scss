@@ -61,6 +61,12 @@
         position: relative;
         top: 3px;
         left: 7px;
+
+        color: #335B6B;
+
+        .button__svg-arrow {
+            color: var(--color-white);
+        }
     }
 }
 
@@ -68,15 +74,6 @@
     width: 220px;
     background-color: var(--color-blue);
     color: var(--color-white);
-    margin-top: 46px;
-
-    svg {
-        color: #335B6B;
-
-        .button--blue__svg-arrow {
-            color: var(--color-white);
-        }
-    }
 
     @include desktop-screen {
 
@@ -91,6 +88,55 @@
         &:hover,
         &:focus-visible {
             background-color: var(--color-blue);
+        }
+    }
+}
+
+.button--yellow {
+    width: 220px;
+    background-color: var(--color-yellow);
+    color: var(--color-blue);
+
+    @include desktop-screen {
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-darkyellow);
+        }
+    }
+
+    @include touch-screen {
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-yellow);
+        }
+    }
+}
+
+.button--transparent {
+    width: 220px;
+    border: var(--border-bold);
+    color: var(--color-blue);
+    transition: all var(--transition) !important;
+
+    @include desktop-screen {
+
+        &:hover,
+        &:focus-visible {
+            transform: scale(1.03);
+            border-color: var(--color-darkblue);
+            color: var(--color-darkblue);
+        }
+    }
+
+    @include touch-screen {
+
+        &:hover,
+        &:focus-visible {
+            transform: none;
+            border-color: var(--color-blue);
+            color: var(--color-blue);
         }
     }
 }
