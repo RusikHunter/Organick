@@ -1,0 +1,58 @@
+.grow {
+
+    &__inner {
+        padding-block: 200px;
+    }
+
+    &__row {}
+
+    &__row--1 {}
+
+    &__column {}
+
+    &__column--1 {
+        width: 100%;
+    }
+
+    &__promo {
+        margin-inline: auto;
+    }
+
+    &__title {
+        margin-inline: auto;
+        width: 480px;
+        text-align: center;
+    }
+
+    &__row--2 {}
+
+    &__futures-wrap {}
+
+    &__feature {}
+
+    &__grid-column {}
+
+    &__grid-column--a {}
+
+    &__grid-column--b {}
+
+    &__grid-column--c {}
+
+    &__grid-column--g {}
+
+    &__grid-column--d {}
+
+    &__grid-column--e {}
+
+    &__grid-column--f {}
+
+    &__feature-icon {}
+
+    &__feature-title {}
+
+    &__feature-description {}
+
+    &__row--3 {}
+
+    &__button {}
+}
