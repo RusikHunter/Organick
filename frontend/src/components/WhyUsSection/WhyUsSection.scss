@@ -5,18 +5,38 @@
 
     &__inner {
         padding-block: 210px 190px;
+
+        @include laptop {
+            padding-block: 180px 160px;
+        }
+
+        @include mobile {
+            padding-block: 150px 120px;
+        }
+
+        @include mobile-small {
+            padding-block: 90px 90px;
+        }
     }
 
     &__row {
         gap: 50px;
     }
 
-    &__row--1 {}
+    &__row--1 {
+        @include mobile {
+            flex-direction: column !important;
+        }
+    }
 
     &__column {}
 
     &__column--1 {
         width: 50%;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__promo {}
@@ -24,10 +44,22 @@
     &__title {
         margin-top: 6px;
         width: 80%;
+
+        @include mobile-small {
+            width: 100%;
+        }
     }
 
     &__description {
         margin-top: 25px;
+
+        @include mobile {
+            width: 90%;
+        }
+
+        @include mobile-small {
+            width: 100%;
+        }
     }
 
     &__description-list {
@@ -53,21 +85,50 @@
                 }
             }
         }
+
+        @include mobile-small {
+            width: 90%;
+        }
     }
 
     &__description-definition {
         margin: 12px 0 24px 60px;
         width: 440px;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            width: 60%;
+        }
+
+        @include mobile-small {
+            width: 70%;
+        }
     }
 
     &__column--2 {
         width: 50%;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
-    &__image {}
+    &__image {
+        @include mobile {
+            width: 75%;
+            margin-inline: auto;
+        }
+    }
 
     &__row--2 {
         margin-top: 90px;
+
+        @include mobile {
+            margin-top: 60px;
+        }
     }
 
     &__column--3 {
@@ -78,9 +139,37 @@
         margin-inline: auto;
         display: flex;
         gap: 30px;
+
+        @include tablet {
+            width: 65%;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include mobile-small {
+            width: 80%;
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
     }
 
-    &__feature-list-item {}
+    &__feature-list-item {
+        @include laptop {
+            width: 25%;
+        }
+
+        @include tablet {
+            width: calc(50% - 10px);
+        }
+
+        @include mobile-small {
+            width: 100%;
+        }
+    }
 
     &__feature {}
 }
@@ -95,6 +184,9 @@
     background-color: var(--color-white);
     align-items: center;
 
+    @include laptop {
+        width: 100%;
+    }
 
     &__icon-wrap {
         display: flex;
@@ -108,6 +200,7 @@
 
     &__title {
         text-align: center;
+        white-space: nowrap;
     }
 
     &__description {
