@@ -1,0 +1,64 @@
+@use "../../styles/index" as *;
+
+.offer {
+    background-color: var(--color-blue);
+
+    &__inner {}
+
+    &__row {
+        padding-block: 190px;
+    }
+
+    &__column {
+        width: 100%;
+    }
+
+    &__promo {
+        margin-inline: auto;
+    }
+
+    &__title {
+        color: var(--color-white) !important;
+        margin-top: 8px;
+        margin-inline: auto;
+    }
+
+    &__list {
+        margin-top: 30px;
+        display: flex;
+        gap: 20px;
+    }
+
+    &__list-item {}
+
+    &__product {
+        display: block;
+        transition: transform var(--transition);
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: scale(1.02);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: none;
+            }
+        }
+    }
+
+    &__product-image {
+        border-radius: 30px;
+    }
+
+    &__product-title {
+        color: var(--color-white) !important;
+        margin-top: 24px;
+        text-align: center;
+    }
+}

@@ -16,7 +16,7 @@ function SubscribeSection() {
                                     <input type="email" id="subscribeInputEmail" placeholder="Your Email Address" className="subscribe__input subscribe__input--email" />
                                 </label>
 
-                                // ! todo fix hover effect of email
+                                {/* todo fix hover effect of email */}
 
                                 <label htmlFor="subscribeInputEmail" className="subscribe__label subscribe__label--submit">
                                     <input type="submit" id="subscribeInputEmail" value="Subscribe" className="subscribe__input subscribe__input--submit button button--blue" />
