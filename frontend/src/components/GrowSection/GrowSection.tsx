@@ -6,6 +6,7 @@ import NutsPackageImage from "../../images/images/nuts-package.png"
 import AgriculturalImage from "../../images/icons/agricultural.svg"
 import OrganicProductsImage from "../../images/icons/organic-product.svg"
 import FreshVegetablesImage from "../../images/icons/fresh-vegetables.svg"
+import { Link } from "react-router-dom"
 
 function GrowSection() {
     return (
@@ -46,19 +47,9 @@ function GrowSection() {
                             <p className="grow__feature-description text">Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis</p>
                         </div>
 
-
-
-
-
-
                         <div className="grow__grid-column grow__grid-column--g">
                             <img src={NutsPackageImage} alt="Nuts Package" className="grow__image" width={743} height={990} />
                         </div>
-
-
-
-
-
 
                         <div className="grow__feature grow__grid-column grow__grid-column--d">
                             <img className="grow__feature-icon" src={AgriculturalImage} alt="Agricultural Services" width={61} height={62} />
@@ -87,13 +78,15 @@ function GrowSection() {
                 </div>
                 <div className="grow__row grow__row--3 row">
                     <div className="grow__column grow__column--2">
-                        <button className="grow__button button button--transparent">
-                            Explore More
-                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="9.5" cy="9.5" r="9.5" fill="#335B6B" />
-                                <path className="button__svg-arrow" d="M9.4769 6.12891L12.8714 9.19342L9.4769 12.2579M12.4 9.19342H5.5166" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </button>
+                        <Link to="/blog" className="grow__link">
+                            <button className="grow__button button button--transparent">
+                                Explore More
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="9.5" cy="9.5" r="9.5" fill="#335B6B" />
+                                    <path className="button__svg-arrow" d="M9.4769 6.12891L12.8714 9.19342L9.4769 12.2579M12.4 9.19342H5.5166" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
