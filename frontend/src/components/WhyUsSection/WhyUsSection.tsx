@@ -19,7 +19,7 @@ function WhyUsSection() {
                         <p className="whyus__description text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard  the 1500s, when an unknown</p>
 
                         <dl className="whyus__description-list">
-                            <dt className="whyus__description-term h6">
+                            <dt className="whyus__description-term">
                                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="9.5" cy="9.5" r="9.5" fill="#7EB693" />
                                     <circle cx="9.5" cy="9.5" r="5.5" fill="#ECECEC" />
@@ -29,7 +29,7 @@ function WhyUsSection() {
                             </dt>
                             <dd className="whyus__description-definition text">Simply dummy text of the printing and typesetting industry Lorem Ipsum</dd>
 
-                            <dt className="whyus__description-term h6">
+                            <dt className="whyus__description-term">
                                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="9.5" cy="9.5" r="9.5" fill="#7EB693" />
                                     <circle cx="9.5" cy="9.5" r="5.5" fill="#ECECEC" />
@@ -37,7 +37,7 @@ function WhyUsSection() {
 
                                 Increases resistance
                             </dt>
-                            <dd className="whyus__description-definition text">Simply dummy text of the printing and typesetting industry Lorem Ipsum</dd>
+                            <dd className="whyus__description-definition text">Filling, and temptingly healthy, our Biona Organic Granola with Wild Berries is just the thing</dd>
                         </dl>
                     </div>
 
@@ -52,7 +52,7 @@ function WhyUsSection() {
                             <li className="whyus__feature-list-item">
                                 <div className="whyus__feature feature">
                                     <div className="feature__icon-wrap">
-                                        <img src={ReturnPolicyIcon} alt="Return Policy" width={46} height={50} />
+                                        <img className="feature__icon" src={ReturnPolicyIcon} alt="Return Policy" width={46} height={50} />
                                     </div>
 
                                     <h6 className="feature__title h6">Return Policy</h6>
@@ -64,7 +64,7 @@ function WhyUsSection() {
                             <li className="whyus__feature-list-item">
                                 <div className="whyus__feature feature">
                                     <div className="feature__icon-wrap">
-                                        <img src={FreshIcon} alt="Fresh" width={45} height={48} />
+                                        <img className="feature__icon" src={FreshIcon} alt="Fresh" width={45} height={48} />
                                     </div>
 
                                     <h6 className="feature__title h6">100% Fresh</h6>
@@ -76,7 +76,7 @@ function WhyUsSection() {
                             <li className="whyus__feature-list-item">
                                 <div className="whyus__feature feature">
                                     <div className="feature__icon-wrap">
-                                        <img src={SupportIcon} alt="Support" width={44} height={47} />
+                                        <img className="feature__icon" src={SupportIcon} alt="Support" width={44} height={47} />
                                     </div>
 
                                     <h6 className="feature__title h6">Support 24/7</h6>
@@ -88,7 +88,7 @@ function WhyUsSection() {
                             <li className="whyus__feature-list-item">
                                 <div className="whyus__feature feature">
                                     <div className="feature__icon-wrap">
-                                        <img src={PaymentIcon} alt="Payment" width={51} height={44} />
+                                        <img className="feature__icon" src={PaymentIcon} alt="Payment" width={51} height={44} />
                                     </div>
 
                                     <h6 className="feature__title h6">Secured Payment</h6>
