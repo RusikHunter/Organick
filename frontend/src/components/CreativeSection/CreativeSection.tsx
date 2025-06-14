@@ -7,7 +7,7 @@ function CreativeSection() {
             <div className="creative__inner container">
                 <div className="creative__row row">
                     <div className="creative__column creative__column--1 column">
-                        <img src={PlateImage} alt="" className="creative__image" width={914} height={776} />
+                        <img src={PlateImage} alt="Plate with vegetables and fruits" className="creative__image" width={914} height={776} />
                     </div>
 
                     <div className="creative__column creative__column--2 column">
