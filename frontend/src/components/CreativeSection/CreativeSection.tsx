@@ -16,20 +16,16 @@ function CreativeSection() {
                         <h2 className="creative__title h2">We do Creative
                             Things for Success</h2>
 
-                        <p className="creative__description text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
+                        <p className="creative__description text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
 
-                            Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-
-                        <p className="creative__description text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
-
-                            Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                        <p className="creative__description text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
 
                         <ul className="creative__list">
-                            <li className="creative__list-item">Modern Agriculture
+                            <li className="creative__list-item h6">Modern Agriculture
                                 Equipment
                             </li>
 
-                            <li className="creative__list-item">No growth hormones are used</li>
+                            <li className="creative__list-item h6">No growth hormones are used</li>
                         </ul>
 
                         <button className="creative__button button button--blue">
