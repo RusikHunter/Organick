@@ -10,9 +10,9 @@ function Header() {
             <div className="header__inner container">
                 <div className="header__row row">
                     <div className="header__column header__column--1 column">
-                        <a href="#" className="header__logo-link">
+                        <Link to="/" className="header__logo-link">
                             <img className="header__logo" src={Logo} alt="Organick" width={199} height={54} />
-                        </a>
+                        </Link>
                     </div>
                     <div className="header__column header__column--2 column">
                         <nav className="header__navigation">
