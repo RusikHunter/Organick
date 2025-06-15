@@ -1,15 +1,42 @@
 import FruitsMovie from "../../assets/fruits.mp4"
 import "./VideoSection.scss"
+import { useState, useRef } from "react"
 
 function VideoSection() {
+    const [isPlaying, setIsPlaying] = useState<boolean>(false)
+    const contentWrapRef = useRef<HTMLDivElement | null>(null)
+    const videoPlayerRef = useRef<HTMLVideoElement | null>(null)
+
+    const handleClick = (): void => {
+        setIsPlaying(prev => {
+            const newState = !prev
+
+            if (!isPlaying) {
+                videoPlayerRef.current?.play()
+
+                if (contentWrapRef.current) {
+                    contentWrapRef.current.style.display = "none"
+                }
+            } else {
+                videoPlayerRef.current?.pause()
+
+                if (contentWrapRef.current) {
+                    contentWrapRef.current.style.display = "block"
+                }
+            }
+
+            return newState
+        })
+    }
+
     return (
-        <section className="video">
+        <section className="video" onClick={handleClick}>
             <div className="video__inner container">
                 <div className="video__row row">
                     <div className="video__column column">
-                        <video src={FruitsMovie} className="video__movie"></video>
+                        <video src={FruitsMovie} className="video__movie" ref={videoPlayerRef}></video>
 
-                        <div className="video__content-wrap">
+                        <div className="video__content-wrap" ref={contentWrapRef}>
                             <span className="video__promo promo">Organic Only</span>
 
                             <h2 className="video__title h2">Everyday Fresh & Clean</h2>

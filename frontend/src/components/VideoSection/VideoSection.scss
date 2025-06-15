@@ -1,6 +1,7 @@
 @use "../../styles/index" as *;
 
 .video {
+    cursor: pointer;
 
     &__inner {
         max-width: 100% !important;
@@ -62,6 +63,12 @@
         @include mobile-small {
             top: 25%;
         }
+    }
+
+    &__promo,
+    &__title,
+    &__description {
+        user-select: none;
     }
 
     &__promo {
