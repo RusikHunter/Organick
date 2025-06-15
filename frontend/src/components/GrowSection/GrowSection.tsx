@@ -78,7 +78,7 @@ function GrowSection() {
                 </div>
                 <div className="grow__row grow__row--3 row">
                     <div className="grow__column grow__column--2">
-                        <Link to="/blog" className="grow__link">
+                        <Link to="/quality" className="grow__link">
                             <button className="grow__button button button--transparent">
                                 Explore More
                                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
