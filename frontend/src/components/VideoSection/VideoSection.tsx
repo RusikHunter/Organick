@@ -1,4 +1,5 @@
 import FruitsMovie from "../../assets/fruits.mp4"
+import "./VideoSection.scss"
 
 function VideoSection() {
     return (
@@ -6,7 +7,7 @@ function VideoSection() {
             <div className="video__inner container">
                 <div className="video__row row">
                     <div className="video__column column">
-                        <video src={FruitsMovie} className="video__movie" controls></video>
+                        <video src={FruitsMovie} className="video__movie"></video>
 
                         <span className="video__promo promo">Organic Only</span>
 
