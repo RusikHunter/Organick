@@ -1,10 +1,10 @@
-import "./IntroBlockPortfolioItem"
+import "./IntroBlockPortfolioItem.scss"
 import type { PortFolioItem } from "../../assets/portfolio-items"
 
 function IntroBlockPortfolioItem(content: PortFolioItem) {
     return (
-        <div className="intro__column intro__column--portfolio-item portfolio-item column">
-            <div className="portfolio-item__wrap">
+        <div className="intro__column intro__column--portfolio-item column">
+            <div className="portfolio-item">
                 <div className="portfolio-item__text-content">
                     <h1 className="portfolio-item__title h1">{content.title}</h1>
 
@@ -14,27 +14,27 @@ function IntroBlockPortfolioItem(content: PortFolioItem) {
                 <div className="portfolio-item__data">
                     <dl className="portfolio-item__description-list">
                         <div className="portfolio-item__description-list-pair">
-                            <dt className="portfolio-item__description-term">Date</dt>
+                            <dt className="portfolio-item__description-term h6">Date</dt>
 
-                            <dd className="portfolio-item__description-definition">{content.date}</dd>
+                            <dd className="portfolio-item__description-definition text">{content.date}</dd>
                         </div>
 
                         <div className="portfolio-item__description-list-pair">
-                            <dt className="portfolio-item__description-term">Client</dt>
+                            <dt className="portfolio-item__description-term h6">Client</dt>
 
-                            <dd className="portfolio-item__description-definition">{content.client}</dd>
+                            <dd className="portfolio-item__description-definition text">{content.client}</dd>
                         </div>
 
                         <div className="portfolio-item__description-list-pair">
-                            <dt className="portfolio-item__description-term">Category</dt>
+                            <dt className="portfolio-item__description-term h6">Category</dt>
 
-                            <dd className="portfolio-item__description-definition">{content.category}</dd>
+                            <dd className="portfolio-item__description-definition text">{content.category}</dd>
                         </div>
 
                         <div className="portfolio-item__description-list-pair">
-                            <dt className="portfolio-item__description-term">Service</dt>
+                            <dt className="portfolio-item__description-term h6">Service</dt>
 
-                            <dd className="portfolio-item__description-definition">{content.service}</dd>
+                            <dd className="portfolio-item__description-definition text">{content.service}</dd>
                         </div>
                     </dl>
                 </div>

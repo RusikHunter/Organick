@@ -1,0 +1,62 @@
+@use "../../styles/index" as *;
+
+.intro__column--portfolio-item {
+    width: 100%;
+}
+
+.portfolio-item {
+
+    background-color: var(--color-white);
+    border-radius: 30px;
+    display: flex;
+    width: 100%;
+    box-shadow: 0 14px 36px 0 rgba(204, 204, 204, 0.25);
+    position: relative;
+    top: 470px;
+
+    &__text-content {
+        width: 65%;
+        padding-block: 95px;
+        padding-left: 80px;
+    }
+
+    &__title {}
+
+    &__description {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    &__data {
+        width: 35%;
+        padding-block: 95px;
+        padding-inline: 110px 80px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: var(--color-lightgray);
+    }
+
+    &__description-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    &__description-list-pair {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__description-term {
+        width: 120px;
+        position: relative;
+
+        &::after {
+            content: ":";
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    &__description-definition {}
+}
