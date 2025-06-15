@@ -19,8 +19,12 @@ import ChangelogPage from './pages/ChangelogPage/ChangelogPage'
 import ProtectedPage from './pages/ProtectedPage/ProtectedPage'
 import SubscribeSection from './components/SubscribeSection/SubscribeSection'
 import Footer from './components/Footer/Footer'
+import { useSelector } from 'react-redux'
+import type { RootState } from "./store/index"
 
 function App() {
+    const currentPage = useSelector((state: RootState) => state.client.currentPage)
+
     return (
         <Router>
             <div className="app">
@@ -45,7 +49,7 @@ function App() {
                         <Route path="/changelog" element={<ChangelogPage />} />
                         <Route path="/protected" element={<ProtectedPage />} />
                     </Routes>
-                    <SubscribeSection />
+                    {currentPage !== "services" && currentPage !== "notfound" && <SubscribeSection />}
                 </main>
                 <Footer />
             </div>
