@@ -12,15 +12,17 @@ type PortfolioItemCardProps = {
 function PortfolioItemCard({ id, title, type, backgroundImageURL, className }: PortfolioItemCardProps) {
     return (
         <Link to={`/portfolio/${id}`} className={`${className} portfolio-item-card`} >
-            <img src={backgroundImageURL} alt={title} className="portfolio-item-card__image" width={451} height={421} />
+            <div className="portfolio-item-card__image-wrap">
+                <img src={backgroundImageURL} alt={title} className="portfolio-item-card__image" width={451} height={421} />
 
-            <div className="portfolio-item-card__hover-decoration">
-                <div className="portfolio-item-card__hover-decoration-background"></div>
+                <div className="portfolio-item-card__hover-decoration">
+                    <div className="portfolio-item-card__hover-decoration-background"></div>
 
-                <svg className="portfolio-item-card__hover-decoration-svg" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="23" cy="23" r="23" fill="currentColor" />
-                    <path d="M1 12L6.5 6.5L1 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" transform="translate(19.5 17)" />
-                </svg>
+                    <svg className="portfolio-item-card__hover-decoration-svg" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="23" fill="currentColor" />
+                        <path d="M1 12L6.5 6.5L1 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" transform="translate(19.5 17)" />
+                    </svg>
+                </div>
             </div>
 
             <h6 className="portfolio-item-card__title h6">{title}</h6>
