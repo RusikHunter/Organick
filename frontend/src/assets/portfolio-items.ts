@@ -13,7 +13,7 @@ export interface PortFolioItem {
     category: string
     service: string
     type: string
-    image: string
+    imageURL: string
 }
 
 const portfolioItems: PortFolioItem[] = [
@@ -25,7 +25,7 @@ const portfolioItems: PortFolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Fruits",
-        image: GreenAndTastyLemonImage
+        imageURL: GreenAndTastyLemonImage
     },
     {
         id: 1,
@@ -35,7 +35,7 @@ const portfolioItems: PortFolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Farmer",
-        image: OrganicCarrotImage
+        imageURL: OrganicCarrotImage
     },
     {
         id: 2,
@@ -45,7 +45,7 @@ const portfolioItems: PortFolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Leaf",
-        image: OrganicBetelLeafImage
+        imageURL: OrganicBetelLeafImage
     },
     {
         id: 3,
@@ -55,7 +55,7 @@ const portfolioItems: PortFolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Fruits",
-        image: NaturalTommatoImage
+        imageURL: NaturalTommatoImage
     },
     {
         id: 4,
@@ -65,7 +65,7 @@ const portfolioItems: PortFolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Farmer",
-        image: BlackRaspberryImage
+        imageURL: BlackRaspberryImage
     },
     {
         id: 5,
@@ -75,7 +75,7 @@ const portfolioItems: PortFolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Farmer",
-        image: HoneyOrangeImage
+        imageURL: HoneyOrangeImage
     }
 ]
 
