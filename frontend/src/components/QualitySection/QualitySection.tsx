@@ -26,9 +26,9 @@ function QualitySection() {
                                 <img className="quality__feature-image" src={PlantingImage} alt="Planting" width={379} height={252} />
 
                                 <div className="quality__feature-content">
-                                    <h6 className="quality__feature-title">Why Organic</h6>
+                                    <h6 className="quality__feature-title h6">Why Organic</h6>
 
-                                    <p className="quality__feature-description">Sed ut perspiciatis unde omnis iste natus error sit voluptat. page editors now use Lorem Ipsum as their default model text, and auncover.</p>
+                                    <p className="quality__feature-description text">Sed ut perspiciatis unde omnis iste natus error sit voluptat. page editors now use Lorem Ipsum as their default model text, and auncover.</p>
                                 </div>
                             </div>
 
@@ -36,30 +36,28 @@ function QualitySection() {
                                 <img className="quality__feature-image" src={PlantImage} alt="Plant" width={379} height={252} />
 
                                 <div className="quality__feature-content">
-                                    <h6 className="quality__feature-title">Speciality Produce</h6>
+                                    <h6 className="quality__feature-title h6">Speciality Produce</h6>
 
-                                    <p className="quality__feature-description">Sed ut perspiciatis unde omnis iste natus error sit voluptat. page editors now use Lorem Ipsum as their default model text, and auncover.</p>
+                                    <p className="quality__feature-description text">Sed ut perspiciatis unde omnis iste natus error sit voluptat. page editors now use Lorem Ipsum as their default model text, and auncover.</p>
                                 </div>
                             </div>
                         </div>
 
                         <h4 className="quality__subtitle h4">We farm your land</h4>
 
-                        <p className="quality__description">It is a long established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                    </div>
-                </div>
+                        <p className="quality__description text">It is a long established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
 
-                <div className="quality__row quality__row--3 row">
-                    <div className="quality__advantages">
-                        <span className="quality__advantage">
-                            <span className="quality__advantage-circle">01</span>
-                            <span className="quality__advantage-text">Best quality support</span>
-                        </span>
+                        <div className="quality__advantages">
+                            <span className="quality__advantage">
+                                <span className="quality__advantage-circle h6">01</span>
+                                <span className="quality__advantage-text h6">Best quality support</span>
+                            </span>
 
-                        <span className="quality__advantage">
-                            <span className="quality__advantage-circle">02</span>
-                            <span className="quality__advantage-text">Money back guarantee</span>
-                        </span>
+                            <span className="quality__advantage">
+                                <span className="quality__advantage-circle h6">02</span>
+                                <span className="quality__advantage-text h6">Money back guarantee</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
