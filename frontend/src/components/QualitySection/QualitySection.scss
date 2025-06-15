@@ -1,7 +1,25 @@
+@use "../../styles/index" as *;
+
 .quality {
 
     &__inner {
         padding-block: 180px 130px;
+
+        @include laptop {
+            padding-block: 150px 110px;
+        }
+
+        @include tablet {
+            padding-block: 120px 90px;
+        }
+
+        @include mobile {
+            padding-block: 90px 60px;
+        }
+
+        @include mobile-small {
+            padding-block: 70px 40px;
+        }
     }
 
     &__row {}
@@ -20,6 +38,14 @@
 
     &__column--2 {
         padding-inline: 230px;
+
+        @include laptop {
+            padding-inline: 10%;
+        }
+
+        @include tablet {
+            padding-inline: 0;
+        }
     }
 
     &__description {
@@ -44,16 +70,43 @@
         &:last-child {
             flex-direction: row-reverse;
         }
+
+        @include mobile {
+            width: 80%;
+            flex-direction: column;
+            margin-inline: auto;
+
+            &:last-child {
+                flex-direction: column;
+            }
+        }
+
+        @include mobile-small {
+            width: 100%;
+        }
     }
 
     &__feature-image {
         border-radius: 20px;
+
+        @include mobile {
+            width: 100%;
+            margin-inline: auto;
+        }
     }
 
     &__feature-content {
         border-radius: 20px;
         padding: 60px 45px;
         background-color: var(--color-lightgray);
+
+        @include mobile {
+            padding: 35px 25px;
+        }
+
+        @include mobile-small {
+            padding: 30px 20px;
+        }
     }
 
     &__feature-title {}
@@ -68,6 +121,11 @@
         margin-top: 60px;
         display: flex;
         gap: 30px;
+
+        @include mobile {
+            flex-direction: column;
+            margin-inline: auto;
+        }
     }
 
     &__advantage {
@@ -78,6 +136,10 @@
         padding: 15px 17px;
         background-color: var(--color-lightgray);
         border-radius: 100px;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__advantage-circle {
@@ -89,6 +151,11 @@
         background-color: var(--color-green);
         color: var(--color-white) !important;
         border-radius: 50%;
+
+        @include mobile-small {
+            width: 50px;
+            height: 50px;
+        }
     }
 
     &__advantage-text {}
