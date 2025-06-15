@@ -1,0 +1,32 @@
+.farm {
+
+    &__inner {
+        padding-block: 285px 120px;
+    }
+
+    &__row {}
+
+    &__column {
+        width: 940px;
+        margin-inline: auto;
+    }
+
+    &__title {}
+
+    &__title--last {
+        margin-top: 30px;
+    }
+
+    &__description {
+        margin-top: 25px;
+    }
+
+    &__image {
+        margin-top: 40px;
+    }
+
+    &__image-title {
+        margin-inline: auto;
+        margin-block: 20px;
+    }
+}
