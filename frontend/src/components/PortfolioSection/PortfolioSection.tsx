@@ -13,10 +13,11 @@ function PortfolioSection() {
             <div className="portfolio__inner container">
                 <div className="portfolio__row row">
                     <div className="portfolio__column column">
-                        <div className="portfolio__item-cards">
+                        <div className="portfolio__item-cards-wrap">
                             {portfolioItems.map((item, index) => {
                                 return (
                                     <PortfolioItemCard
+                                        className="portfolio__item-card"
                                         key={index}
                                         id={item.id}
                                         title={item.title}

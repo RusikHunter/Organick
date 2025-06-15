@@ -1,0 +1,21 @@
+.portfolio {
+
+    &__inner {
+        padding-block: 150px 140px;
+    }
+
+    &__row {}
+
+    &__column {}
+
+    &__item-cards-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 45px;
+        column-gap: 24px;
+    }
+
+    &__item-card {
+        width: calc(33% - 12px);
+    }
+}

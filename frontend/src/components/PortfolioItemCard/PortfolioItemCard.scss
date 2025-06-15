@@ -1,0 +1,76 @@
+@use "../../styles/index" as *;
+
+.portfolio-item-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include desktop-screen {
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                .portfolio-item-card__hover-decoration {
+                    opacity: 1;
+                }
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                .portfolio-item-card__hover-decoration {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &__hover-decoration {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5%;
+        width: 90%;
+        height: 75%;
+        opacity: 0;
+        transition: opacity var(--transition);
+    }
+
+    &__hover-decoration-background {
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-white);
+        border-radius: 30px;
+        opacity: 0.8;
+    }
+
+    &__hover-decoration-svg {
+        position: absolute;
+        color: var(--color-green);
+        opacity: 1;
+        z-index: 9;
+
+        & path {
+            color: var(--color-white);
+        }
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    &__title {
+        margin-top: 20px;
+    }
+
+    &__type {
+        @include fluid-text(22, 16);
+        @include font(var(--third-family), 400, 1);
+        color: var(--color-green);
+        margin-top: 5px;
+    }
+}
