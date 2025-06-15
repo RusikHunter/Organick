@@ -8,6 +8,7 @@ import HoneyOrangeImage from "../images/images/honey-orange.png"
 export interface PortFolioItem {
     id: number,
     title: string
+    description: string
     date: string
     client: string
     category: string
@@ -20,6 +21,7 @@ const portfolioItems: PortFolioItem[] = [
     {
         id: 0,
         title: "Green & Tasty Lemon",
+        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
         date: "December 5, 2022",
         client: "John Davis",
         category: "Agriculture, Eco",
@@ -30,6 +32,7 @@ const portfolioItems: PortFolioItem[] = [
     {
         id: 1,
         title: "Organic Carrot",
+        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
         date: "June 29, 2023",
         client: "Kevin Martin",
         category: "Agriculture, Eco",
@@ -40,6 +43,7 @@ const portfolioItems: PortFolioItem[] = [
     {
         id: 2,
         title: "Organic Betel Leaf",
+        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
         date: "September 13, 2022",
         client: "Adnrew McTavish",
         category: "Agriculture, Eco",
@@ -50,6 +54,7 @@ const portfolioItems: PortFolioItem[] = [
     {
         id: 3,
         title: "Natural Tommato",
+        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
         date: "May 27, 2024",
         client: "Adnrew McTavish",
         category: "Agriculture, Eco",
@@ -60,6 +65,7 @@ const portfolioItems: PortFolioItem[] = [
     {
         id: 4,
         title: "Black Raspberry",
+        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
         date: "December 4, 2022",
         client: "Kevin Martin",
         category: "Agriculture, Eco",
@@ -70,6 +76,7 @@ const portfolioItems: PortFolioItem[] = [
     {
         id: 5,
         title: "Honey Orange",
+        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
         date: "July 3, 2025",
         client: "John Davis",
         category: "Agriculture, Eco",
