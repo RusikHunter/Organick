@@ -1,7 +1,25 @@
+@use "../../styles/index" as *;
+
 .farm {
 
     &__inner {
         padding-block: 285px 120px;
+
+        @include laptop {
+            padding-block: 285px 100px;
+        }
+
+        @include tablet {
+            padding-block: 285px 90px;
+        }
+
+        @include mobile {
+            padding-block: 180px 80px;
+        }
+
+        @include mobile-small {
+            padding-block: 150px 70px;
+        }
     }
 
     &__row {}
@@ -15,6 +33,10 @@
 
     &__title--last {
         margin-top: 30px;
+
+        @include mobile-small {
+            margin-top: 20px;
+        }
     }
 
     &__description {
