@@ -1,0 +1,63 @@
+@use "../../styles/index" as *;
+
+.portfolio {
+
+    &__inner {
+        padding-block: 150px 140px;
+
+        @include laptop {
+            padding-block: 120px 110px;
+        }
+
+        @include tablet {
+            padding-block: 100px 90px;
+        }
+
+        @include mobile {
+            padding-block: 80px 60px;
+        }
+
+        @include mobile-small {
+            padding-block: 60px 40px;
+        }
+    }
+
+    &__row {}
+
+    &__column {}
+
+    &__item-cards-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 45px;
+        column-gap: 24px;
+
+        @include laptop {
+            column-gap: 2%;
+        }
+
+        @include mobile {
+            row-gap: 30px;
+        }
+
+        @include mobile-small {
+            column-gap: 0;
+        }
+    }
+
+    &__item-card {
+        width: calc(33% - 12px);
+
+        @include laptop {
+            width: 32%;
+        }
+
+        @include mobile {
+            width: 49%;
+        }
+
+        @include mobile-small {
+            width: 100%;
+        }
+    }
+}

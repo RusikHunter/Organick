@@ -1,0 +1,125 @@
+@use "../../styles/index" as *;
+
+.video {
+    cursor: pointer;
+
+    &__inner {
+        max-width: 100% !important;
+        margin-bottom: 140px;
+
+        @include laptop {
+            padding-inline: 0 !important;
+        }
+
+        @include tablet {
+            margin-bottom: 110px;
+        }
+
+        @include mobile {
+            margin-bottom: 70px;
+        }
+
+        @include mobile-small {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__row {}
+
+    &__column {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    &__movie {
+        width: 100%;
+        z-index: -1;
+    }
+
+    &__content-wrap {
+        width: 100%;
+        position: absolute;
+        top: 180px;
+        z-index: 9;
+
+        @include laptop {
+            top: 140px;
+        }
+
+        @include tablet {
+            top: 70px;
+        }
+
+        @include mobile {
+            top: 30px;
+            transform: scale(0.6);
+        }
+
+        @media (max-width: 640px) {
+            top: -20px;
+        }
+
+        @include mobile-small {
+            top: 25%;
+        }
+    }
+
+    &__promo,
+    &__title,
+    &__description {
+        user-select: none;
+    }
+
+    &__promo {
+        display: block;
+        text-align: center;
+
+        @include mobile-small {
+            display: none;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-top: 8px;
+
+        @include mobile-small {
+            display: none;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        width: 670px;
+        margin-inline: auto;
+        margin-top: 24px;
+
+        @include mobile {
+            width: 90%;
+        }
+
+        @include mobile-small {
+            display: none;
+        }
+    }
+
+    &__button {
+        display: block;
+        width: 107px;
+        height: 107px;
+        background-color: var(--color-green);
+        border-radius: 50%;
+        color: var(--color-white);
+        margin-inline: auto;
+        margin-top: 50px;
+
+        @include tablet {
+            margin-top: 30px;
+        }
+
+        @include mobile-small {
+            margin-top: 0;
+        }
+    }
+}

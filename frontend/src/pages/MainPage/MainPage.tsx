@@ -7,8 +7,11 @@ import ReviewsSection from "../../components/ReviewsSection/ReviewsSection"
 import EcoSection from "../../components/EcoSection/EcoSection"
 import CategoriesListSection from "../../components/CategoriesListSection/CategoriesListSection"
 import MoreNewsSection from "../../components/MoreNewsSection/MoreNewsSection"
+import { useSetCurrentPage } from "../../hooks/useSetCurrentPage"
 
 function MainPage() {
+    useSetCurrentPage("main")
+
     return (
         <>
             <IntroBlock content={<IntroBlockNaturalFood />} backgroundImageURL={NaturalFoodImage} />
