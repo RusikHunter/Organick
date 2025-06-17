@@ -3,6 +3,7 @@ import IntroBlockNaturalFood from "../../components/IntroBlockNaturalFood/IntroB
 import NaturalFoodImage from "../../images/images/natural-food.png"
 import CouponsSection from "../../components/CouponsSection/CouponsSection"
 import BelieveSection from "../../components/BelieveSection/BelieveSection"
+import OurProductsSection from "../../components/OurProductsSection/OurProductsSection"
 import ReviewsSection from "../../components/ReviewsSection/ReviewsSection"
 import EcoSection from "../../components/EcoSection/EcoSection"
 import CategoriesListSection from "../../components/CategoriesListSection/CategoriesListSection"
@@ -17,6 +18,7 @@ function MainPage() {
             <IntroBlock content={<IntroBlockNaturalFood />} backgroundImageURL={NaturalFoodImage} />
             <CouponsSection />
             <BelieveSection />
+            <OurProductsSection />
             <ReviewsSection />
             <EcoSection />
             <CategoriesListSection />

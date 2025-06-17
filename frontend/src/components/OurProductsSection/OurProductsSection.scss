@@ -1,0 +1,54 @@
+@use "../../styles/index" as *;
+
+.our-products {
+
+    &__inner {
+        padding-block: 175px 200px;
+
+        @include laptop {
+            padding-block: 150px 180px;
+        }
+
+        @include tablet {
+            padding-block: 130px 160px;
+        }
+
+        @include mobile {
+            padding-block: 110px 140px;
+        }
+
+        @include mobile-small {
+            padding-block: 80px 100px;
+        }
+    }
+
+    &__row {}
+
+    &__row--1 {}
+
+    &__column {
+        width: 100%;
+    }
+
+    &__column--1 {}
+
+    &__promo {
+        margin-inline: auto;
+    }
+
+    &__title {
+        padding-block: 8px 40px;
+        margin-inline: auto;
+
+        @include mobile-small {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__link {
+        margin-top: 120px;
+        margin-inline: auto;
+    }
+
+    &__button--more {}
+}
