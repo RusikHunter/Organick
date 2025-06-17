@@ -70,7 +70,7 @@
 
     &__column--3,
     &__column--4 {
-        width: 50%;
+        width: calc(50% - 23px);
 
         @include mobile {
             width: 100%;
@@ -139,6 +139,10 @@
             position: static;
             top: 0;
         }
+
+        @include mobile-small {
+            padding: 26px 30px;
+        }
     }
 
     &__username {
@@ -159,6 +163,12 @@
     }
 
     &__news-text {}
+
+    &__link {
+        @include tablet {
+            width: 100%;
+        }
+    }
 
     &__button--read {
         margin-top: 15px;
