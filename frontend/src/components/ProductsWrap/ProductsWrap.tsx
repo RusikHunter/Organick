@@ -8,6 +8,10 @@ function ProductsWrap() {
             <ProductCard />
             <ProductCard />
             <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
         </article>
     )
 }

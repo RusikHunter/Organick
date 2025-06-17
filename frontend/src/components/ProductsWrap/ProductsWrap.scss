@@ -1,5 +1,19 @@
+@use "../../styles/index" as *;
+
 .products-wrap {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+
+    @include tablet {
+        gap: 18px;
+    }
+
+    @include mobile {
+        gap: 16px;
+    }
+
+    @include mobile-small {
+        gap: 12px;
+    }
 }
