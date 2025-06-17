@@ -24,7 +24,7 @@ function MainPage() {
             <OrganicSection />
             <EcoSection />
             <CategoriesListSection />
-            <MoreNewsSection />
+            {/* <MoreNewsSection /> */}
         </>
     )
 }

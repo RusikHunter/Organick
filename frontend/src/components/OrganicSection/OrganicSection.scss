@@ -5,12 +5,34 @@
 
     &__inner {
         padding-block: 200px;
+
+        @include laptop {
+            padding-block: 180px;
+        }
+
+        @include tablet {
+            padding-block: 150px;
+        }
+
+        @include mobile {
+            padding-block: 120px;
+        }
+
+        @include mobile-small {
+            padding-block: 90px;
+        }
     }
 
     &__row {}
 
     &__row--1 {
         padding-bottom: 50px;
+
+        @include mobile {
+            padding-bottom: 30px;
+            flex-direction: column !important;
+            gap: 30px;
+        }
     }
 
     &__column {}
