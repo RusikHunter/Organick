@@ -22,7 +22,7 @@ function OurProductsSection() {
 
                 <div className="our-products__row our-products__row--3 row">
                     <div className="our-products__column our-products__column--3 column">
-                        <Link to="/shop" className="our-products__link">
+                        <Link to="/shop" className="our-products__link" tabIndex={-1}>
                             <button className="our-products__button our-products__button--more button button--blue">
                                 Load More
 

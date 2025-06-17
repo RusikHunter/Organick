@@ -1,0 +1,34 @@
+@use "../../styles/index" as *;
+
+.organic {
+    background-color: var(--color-blue);
+
+    &__inner {
+        padding-block: 200px;
+    }
+
+    &__row {}
+
+    &__row--1 {
+        padding-bottom: 50px;
+    }
+
+    &__column {}
+
+    &__column--1 {}
+
+    &__promo {}
+
+    &__title {
+        color: var(--color-white) !important;
+        margin-top: 8px;
+    }
+
+    &__column--2 {
+        justify-content: end;
+    }
+
+    &__row--2 {}
+
+    &__column--3 {}
+}
