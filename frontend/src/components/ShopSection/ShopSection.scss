@@ -1,0 +1,28 @@
+@use "../../styles/index" as *;
+
+.shop {
+
+    &__inner {
+        padding-block: 90px 140px;
+
+        @include laptop {
+            padding-block: 80px 120px;
+        }
+
+        @include tablet {
+            padding-block: 70px 100px;
+        }
+
+        @include mobile {
+            padding-block: 60px 90px;
+        }
+
+        @include mobile-small {
+            padding-block: 40px 60px;
+        }
+    }
+
+    &__row {}
+
+    &__column {}
+}
