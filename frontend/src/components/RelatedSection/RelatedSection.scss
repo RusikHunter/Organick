@@ -1,0 +1,45 @@
+@use "../../styles/index" as *;
+
+.related {
+
+    &__inner {
+        padding-block: 140px;
+
+        @include laptop {
+            padding-block: 110px;
+        }
+
+        @include tablet {
+            padding-block: 80px;
+        }
+
+        @include mobile {
+            padding-block: 60px;
+        }
+
+        @include mobile-small {
+            padding-block: 40px;
+        }
+    }
+
+    &__row {}
+
+    &__row--1 {}
+
+    &__row--2 {
+        padding-top: 40px;
+
+        @include mobile {
+            padding-top: 30px;
+        }
+    }
+
+    &__column {
+        width: 100%;
+    }
+
+    &__title {
+        margin-inline: auto;
+        text-align: center;
+    }
+}
