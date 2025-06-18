@@ -13,7 +13,7 @@ function ProductItemSection() {
                     </div>
 
                     <div className="product-item__column product-item__column--2 column">
-                        <h3 className="product-item__title h3"></h3>
+                        <h3 className="product-item__title h3">Health Pistachios</h3>
 
                         <div className="product-item__rate">
                             <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,9 +38,9 @@ function ProductItemSection() {
                         </div>
 
                         <div className="product-item__price-wrap">
-                            <span className="product-card__price--sale"><s>$20.00</s></span>
+                            <span className="product-item__price--sale"><s>$20.00</s></span>
 
-                            <span className="product-card__price">$13.00</span>
+                            <span className="product-item__price h6">$13.00</span>
                         </div>
 
                         <p className="product-item__description text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
@@ -67,8 +67,12 @@ function ProductItemSection() {
                 <div className="product-item__row product-item__row--2 row">
                     <div className="product-item__column product-item__column--3 column">
                         <div className="product-item__switch-wrap">
-                            <button className="product-item__button product-item__button--description button">Product Description</button>
-                            <button className="product-item__button product-item__button--additional button">Additional Info</button>
+                            <button className="product-item__button product-item__button--description">
+                                Product Description
+                            </button>
+                            <button className="product-item__button product-item__button--additional product-item__button--active">
+                                Additional Info
+                            </button>
                         </div>
 
                         <p className="product-item__info text">
