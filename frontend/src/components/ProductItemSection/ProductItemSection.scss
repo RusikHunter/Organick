@@ -4,17 +4,49 @@
 
     &__inner {
         padding-top: 130px;
+
+        @include laptop {
+            padding-top: 110px;
+        }
+
+        @include tablet {
+            padding-top: 90px;
+        }
+
+        @include mobile {
+            padding-top: 70px;
+        }
+
+        @include mobile-small {
+            padding-top: 50px;
+        }
     }
 
     &__row {}
 
-    &__row--1 {}
+    &__row--1 {
+        @include laptop {
+            gap: 5%;
+        }
+
+        @include mobile-small {
+            flex-direction: column !important;
+        }
+    }
 
     &__column {}
 
     &__column--1 {
         width: 48%;
         position: relative;
+
+        @include laptop {
+            width: 50%;
+        }
+
+        @include mobile-small {
+            width: 100%;
+        }
     }
 
     &__category {
@@ -34,10 +66,26 @@
 
     &__column--2 {
         width: 52%;
+
+        @include laptop {
+            width: 55%;
+        }
+
+        @include mobile-small {
+            width: 100%;
+        }
     }
 
     &__title {
         padding-top: 105px;
+
+        @include laptop {
+            padding-top: 80px;
+        }
+
+        @include mobile {
+            padding-top: 40px;
+        }
     }
 
     &__rate {
@@ -65,12 +113,28 @@
 
     &__form {
         margin-top: 35px;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @include mobile {
+            margin-top: 25px;
+        }
     }
 
     &__label {
         @include fluid-text(20, 16);
         @include font(var(--font-family), 700, 1);
         color: var(--color-blue);
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__label--count {}
@@ -85,12 +149,21 @@
         margin-inline: 20px;
         color: var(--color-blue);
         text-align: center;
+
+        @include mobile {
+            margin-inline: 0;
+            width: 220px;
+        }
     }
 
     &__input--submit {}
 
     &__row--2 {
         margin-top: 90px;
+
+        @include mobile {
+            margin-top: 50px;
+        }
     }
 
     &__column--3 {
@@ -102,6 +175,12 @@
         margin-inline: auto;
         gap: 20px;
         width: 690px;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
     }
 
     &__button {
@@ -129,6 +208,14 @@
                 background-color: var(--color-gray-alt);
             }
         }
+
+        @include mobile {
+            width: 80%;
+        }
+
+        @include mobile-small {
+            width: 90%;
+        }
     }
 
     &__button--description {}
@@ -155,6 +242,14 @@
                 background-color: var(--color-blue) !important;
             }
         }
+
+        @include mobile {
+            width: 80%;
+        }
+
+        @include mobile-small {
+            width: 90%;
+        }
     }
 
     &__info {
@@ -162,5 +257,13 @@
         margin-top: 25px;
         margin-inline: auto;
         text-align: center;
+
+        @include laptop {
+            width: 80%;
+        }
+
+        @include mobile-small {
+            width: 90%;
+        }
     }
 }
