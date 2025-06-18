@@ -1,7 +1,15 @@
 import "./ProductItemSection.scss"
 import TEMPNUTS from "../../images/images/TEMP-NUTS.png"
+import { useState } from "react"
 
 function ProductItemSection() {
+    const [activeSide, setActiveSide] = useState<'left' | 'right'>('left')
+    const [productCount, setProductCount] = useState<string>('0')
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setProductCount(e.target.value)
+    }
+
     return (
         <section className="product-item">
             <div className="product-item__inner container">
@@ -49,7 +57,13 @@ function ProductItemSection() {
                             <label htmlFor="productItemInputCount" className="product-item__label product-item__label--count">
                                 Quantity:
 
-                                <input type="number" className="product-item__input product-item__input--count" id="productItemInputCount" />
+                                <input
+                                    type="number"
+                                    className="product-item__input product-item__input--count"
+                                    id="productItemInputCount"
+                                    value={productCount}
+                                    onChange={handleChange}
+                                />
                             </label>
 
                             <button type="submit" className="product-item__input product-item__input--submit button button--blue">
@@ -67,16 +81,28 @@ function ProductItemSection() {
                 <div className="product-item__row product-item__row--2 row">
                     <div className="product-item__column product-item__column--3 column">
                         <div className="product-item__switch-wrap">
-                            <button className="product-item__button product-item__button--description">
+                            <button
+                                className={`product-item__button product-item__button--description${activeSide === 'left' ? ` product-item__button--active` : ``}`}
+                                onClick={() => {
+                                    setActiveSide('left')
+                                }}
+                            >
                                 Product Description
                             </button>
-                            <button className="product-item__button product-item__button--additional product-item__button--active">
+                            <button
+                                className={`product-item__button product-item__button--additional${activeSide === 'right' ? ` product-item__button--active` : ``}`}
+                                onClick={() => {
+                                    setActiveSide('right')
+                                }}
+                            >
                                 Additional Info
                             </button>
                         </div>
 
                         <p className="product-item__info text">
-                            Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.
+                            {activeSide === 'left'
+                                ? 'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.'
+                                : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam voluptatem ex nobis adipisci maxime doloribus neque aut, possimus odit tempora repellat quae ducimus. Est, iusto? Laudantium beatae accusantium recusandae omnis. Est, iusto? Laudantium beatae accusantium recusandae omnis.'}
                         </p>
                     </div>
                 </div>
