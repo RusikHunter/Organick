@@ -4,6 +4,22 @@
 
     &__inner {
         padding-block: 300px 120px;
+
+        @include laptop {
+            padding-block: 250px 110px;
+        }
+
+        @include tablet {
+            padding-block: 300px 100px;
+        }
+
+        @include mobile {
+            padding-block: 120px 90px;
+        }
+
+        @include mobile-small {
+            padding-block: 190px 70px;
+        }
     }
 
     &__row {}
@@ -12,6 +28,14 @@
         gap: 30px;
         width: 70%;
         margin-inline: auto;
+
+        @include tablet {
+            width: 90%;
+        }
+
+        @include mobile {
+            gap: 20px;
+        }
     }
 
     &__text {}
@@ -40,6 +64,10 @@
         background-color: #F1EDEA;
         border-radius: 30px;
         text-align: center;
+
+        @include mobile {
+            padding: 40px 30px;
+        }
     }
 
     &__subtitle {}

@@ -25,7 +25,7 @@
 
     @include mobile {
         flex-direction: column;
-        top: 160px;
+        top: 200px;
         padding: 40px;
     }
 
@@ -41,7 +41,7 @@
 
     &__meta-date {
         @include fluid-text(18, 18);
-        @include font(var(--font-family), 600, 1);
+        @include font(var(--font-family), 600, 1.4);
         color: var(--color-blue);
 
         & time {
