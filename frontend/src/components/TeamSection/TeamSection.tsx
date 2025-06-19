@@ -1,5 +1,6 @@
 import "./TeamSection.scss"
 import TeamExpertCard from "../TeamExpertCard/TeamExpertCard"
+import teamExperts from "../../assets/team-experts"
 
 function TeamSection() {
     return (
@@ -17,7 +18,9 @@ function TeamSection() {
 
                 <div className="team__row team__row--2 row">
                     <div className="team__experts-wrap">
-
+                        {teamExperts.map((expertProps, index) => (
+                            <TeamExpertCard key={index} {...expertProps} />
+                        ))}
                     </div>
                 </div>
             </div>
