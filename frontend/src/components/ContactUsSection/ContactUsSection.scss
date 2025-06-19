@@ -4,21 +4,60 @@
 
     &__inner {
         padding-block: 210px 100px;
+
+        @include laptop {
+            padding-block: 180px 80px;
+        }
+
+        @include tablet {
+            padding-block: 150px 70px;
+        }
+
+        @include mobile {
+            padding-block: 120px 60px;
+        }
+
+        @include mobile-small {
+            padding-block: 100px 50px;
+        }
     }
 
-    &__row {}
+    &__row {
+        @include mobile {
+            flex-direction: column !important;
+            gap: 30px;
+        }
+    }
 
     &__column {}
 
     &__column--1 {
         width: 50%;
         padding-right: 75px;
+
+        @include tablet {
+            padding-right: 40px;
+        }
+
+        @include mobile {
+            width: 100%;
+            padding-right: 0;
+        }
     }
 
-    &__image {}
+    &__image {
+        @include mobile {
+            width: 80%;
+            margin-inline: auto;
+        }
+    }
 
     &__column--2 {
         width: 50%;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__title {}
@@ -59,6 +98,10 @@
                 }
             }
         }
+
+        @include mobile-small {
+            width: 100%;
+        }
     }
 
     &__link-icon {}
@@ -82,11 +125,6 @@
             color: var(--color-blue);
             fill: #EFF6F1;
             transition: fill var(--transition);
-
-            @include tablet {
-                width: 40px;
-                height: 40px;
-            }
         }
 
         @include desktop-screen {
