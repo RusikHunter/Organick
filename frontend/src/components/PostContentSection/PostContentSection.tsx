@@ -32,7 +32,7 @@ function PostContentSection() {
                             “The first rule of any organic used in a business is that nature applied to an efficient operation will magnify the efficiency. The second is that organic applied to an inefficient operation will magnify the health.”
                         </blockquote>
 
-                        <h4 className="post-content__subtitle">Make perfect organic product with us</h4>
+                        <h4 className="post-content__subtitle h4">Make perfect organic product with us</h4>
 
                         <p className="post-content__text text">
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
@@ -48,8 +48,8 @@ function PostContentSection() {
                             <li className="post-content__ordered-list-item text">
                                 Packages and web pageLorem Ipsum as their default
                             </li>
-                            <li className="post-content__ ordered-list-item">
-                                4. more-or-less normal distribution of letters
+                            <li className="post-content__ordered-list-item text">
+                                more-or-less normal distribution of letters
                             </li>
                         </ol>
                     </div>
