@@ -24,14 +24,36 @@
         }
     }
 
-    &__image-wrap {}
+    @include tablet {
+        width: calc(50% - 12px);
+    }
 
-    &__image {}
+    @include mobile-small {
+        width: 100%;
+    }
+
+    &__image-wrap {
+        width: 100%;
+    }
+
+    &__image {
+        width: 100%;
+    }
 
     &__content-wrap {
         display: flex;
         justify-content: space-between;
         padding: 35px 28px;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @include mobile-small {
+            flex-direction: row;
+            gap: 0;
+        }
     }
 
     &__text-wrap {}
