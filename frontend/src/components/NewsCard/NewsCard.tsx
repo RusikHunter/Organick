@@ -18,7 +18,7 @@ function NewsCard() {
                 </span>
                 <h6 className="news-card__news-title h6">The Benefits of Vitamin D & How to Get It</h6>
                 <p className="news-card__news-text text">Simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-                <Link to="/blog" className="news-card__link">
+                <Link to={`/blog/${1}`} className="news-card__link">
                     <button className="news-card__button news-card__button--read button button--yellow">
                         Read More
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">

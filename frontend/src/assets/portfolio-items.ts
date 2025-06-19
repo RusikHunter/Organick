@@ -5,7 +5,7 @@ import NaturalTommatoImage from "../images/images/natural-tommato.png"
 import BlackRaspberryImage from "../images/images/black-raspberry.png"
 import HoneyOrangeImage from "../images/images/honey-orange.png"
 
-export interface PortFolioItem {
+export interface PortfolioItem {
     id: number,
     title: string
     description: string
@@ -17,7 +17,7 @@ export interface PortFolioItem {
     imageURL: string
 }
 
-const portfolioItems: PortFolioItem[] = [
+const portfolioItems: PortfolioItem[] = [
     {
         id: 0,
         title: "Green & Tasty Lemon",

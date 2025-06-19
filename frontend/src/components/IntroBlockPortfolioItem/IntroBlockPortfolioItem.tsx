@@ -1,7 +1,7 @@
 import "./IntroBlockPortfolioItem.scss"
-import type { PortFolioItem } from "../../assets/portfolio-items"
+import type { PortfolioItem } from "../../assets/portfolio-items"
 
-function IntroBlockPortfolioItem(content: PortFolioItem) {
+function IntroBlockPortfolioItem(content: PortfolioItem) {
     return (
         <div className="intro__column intro__column--portfolio-item column">
             <div className="portfolio-item">
