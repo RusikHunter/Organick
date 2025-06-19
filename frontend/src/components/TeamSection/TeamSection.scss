@@ -1,0 +1,85 @@
+@use "../../styles/index" as *;
+
+.team {
+
+    &__inner {
+        padding-block: 150px 120px;
+
+        @include laptop {
+            padding-block: 120px 100px;
+        }
+
+        @include tablet {
+            padding-block: 100px 80px;
+        }
+
+        @include mobile {
+            padding-block: 80px 60px;
+        }
+
+        @include mobile-small {
+            padding-block: 60px 40px;
+        }
+    }
+
+    &__row {}
+
+    &__row--1 {}
+
+    &__column {}
+
+    &__promo {
+        margin-inline: auto;
+    }
+
+    &__title {
+        margin-inline: auto;
+        text-align: center;
+
+        @include mobile-small {
+            width: 90%;
+        }
+    }
+
+    &__description {
+        width: 65%;
+        margin-top: 16px;
+        margin-inline: auto;
+        text-align: center;
+
+        @include mobile {
+            width: 80%;
+        }
+
+        @include mobile-small {
+            width: 90%;
+        }
+    }
+
+    &__row--2 {
+        padding-top: 40px;
+
+        @include mobile {
+            padding-top: 25px;
+        }
+    }
+
+    &__experts-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 27px;
+        row-gap: 40px;
+
+        @include tablet {
+            column-gap: 24px;
+        }
+
+        @include mobile {
+            row-gap: 25px;
+        }
+
+        @include mobile-small {
+            column-gap: 0;
+        }
+    }
+}

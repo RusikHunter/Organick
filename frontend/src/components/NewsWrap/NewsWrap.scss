@@ -1,0 +1,12 @@
+@use "../../styles/index" as *;
+
+.news-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 46px;
+    row-gap: 110px;
+
+    @include mobile {
+        column-gap: 0;
+    }
+}

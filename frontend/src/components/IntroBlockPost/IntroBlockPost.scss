@@ -1,0 +1,92 @@
+@use "../../styles/index" as *;
+
+.intro__column--post {
+    width: 100%;
+}
+
+.post {
+    background-color: var(--color-white);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    width: 100%;
+    box-shadow: 0 14px 36px 0 rgba(204, 204, 204, 0.25);
+    position: relative;
+    top: 470px;
+
+    @include laptop {
+        top: 370px;
+    }
+
+    @include tablet {
+        padding: 60px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        top: 200px;
+        padding: 40px;
+    }
+
+    &__meta {
+        display: flex;
+        gap: 30px;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__meta-date {
+        @include fluid-text(18, 18);
+        @include font(var(--font-family), 600, 1.4);
+        color: var(--color-blue);
+
+        & time {
+            font-weight: 400;
+            margin-left: 5px;
+        }
+    }
+
+    &__username {
+        @include fluid-text(18, 18);
+        @include font(var(--font-family), 400, 1);
+        color: var(--color-blue);
+
+        & svg {
+            position: relative;
+            top: 3px;
+            color: var(--color-green);
+            margin-right: 8px;
+        }
+    }
+
+    &__title {
+        @include fluid-text(70, 50);
+        @include font(var(--font-family), 800, 1.2);
+        color: var(--color-blue);
+        margin-block: 10px;
+
+        @include tablet {
+            width: 75%;
+        }
+
+        @include mobile {
+            margin-block: 20px;
+            width: 100%;
+            @include fluid-text(40, 32);
+            @include font(var(--font-family), 800, 1.2);
+            color: var(--color-blue);
+        }
+    }
+
+    &__text {
+        width: 56%;
+
+        @include mobile {
+            width: 90%;
+        }
+    }
+}

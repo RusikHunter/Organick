@@ -1,0 +1,192 @@
+@use "../../styles/index" as *;
+
+.location {
+
+    &__inner {
+        padding-bottom: 120px;
+
+        @include laptop {
+            padding-bottom: 100px;
+        }
+
+        @include tablet {
+            padding-bottom: 80px;
+        }
+
+        @include mobile {
+            padding-bottom: 60px;
+        }
+
+        @include mobile-small {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__row {}
+
+    &__row--1 {}
+
+    &__column {
+        width: 100%;
+    }
+
+    &__column--1 {}
+
+    &__block {
+        display: flex;
+        justify-content: end;
+        background-image: url("../../images/images/leaf.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 30px;
+        padding: 120px 110px;
+
+        @include mobile {
+            padding: 60px 50px;
+        }
+
+        @include mobile-small {
+            padding: 30px 20px;
+        }
+    }
+
+    &__content-wrap {
+        display: flex;
+        flex-direction: column;
+        padding: 45px 55px;
+        width: 515px;
+        background-color: var(--color-white);
+        border-radius: 30px;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include mobile-small {
+            padding: 20px 25px;
+        }
+    }
+
+    &__promo {}
+
+    &__title {}
+
+    &__text {
+        margin-top: 15px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    &__list-item {
+        display: flex;
+        position: relative;
+        padding-left: 55px;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 50px;
+            height: 50px;
+            background-image: url("../../images/icons/location.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+        @include fluid-text(18, 16);
+        @include font(var(--font-family), 700, 1.65);
+        color: var(--color-blue);
+    }
+
+    &__city {}
+
+    &__street {
+        font-weight: 400;
+    }
+
+    &__row--2 {
+        margin-top: 80px;
+    }
+
+    &__column--2 {
+        width: 100%;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        @include mobile {
+            gap: 30px;
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: calc(50% - 25px);
+        @include fluid-text(18, 16);
+        @include font(var(--font-family), 600, 1);
+        color: var(--color-blue);
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__label--name {}
+
+    &__input {
+        padding: 28px 23px;
+        border-radius: 16px;
+        border: var(--border-green);
+        @include fluid-text(18, 14);
+        @include font(var(--second-family), 400, 1);
+        color: var(--color-darkgray);
+        font-style: italic;
+    }
+
+    &__input--name {}
+
+    &__label--company {}
+
+    &__input--company {}
+
+    &__label--subject {}
+
+    &__input--subject {}
+
+    &__label--message {
+        width: 100% !important;
+    }
+
+    &__input--message {
+        width: 100%;
+        height: 247px;
+        resize: none;
+    }
+
+    &__submit-wrap {
+        width: 100%;
+    }
+
+    &__input--submit {
+        margin-top: 10px;
+        font-style: normal;
+        cursor: pointer;
+    }
+}

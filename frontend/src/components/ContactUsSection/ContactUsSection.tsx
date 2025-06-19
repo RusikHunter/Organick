@@ -1,50 +1,46 @@
-import "./Footer.scss"
-import Logo from "../../images/icons/logo.svg"
-import { Link } from "react-router-dom"
+import "./ContactUsSection.scss"
+import BananaOrangeImage from "../../images/images/banana-orange.png"
+import MailImage from "../../images/icons/mail.svg"
+import PhoneImage from "../../images/icons/phone.svg"
 
-function Footer() {
+function ContactUsSection() {
     return (
-        <footer className="footer">
-            <div className="footer__inner container">
-                <div className="footer__row footer__row--1 row">
-                    <div className="footer__column footer__column--1 column">
-                        <address className="footer__address-info">
-                            <h5 className="footer__title footer__title--contact-us h5">Contact us</h5>
-
-                            <dl className="footer__description-list">
-                                <dt className="footer__description-term">
-                                    <span className="footer__span text">Email</span>
-                                </dt>
-                                <dd className="footer__description-definition">
-                                    <a href="mailto:support@organic.com" className="footer__link text">support@organic.com</a>
-                                </dd>
-
-                                <dt className="footer__description-term">
-                                    <span className="footer__span text">Phone</span>
-                                </dt>
-                                <dd className="footer__description-definition">
-                                    <a href="tel:0123456789" className="footer__link text">+01 123 456 789</a>
-                                </dd>
-
-                                <dt className="footer__description-term">
-                                    <span className="footer__span text">Address</span>
-                                </dt>
-                                <dd className="footer__description-definition">
-                                    <a href="https://www.google.com/maps/place/88+Brooklyn+Ave,+Brooklyn,+NY+11216,+%D0%A1%D0%A8%D0%90/@40.677099,-73.9470458,653m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89c25b84595d61fd:0xc00ede9005b9a8a5!8m2!3d40.677099!4d-73.9444709!16s%2Fg%2F11csdw1nfp?entry=ttu&g_ep=EgoyMDI1MDYwOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="footer__link text">88 road, borklyn street, USA</a>
-                                </dd>
-                            </dl>
-                        </address>
+        <section className="contact-us">
+            <div className="contact-us__inner container">
+                <div className="contact-us__row row">
+                    <div className="contact-us__column contact-us__column--1 column">
+                        <img src={BananaOrangeImage} alt="Banana and Orange" className="contact-us__image" width={623} height={640} />
                     </div>
 
-                    <div className="footer__column footer__column--2 column">
-                        <img src={Logo} alt="Organick" className="footer__logo" width={199} height={53} />
+                    <div className="contact-us__column contact-us__column--2 column">
+                        <h2 className="contact-us__title h2">We'd love to talk about how we can work together.</h2>
 
-                        <p className="footer__description text">Simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum simply dummy text of the printing </p>
+                        <p className="contact-us__text text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
 
-                        <ul className="footer__list footer__list--social-networks">
-                            <li className="footer__list-item footer__list-item--social-networks">
-                                <a href="https://www.instagram.com/" target="_blank" className="footer__link footer__link--social-networks">
+                        <a href="mailto:support@saasflow.com" className="contact-us__link">
+                            <img src={MailImage} alt="Mail" className="contact-us__link-icon" width={89} height={89} />
+
+                            <div className="contact-us__link-text-wrap">
+                                <h6 className="contact-us__link-title h6">Message</h6>
+
+                                <span className="contact-us__link-text text">support@organic.com</span>
+                            </div>
+                        </a>
+
+                        <a href="tel:01123456789" className="contact-us__link">
+                            <img src={PhoneImage} alt="Phone" className="contact-us__link-icon" width={89} height={89} />
+
+                            <div className="contact-us__link-text-wrap">
+                                <h6 className="contact-us__link-title h6">Contact Us</h6>
+
+                                <span className="contact-us__link-text text">+01 123 456 789</span>
+                            </div>
+                        </a>
+
+                        <ul className="contact-us__list">
+                            <li className="contact-us__list-item">
+                                <a href="https://www.instagram.com/" target="_blank" className="contact-us__link--social-networks">
                                     <svg width="60" height="61" viewBox="0 0 60 61" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="30" cy="30.7158" r="30" />
                                         <path d="M33.6585 23.2631C34.7231 23.2661 35.7431 23.6747 36.4958 24.3996C37.2486 25.1244 37.6729 26.1067 37.6761 27.1318V34.8685C37.6729 35.8936 37.2486 36.8758 36.4958 37.6007C35.7431 38.3256 34.7231 38.7342 33.6585 38.7372H25.6243C24.5598 38.7342 23.5397 38.3256 22.787 37.6007C22.0342 36.8758 21.6099 35.8936 21.6068 34.8685V27.1318C21.6099 26.1067 22.0342 25.1244 22.787 24.3996C23.5397 23.6747 24.5598 23.2661 25.6243 23.2631H33.6585ZM33.6585 21.7158H25.6243C22.5309 21.7158 20 24.153 20 27.1318V34.8685C20 37.8473 22.5309 40.2845 25.6243 40.2845H33.6585C36.752 40.2845 39.2828 37.8473 39.2828 34.8685V27.1318C39.2828 24.153 36.752 21.7158 33.6585 21.7158Z" fill="#274C5B" />
@@ -53,8 +49,8 @@ function Footer() {
                                 </a>
                             </li>
 
-                            <li className="footer__list-item footer__list-item--social-networks">
-                                <a href="https://www.facebook.com/" target="_blank" className="footer__link footer__link--social-networks">
+                            <li className="contact-us__list-item">
+                                <a href="https://www.facebook.com/" target="_blank" className="contact-us__link--social-networks">
                                     <svg width="60" height="61" viewBox="0 0 60 61" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="30" cy="30.7158" r="30" />
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2828 31.0001C39.2828 25.873 34.9657 21.7158 29.6414 21.7158C24.3171 21.7158 20 25.873 20 31.0001C20 35.634 23.5251 39.475 28.1349 40.1721V33.6847H25.6863V31.0001H28.1349V28.9547C28.1349 26.6282 29.5747 25.3421 31.7767 25.3421C32.8317 25.3421 33.9353 25.5236 33.9353 25.5236V27.8087H32.7189C31.5219 27.8087 31.1475 28.524 31.1475 29.2593V31.0001H33.8212L33.3942 33.6847H31.1479V40.173C35.7577 39.4762 39.2828 35.6353 39.2828 31.0001Z" fill="#274C5B" />
@@ -62,8 +58,8 @@ function Footer() {
                                 </a>
                             </li>
 
-                            <li className="footer__list-item footer__list-item--social-networks">
-                                <a href="https://x.com/" target="_blank" className="footer__link footer__link--social-networks">
+                            <li className="contact-us__list-item">
+                                <a href="https://x.com/" target="_blank" className="contact-us__link--social-networks">
                                     <svg width="60" height="61" viewBox="0 0 60 61" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="30" cy="30.7158" r="30" />
                                         <path d="M40.6602 24.6742C39.8852 25.011 39.0652 25.2328 38.2261 25.3328C39.1079 24.8164 39.7711 23.9961 40.0912 23.0257C39.2575 23.5132 38.3469 23.8553 37.3984 24.0372C36.9991 23.6186 36.5187 23.2857 35.9866 23.0585C35.4546 22.8313 34.8818 22.7148 34.3033 22.7158C31.9609 22.7158 30.0654 24.5839 30.0654 26.8866C30.0637 27.2069 30.1004 27.5263 30.1747 27.8378C28.4951 27.7591 26.8504 27.3306 25.3458 26.5798C23.8413 25.829 22.51 24.7724 21.4372 23.4777C21.0608 24.1122 20.8618 24.8361 20.8608 25.5738C20.8608 27.02 21.6154 28.2984 22.7547 29.0473C22.0797 29.0313 21.4185 28.8526 20.8273 28.5265V28.5781C20.8273 30.6011 22.2907 32.2841 24.2276 32.6671C23.8634 32.7642 23.488 32.8134 23.1111 32.8135C22.8436 32.814 22.5767 32.788 22.3144 32.736C22.8528 34.3931 24.42 35.5983 26.2764 35.6327C24.7679 36.7953 22.9159 37.4236 21.0115 37.419C20.6734 37.4185 20.3357 37.3984 20 37.3587C21.9374 38.5958 24.1895 39.2502 26.4882 39.244C34.2943 39.244 38.5589 32.8867 38.5589 27.373C38.5589 27.1922 38.5541 27.0114 38.5455 26.8349C39.3733 26.2462 40.0893 25.5145 40.6602 24.6742Z" fill="#274C5B" />
@@ -71,8 +67,8 @@ function Footer() {
                                 </a>
                             </li>
 
-                            <li className="footer__list-item footer__list-item--social-networks">
-                                <a href="https://www.pinterest.com/" target="_blank" className="footer__link footer__link--social-networks">
+                            <li className="contact-us__list-item">
+                                <a href="https://www.pinterest.com/" target="_blank" className="contact-us__link--social-networks">
                                     <svg width="60" height="61" viewBox="0 0 60 61" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="30" cy="30.7158" r="30" />
                                         <path d="M29.7966 20.7158C24.3866 20.7158 20 25.1005 20 30.5081C20 34.5168 22.4142 37.9616 25.8649 39.4785C25.8386 38.7965 25.8605 37.9747 26.0354 37.2315C26.2235 36.4359 27.295 31.8939 27.295 31.8939C27.295 31.8939 26.9801 31.2687 26.9801 30.3463C26.9801 28.895 27.8198 27.8108 28.8695 27.8108C29.7617 27.8108 30.1903 28.4797 30.1903 29.2797C30.1903 30.1758 29.6173 31.5135 29.3243 32.7551C29.0794 33.7955 29.8447 34.6392 30.8725 34.6392C32.7269 34.6392 33.9777 32.2567 33.9777 29.4327C33.9777 27.2863 32.5301 25.6819 29.9016 25.6819C26.932 25.6819 25.0776 27.8983 25.0776 30.3726C25.0776 31.225 25.3313 31.8283 25.7249 32.2917C25.9042 32.5059 25.9305 32.5933 25.8649 32.8381C25.8168 33.0174 25.7118 33.4501 25.6637 33.625C25.5981 33.8742 25.3969 33.9616 25.1738 33.8698C23.8049 33.3102 23.1664 31.8152 23.1664 30.1278C23.1664 27.3475 25.515 24.012 30.1684 24.012C33.9077 24.012 36.37 26.718 36.37 29.6207C36.37 33.4633 34.2314 36.331 31.0824 36.331C30.0241 36.331 29.0313 35.7583 28.6901 35.1113C28.6901 35.1113 28.1216 37.367 27.9991 37.8042C27.7936 38.5605 27.3868 39.3124 27.0151 39.9025C27.9169 40.1684 28.8521 40.3039 29.7923 40.3047C35.2023 40.3047 39.5889 35.9201 39.5889 30.5125C39.5889 25.1049 35.2067 20.7158 29.7966 20.7158Z" fill="#274C5B" />
@@ -81,44 +77,10 @@ function Footer() {
                             </li>
                         </ul>
                     </div>
-
-                    <div className="footer__column footer__column--3 column">
-                        <h5 className="footer__title footer__title--utility-pages h5">Utility Pages</h5>
-
-                        <ul className="footer__list footer__list--utility-pages">
-                            <li className="footer__list-item footer__list-item--utility-pages">
-                                <Link to="/" className="footer__link text">Style Guide</Link>
-                            </li>
-
-                            <li className="footer__list-item footer__list-item--utility-pages">
-                                <Link to="/notfoundpage" className="footer__link text">404 Not Found</Link>
-                            </li>
-
-                            <li className="footer__list-item footer__list-item--utility-pages">
-                                <Link to="/protected" className="footer__link text">Password Protected</Link>
-                            </li>
-
-                            <li className="footer__list-item footer__list-item--utility-pages">
-                                <Link to="/licenses" className="footer__link text">Licences</Link>
-                            </li>
-
-                            <li className="footer__list-item footer__list-item--utility-pages">
-                                <Link to="/changelog" className="footer__link text">Changelog</Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="footer__row footer__row--2 row">
-                    <div className="footer__column footer__column--4 column">
-                        <p className="footer__copyright text">
-                            Copyright <span className="footer__copyright--bold">© Organick.</span>
-                        </p>
-                    </div>
                 </div>
             </div>
-        </footer>
+        </section>
     )
 }
 
-export default Footer
+export default ContactUsSection

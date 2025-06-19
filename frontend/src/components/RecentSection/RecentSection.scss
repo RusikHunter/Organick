@@ -1,0 +1,26 @@
+@use "../../styles/index" as *;
+
+.recent {
+
+    &__inner {
+        padding-block: 120px 180px;
+
+        @include laptop {
+            padding-block: 100px 150px;
+        }
+
+        @include tablet {
+            padding-block: 80px 120px;
+        }
+
+        @include mobile {
+            padding-block: 60px 120px;
+        }
+
+        @include mobile-small {
+            padding-block: 40px 120px;
+        }
+    }
+
+    &__row {}
+}
