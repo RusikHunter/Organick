@@ -1,0 +1,112 @@
+@use "../../styles/index" as *;
+
+.contact-us {
+
+    &__inner {
+        padding-block: 210px 100px;
+    }
+
+    &__row {}
+
+    &__column {}
+
+    &__column--1 {
+        width: 50%;
+        padding-right: 75px;
+    }
+
+    &__image {}
+
+    &__column--2 {
+        width: 50%;
+    }
+
+    &__title {}
+
+    &__text {
+        margin-top: 15px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 17px;
+        border-radius: 16px;
+        border: var(--border-default);
+        width: 352px;
+        padding: 12px;
+        transition: transform var(--transition);
+
+        &:first-child {
+            margin-top: 35px;
+        }
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: scale(1.02);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                & svg {
+                    transform: none;
+                }
+            }
+        }
+    }
+
+    &__link-icon {}
+
+    &__link-text-wrap {}
+
+    &__link-title {}
+
+    &__link-text {}
+
+    &__list {
+        display: flex;
+        gap: 15px;
+        margin-top: 35px;
+    }
+
+    &__list-item {}
+
+    &__link--social-networks {
+        & svg {
+            color: var(--color-blue);
+            fill: #EFF6F1;
+            transition: fill var(--transition);
+
+            @include tablet {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                & svg {
+                    fill: #E4E7E5;
+                }
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                & svg {
+                    fill: #EFF6F1;
+                }
+            }
+        }
+    }
+}
