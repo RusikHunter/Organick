@@ -1,0 +1,40 @@
+@use "../../styles/index" as *;
+
+.team {
+
+    &__inner {
+        padding-block: 150px 120px;
+    }
+
+    &__row {}
+
+    &__row--1 {}
+
+    &__column {}
+
+    &__promo {
+        margin-inline: auto;
+    }
+
+    &__title {
+        margin-inline: auto;
+    }
+
+    &__description {
+        width: 65%;
+        margin-top: 16px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    &__row--2 {
+        padding-top: 40px;
+    }
+
+    &__experts-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 27px;
+        row-gap: 40px;
+    }
+}
