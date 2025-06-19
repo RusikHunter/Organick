@@ -1,0 +1,63 @@
+@use "../../styles/index" as *;
+
+.intro__column--post {
+    width: 100%;
+}
+
+.post {
+    background-color: var(--color-white);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    width: 100%;
+    box-shadow: 0 14px 36px 0 rgba(204, 204, 204, 0.25);
+    position: relative;
+    top: 470px;
+
+    @include laptop {
+        top: 370px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        top: 100px;
+    }
+
+    &__meta {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__meta-date {
+        @include fluid-text(18, 18);
+        @include font(var(--font-family), 600, 1.65);
+        color: var(--color-blue);
+
+        & time {
+            font-weight: 400;
+            margin-left: 5px;
+        }
+    }
+
+    &__username {
+        @include fluid-text(18, 18);
+        @include font(var(--font-family), 400, 1.65);
+        color: var(--color-blue);
+
+        & svg {
+            position: relative;
+            top: 3px;
+            color: var(--color-green);
+            margin-right: 8px;
+        }
+    }
+
+    &__title {
+        margin-block: 10px;
+    }
+
+    &__text {
+        width: 56%;
+    }
+}
