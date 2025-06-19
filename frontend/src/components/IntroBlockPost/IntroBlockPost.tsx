@@ -18,7 +18,7 @@ function IntroBlockPost() {
                     </span>
                 </div>
 
-                <h1 className="post__title h1">Research More Organic Food</h1>
+                <h1 className="post__title">Research More Organic Food</h1>
 
                 <p className="post__text text">Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed </p>
             </div>

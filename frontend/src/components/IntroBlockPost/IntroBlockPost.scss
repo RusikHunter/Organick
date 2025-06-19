@@ -19,14 +19,24 @@
         top: 370px;
     }
 
+    @include tablet {
+        padding: 60px;
+    }
+
     @include mobile {
         flex-direction: column;
-        top: 100px;
+        top: 160px;
+        padding: 40px;
     }
 
     &__meta {
         display: flex;
         gap: 30px;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
     &__meta-date {
@@ -54,10 +64,29 @@
     }
 
     &__title {
+        @include fluid-text(70, 50);
+        @include font(var(--font-family), 800, 1.2);
+        color: var(--color-blue);
         margin-block: 10px;
+
+        @include tablet {
+            width: 75%;
+        }
+
+        @include mobile {
+            margin-block: 20px;
+            width: 100%;
+            @include fluid-text(40, 32);
+            @include font(var(--font-family), 800, 1.2);
+            color: var(--color-blue);
+        }
     }
 
     &__text {
         width: 56%;
+
+        @include mobile {
+            width: 90%;
+        }
     }
 }
