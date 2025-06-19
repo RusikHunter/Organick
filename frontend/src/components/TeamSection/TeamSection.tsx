@@ -1,4 +1,5 @@
 import "./TeamSection.scss"
+import TeamExpertCard from "../TeamExpertCard/TeamExpertCard"
 
 function TeamSection() {
     return (
@@ -15,7 +16,9 @@ function TeamSection() {
                 </div>
 
                 <div className="team__row team__row--2 row">
+                    <div className="team__experts-wrap">
 
+                    </div>
                 </div>
             </div>
         </section>

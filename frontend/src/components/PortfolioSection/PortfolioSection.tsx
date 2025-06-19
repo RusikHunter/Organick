@@ -4,10 +4,6 @@ import portfolioItems from "../../assets/portfolio-items"
 import { useEffect } from "react"
 
 function PortfolioSection() {
-    useEffect(() => {
-        console.log(portfolioItems)
-    }, [])
-
     return (
         <section className="portfolio">
             <div className="portfolio__inner container">
