@@ -21,6 +21,7 @@ function LocationSection() {
                                             </span>
 
                                             <span className="location__street">299 Park Avenue New York,
+                                                <br />
                                                 New York 10171</span>
                                         </address>
                                     </li>
@@ -31,6 +32,7 @@ function LocationSection() {
                                             </span>
 
                                             <span className="location__street">30 Stamford Street,
+                                                <br />
                                                 London SE1 9LQ</span>
                                         </address>
                                     </li>
@@ -84,15 +86,25 @@ function LocationSection() {
                                     placeholder="How Can We Help" />
                             </label>
 
-                            <label htmlFor="locationTextareaMessage">
+                            <label htmlFor="locationTextareaMessage" className="location__label location__label--message">
+                                Message*
+
                                 <textarea
                                     id="locationTextareaMessage"
                                     className="location__input location__input--message"
                                     placeholder="Your Message"
+                                    rows={11}
                                 ></textarea>
                             </label>
 
-                            <input type="submit" className="location__input location__input--submit button button--blue" id="locationInputSubmit" value="Send Message" />
+                            <div className="location__submit-wrap">
+                                <input
+                                    type="submit"
+                                    className="location__input location__input--submit button button--blue"
+                                    id="locationInputSubmit"
+                                    value="Send Message"
+                                />
+                            </div>
                         </form>
                     </div>
                 </div>
