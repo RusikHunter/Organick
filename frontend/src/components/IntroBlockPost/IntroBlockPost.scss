@@ -41,7 +41,7 @@
 
     &__meta-date {
         @include fluid-text(18, 18);
-        @include font(var(--font-family), 600, 1.65);
+        @include font(var(--font-family), 600, 1);
         color: var(--color-blue);
 
         & time {
@@ -52,7 +52,7 @@
 
     &__username {
         @include fluid-text(18, 18);
-        @include font(var(--font-family), 400, 1.65);
+        @include font(var(--font-family), 400, 1);
         color: var(--color-blue);
 
         & svg {
