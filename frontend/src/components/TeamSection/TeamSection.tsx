@@ -2,7 +2,13 @@ import "./TeamSection.scss"
 import TeamExpertCard from "../TeamExpertCard/TeamExpertCard"
 import teamExperts from "../../assets/team-experts"
 
-function TeamSection() {
+type TeamSectionProps = {
+    defaultExpertsCount: number
+}
+
+function TeamSection({ defaultExpertsCount }: TeamSectionProps) {
+    const expertsCount = Array.from({ length: defaultExpertsCount }, (_, i) => i)
+
     return (
         <section className="team">
             <div className="team__inner container">
@@ -18,8 +24,8 @@ function TeamSection() {
 
                 <div className="team__row team__row--2 row">
                     <div className="team__experts-wrap">
-                        {teamExperts.map((expertProps, index) => (
-                            <TeamExpertCard key={index} {...expertProps} />
+                        {expertsCount.map(index => (
+                            <TeamExpertCard key={index} {...teamExperts[index]} />
                         ))}
                     </div>
                 </div>

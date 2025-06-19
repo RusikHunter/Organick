@@ -9,7 +9,7 @@ function TeamPage() {
     return (
         <>
             <SubIntroBlock title="Our Team" backgroundImageURL={OurTeamBackgroundmage} />
-            <TeamSection />
+            <TeamSection defaultExpertsCount={6} />
         </>
     )
 }
