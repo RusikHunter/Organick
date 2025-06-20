@@ -16,10 +16,15 @@ function ProtectedSection() {
                                 <label htmlFor="" className="protected__label">
                                     Password
 
-                                    <input type="password" className="protected__input protected__input--password" />
+                                    <input
+                                        type="password"
+                                        className="protected__input protected__input--password"
+                                        id="protectedInputPassword"
+                                        placeholder="Enter Your Password"
+                                    />
                                 </label>
 
-                                <button type="submit" className="protected__input protected__input--submit button button--blue">
+                                <button type="submit" className="protected__input protected__input--submit button button--blue" id="protectedInputSubmit">
                                     Send Now
 
                                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
