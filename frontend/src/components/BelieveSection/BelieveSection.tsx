@@ -34,7 +34,7 @@ function BelieveSection() {
                             </div>
                         </div>
 
-                        <Link to="/shop" tabIndex={-1}>
+                        <Link to="/shop" className="believe__link" tabIndex={-1}>
                             <button className="believe__button button button--blue">
                                 Shop now
 

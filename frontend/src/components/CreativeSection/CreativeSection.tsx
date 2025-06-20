@@ -29,7 +29,7 @@ function CreativeSection() {
                             <li className="creative__list-item h6">No growth hormones are used</li>
                         </ul>
 
-                        <Link to="/blog" className="creative__link">
+                        <Link to="/blog" className="creative__link" tabIndex={-1}>
                             <button className="creative__button button button--blue">
                                 Explore More
 

@@ -183,11 +183,12 @@
 
     &__link {
         display: block;
+        width: max-content;
+        margin-inline: auto;
     }
 
     &__button {
         display: block;
-        margin-inline: auto;
 
         @include laptop {
             margin-top: 60px;
