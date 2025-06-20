@@ -1,0 +1,77 @@
+@use "../../styles/index" as *;
+
+.not-found {
+    background-image: url("../../images/images/background-not-found.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__inner {
+        padding-block: 210px;
+
+        @include laptop {
+            padding-block: 180px;
+        }
+
+        @include tablet {
+            padding-block: 150px;
+        }
+
+        @include mobile {
+            padding-block: 120px;
+        }
+
+        @include mobile-small {
+            padding-block: 90px;
+        }
+    }
+
+    &__row {
+        justify-content: end !important;
+    }
+
+    &__column {}
+
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    &__number {
+        @include fluid-text(320, 150);
+        @include font(var(--font-family), 600, 0.85);
+        color: #8FA8A8;
+    }
+
+    &__title {
+        @include fluid-text(70, 40);
+        @include font(var(--font-family), 800, 1.2);
+        color: var(--color-blue);
+    }
+
+    &__text {
+        font-weight: 600 !important;
+
+        @include mobile-small {
+            text-align: center;
+        }
+    }
+
+    &__link {
+        display: block;
+        margin-top: 40px;
+        width: max-content;
+
+        @include mobile {
+            margin-inline: auto;
+        }
+
+        @include mobile-small {
+            margin-top: 25px;
+        }
+    }
+
+    &__button {}
+}

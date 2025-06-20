@@ -1,0 +1,102 @@
+@use "../../styles/index" as *;
+
+.protected {
+
+    &__inner {
+        padding-block: 110px 180px;
+
+        @include laptop {
+            padding-block: 90px 160px;
+        }
+
+        @include tablet {
+            padding-block: 70px 140px;
+        }
+
+        @include mobile {
+            padding-block: 60px 120px;
+        }
+
+        @include mobile-small {
+            padding-block: 50px 100px;
+        }
+    }
+
+    &__row {}
+
+    &__column {
+        width: 100%;
+        align-items: center;
+    }
+
+    &__form-wrap {
+        display: flex;
+        width: 856px;
+        gap: 30px;
+        padding: 35px 30px;
+        border-radius: 30px;
+        box-shadow: 0 39px 37px 0 rgba(195, 195, 195, 0.25);
+
+        @include tablet {
+            width: 90%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include mobile-small {
+            flex-direction: column;
+        }
+    }
+
+    &__image-wrap {
+        width: 193px;
+
+        @include mobile {
+            width: 161px;
+        }
+    }
+
+    &__image {
+        border-radius: 18px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+    }
+
+    &__label {
+        display: flex;
+        width: 100% !important;
+        flex-direction: column;
+        gap: 25px;
+        width: calc(50% - 25px);
+        @include fluid-text(18, 16);
+        @include font(var(--font-family), 600, 1);
+        color: var(--color-blue);
+    }
+
+    &__input {}
+
+    &__input--password {
+        width: 100%;
+        padding: 28px 23px;
+        border-radius: 16px;
+        border: var(--border-green);
+        @include fluid-text(18, 14);
+        @include font(var(--second-family), 400, 1);
+        color: var(--color-darkgray);
+
+        &::placeholder {
+            font-style: italic;
+        }
+    }
+
+    &__input--submit {
+        margin-top: 25px;
+    }
+}

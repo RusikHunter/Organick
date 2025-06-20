@@ -1,0 +1,95 @@
+@use "../../styles/index" as *;
+
+.licenses {
+
+    &__inner {
+        padding-block: 150px;
+
+        @include laptop {
+            padding-block: 120px;
+        }
+
+        @include tablet {
+            padding-block: 90px;
+        }
+
+        @include mobile {
+            padding-block: 60px;
+        }
+
+        @include mobile-small {
+            padding-block: 40px;
+        }
+    }
+
+    &__row {}
+
+    &__column {
+        gap: 100px;
+
+        @include tablet {
+            gap: 80px;
+        }
+
+        @include mobile {
+            gap: 60px;
+        }
+
+        @include mobile-small {
+            gap: 40px;
+        }
+    }
+
+    &__condition-block {
+        display: flex;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__title-wrap {
+        width: 36%;
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__title {}
+
+    &__content-wrap {
+        width: 64%;
+        padding-top: 5px;
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        margin-bottom: 45px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__text--enumeration {
+        word-spacing: 3px;
+    }
+
+    &__text--short {
+        width: 80%;
+    }
+
+    &__subtitle {
+        margin-bottom: 10px;
+    }
+
+    &__text--bold {
+        font-weight: 700;
+        color: var(--color-blue);
+    }
+}

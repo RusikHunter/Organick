@@ -67,14 +67,14 @@
     }
 
     &__link {
+        margin-top: 15px;
+
         @include tablet {
             width: 100%;
         }
     }
 
     &__button--read {
-        margin-top: 15px;
-
         @include tablet {
             width: 100%;
         }

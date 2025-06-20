@@ -167,7 +167,10 @@
         }
     }
 
-    &__button {
+    &__link {
         margin-top: 58px;
+        width: max-content;
     }
+
+    &__button {}
 }
