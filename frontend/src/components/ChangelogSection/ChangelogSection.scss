@@ -1,0 +1,38 @@
+@use "../../styles/index" as *;
+
+.changelog {
+
+    &__inner {
+        padding-block: 70px 140px;
+    }
+
+    &__row {}
+
+    &__column {
+        width: 100%;
+        align-items: center;
+    }
+
+    &__change-wrap {
+        display: flex;
+        gap: 30px;
+        width: 705px;
+        padding: 25px 40px;
+        border-radius: 30px;
+        box-shadow: 0 39px 37px 0 rgba(195, 195, 195, 0.25);
+    }
+
+    &__image-wrap {}
+
+    &__image {}
+
+    &__text-wrap {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__title {}
+
+    &__text {}
+}
