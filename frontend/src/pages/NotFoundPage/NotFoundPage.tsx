@@ -1,11 +1,12 @@
 import { useSetCurrentPage } from "../../hooks/useSetCurrentPage"
+import NotFoundSection from "../../components/NotFoundSection/NotFoundSection"
 
 function NotFoundPage() {
     useSetCurrentPage("notfound")
 
     return (
         <>
-            <h1>NotFoundPage</h1>
+            <NotFoundSection />
         </>
     )
 }
