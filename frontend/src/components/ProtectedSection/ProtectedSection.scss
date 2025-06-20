@@ -4,6 +4,22 @@
 
     &__inner {
         padding-block: 110px 180px;
+
+        @include laptop {
+            padding-block: 90px 160px;
+        }
+
+        @include tablet {
+            padding-block: 70px 140px;
+        }
+
+        @include mobile {
+            padding-block: 60px 120px;
+        }
+
+        @include mobile-small {
+            padding-block: 50px 100px;
+        }
     }
 
     &__row {}
@@ -20,10 +36,26 @@
         padding: 35px 30px;
         border-radius: 30px;
         box-shadow: 0 39px 37px 0 rgba(195, 195, 195, 0.25);
+
+        @include tablet {
+            width: 90%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include mobile-small {
+            flex-direction: column;
+        }
     }
 
     &__image-wrap {
         width: 193px;
+
+        @include mobile {
+            width: 161px;
+        }
     }
 
     &__image {
