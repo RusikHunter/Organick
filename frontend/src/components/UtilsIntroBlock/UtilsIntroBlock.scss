@@ -1,0 +1,34 @@
+@use "../../styles/index" as *;
+
+.utils-intro {
+    background-image: url("../../images/images/background-util-page.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__inner {}
+
+    &__row {
+        padding-block: 120px;
+
+        @include laptop {
+            padding-block: 100px;
+        }
+
+        @include tablet {
+            padding-block: 80px;
+        }
+
+        @include mobile {
+            padding-block: 60px;
+        }
+
+        @include mobile-small {
+            padding-block: 40px;
+        }
+    }
+
+    &__title {
+        margin-inline: auto;
+    }
+}
