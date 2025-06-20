@@ -10,7 +10,7 @@ function NotFoundSection() {
                         <div className="not-found__text-wrap">
                             <span className="not-found__number">404</span>
 
-                            <h1 className="not-found__title h1">Page Not Found</h1>
+                            <h1 className="not-found__title">Page Not Found</h1>
 
                             <p className="not-found__text text">The page you are looking for doesn't exist or has been moved</p>
                         </div>
