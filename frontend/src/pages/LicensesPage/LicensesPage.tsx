@@ -1,11 +1,13 @@
 import { useSetCurrentPage } from "../../hooks/useSetCurrentPage"
+import UtilsIntroBlock from "../../components/UtilsIntroBlock/UtilsIntroBlock"
+import UtilPageBackgroundImage from "../../images/images/background-util-page.png"
 
 function LicensesPage() {
     useSetCurrentPage("licenses")
 
     return (
         <>
-            <h1>LicensesPage</h1>
+            <UtilsIntroBlock title="Licenses" backgroundImageURL={UtilPageBackgroundImage} />
         </>
     )
 }
