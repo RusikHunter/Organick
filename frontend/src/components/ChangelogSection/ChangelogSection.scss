@@ -4,6 +4,22 @@
 
     &__inner {
         padding-block: 70px 140px;
+
+        @include laptop {
+            padding-block: 60px 120px;
+        }
+
+        @include tablet {
+            padding-block: 50px 100px;
+        }
+
+        @include mobile {
+            padding-block: 40px 80px;
+        }
+
+        @include mobile-small {
+            padding-block: 40px 60px;
+        }
     }
 
     &__row {}
@@ -20,6 +36,15 @@
         padding: 25px 40px;
         border-radius: 30px;
         box-shadow: 0 39px 37px 0 rgba(195, 195, 195, 0.25);
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include mobile-small {
+            width: 100%;
+            flex-direction: column;
+        }
     }
 
     &__image-wrap {}
@@ -30,6 +55,12 @@
         display: flex;
         align-items: center;
         gap: 15px;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
     }
 
     &__title {}
