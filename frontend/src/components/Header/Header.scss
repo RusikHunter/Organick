@@ -112,9 +112,7 @@
         }
     }
 
-    &__dropdown {
-        display: none; // temp
-    }
+    &__dropdown {}
 
     &__column--3 {
         flex-direction: row !important;
@@ -125,7 +123,7 @@
         }
     }
 
-    &__search {
+    &__search-wrap {
         position: relative;
 
         // HACK: positioning search outside its column
@@ -143,6 +141,8 @@
             top: 96px;
         }
     }
+
+    &__search {}
 
     &__input {
         width: 376px;
@@ -214,7 +214,17 @@
         }
     }
 
-    &__dropdown--search {}
+    &__dropdown--search {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background-color: var(--color-lightgray);
+        border-radius: 30px;
+        padding: 25px;
+    }
 
     &__dropdown-list {}
 
