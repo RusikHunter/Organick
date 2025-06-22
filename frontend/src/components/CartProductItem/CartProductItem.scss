@@ -1,0 +1,18 @@
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__controls {}
+
+    &__label {}
+
+    &__input {}
+
+    &__button--delete {}
+}

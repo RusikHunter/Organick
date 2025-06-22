@@ -100,3 +100,15 @@
         }
     }
 }
+
+.product-card--cart-item {
+    width: 100%;
+
+    @include tablet {
+        width: 100%;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+}

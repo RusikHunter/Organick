@@ -27,6 +27,11 @@
     &__product-list {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        width: 100%;
+        gap: 50px;
+
+        @include mobile {
+            gap: 25px;
+        }
     }
 }
