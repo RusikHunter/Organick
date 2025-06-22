@@ -6,7 +6,7 @@ function PaymentSection() {
             <div className="payment__inner container">
                 <div className="payment__row payment__row--1 row">
                     <form className="payment__form">
-                        <h4 className="payment__title h4">Delivery</h4>
+                        <h4 className="payment__title payment__title--delivery h4">Delivery</h4>
 
                         <label htmlFor="paymentInputName" className="payment__label payment__label--name">
                             Full Name*
@@ -18,7 +18,6 @@ function PaymentSection() {
                                 placeholder="Your Full Name"
                             />
                         </label>
-
                         <label htmlFor="paymentInputEmail" className="payment__label payment__label--name">
                             Your Email*
 
@@ -49,40 +48,42 @@ function PaymentSection() {
                                 placeholder="Your Address" />
                         </label>
 
-                        <h4 className="payment__title h4">Card</h4>
+                        <h4 className="payment__title payment__title--card h4">Card</h4>
 
-                        <label htmlFor="paymentInputCardDate" className="payment__label payment__label--card-date">
-                            Month/Year*
+                        <div className="payment__card-wrap">
+                            <label htmlFor="paymentInputCardDate" className="payment__label payment__label--card-date">
+                                Month/Year*
 
-                            <input
-                                type="number"
-                                className="payment__input payment__input--card-date"
-                                id="paymentInputCardDate"
-                                placeholder="00/00" />
-                        </label>
+                                <input
+                                    type="number"
+                                    className="payment__input payment__input--card-date"
+                                    id="paymentInputCardDate"
+                                    placeholder="00/00" />
+                            </label>
 
-                        <label htmlFor="paymentInputCVV" className="payment__label payment__label--cvv">
-                            CVV2*
+                            <label htmlFor="paymentInputCVV" className="payment__label payment__label--cvv">
+                                CVV2*
 
-                            <input
-                                type="number"
-                                className="payment__input payment__input--cvv"
-                                id="paymentInputCVV"
-                                placeholder="000" />
-                        </label>
+                                <input
+                                    type="number"
+                                    className="payment__input payment__input--cvv"
+                                    id="paymentInputCVV"
+                                    placeholder="000" />
+                            </label>
 
-                        <label htmlFor="paymentInputCardNumber" className="payment__label payment__label--card-number">
-                            Card Number*
+                            <label htmlFor="paymentInputCardNumber" className="payment__label payment__label--card-number">
+                                Card Number*
 
-                            <input
-                                type="number"
-                                className="payment__input payment__input--card-number"
-                                id="paymentInputCardNumber"
-                                placeholder="000" />
-                        </label>
+                                <input
+                                    type="number"
+                                    className="payment__input payment__input--card-number"
+                                    id="paymentInputCardNumber"
+                                    placeholder="XXXX-XXXX-XXXX-XXXX" />
+                            </label>
+                        </div>
 
                         <div className="payment__details-wrap">
-                            <h4 className="payment__title h4">Details</h4>
+                            <h4 className="payment__title payment__title--details h4">Details</h4>
 
                             <h6 className="payment__details">Name: Alex Davidson</h6>
                             <h6 className="payment__details">Email: alexdavidson@gmail.com</h6>
