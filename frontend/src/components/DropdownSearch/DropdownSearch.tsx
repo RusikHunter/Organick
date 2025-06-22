@@ -2,6 +2,9 @@ import "./DropdownSearch.scss"
 import { Link } from "react-router-dom"
 import { useState, useRef, useEffect } from "react"
 import TEMPBANANA from "../../images/images/TEMP-BANANA.png"
+import { useDispatch } from "react-redux"
+import { setIsBurgerMenuOpen } from "../../store/reducers/clientReducer"
+import type { AppDispatch } from "../../store"
 
 function DropdownSearch() {
     const [isSearhDropdownShowed, setIsSearhDropdownShowed] = useState<boolean>(false)
@@ -9,8 +12,11 @@ function DropdownSearch() {
     const searchDropdownRef = useRef<HTMLDivElement | null>(null)
     const searchWrapRef = useRef<HTMLDivElement | null>(null)
 
+    const dispatch = useDispatch<AppDispatch>()
+
     const handleSearchClick = (): void => {
         setIsSearhDropdownShowed(true)
+        dispatch(setIsBurgerMenuOpen())
     }
 
     const handleCloseClick = (): void => {
