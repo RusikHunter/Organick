@@ -18,7 +18,7 @@ function CartProductItem() {
 
             <div className="cart-item__controls">
                 <label htmlFor="cartItemInputCount" className="cart-item__label">
-                    Count:
+                    Quantity:
                     <input type="number" className="cart-item__input" id="cartItemInputCount" value={count} onChange={handleChange} />
                 </label>
 

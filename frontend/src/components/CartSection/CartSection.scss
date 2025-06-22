@@ -24,6 +24,8 @@
 
     &__row {}
 
+    &__row--1 {}
+
     &__product-list {
         display: flex;
         flex-direction: column;
@@ -33,5 +35,91 @@
         @include mobile {
             gap: 25px;
         }
+    }
+
+    &__row--2 {
+        padding-top: 120px;
+
+        @include laptop {
+            padding-top: 100px;
+        }
+
+        @include tablet {
+            padding-top: 80px;
+        }
+
+        @include mobile {
+            padding-top: 60px;
+        }
+
+        @include mobile-small {
+            padding-top: 40px;
+        }
+    }
+
+    &__column {
+        width: 100%;
+    }
+
+    &__order-details-wrap {
+        width: 100%;
+        padding: 75px 45px;
+        border-radius: 30px;
+        background-color: var(--color-lightgray);
+
+        @include mobile-small {
+            padding: 60px 30px;
+        }
+    }
+
+    &__count {
+        margin-bottom: 15px;
+    }
+
+    &__details {
+        @include fluid-text(25, 18);
+        @include font(var(--font-family), 400, 1.2);
+        color: var(--color-blue);
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 350px;
+        margin-top: 30px;
+        @include fluid-text(18, 16);
+        @include font(var(--font-family), 600, 1);
+        color: var(--color-blue);
+
+        @include mobile-small {
+            width: 100%;
+        }
+    }
+
+    &__input {
+        padding: 28px 23px;
+        border-radius: 16px;
+        border: var(--border-green);
+        @include fluid-text(18, 14);
+        @include font(var(--second-family), 400, 1);
+        color: var(--color-darkgray);
+        background-color: transparent;
+        text-transform: uppercase;
+
+        &::placeholder {
+            font-style: italic;
+            text-transform: none;
+        }
+    }
+
+    &__price {
+        margin-top: 30px;
+    }
+
+    &__button {
+        margin-top: 30px;
+
+
     }
 }
