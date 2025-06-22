@@ -1,11 +1,12 @@
 import { useSetCurrentPage } from "../../hooks/useSetCurrentPage"
+import ThankYouSection from "../../components/ThankYouSection/ThankYouSection"
 
 function ThankYouPage() {
     useSetCurrentPage("thankyou")
 
     return (
         <>
-            <h1>ThankYouPage</h1>
+            <ThankYouSection />
         </>
     )
 }
