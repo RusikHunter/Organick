@@ -1,4 +1,5 @@
 import "./CartSection.scss"
+import CartProductItem from "../CartProductItem/CartProductItem"
 
 function CartSection() {
     return (
@@ -6,7 +7,9 @@ function CartSection() {
             <div className="cart__inner container">
                 <div className="cart__row row">
                     <div className="cart__product-list">
+                        <CartProductItem />
 
+                        <CartProductItem />
                     </div>
                 </div>
             </div>
