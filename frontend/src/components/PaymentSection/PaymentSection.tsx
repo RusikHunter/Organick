@@ -1,11 +1,21 @@
 import "./PaymentSection.scss"
+import { useNavigate } from "react-router-dom"
+import type { NavigateFunction } from "react-router-dom"
 
 function PaymentSection() {
+    const navigate: NavigateFunction = useNavigate()
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+        event.preventDefault()
+
+        navigate("/thankyou")
+    }
+
     return (
         <section className="payment">
             <div className="payment__inner container">
                 <div className="payment__row payment__row--1 row">
-                    <form className="payment__form">
+                    <form className="payment__form" onSubmit={handleSubmit}>
                         <h4 className="payment__title payment__title--delivery h4">Delivery</h4>
 
                         <label htmlFor="paymentInputName" className="payment__label payment__label--name">
