@@ -67,67 +67,63 @@ function Header() {
                             <div
                                 className="header__dropdown header__dropdown--search overlay"
                                 ref={searchDropdownRef}
-                                style={{ display: isSearhDropdownShowed ? "block" : "none" }}
+                                style={{ opacity: isSearhDropdownShowed ? "1" : "0" }}
                             >
-                                <ul className="header__dropdown-list">
-                                    <li className="header__dropdown-list-item">
-                                        <div className="header__dropdown-product-card">
-                                            <img src={TEMPBANANA} alt="Fresh banana" className="header__dropdown-product-image" width={20} height={20} />
+                                <div className="header__dropdown-list-wrap">
+                                    <ul className="header__dropdown-list">
+                                        <li className="header__dropdown-list-item">
+                                            <Link to={`/shop/${1}`} className="header__dropdown-product-card" tabIndex={isSearhDropdownShowed ? 0 : -1}>
+                                                <img src={TEMPBANANA} alt="Fresh banana" className="header__dropdown-product-image" width={40} height={40} />
 
-                                            <h6 className="header__dropdown-product-title">Fresh Banana Fruites</h6>
+                                                <h6 className="header__dropdown-product-title">Fresh Banana Fruites</h6>
 
-                                            <span className="header__dropdown-product-price">13.00$</span>
-                                        </div>
-                                    </li>
-                                    <li className="header__dropdown-list-item">
-                                        <div className="header__dropdown-product-card">
-                                            <img src={TEMPBANANA} alt="Fresh banana" className="header__dropdown-product-image" width={20} height={20} />
+                                                <span className="header__dropdown-product-price">13.00$</span>
+                                            </Link>
+                                        </li>
+                                        <li className="header__dropdown-list-item">
+                                            <Link to={`/shop/${1}`} className="header__dropdown-product-card" tabIndex={isSearhDropdownShowed ? 0 : -1}>
+                                                <img src={TEMPBANANA} alt="Fresh banana" className="header__dropdown-product-image" width={40} height={40} />
 
-                                            <h6 className="header__dropdown-product-title">Fresh Banana Fruites</h6>
+                                                <h6 className="header__dropdown-product-title">Fresh Banana Fruites</h6>
 
-                                            <span className="header__dropdown-product-price">13.00$</span>
-                                        </div>
-                                    </li>
-                                    <li className="header__dropdown-list-item">
-                                        <div className="header__dropdown-product-card">
-                                            <img src={TEMPBANANA} alt="Fresh banana" className="header__dropdown-product-image" width={20} height={20} />
+                                                <span className="header__dropdown-product-price">13.00$</span>
+                                            </Link>
+                                        </li>
+                                        <li className="header__dropdown-list-item">
+                                            <Link to={`/shop/${1}`} className="header__dropdown-product-card" tabIndex={isSearhDropdownShowed ? 0 : -1}>
+                                                <img src={TEMPBANANA} alt="Fresh banana" className="header__dropdown-product-image" width={40} height={40} />
 
-                                            <h6 className="header__dropdown-product-title">Fresh Banana Fruites</h6>
+                                                <h6 className="header__dropdown-product-title">Fresh Banana Fruites</h6>
 
-                                            <span className="header__dropdown-product-price">13.00$</span>
-                                        </div>
-                                    </li>
-                                    <li className="header__dropdown-list-item">
-                                        <div className="header__dropdown-product-card">
-                                            <img src={TEMPBANANA} alt="Fresh banana" className="header__dropdown-product-image" width={20} height={20} />
+                                                <span className="header__dropdown-product-price">13.00$</span>
+                                            </Link>
+                                        </li>
+                                        <li className="header__dropdown-list-item">
+                                            <Link to={`/shop/${1}`} className="header__dropdown-product-card" tabIndex={isSearhDropdownShowed ? 0 : -1}>
+                                                <img src={TEMPBANANA} alt="Fresh banana" className="header__dropdown-product-image" width={40} height={40} />
 
-                                            <h6 className="header__dropdown-product-title">Fresh Banana Fruites</h6>
+                                                <h6 className="header__dropdown-product-title">Fresh Banana Fruites</h6>
 
-                                            <span className="header__dropdown-product-price">13.00$</span>
-                                        </div>
-                                    </li>
-                                    <li className="header__dropdown-list-item">
-                                        <div className="header__dropdown-product-card">
-                                            <img src={TEMPBANANA} alt="Fresh banana" className="header__dropdown-product-image" width={20} height={20} />
+                                                <span className="header__dropdown-product-price">13.00$</span>
+                                            </Link>
+                                        </li>
+                                        <li className="header__dropdown-list-item">
+                                            <Link to={`/shop/${1}`} className="header__dropdown-product-card" tabIndex={isSearhDropdownShowed ? 0 : -1}>
+                                                <img src={TEMPBANANA} alt="Fresh banana" className="header__dropdown-product-image" width={40} height={40} />
 
-                                            <h6 className="header__dropdown-product-title">Fresh Banana Fruites</h6>
+                                                <h6 className="header__dropdown-product-title">Fresh Banana Fruites</h6>
 
-                                            <span className="header__dropdown-product-price">13.00$</span>
-                                        </div>
-                                    </li>
-                                    <li className="header__dropdown-list-item">
-                                        <div className="header__dropdown-product-card">
-                                            <img src={TEMPBANANA} alt="Fresh banana" className="header__dropdown-product-image" width={20} height={20} />
+                                                <span className="header__dropdown-product-price">13.00$</span>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                                            <h6 className="header__dropdown-product-title">Fresh Banana Fruites</h6>
-
-                                            <span className="header__dropdown-product-price">13.00$</span>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                                <button className="header__dropdown-button--close" onClick={handleCloseClick}>
-                                    Close
+                                <button className="header__dropdown-button--close" onClick={handleCloseClick} tabIndex={-1}>
+                                    <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="0" y1="0" x2="10" y2="10" stroke="black" strokeWidth="2" />
+                                        <line x1="0" y1="10" x2="10" y2="0" stroke="black" strokeWidth="2" />
+                                    </svg>
                                 </button>
                             </div>
                         </div>

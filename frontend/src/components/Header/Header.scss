@@ -215,20 +215,88 @@
     }
 
     &__dropdown--search {
-        display: none;
+        opacity: 0;
         position: absolute;
         top: 80px;
         left: 0;
         width: 100%;
-        height: 200px;
         background-color: var(--color-lightgray);
         border-radius: 30px;
         padding: 25px;
+        padding-top: 50px;
+        transition: opacity var(--transition);
+    }
+
+    &__dropdown-list-wrap {
+        height: 160px;
+        padding-right: 10px;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--color-gray);
+            border-radius: 4px;
+        }
     }
 
     &__dropdown-list {}
 
     &__dropdown-list-item {}
+
+    &__dropdown-product-card {
+        display: flex;
+        align-items: center;
+        transition: transform var(--transition);
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: scale(1.01);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: none;
+            }
+        }
+    }
+
+    &__dropdown-product-image {
+        border-radius: 5px;
+    }
+
+    &__dropdown-product-title {
+        margin-left: 10px;
+        @include fluid-text(14, 14);
+        @include font(var(--font-family), 600, 1);
+        color: var(--color-blue);
+    }
+
+    &__dropdown-product-price {
+        flex: 1;
+        text-align: right;
+        @include fluid-text(18, 18);
+        @include font(var(--font-family), 600, 1);
+        color: var(--color-blue);
+    }
+
+    &__dropdown-button--close {
+        position: absolute;
+        top: 15px;
+        right: 22px;
+        color: var(--color-blue);
+    }
 
     &__button--cart {
         position: relative;
