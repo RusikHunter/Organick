@@ -56,12 +56,12 @@ function LocationSection() {
                                 />
                             </label>
 
-                            <label htmlFor="locationInputEmail" className="location__label location__label--name">
+                            <label htmlFor="locationInputEmail" className="location__label location__label--email">
                                 Your Email*
 
                                 <input
                                     type="email"
-                                    className="location__input location__input--name"
+                                    className="location__input location__input--email"
                                     id="locationInputEmail"
                                     placeholder="Your Email Address" />
                             </label>

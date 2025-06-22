@@ -1,11 +1,15 @@
 import { useSetCurrentPage } from "../../hooks/useSetCurrentPage"
+import PaymentSection from "../../components/PaymentSection/PaymentSection"
+import SubIntroBlock from "../../components/SubIntroBlock/SubIntroBlock"
+import PaymentBackground from "../../images/images/background-payment.png"
 
 function PaymentPage() {
     useSetCurrentPage("payment")
 
     return (
         <>
-            <h1>PaymentPage</h1>
+            <SubIntroBlock title="Payment" backgroundImageURL={PaymentBackground} />
+            <PaymentSection />
         </>
     )
 }
