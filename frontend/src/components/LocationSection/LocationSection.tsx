@@ -45,53 +45,53 @@ function LocationSection() {
                 <div className="location__row location__row--2 row">
                     <div className="location__column location__column--2 column">
                         <form className="location__form">
-                            <label htmlFor="locationInputName" className="location__label location__label--name">
+                            <label htmlFor="locationInputName" className="location__label location__label--name label">
                                 Full Name*
 
                                 <input
                                     type="text"
-                                    className="location__input location__input--name"
+                                    className="location__input location__input--name input"
                                     id="locationInputName"
                                     placeholder="Your Full Name"
                                 />
                             </label>
 
-                            <label htmlFor="locationInputEmail" className="location__label location__label--name">
+                            <label htmlFor="locationInputEmail" className="location__label location__label--email label">
                                 Your Email*
 
                                 <input
                                     type="email"
-                                    className="location__input location__input--name"
+                                    className="location__input location__input--email input"
                                     id="locationInputEmail"
                                     placeholder="Your Email Address" />
                             </label>
 
-                            <label htmlFor="locationInputCompany" className="location__label location__label--company">
+                            <label htmlFor="locationInputCompany" className="location__label location__label--company label">
                                 Company*
 
                                 <input
                                     type="text"
-                                    className="location__input location__input--company"
+                                    className="location__input location__input--company input"
                                     id="locationInputCompany"
                                     placeholder="Your Company Name" />
                             </label>
 
-                            <label htmlFor="locationInputSubject" className="location__label location__label--subject">
+                            <label htmlFor="locationInputSubject" className="location__label location__label--subject label">
                                 Subject*
 
                                 <input
                                     type="text"
-                                    className="location__input location__input--subject"
+                                    className="location__input location__input--subject input"
                                     id="locationInputSubject"
                                     placeholder="How Can We Help" />
                             </label>
 
-                            <label htmlFor="locationTextareaMessage" className="location__label location__label--message">
+                            <label htmlFor="locationTextareaMessage" className="location__label location__label--message label">
                                 Message*
 
                                 <textarea
                                     id="locationTextareaMessage"
-                                    className="location__input location__input--message"
+                                    className="location__input location__input--message input"
                                     placeholder="Your Message"
                                     rows={11}
                                 ></textarea>
@@ -100,7 +100,7 @@ function LocationSection() {
                             <div className="location__submit-wrap">
                                 <input
                                     type="submit"
-                                    className="location__input location__input--submit button button--blue"
+                                    className="location__input location__input--submit button button--blue input"
                                     id="locationInputSubmit"
                                     value="Send Message"
                                 />

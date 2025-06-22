@@ -1,0 +1,58 @@
+@use "../../styles/index" as *;
+
+.thank-you {
+    max-width: 100% !important;
+    background-image: url("../../images/images/background-thank-you.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 120px;
+
+    @include mobile {
+        margin-bottom: 60px;
+    }
+
+    @include mobile-small {
+        background-position: -400px center;
+    }
+
+    &__inner {
+        padding-block: 320px;
+
+        @include laptop {
+            padding-block: 280px;
+        }
+
+        @include tablet {
+            padding-block: 240px;
+        }
+
+        @include mobile {
+            padding-block: 200px;
+        }
+
+        @include mobile-small {
+            padding-block: 160px;
+        }
+    }
+
+    &__row {}
+
+    &__column {
+        gap: 30px;
+    }
+
+    &__title {
+        @include mobile-small {
+            width: 60%;
+        }
+    }
+
+    &__title--green {
+        color: var(--color-darkgreen);
+    }
+
+    &__link {
+        width: max-content;
+    }
+}

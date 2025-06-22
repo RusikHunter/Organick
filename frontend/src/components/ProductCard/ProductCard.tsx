@@ -2,9 +2,18 @@ import "./ProductCard.scss"
 import TEMP from "../../images/images/TEMP-BANANA.png"
 import { Link } from "react-router-dom"
 
-function ProductCard() {
+interface ProductCardProps {
+    isCartItem?: boolean
+}
+
+function ProductCard({ isCartItem }: ProductCardProps) {
     return (
-        <Link to={`/shop/${0}`} className="product-card">
+        <Link
+            to={`/shop/${0}`}
+            className={`product-card${isCartItem ? ' product-card--cart-item' : ''}`}
+            tabIndex={isCartItem ? -1 : 1}
+            style={{ ...(isCartItem ? { transform: "none" } : {}) }}
+        >
             <span className="product-card__category">Fresh</span>
 
             <img src={TEMP} alt="Fresh Banana" className="product-card__image" width={336} height={375} />
@@ -38,7 +47,7 @@ function ProductCard() {
                     </svg>
                 </div>
             </div>
-        </Link>
+        </ Link >
     )
 }
 

@@ -112,9 +112,7 @@
         }
     }
 
-    &__dropdown {
-        display: none; // temp
-    }
+    &__dropdown {}
 
     &__column--3 {
         flex-direction: row !important;
@@ -124,101 +122,6 @@
             gap: 14px;
         }
     }
-
-    &__search {
-        position: relative;
-
-        // HACK: positioning search outside its column
-
-        @include mobile {
-            position: absolute;
-            width: calc(100% - 48px);
-            left: 24px;
-            top: 116px;
-        }
-
-        @include mobile-small {
-            width: calc(100% - 24px);
-            left: 12px;
-            top: 96px;
-        }
-    }
-
-    &__input {
-        width: 376px;
-        height: 66px;
-        padding-block: var(--input-padding-block);
-        padding-inline: var(--input-padding-block);
-        background-color: var(--color-lightgray);
-        border-radius: 36px;
-        @include fluid-text(20, 16);
-        @include font(var(--font-family), 700, 1);
-        color: var(--color-blue);
-        caret-color: var(--color-blue);
-
-        @media (max-width: 1310px) {
-            width: 270px;
-        }
-
-        @include tablet {
-            width: 320px;
-        }
-
-        @include mobile {
-            width: 100%;
-        }
-
-        @include mobile-small {
-            height: 56px;
-        }
-    }
-
-    &__input--search {}
-
-    &__button--search {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        width: 56px;
-        height: 56px;
-        background-color: var(--color-green);
-        border-radius: 50%;
-        transition: background-color var(--transition);
-
-        @include mobile-small {
-            width: 46px;
-            height: 46px;
-        }
-
-        & svg {
-            position: relative;
-            top: 3px;
-            left: 1px;
-            color: var(--color-white);
-        }
-
-        @include desktop-screen {
-
-            &:hover,
-            &:focus-visible {
-                background-color: var(--color-darkgreen);
-            }
-        }
-
-        @include touch-screen {
-
-            &:hover,
-            &:focus-visible {
-                background-color: var(--color-green);
-            }
-        }
-    }
-
-    &__dropdown--search {}
-
-    &__dropdown-list {}
-
-    &__dropdown-list-item {}
 
     &__button--cart {
         position: relative;

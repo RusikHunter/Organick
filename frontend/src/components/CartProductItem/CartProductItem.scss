@@ -1,0 +1,102 @@
+@use "../../styles/index" as *;
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-inline: auto;
+    align-items: center;
+    background-color: var(--color-lightgray);
+    padding: 15px;
+    border-radius: 30px;
+
+    @include tablet {
+        width: 100%;
+    }
+
+    @include mobile {
+        border-radius: 18px;
+    }
+
+    @include mobile-small {
+        flex-direction: column-reverse;
+        gap: 30px;
+        align-items: start;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+
+        @include mobile {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 25px;
+        }
+
+        @include mobile-small {
+            align-items: start;
+            margin-right: 0;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+    }
+
+    &__label {
+        @include fluid-text(20, 16);
+        @include font(var(--font-family), 700, 1);
+        color: var(--color-blue);
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @include mobile-small {
+            align-items: start;
+        }
+    }
+
+    &__input {
+        border: var(--border-bold);
+        height: 80px;
+        width: 135px;
+        border-radius: 16px;
+        margin-inline: 20px;
+        color: var(--color-blue);
+        text-align: center;
+        background-color: transparent;
+
+        @include mobile {
+            margin: 0;
+        }
+    }
+
+    &__button--delete {
+        transition: transform var(--transition);
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: scale(1.05);
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                transform: none;
+            }
+        }
+    }
+}

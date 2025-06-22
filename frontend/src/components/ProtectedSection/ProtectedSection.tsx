@@ -13,12 +13,12 @@ function ProtectedSection() {
                             </div>
 
                             <form className="protected__form">
-                                <label htmlFor="" className="protected__label">
+                                <label htmlFor="" className="protected__label label">
                                     Password
 
                                     <input
                                         type="password"
-                                        className="protected__input protected__input--password"
+                                        className="protected__input protected__input--password input"
                                         id="protectedInputPassword"
                                         placeholder="Enter Your Password"
                                     />

@@ -1,0 +1,130 @@
+@use "../../styles/index" as *;
+
+.payment {
+
+    &__inner {
+        padding-block: 120px;
+
+        @include laptop {
+            padding-block: 100px;
+        }
+
+        @include tablet {
+            padding-block: 80px;
+        }
+
+        @include mobile {
+            padding-block: 60px;
+        }
+
+        @include mobile-small {
+            padding-block: 40px;
+        }
+    }
+
+    &__row {}
+
+    &__row--1 {}
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        @include mobile {
+            gap: 25px;
+        }
+    }
+
+    &__title {
+        width: 100%;
+    }
+
+    &__title--card {
+        margin-top: 30px;
+    }
+
+    &__label {
+        width: calc(50% - 25px);
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__label--name {}
+
+    &__input {}
+
+    &__input--name {}
+
+    &__label--company {}
+
+    &__input--company {}
+
+    &__label--address {}
+
+    &__input--address {}
+
+    &__card-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 285px;
+        gap: 20px;
+    }
+
+    &__label--card-date {
+        width: 135px;
+    }
+
+    &__input--card-date {
+        padding-inline: 40px;
+    }
+
+    &__label--cvv {
+        width: 130px;
+    }
+
+    &__input--cvv {
+        padding-inline: 40px;
+    }
+
+    &__label--card-number {
+        width: 100%;
+    }
+
+    &__input--card-number {}
+
+    &__details-wrap {
+        width: 100%;
+        margin-top: 30px;
+        padding: 75px 45px;
+        border-radius: 30px;
+        background-color: var(--color-lightgray);
+
+        @include mobile-small {
+            padding: 60px 30px;
+        }
+    }
+
+    &__details {
+        @include fluid-text(18, 14);
+        @include font(var(--font-family), 400, 1.5);
+        color: var(--color-blue);
+    }
+
+    &__title--details {
+        margin-bottom: 15px;
+    }
+
+    &__price {
+        margin-top: 15px;
+    }
+
+    &__input--submit {
+        font-style: normal;
+        border: none;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+}

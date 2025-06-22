@@ -18,6 +18,9 @@ import LicensesPage from './pages/LicensesPage/LicensesPage'
 import ChangelogPage from './pages/ChangelogPage/ChangelogPage'
 import ProtectedPage from './pages/ProtectedPage/ProtectedPage'
 import SubscribeSection from './components/SubscribeSection/SubscribeSection'
+import CartPage from './pages/CartPage/CartPage'
+import PaymentPage from './pages/PaymentPage/PaymentPage'
+import ThankYouPage from './pages/ThankYouPage/ThankYouPage'
 import Footer from './components/Footer/Footer'
 import { useSelector } from 'react-redux'
 import type { RootState } from "./store/index"
@@ -48,6 +51,9 @@ function App() {
                         <Route path="/licenses" element={<LicensesPage />} />
                         <Route path="/changelog" element={<ChangelogPage />} />
                         <Route path="/protected" element={<ProtectedPage />} />
+                        <Route path="/cart" element={<CartPage />} />
+                        <Route path="/payment" element={<PaymentPage />} />
+                        <Route path="/thankyou" element={<ThankYouPage />} />
                     </Routes>
                     {currentPage !== "services" && currentPage !== "notfound" && <SubscribeSection />}
                 </main>

@@ -141,6 +141,28 @@
     }
 }
 
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    @include fluid-text(18, 16);
+    @include font(var(--font-family), 600, 1);
+    color: var(--color-blue);
+}
+
+.input {
+    padding: 28px 23px;
+    border-radius: 16px;
+    border: var(--border-green);
+    @include fluid-text(18, 14);
+    @include font(var(--second-family), 400, 1);
+    color: var(--color-darkgray);
+
+    &::placeholder {
+        font-style: italic;
+    }
+}
+
 .h1 {
     @include fluid-text(70, 50);
     @include font(var(--font-family), 800, 1.2);
