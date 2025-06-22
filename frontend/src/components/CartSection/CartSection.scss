@@ -1,0 +1,32 @@
+@use "../../styles/index" as *;
+
+.cart {
+
+    &__inner {
+        padding-block: 120px;
+
+        @include laptop {
+            padding-block: 100px;
+        }
+
+        @include tablet {
+            padding-block: 80px;
+        }
+
+        @include mobile {
+            padding-block: 60px;
+        }
+
+        @include mobile-small {
+            padding-block: 40px;
+        }
+    }
+
+    &__row {}
+
+    &__product-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
