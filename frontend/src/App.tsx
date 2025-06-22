@@ -19,6 +19,7 @@ import ChangelogPage from './pages/ChangelogPage/ChangelogPage'
 import ProtectedPage from './pages/ProtectedPage/ProtectedPage'
 import SubscribeSection from './components/SubscribeSection/SubscribeSection'
 import CartPage from './pages/CartPage/CartPage'
+import PaymentPage from './pages/PaymentPage/PaymentPage'
 import Footer from './components/Footer/Footer'
 import { useSelector } from 'react-redux'
 import type { RootState } from "./store/index"
@@ -50,6 +51,7 @@ function App() {
                         <Route path="/changelog" element={<ChangelogPage />} />
                         <Route path="/protected" element={<ProtectedPage />} />
                         <Route path="/cart" element={<CartPage />} />
+                        <Route path="/payment" element={<PaymentPage />} />
                     </Routes>
                     {currentPage !== "services" && currentPage !== "notfound" && <SubscribeSection />}
                 </main>
