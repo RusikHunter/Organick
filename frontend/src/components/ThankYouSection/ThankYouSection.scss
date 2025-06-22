@@ -1,0 +1,26 @@
+@use "../../styles/index" as *;
+
+.thank-you {
+    max-width: 100% !important;
+    background-image: url("../../images/images/background-thank-you.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 120px;
+
+    &__inner {
+        padding-block: 320px;
+    }
+
+    &__row {}
+
+    &__column {
+        gap: 30px;
+    }
+
+    &__title {}
+
+    &__title--green {
+        color: var(--color-darkgreen);
+    }
+}
