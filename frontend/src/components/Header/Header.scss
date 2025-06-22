@@ -225,6 +225,11 @@
         padding: 25px;
         padding-top: 50px;
         transition: opacity var(--transition);
+
+        @include mobile {
+            padding: 25px;
+            padding-top: 45px;
+        }
     }
 
     &__dropdown-list-wrap {
