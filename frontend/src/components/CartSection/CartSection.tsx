@@ -21,12 +21,12 @@ function CartSection() {
                             <h6 className="cart__details">Taxes: 2.00$</h6>
                             <h6 className="cart__details">Delivery: 5.00$</h6>
 
-                            <label htmlFor="cartInputPromocode" className="cart__label">
+                            <label htmlFor="cartInputPromocode" className="cart__label label">
                                 Do you have Promocode?
 
                                 <input
                                     id="cartInputPromocode"
-                                    className="cart__input"
+                                    className="cart__input input"
                                     placeholder="Write Your Promocode"
                                 />
                             </label>

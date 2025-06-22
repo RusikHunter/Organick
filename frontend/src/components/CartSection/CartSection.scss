@@ -83,14 +83,8 @@
     }
 
     &__label {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
         width: 350px;
         margin-top: 30px;
-        @include fluid-text(18, 16);
-        @include font(var(--font-family), 600, 1);
-        color: var(--color-blue);
 
         @include mobile-small {
             width: 100%;
@@ -98,12 +92,6 @@
     }
 
     &__input {
-        padding: 28px 23px;
-        border-radius: 16px;
-        border: var(--border-green);
-        @include fluid-text(18, 14);
-        @include font(var(--second-family), 400, 1);
-        color: var(--color-darkgray);
         background-color: transparent;
         text-transform: uppercase;
 

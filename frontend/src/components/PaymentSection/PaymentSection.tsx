@@ -18,42 +18,42 @@ function PaymentSection() {
                     <form className="payment__form" onSubmit={handleSubmit}>
                         <h4 className="payment__title payment__title--delivery h4">Delivery</h4>
 
-                        <label htmlFor="paymentInputName" className="payment__label payment__label--name">
+                        <label htmlFor="paymentInputName" className="payment__label payment__label--name label">
                             Full Name*
 
                             <input
                                 type="text"
-                                className="payment__input payment__input--name"
+                                className="payment__input payment__input--name input"
                                 id="paymentInputName"
                                 placeholder="Your Full Name"
                             />
                         </label>
-                        <label htmlFor="paymentInputEmail" className="payment__label payment__label--name">
+                        <label htmlFor="paymentInputEmail" className="payment__label payment__label--name label">
                             Your Email*
 
                             <input
                                 type="email"
-                                className="payment__input payment__input--name"
+                                className="payment__input payment__input--name input"
                                 id="paymentInputEmail"
                                 placeholder="Your Email Address" />
                         </label>
 
-                        <label htmlFor="paymentInputCompany" className="payment__label payment__label--company">
+                        <label htmlFor="paymentInputCompany" className="payment__label payment__label--company label">
                             Company*
 
                             <input
                                 type="text"
-                                className="payment__input payment__input--company"
+                                className="payment__input payment__input--company input"
                                 id="paymentInputCompany"
                                 placeholder="Your Company Name" />
                         </label>
 
-                        <label htmlFor="paymentInputAddress" className="payment__label payment__label--address">
+                        <label htmlFor="paymentInputAddress" className="payment__label payment__label--address label">
                             Address*
 
                             <input
                                 type="text"
-                                className="payment__input payment__input--address"
+                                className="payment__input payment__input--address input"
                                 id="paymentInputAddress"
                                 placeholder="Your Address" />
                         </label>
@@ -61,32 +61,32 @@ function PaymentSection() {
                         <h4 className="payment__title payment__title--card h4">Card</h4>
 
                         <div className="payment__card-wrap">
-                            <label htmlFor="paymentInputCardDate" className="payment__label payment__label--card-date">
+                            <label htmlFor="paymentInputCardDate" className="payment__label payment__label--card-date label">
                                 Month/Year*
 
                                 <input
                                     type="number"
-                                    className="payment__input payment__input--card-date"
+                                    className="payment__input payment__input--card-date input"
                                     id="paymentInputCardDate"
                                     placeholder="00/00" />
                             </label>
 
-                            <label htmlFor="paymentInputCVV" className="payment__label payment__label--cvv">
+                            <label htmlFor="paymentInputCVV" className="payment__label payment__label--cvv label">
                                 CVV2*
 
                                 <input
                                     type="number"
-                                    className="payment__input payment__input--cvv"
+                                    className="payment__input payment__input--cvv input"
                                     id="paymentInputCVV"
                                     placeholder="000" />
                             </label>
 
-                            <label htmlFor="paymentInputCardNumber" className="payment__label payment__label--card-number">
+                            <label htmlFor="paymentInputCardNumber" className="payment__label payment__label--card-number label">
                                 Card Number*
 
                                 <input
                                     type="number"
-                                    className="payment__input payment__input--card-number"
+                                    className="payment__input payment__input--card-number input"
                                     id="paymentInputCardNumber"
                                     placeholder="XXXX-XXXX-XXXX-XXXX" />
                             </label>

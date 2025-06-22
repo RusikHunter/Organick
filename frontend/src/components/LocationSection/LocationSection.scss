@@ -135,13 +135,7 @@
     }
 
     &__label {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
         width: calc(50% - 25px);
-        @include fluid-text(18, 16);
-        @include font(var(--font-family), 600, 1);
-        color: var(--color-blue);
 
         @include mobile {
             width: 100%;
@@ -150,15 +144,7 @@
 
     &__label--name {}
 
-    &__input {
-        padding: 28px 23px;
-        border-radius: 16px;
-        border: var(--border-green);
-        @include fluid-text(18, 14);
-        @include font(var(--second-family), 400, 1);
-        color: var(--color-darkgray);
-        font-style: italic;
-    }
+    &__input {}
 
     &__input--name {}
 
@@ -188,5 +174,8 @@
         margin-top: 10px;
         font-style: normal;
         cursor: pointer;
+        color: var(--color-white) !important;
+        font-weight: 600 !important;
+        font-style: normal !important;
     }
 }
