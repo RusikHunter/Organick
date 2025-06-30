@@ -64,6 +64,7 @@
 
 .dropdown {
     opacity: 0;
+    // transform: translateY(-150%);
     position: absolute;
     top: 80px;
     left: 0;
@@ -73,6 +74,8 @@
     padding: 25px;
     padding-top: 50px;
     transition: opacity var(--transition);
+    z-index: -999;
+    pointer-events: none;
 
     @include mobile {
         padding: 25px;
@@ -180,4 +183,10 @@
         right: 22px;
         color: var(--color-blue);
     }
+}
+
+.dropdown--active {
+    opacity: 1;
+    z-index: 8;
+    pointer-events: all;
 }

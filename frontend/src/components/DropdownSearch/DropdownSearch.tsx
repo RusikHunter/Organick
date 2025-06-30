@@ -29,8 +29,6 @@ function DropdownSearch() {
 
     useEffect(() => {
         const handleOutsideClick = (e: MouseEvent): void => {
-            console.log(e.target)
-
             if (
                 searchWrapRef.current
                 && searchWrapRef.current.contains(e.target as Node)
@@ -62,9 +60,8 @@ function DropdownSearch() {
             </label>
 
             <div
-                className="search__dropdown dropdown overlay"
+                className={`search__dropdown dropdown ${isSearhDropdownShowed ? 'dropdown--active ' : ''}overlay`}
                 ref={searchDropdownRef}
-                style={{ opacity: isSearhDropdownShowed ? "1" : "0" }}
             >
                 <div className="dropdown__list-wrap">
                     <ul className="dropdown__list">
