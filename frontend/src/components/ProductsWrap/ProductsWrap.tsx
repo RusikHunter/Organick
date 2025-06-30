@@ -3,13 +3,30 @@ import ProductCard from "../ProductCard/ProductCard"
 import type { ProductWrapProps } from "../../interfaces/productWrapProps"
 import { useAppSelector } from "../../hooks/useAppSelector"
 import { useState } from "react"
+import { useParams } from "react-router-dom"
+import type { Product } from "../../interfaces/product"
 
-function ProductsWrap({ defaultCardsCount, hasButtonMore }: ProductWrapProps) {
+function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: ProductWrapProps) {
     const [iteration, setIteration] = useState<number>(1)
 
-    const products = useAppSelector(state => state.client.products)
+    let products = useAppSelector(state => state.client.products)
 
-    let cardsCount = Array.from({ length: defaultCardsCount * iteration }, (_, i) => i)
+    if (isRelatedProducts) {
+        const id = Number(useParams().id ?? '') - 1
+        const productOfCurrentPage: Product = useAppSelector(state => state.client.products[id])
+
+        const productsSortedByType = products.filter(product => {
+            return product.type === productOfCurrentPage.type && product.id !== productOfCurrentPage.id
+        })
+
+        productsSortedByType.sort(() => Math.random() - 0.5)
+
+        products = productsSortedByType
+    }
+
+    let cardsCount = isRelatedProducts && products.length < 4
+        ? Array.from({ length: products.length }, (_, i) => i)
+        : Array.from({ length: defaultCardsCount * iteration }, (_, i) => i)
 
     const handleMoreClick = (): void => {
         setIteration(prev => prev + 1)

@@ -29,7 +29,7 @@ function OrganicSection() {
 
                 <div className="organic__row organic__row--2 row">
                     <div className="organic__column organic__column--3 column">
-                        <ProductsWrap defaultCardsCount={4} hasButtonMore={false} />
+                        <ProductsWrap defaultCardsCount={4} />
                     </div>
                 </div>
             </div>

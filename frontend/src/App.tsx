@@ -38,7 +38,7 @@ function App() {
             dispatch(fetchProducts())
         }
 
-        console.log("products:", products)
+        console.log(products)
     }, [dispatch, products.length])
 
     return (

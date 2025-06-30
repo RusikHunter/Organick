@@ -3,8 +3,6 @@ import { Link } from "react-router-dom"
 import type { ProductCardProps } from "../../interfaces/productCardProps"
 
 function ProductCard({ isCartItem, productData }: ProductCardProps) {
-    console.log(productData)
-
     return (
         <Link
             to={`/shop/${productData.id}`}

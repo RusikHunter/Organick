@@ -16,7 +16,7 @@ function OurProductsSection() {
 
                 <div className="our-products__row our-products__row--2 row">
                     <div className="our-products__column our-products__column--2 column">
-                        <ProductsWrap defaultCardsCount={8} hasButtonMore={false} />
+                        <ProductsWrap defaultCardsCount={8} />
                     </div>
                 </div>
 

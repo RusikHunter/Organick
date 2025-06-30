@@ -15,8 +15,10 @@ function ProductItemSection() {
         setProductCount(e.target.value)
     }
 
+    // ! todo --> loading...
+
     return (
-        <section className="product-item">
+        product && <section className="product-item">
             <div className="product-item__inner container">
                 <div className="product-item__row product-item__row--1 row">
                     <div className="product-item__column product-item__column--1 column">

@@ -7,5 +7,6 @@
 
 export interface ProductWrapProps {
     defaultCardsCount: number
-    hasButtonMore: boolean
+    hasButtonMore?: boolean
+    isRelatedProducts?: boolean
 }

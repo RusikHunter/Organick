@@ -12,7 +12,7 @@ function RelatedSection() {
                 </div>
 
                 <div className="related__row related__row--2 row">
-                    <ProductsWrap defaultCardsCount={4} hasButtonMore={false} />
+                    <ProductsWrap defaultCardsCount={4} isRelatedProducts={true} />
                 </div>
             </div>
         </section>
