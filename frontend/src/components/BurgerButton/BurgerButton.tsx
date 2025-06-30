@@ -12,8 +12,6 @@ function BurgerButton() {
         dispatch(setIsBurgerMenuOpen())
     }
 
-    // ! todo --> border-radius for decoration lines
-
     return (
         <button className={`burger-button${isBurgerMenuOpen ? ` burger-button--active` : ''}`} onClick={handleClick}>
             <div className="burger-button__decoration-wrap">

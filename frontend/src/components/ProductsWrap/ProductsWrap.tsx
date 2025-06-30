@@ -1,17 +1,6 @@
 import "./ProductsWrap.scss"
 import ProductCard from "../ProductCard/ProductCard"
-
-//
-// In this case, the hasButtonMore prop defines the presence
-// of a button that loads additional product cards.
-// Not to be confused with the LoadMore button in some
-// component sections that redirect the user to the ShopPage.
-//
-
-interface ProductWrapProps {
-    defaultCardsCount: number
-    hasButtonMore: boolean
-}
+import type { ProductWrapProps } from "../../interfaces/productWrapProps"
 
 function ProductsWrap({ defaultCardsCount, hasButtonMore }: ProductWrapProps) {
     const cardsCount = Array.from({ length: defaultCardsCount }, (_, i) => i)

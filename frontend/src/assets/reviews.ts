@@ -1,14 +1,7 @@
 import userSaraAvatarURL from '../images/images/sara.png'
 import userJamesAvatarURL from '../images/images/james.png'
 import userRobertAvatarURL from '../images/images/robert.png'
-
-export interface Review {
-    avatarURL: string,
-    rating: number,
-    text: string,
-    name: string,
-    post: string
-}
+import type { Review } from '../interfaces/review'
 
 const reviews: Review[] = [
     {

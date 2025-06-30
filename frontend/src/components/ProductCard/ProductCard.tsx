@@ -1,10 +1,7 @@
 import "./ProductCard.scss"
 import TEMP from "../../images/images/TEMP-BANANA.png"
 import { Link } from "react-router-dom"
-
-interface ProductCardProps {
-    isCartItem?: boolean
-}
+import type { ProductCardProps } from "../../interfaces/productCardProps"
 
 function ProductCard({ isCartItem }: ProductCardProps) {
     return (

@@ -37,6 +37,7 @@
     &__decoration-line {
         width: 100%;
         height: 3px;
+        border-radius: 2px;
         background-color: var(--color-white);
 
         @include mobile-small {

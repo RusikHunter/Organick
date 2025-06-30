@@ -1,22 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { fetchProducts } from '../asyncActions/fetchProducts'
-
-export interface Product {
-    id: number
-    title: string
-    type: string
-    imageURL: string
-    rating: number
-    price: number
-    discountPrice: number
-    description: string
-}
-
-interface ClientState {
-    isBurgerMenuOpen: boolean
-    currentPage: string | null
-    products: Product[]
-}
+import type { ClientState } from '../../interfaces/clientState'
 
 const initialState: ClientState = {
     isBurgerMenuOpen: false,

@@ -1,13 +1,6 @@
 import "./PortfolioItemCard.scss"
 import { Link } from "react-router-dom"
-
-type PortfolioItemCardProps = {
-    id: number,
-    title: string,
-    type: string,
-    backgroundImageURL: string,
-    className: string
-}
+import type { PortfolioItemCardProps } from "../../interfaces/portfolioItemCardProps"
 
 function PortfolioItemCard({ id, title, type, backgroundImageURL, className }: PortfolioItemCardProps) {
     return (

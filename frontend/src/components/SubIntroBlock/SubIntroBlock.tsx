@@ -1,9 +1,5 @@
 import "./SubIntroBlock.scss"
-
-type SubIntroBlockProps = {
-    title: string,
-    backgroundImageURL: string
-}
+import type { SubIntroBlockProps } from "../../interfaces/subIntroBlockProps"
 
 function SubIntroBlock({ title, backgroundImageURL }: SubIntroBlockProps) {
     return (

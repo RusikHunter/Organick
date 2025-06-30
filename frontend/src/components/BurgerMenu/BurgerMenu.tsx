@@ -14,13 +14,13 @@ function BurgerMenu() {
 
     const burgerMenuRef = useRef<HTMLDivElement | null>(null)
 
-    // const handleBurgerClick = (event: React.MouseEvent): void => {
-    //     if (burgerMenuRef.current && isBurgerMenuOpen) {
-    //         if (burgerMenuRef.current.contains(event.target as Node)) {
-    //             dispatch(setIsBurgerMenuOpen())
-    //         }
-    //     }
-    // ! }
+    const handleBurgerClick = (event: React.MouseEvent): void => {
+        if (burgerMenuRef.current && isBurgerMenuOpen) {
+            if (burgerMenuRef.current.contains(event.target as Node)) {
+                dispatch(setIsBurgerMenuOpen())
+            }
+        }
+    }
 
     // The method is needed to hide/appear the burger menu
     // when changing the screen width in the browser devtools
@@ -53,7 +53,7 @@ function BurgerMenu() {
             role="dialog"
             aria-modal="true"
             ref={burgerMenuRef}
-        // onClick={handleBurgerClick}
+            onClick={handleBurgerClick}
         >
             <div className="burger-menu__wrap">
                 <nav className="burger-menu__navigation">
