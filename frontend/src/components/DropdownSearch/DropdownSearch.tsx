@@ -47,6 +47,8 @@ function DropdownSearch() {
         }
     }, [isSearhDropdownShowed])
 
+    // ! TODO ---> FIX PROBLEM WITH OPACITY AND ADD TOP -1000PX 
+
     return (
         <div className="search-wrap" ref={searchWrapRef}>
             <label htmlFor="headerInputSearch" className="search" onClick={handleSearchClick}>
