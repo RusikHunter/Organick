@@ -1,18 +1,28 @@
 import "./ProductsWrap.scss"
 import ProductCard from "../ProductCard/ProductCard"
 import type { ProductWrapProps } from "../../interfaces/productWrapProps"
+import { useAppSelector } from "../../hooks/useAppSelector"
+import { useState } from "react"
 
 function ProductsWrap({ defaultCardsCount, hasButtonMore }: ProductWrapProps) {
-    const cardsCount = Array.from({ length: defaultCardsCount }, (_, i) => i)
+    const [iteration, setIteration] = useState<number>(1)
+
+    const products = useAppSelector(state => state.client.products)
+
+    let cardsCount = Array.from({ length: defaultCardsCount * iteration }, (_, i) => i)
+
+    const handleMoreClick = (): void => {
+        setIteration(prev => prev + 1)
+    }
 
     return (
-        <article className="products-wrap">
+        products.length && <article className="products-wrap">
             {cardsCount.map((index) => (
-                <ProductCard key={index} />
+                <ProductCard key={index} productData={products[index]} />
             ))}
 
             <div className="products-wrap__row row">
-                {hasButtonMore && <button className="products-wrap__button products-wrap__button--more button button--blue">
+                {hasButtonMore && (defaultCardsCount * iteration < products.length) && <button className="products-wrap__button products-wrap__button--more button button--blue" onClick={handleMoreClick}>
                     Add More
 
                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +39,7 @@ function ProductsWrap({ defaultCardsCount, hasButtonMore }: ProductWrapProps) {
 
                 </button>}
             </div>
-        </article>
+        </article >
     )
 }
 
