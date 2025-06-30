@@ -22,11 +22,25 @@ import CartPage from './pages/CartPage/CartPage'
 import PaymentPage from './pages/PaymentPage/PaymentPage'
 import ThankYouPage from './pages/ThankYouPage/ThankYouPage'
 import Footer from './components/Footer/Footer'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import type { RootState } from "./store/index"
+import { useEffect } from 'react'
+import { fetchProducts } from './store/asyncActions/fetchProducts'
+import type { AppDispatch } from './store/index'
 
 function App() {
     const currentPage = useSelector((state: RootState) => state.client.currentPage)
+
+    const dispatch: AppDispatch = useDispatch()
+
+    const products = useSelector((state: RootState) => state.client.products)
+
+    useEffect(() => {
+        if (!products.length) {
+            dispatch(fetchProducts())
+        }
+        console.log("products:", products)
+    }, [dispatch, products.length])
 
     return (
         <Router>
