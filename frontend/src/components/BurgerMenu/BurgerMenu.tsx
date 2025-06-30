@@ -1,11 +1,10 @@
-import { useSelector } from "react-redux"
-import type { RootState } from "../../store"
 import { Link } from "react-router-dom"
 import "./BurgerMenu.scss"
 import { useEffect, useRef } from "react"
+import { useAppSelector } from "../../hooks/useAppSelector"
 
 function BurgerMenu() {
-    const isBurgerMenuOpen = useSelector((state: RootState) => state.client.isBurgerMenuOpen)
+    const isBurgerMenuOpen = useAppSelector(state => state.client.isBurgerMenuOpen)
     const MAX_TABLET_VIEWPORT_WIDTH: number = 1024
 
     const burgerMenuRef = useRef<HTMLDivElement | null>(null)
