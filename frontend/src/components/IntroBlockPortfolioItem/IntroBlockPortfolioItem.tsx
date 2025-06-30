@@ -1,5 +1,5 @@
 import "./IntroBlockPortfolioItem.scss"
-import type { PortfolioItem } from "../../assets/portfolio-items"
+import type { PortfolioItem } from "../../interfaces/portfolioItem"
 
 function IntroBlockPortfolioItem(content: PortfolioItem) {
     return (

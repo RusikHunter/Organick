@@ -4,7 +4,7 @@ import { Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import reviewsJSON from "../../assets/reviews"
-import type { Review } from "../../assets/reviews"
+import type { Review } from "../../interfaces/review"
 
 function ReviewsSection() {
     const reviews: Review[] = reviewsJSON

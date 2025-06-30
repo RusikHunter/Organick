@@ -2,9 +2,9 @@ import "./DropdownSearch.scss"
 import { Link } from "react-router-dom"
 import { useState, useRef, useEffect } from "react"
 import TEMPBANANA from "../../images/images/TEMP-BANANA.png"
-import { useDispatch } from "react-redux"
 import { setIsBurgerMenuOpen } from "../../store/reducers/clientReducer"
-import type { AppDispatch } from "../../store"
+import { useAppDispatch } from "../../hooks/useAppDispatch"
+import { useAppSelector } from "../../hooks/useAppSelector"
 
 function DropdownSearch() {
     const [isSearhDropdownShowed, setIsSearhDropdownShowed] = useState<boolean>(false)
@@ -12,11 +12,15 @@ function DropdownSearch() {
     const searchDropdownRef = useRef<HTMLDivElement | null>(null)
     const searchWrapRef = useRef<HTMLDivElement | null>(null)
 
-    const dispatch = useDispatch<AppDispatch>()
+    const dispatch = useAppDispatch()
+    const isBurgerMenuOpen = useAppSelector(state => state.client.isBurgerMenuOpen)
 
     const handleSearchClick = (): void => {
         setIsSearhDropdownShowed(true)
-        dispatch(setIsBurgerMenuOpen())
+
+        if (isBurgerMenuOpen) {
+            dispatch(setIsBurgerMenuOpen())
+        }
     }
 
     const handleCloseClick = (): void => {
@@ -25,8 +29,6 @@ function DropdownSearch() {
 
     useEffect(() => {
         const handleOutsideClick = (e: MouseEvent): void => {
-            console.log(e.target)
-
             if (
                 searchWrapRef.current
                 && searchWrapRef.current.contains(e.target as Node)
@@ -60,9 +62,8 @@ function DropdownSearch() {
             </label>
 
             <div
-                className="search__dropdown dropdown overlay"
+                className={`search__dropdown dropdown ${isSearhDropdownShowed ? 'dropdown--active ' : ''}overlay`}
                 ref={searchDropdownRef}
-                style={{ opacity: isSearhDropdownShowed ? "1" : "0" }}
             >
                 <div className="dropdown__list-wrap">
                     <ul className="dropdown__list">

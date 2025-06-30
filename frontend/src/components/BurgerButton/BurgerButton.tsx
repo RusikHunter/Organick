@@ -1,19 +1,16 @@
-import { useDispatch, useSelector } from "react-redux"
 import { setIsBurgerMenuOpen } from "../../store/reducers/clientReducer"
-import { useState } from "react"
-import type { RootState } from "../../store"
 import "./BurgerButton.scss"
+import { useAppDispatch } from "../../hooks/useAppDispatch"
+import { useAppSelector } from "../../hooks/useAppSelector"
 
 function BurgerButton() {
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
-    const isBurgerMenuOpen = useSelector((state: RootState) => state.client.isBurgerMenuOpen)
+    const isBurgerMenuOpen = useAppSelector(state => state.client.isBurgerMenuOpen)
 
     const handleClick = (): void => {
         dispatch(setIsBurgerMenuOpen())
     }
-
-    // ! todo --> border-radius for decoration lines
 
     return (
         <button className={`burger-button${isBurgerMenuOpen ? ` burger-button--active` : ''}`} onClick={handleClick}>

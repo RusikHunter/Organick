@@ -4,17 +4,7 @@ import RigaImage from "../images/images/riga.png"
 import KeiraImage from "../images/images/keira.png"
 import ScottImage from "../images/images/scott.png"
 import KarenImage from "../images/images/karen.png"
-
-export interface TeamExpert {
-    imageURL: string
-    name: string
-    jobTitle: string
-    socialNetworksURLs: {
-        instagramURL?: string
-        facebookURL: string
-        twitterURL?: string
-    }
-}
+import type { TeamExpert } from "../interfaces/teamExpert"
 
 const teamExperts: TeamExpert[] = [
     {

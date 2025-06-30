@@ -1,9 +1,6 @@
 import "./NewsWrap.scss"
 import NewsCard from "../NewsCard/NewsCard"
-
-interface NewsWrapProps {
-    defaultNewsCount: number
-}
+import type { NewsWrapProps } from "../../interfaces/newsWrapProps"
 
 function NewsWrap({ defaultNewsCount }: NewsWrapProps) {
     const newsCount = Array.from({ length: defaultNewsCount }, (_, i) => i)

@@ -1,5 +1,5 @@
 import "./TeamExpertCard.scss"
-import type { TeamExpert } from "../../assets/team-experts"
+import type { TeamExpert } from "../../interfaces/teamExpert"
 
 function TeamExpertCard(props: TeamExpert) {
     return (

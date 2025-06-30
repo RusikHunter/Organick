@@ -4,18 +4,7 @@ import OrganicBetelLeafImage from "../images/images/organic-betel-leaf.png"
 import NaturalTommatoImage from "../images/images/natural-tommato.png"
 import BlackRaspberryImage from "../images/images/black-raspberry.png"
 import HoneyOrangeImage from "../images/images/honey-orange.png"
-
-export interface PortfolioItem {
-    id: number,
-    title: string
-    description: string
-    date: string
-    client: string
-    category: string
-    service: string
-    type: string
-    imageURL: string
-}
+import type { PortfolioItem } from "../interfaces/portfolioItem"
 
 const portfolioItems: PortfolioItem[] = [
     {

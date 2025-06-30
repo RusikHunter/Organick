@@ -7,7 +7,7 @@ function ShopSection() {
             <div className="shop__inner container">
                 <div className="shop__row row">
                     <div className="shop__column column">
-                        <ProductsWrap defaultCardsCount={11} hasButtonMore={true} />
+                        <ProductsWrap defaultCardsCount={12} hasButtonMore={true} />
                     </div>
                 </div>
             </div>

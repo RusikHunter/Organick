@@ -1,13 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
-
-interface ClientState {
-    isBurgerMenuOpen: boolean
-    currentPage: string | null
-}
+import { fetchProducts } from '../asyncActions/fetchProducts'
+import type { ClientState } from '../../interfaces/clientState'
 
 const initialState: ClientState = {
     isBurgerMenuOpen: false,
-    currentPage: null
+    currentPage: null,
+    products: []
 }
 
 const clientSlice = createSlice({
@@ -21,6 +19,11 @@ const clientSlice = createSlice({
             state.currentPage = action.payload
         }
     },
+    extraReducers: (builder) => {
+        builder.addCase(fetchProducts.fulfilled, (state, action) => {
+            state.products = action.payload
+        })
+    }
 })
 
 export const { setIsBurgerMenuOpen, setCurrentPage } = clientSlice.actions

@@ -1,7 +1,6 @@
 import "./PortfolioSection.scss"
 import PortfolioItemCard from "../PortfolioItemCard/PortfolioItemCard"
 import portfolioItems from "../../assets/portfolio-items"
-import { useEffect } from "react"
 
 function PortfolioSection() {
     return (

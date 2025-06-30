@@ -48,7 +48,7 @@
         padding: 5px 12px;
         background-color: var(--color-blue);
         border-radius: 8px;
-        z-index: 9;
+        z-index: 1;
     }
 
     &__image {
@@ -68,13 +68,15 @@
         display: flex;
         margin-inline: 30px;
         padding-bottom: 30px;
-        margin-top: 12px;
+        margin-top: 15px;
         border-top: var(--border-default);
         padding-top: 6px;
         align-items: end;
     }
 
     &__price {
+        position: relative;
+        top: 2px;
         @include fluid-text(18, 16);
         @include font(var(--second-family), 700, 1);
         color: var(--color-blue);

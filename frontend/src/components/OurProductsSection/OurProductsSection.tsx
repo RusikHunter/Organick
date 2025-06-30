@@ -16,7 +16,7 @@ function OurProductsSection() {
 
                 <div className="our-products__row our-products__row--2 row">
                     <div className="our-products__column our-products__column--2 column">
-                        <ProductsWrap defaultCardsCount={8} hasButtonMore={false} />
+                        <ProductsWrap defaultCardsCount={8} />
                     </div>
                 </div>
 
@@ -28,7 +28,7 @@ function OurProductsSection() {
 
                                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="9.5" cy="9.5" r="9.5" fill="#335B6B" />
-                                    <path className="button__svg-arrow" d="M9.47641 6.12891L12.871 9.19342L9.47641 12.2579M12.3995 9.19342H5.51611" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path className="button__svg-arrow" d="M9.47641 6.12891L12.871 9.19342L9.47641 12.2579M12.3995 9.19342H5.51611" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </button>
                         </Link>

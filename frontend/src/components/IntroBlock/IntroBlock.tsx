@@ -6,11 +6,7 @@
 //
 
 import "./IntroBlock.scss"
-
-type IntroBlockProps = {
-    content: React.ReactNode,
-    backgroundImageURL: string
-}
+import type { IntroBlockProps } from "../../interfaces/introBlockProps"
 
 function IntroBlock({ content, backgroundImageURL }: IntroBlockProps) {
     return (
