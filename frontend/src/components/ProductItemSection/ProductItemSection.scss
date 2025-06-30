@@ -62,7 +62,10 @@
         z-index: 1;
     }
 
-    &__image {}
+    &__image {
+        filter: brightness(0.97);
+        border-radius: 30px;
+    }
 
     &__column--2 {
         width: 52%;
