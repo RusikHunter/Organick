@@ -2,9 +2,10 @@ import "./CartProductItem.scss"
 import ProductCard from "../ProductCard/ProductCard"
 import { useState } from "react"
 import DeleteIcon from "../../images/icons/delete.svg"
+import type { CartProductItemProps } from "../../interfaces/cartProductItemProps"
 
-function CartProductItem() {
-    const [count, setCount] = useState<string>("1")
+function CartProductItem({ cartProduct }: CartProductItemProps) {
+    const [count, setCount] = useState<string>(cartProduct.count.toString())
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setCount(e.target.value)
@@ -13,7 +14,7 @@ function CartProductItem() {
     return (
         <article className="cart-item">
             <div className="cart-item__content">
-                {/* <ProductCard isCartItem={true} /> */}
+                <ProductCard isCartItem={true} productData={cartProduct.product} />
             </div>
 
             <div className="cart-item__controls">

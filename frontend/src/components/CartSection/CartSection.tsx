@@ -1,16 +1,54 @@
 import "./CartSection.scss"
 import CartProductItem from "../CartProductItem/CartProductItem"
 import { Link } from "react-router-dom"
+import { useAppSelector } from "../../hooks/useAppSelector"
+import type { LocalStorageItem } from "../../interfaces/localStorageItem"
+import type { Product } from "../../interfaces/product"
+import type { CartProduct } from "../../interfaces/cartProduct"
 
 function CartSection() {
+    function getAllLocalStorageData(): Record<string, unknown> {
+        const data: Record<string, unknown> = {}
+
+        for (let i = 0; i < localStorage.length; ++i) {
+            const key = localStorage.key(i)
+            if (!key) continue
+
+            try {
+                const value = localStorage.getItem(key)
+                data[key] = value ? JSON.parse(value) : null
+            } catch {
+                data[key] = localStorage.getItem(key)
+            }
+        }
+
+        return data
+    }
+
+    function isLocalStorageItem(item: unknown): item is LocalStorageItem {
+        return typeof item === "object" && item !== null && "id" in item && "productCount" in item
+    }
+
+    const storedProducts: unknown[] = Object.values(getAllLocalStorageData())
+
+    const products: Product[] = useAppSelector(state => state.client.products)
+
+    const cartProducts: CartProduct[] = storedProducts
+        .filter(isLocalStorageItem)
+        .map(item => { return { product: products[item.id], count: item.productCount } })
+
+    console.log(cartProducts)
+
+    // ! todo --> loading...
+
     return (
-        <section className="cart">
+        products.length && <section className="cart">
             <div className="cart__inner container">
                 <div className="cart__row cart__row--1 row">
                     <div className="cart__product-list">
-                        <CartProductItem />
-
-                        <CartProductItem />
+                        {cartProducts.map(product => (
+                            <CartProductItem cartProduct={product} />
+                        ))}
                     </div>
                 </div>
 
