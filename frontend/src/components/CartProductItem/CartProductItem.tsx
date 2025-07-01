@@ -13,7 +13,7 @@ function CartProductItem() {
     return (
         <article className="cart-item">
             <div className="cart-item__content">
-                <ProductCard isCartItem={true} />
+                {/* <ProductCard isCartItem={true} /> */}
             </div>
 
             <div className="cart-item__controls">

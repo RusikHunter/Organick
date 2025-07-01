@@ -26,6 +26,7 @@ import { useAppSelector } from './hooks/useAppSelector'
 import { useAppDispatch } from './hooks/useAppDispatch'
 import { useEffect } from 'react'
 import { fetchProducts } from './store/asyncActions/fetchProducts'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
     const currentPage = useAppSelector(state => state.client.currentPage)
@@ -38,7 +39,7 @@ function App() {
             dispatch(fetchProducts())
         }
 
-        console.log(products)
+        // console.log(products)
     }, [dispatch, products.length])
 
     return (
@@ -71,6 +72,7 @@ function App() {
                     {currentPage !== "services" && currentPage !== "notfound" && <SubscribeSection />}
                 </main>
                 <Footer />
+                <ToastContainer position="top-right" autoClose={3000} />
             </div>
         </Router >
     )

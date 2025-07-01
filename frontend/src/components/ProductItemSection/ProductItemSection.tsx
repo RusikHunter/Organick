@@ -3,6 +3,8 @@ import { useState } from "react"
 import { useAppSelector } from "../../hooks/useAppSelector"
 import { useParams } from "react-router-dom"
 import type { Product } from "../../interfaces/product"
+import type { LocalStorageItem } from "../../interfaces/localStorageItem"
+import { toast } from "react-toastify"
 
 function ProductItemSection() {
     const [activeSide, setActiveSide] = useState<'left' | 'right'>('left')
@@ -11,8 +13,37 @@ function ProductItemSection() {
     const id = Number(useParams().id ?? '') - 1
     const product: Product = useAppSelector(state => state.client.products[id])
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setProductCount(e.target.value)
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        setProductCount(event.target.value)
+    }
+
+    const handleAddClick = (event: React.MouseEvent): void => {
+        event.preventDefault()
+
+        if (Number(productCount) <= 0) {
+            toast.error("Enter quantity of product!")
+            return
+        }
+
+        const objectToAdding: LocalStorageItem = {
+            id: id,
+            productCount: Number(productCount)
+        }
+
+        const key: string = `product_${id}`
+        const alreadyExistingString: string | null = localStorage.getItem(key)
+
+        if (alreadyExistingString) {
+            const alreadyExistingObject: LocalStorageItem = JSON.parse(alreadyExistingString)
+
+            objectToAdding.productCount += alreadyExistingObject.productCount
+        }
+
+        localStorage.setItem(key, JSON.stringify(objectToAdding))
+
+        setProductCount("0")
+
+        toast.success("Product added to cart!")
     }
 
     // ! todo --> loading...
@@ -73,7 +104,7 @@ function ProductItemSection() {
                                 />
                             </label>
 
-                            <button type="submit" className="product-item__input product-item__input--submit button button--blue">
+                            <button className="product-item__input product-item__input--submit button button--blue" onClick={handleAddClick}>
                                 Add To Cart
 
                                 <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
