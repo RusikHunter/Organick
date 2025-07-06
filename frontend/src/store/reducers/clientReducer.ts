@@ -21,6 +21,17 @@ const clientSlice = createSlice({
         },
         setCart: (state, action) => {
             state.cart = action.payload
+        },
+        addCartItem: (state, action) => {
+            for (let i = 0; i < state.cart.length; ++i) {
+                if (state.cart[i].id === action.payload.id) {
+                    state.cart[i] = action.payload
+
+                    return
+                }
+            }
+
+            state.cart.push(action.payload)
         }
     },
     extraReducers: (builder) => {
@@ -30,5 +41,5 @@ const clientSlice = createSlice({
     }
 })
 
-export const { setIsBurgerMenuOpen, setCurrentPage, setCart } = clientSlice.actions
+export const { setIsBurgerMenuOpen, setCurrentPage, setCart, addCartItem } = clientSlice.actions
 export default clientSlice.reducer

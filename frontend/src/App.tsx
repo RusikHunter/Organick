@@ -27,7 +27,7 @@ import { useAppDispatch } from './hooks/useAppDispatch'
 import { useEffect } from 'react'
 import { fetchProducts } from './store/asyncActions/fetchProducts'
 import { setCart } from './store/reducers/clientReducer'
-import type { CartItem } from './interfaces/cartItem'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
     const currentPage = useAppSelector(state => state.client.currentPage)
@@ -42,19 +42,21 @@ function App() {
         }
     }, [dispatch, products.length])
 
-
-
     useEffect(() => {
         const cartItems = JSON.parse(localStorage.getItem("cartItems") as string)
 
-        dispatch(setCart(cartItems))
-
-        return () => {
-            const cartItemsToAdding: string = JSON.stringify(cart)
-
-            localStorage.setItem("cartItems", cartItemsToAdding)
+        if (cartItems !== null) {
+            dispatch(setCart(cartItems))
         }
     }, [])
+
+    useEffect(() => {
+        if (!cart.length) return
+
+        const cartItemsToAdding: string = JSON.stringify(cart)
+
+        localStorage.setItem("cartItems", cartItemsToAdding)
+    }, [cart])
 
     return (
         <Router>
@@ -86,6 +88,7 @@ function App() {
                     {currentPage !== "services" && currentPage !== "notfound" && <SubscribeSection />}
                 </main>
                 <Footer />
+                <ToastContainer />
             </div>
         </Router >
     )

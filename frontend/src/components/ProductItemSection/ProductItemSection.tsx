@@ -3,19 +3,50 @@ import { useState } from "react"
 import { useAppSelector } from "../../hooks/useAppSelector"
 import { useParams } from "react-router-dom"
 import type { Product } from "../../interfaces/product"
+import { useAppDispatch } from "../../hooks/useAppDispatch"
+import { addCartItem } from "../../store/reducers/clientReducer"
+import type { CartItem } from "../../interfaces/cartItem"
+import { toast } from "react-toastify"
 
 function ProductItemSection() {
     const [activeSide, setActiveSide] = useState<'left' | 'right'>('left')
     const [productCount, setProductCount] = useState<string>('0')
 
+    const dispatch = useAppDispatch()
+    const cart = useAppSelector(state => state.client.cart)
+
     const id = Number(useParams().id ?? '')
     const product: Product = useAppSelector(state => state.client.products[id])
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setProductCount(e.target.value)
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setProductCount(event.target.value)
     }
 
-    // ! todo --> loading...
+    const handleAdd = (event: React.MouseEvent<HTMLButtonElement>): void => {
+        event.preventDefault()
+
+        if (productCount === "0") {
+            toast.error("Enter quality of product!")
+            return
+        }
+
+        const cartItemToAdding: CartItem = {
+            id: id,
+            count: Number(productCount)
+        }
+
+        for (let i = 0; i < cart.length; ++i) {
+            if (cart[i].id === id) {
+                cartItemToAdding.count += cart[i].count
+            }
+        }
+
+        dispatch(addCartItem(cartItemToAdding))
+
+        setProductCount("0")
+
+        toast.success("Product added to the cart!")
+    }
 
     return (
         product && <section className="product-item">
@@ -73,7 +104,7 @@ function ProductItemSection() {
                                 />
                             </label>
 
-                            <button type="submit" className="product-item__input product-item__input--submit button button--blue">
+                            <button type="submit" className="product-item__input product-item__input--submit button button--blue" onClick={handleAdd}>
                                 Add To Cart
 
                                 <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
