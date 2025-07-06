@@ -1,16 +1,19 @@
 import "./CartSection.scss"
 import CartProductItem from "../CartProductItem/CartProductItem"
 import { Link } from "react-router-dom"
+import { useAppSelector } from "../../hooks/useAppSelector"
 
 function CartSection() {
+    const cart = useAppSelector(state => state.client.cart)
+
     return (
         <section className="cart">
             <div className="cart__inner container">
                 <div className="cart__row cart__row--1 row">
                     <div className="cart__product-list">
-                        <CartProductItem />
-
-                        <CartProductItem />
+                        {cart.map(cartItem => (
+                            <CartProductItem data={cartItem} />
+                        ))}
                     </div>
                 </div>
 

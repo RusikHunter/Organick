@@ -2,9 +2,16 @@ import "./CartProductItem.scss"
 import ProductCard from "../ProductCard/ProductCard"
 import { useState } from "react"
 import DeleteIcon from "../../images/icons/delete.svg"
+import type { CartProductItemProps } from "../../interfaces/cartProductItemProps"
+import type { Product } from "../../interfaces/product"
+import { useAppSelector } from "../../hooks/useAppSelector"
 
-function CartProductItem() {
-    const [count, setCount] = useState<string>("1")
+function CartProductItem({ data }: CartProductItemProps) {
+    const [count, setCount] = useState<string>(data.count.toString())
+
+    const products = useAppSelector(state => state.client.products)
+
+    const cartProduct: Product[] = products.filter(product => product.id === data.id)
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setCount(e.target.value)
@@ -13,7 +20,7 @@ function CartProductItem() {
     return (
         <article className="cart-item">
             <div className="cart-item__content">
-                <ProductCard isCartItem={true} />
+                <ProductCard isCartItem={true} productData={cartProduct[0]} />
             </div>
 
             <div className="cart-item__controls">
