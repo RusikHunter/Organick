@@ -8,7 +8,7 @@ function ProductItemSection() {
     const [activeSide, setActiveSide] = useState<'left' | 'right'>('left')
     const [productCount, setProductCount] = useState<string>('0')
 
-    const id = Number(useParams().id ?? '') - 1
+    const id = Number(useParams().id ?? '')
     const product: Product = useAppSelector(state => state.client.products[id])
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
