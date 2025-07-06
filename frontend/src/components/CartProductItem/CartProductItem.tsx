@@ -5,22 +5,35 @@ import DeleteIcon from "../../images/icons/delete.svg"
 import type { CartProductItemProps } from "../../interfaces/cartProductItemProps"
 import type { Product } from "../../interfaces/product"
 import { useAppSelector } from "../../hooks/useAppSelector"
+import { useAppDispatch } from "../../hooks/useAppDispatch"
+import { addCartItem } from "../../store/reducers/clientReducer"
 
-function CartProductItem({ data }: CartProductItemProps) {
-    const [count, setCount] = useState<string>(data.count.toString())
+function CartProductItem({ cartItem }: CartProductItemProps) {
+    const [count, setCount] = useState<string>(cartItem.count.toString())
+
+    const dispatch = useAppDispatch()
 
     const products = useAppSelector(state => state.client.products)
 
-    const cartProduct: Product[] = products.filter(product => product.id === data.id)
+    const cartProduct: Product = products.find(product => product.id === cartItem.id) as Product
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-        setCount(e.target.value)
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        const value = event.target.value
+
+        setCount(value)
+
+        const cartItemToChange = {
+            id: cartItem.id,
+            count: Number(value)
+        }
+
+        dispatch(addCartItem(cartItemToChange))
     }
 
     return (
         <article className="cart-item">
             <div className="cart-item__content">
-                <ProductCard isCartItem={true} productData={cartProduct[0]} />
+                <ProductCard isCartItem={true} productData={cartProduct} />
             </div>
 
             <div className="cart-item__controls">

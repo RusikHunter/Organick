@@ -5,17 +5,28 @@ import { useAppSelector } from "../../hooks/useAppSelector"
 
 function CartSection() {
     const cart = useAppSelector(state => state.client.cart)
+    const products = useAppSelector(state => state.client.products)
 
     return (
         <section className="cart">
             <div className="cart__inner container">
-                <div className="cart__row cart__row--1 row">
-                    <div className="cart__product-list">
-                        {cart.map(cartItem => (
-                            <CartProductItem data={cartItem} />
-                        ))}
-                    </div>
-                </div>
+
+                {products.length
+                    ?
+                    (
+                        <div className="cart__row cart__row--1 row">
+                            <div className="cart__product-list">
+                                {cart.map((cartItem, index) => (
+                                    <CartProductItem key={index} cartItem={cartItem} />
+                                ))}
+                            </div>
+                        </div>
+                    )
+                    :
+                    (
+                        <h5 className="cart__title--loading h5">Loading...</h5>
+                    )
+                }
 
                 <div className="cart__row cart__row--2 row">
                     <div className="cart__column column">
