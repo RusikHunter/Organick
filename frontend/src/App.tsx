@@ -26,10 +26,13 @@ import { useAppSelector } from './hooks/useAppSelector'
 import { useAppDispatch } from './hooks/useAppDispatch'
 import { useEffect } from 'react'
 import { fetchProducts } from './store/asyncActions/fetchProducts'
+import { setCart } from './store/reducers/clientReducer'
+import type { CartItem } from './interfaces/cartItem'
 
 function App() {
     const currentPage = useAppSelector(state => state.client.currentPage)
     const products = useAppSelector(state => state.client.products)
+    const cart = useAppSelector(state => state.client.cart)
 
     const dispatch = useAppDispatch()
 
@@ -37,9 +40,21 @@ function App() {
         if (!products.length) {
             dispatch(fetchProducts())
         }
-
-        console.log(products)
     }, [dispatch, products.length])
+
+
+
+    useEffect(() => {
+        const cartItems = JSON.parse(localStorage.getItem("cartItems") as string)
+
+        dispatch(setCart(cartItems))
+
+        return () => {
+            const cartItemsToAdding: string = JSON.stringify(cart)
+
+            localStorage.setItem("cartItems", cartItemsToAdding)
+        }
+    }, [])
 
     return (
         <Router>
