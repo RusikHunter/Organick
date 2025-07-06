@@ -4,8 +4,11 @@ import { Link } from "react-router-dom"
 import DropdownPages from "../DropdownPages/DropdownPages"
 import Logo from "../../images/icons/logo.svg"
 import DropdownSearch from "../DropdownSearch/DropdownSearch"
+import { useAppSelector } from "../../hooks/useAppSelector"
 
 function Header() {
+    const cart = useAppSelector(state => state.client.cart)
+
     return (
         <header className="header">
             <div className="header__inner container">
@@ -54,7 +57,7 @@ function Header() {
                                 </span>
 
                                 <span className="header__button--cart-text">
-                                    Cart (0)
+                                    Cart ({cart.length})
                                 </span>
                             </button>
                         </Link>

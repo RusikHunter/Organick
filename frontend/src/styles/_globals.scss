@@ -2,9 +2,11 @@
 // File with styles for selectors with tag names and global elements 
 //
 
-
+@use "media" as *;
 
 // In processing ...
+
+@use "./media" as *;
 
 a,
 a:hover,
@@ -45,6 +47,37 @@ input[type="number"]::-webkit-inner-spin-button {
 *:focus,
 *:focus-visible {
     outline: none;
+}
+
+.Toastify__toast {
+    padding: 30px;
+    border-radius: 18px;
+
+    @include mobile-small {
+        width: 90%;
+        padding: 35px;
+        top: 12px;
+        right: 12px;
+    }
+}
+
+.Toastify__toast--error {
+    .Toastify__toast-icon {
+        color: var(--color-red);
+    }
+}
+
+.Toastify__toast-icon {
+    color: var(--color-green);
+}
+
+.Toastify__close-button {
+    top: 12px;
+    right: 12px;
+}
+
+.Toastify__progress-bar--wrp {
+    opacity: 0;
 }
 
 // *:focus,

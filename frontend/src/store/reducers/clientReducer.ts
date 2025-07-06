@@ -5,7 +5,8 @@ import type { ClientState } from '../../interfaces/clientState'
 const initialState: ClientState = {
     isBurgerMenuOpen: false,
     currentPage: null,
-    products: []
+    products: [],
+    cart: []
 }
 
 const clientSlice = createSlice({
@@ -17,6 +18,23 @@ const clientSlice = createSlice({
         },
         setCurrentPage: (state, action) => {
             state.currentPage = action.payload
+        },
+        setCart: (state, action) => {
+            state.cart = action.payload
+        },
+        addCartItem: (state, action) => {
+            for (let i = 0; i < state.cart.length; ++i) {
+                if (state.cart[i].id === action.payload.id) {
+                    state.cart[i] = action.payload
+
+                    return
+                }
+            }
+
+            state.cart.push(action.payload)
+        },
+        removeCartItem: (state, action) => {
+            state.cart.splice(action.payload, 1)
         }
     },
     extraReducers: (builder) => {
@@ -26,5 +44,5 @@ const clientSlice = createSlice({
     }
 })
 
-export const { setIsBurgerMenuOpen, setCurrentPage } = clientSlice.actions
+export const { setIsBurgerMenuOpen, setCurrentPage, setCart, addCartItem, removeCartItem } = clientSlice.actions
 export default clientSlice.reducer
