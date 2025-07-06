@@ -32,6 +32,9 @@ const clientSlice = createSlice({
             }
 
             state.cart.push(action.payload)
+        },
+        removeCartItem: (state, action) => {
+            state.cart.splice(action.payload, 1)
         }
     },
     extraReducers: (builder) => {
@@ -41,5 +44,5 @@ const clientSlice = createSlice({
     }
 })
 
-export const { setIsBurgerMenuOpen, setCurrentPage, setCart, addCartItem } = clientSlice.actions
+export const { setIsBurgerMenuOpen, setCurrentPage, setCart, addCartItem, removeCartItem } = clientSlice.actions
 export default clientSlice.reducer
