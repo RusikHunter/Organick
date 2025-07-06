@@ -3,9 +3,13 @@ import { useState } from "react"
 import { useAppSelector } from "../../hooks/useAppSelector"
 import { useParams } from "react-router-dom"
 import type { Product } from "../../interfaces/product"
+<<<<<<< HEAD
 import { useAppDispatch } from "../../hooks/useAppDispatch"
 import { addCartItem } from "../../store/reducers/clientReducer"
 import type { CartItem } from "../../interfaces/cartItem"
+=======
+import type { LocalStorageItem } from "../../interfaces/localStorageItem"
+>>>>>>> 69af3a6f7a90570b63ff6b2bb5ad4914f94291f4
 import { toast } from "react-toastify"
 
 function ProductItemSection() {
@@ -18,8 +22,42 @@ function ProductItemSection() {
     const id = Number(useParams().id ?? '')
     const product: Product = useAppSelector(state => state.client.products[id])
 
+<<<<<<< HEAD
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setProductCount(event.target.value)
+=======
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        setProductCount(event.target.value)
+    }
+
+    const handleAddClick = (event: React.MouseEvent): void => {
+        event.preventDefault()
+
+        if (Number(productCount) <= 0) {
+            toast.error("Enter quantity of product!")
+            return
+        }
+
+        const objectToAdding: LocalStorageItem = {
+            id: id,
+            productCount: Number(productCount)
+        }
+
+        const key: string = `product_${id}`
+        const alreadyExistingString: string | null = localStorage.getItem(key)
+
+        if (alreadyExistingString) {
+            const alreadyExistingObject: LocalStorageItem = JSON.parse(alreadyExistingString)
+
+            objectToAdding.productCount += alreadyExistingObject.productCount
+        }
+
+        localStorage.setItem(key, JSON.stringify(objectToAdding))
+
+        setProductCount("0")
+
+        toast.success("Product added to cart!")
+>>>>>>> 69af3a6f7a90570b63ff6b2bb5ad4914f94291f4
     }
 
     const handleAdd = (event: React.MouseEvent<HTMLButtonElement>): void => {
@@ -118,6 +156,34 @@ function ProductItemSection() {
                                 </button>
                             </form>
                         </div>
+<<<<<<< HEAD
+=======
+
+                        <p className="product-item__description text">{product.description}</p>
+
+                        <form className="product-item__form">
+                            <label htmlFor="productItemInputCount" className="product-item__label product-item__label--count">
+                                Quantity:
+
+                                <input
+                                    type="number"
+                                    className="product-item__input product-item__input--count"
+                                    id="productItemInputCount"
+                                    value={productCount}
+                                    onChange={handleChange}
+                                />
+                            </label>
+
+                            <button className="product-item__input product-item__input--submit button button--blue" onClick={handleAddClick}>
+                                Add To Cart
+
+                                <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="9.5" r="9.5" fill="#335B6B" />
+                                    <path className="button__svg-arrow" d="M9.97641 6.12891L13.371 9.19342L9.97641 12.2579M12.8995 9.19342H6.01611" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
+                        </form>
+>>>>>>> 69af3a6f7a90570b63ff6b2bb5ad4914f94291f4
                     </div>
                     :
                     <div className="product__item__row product-item__row--1 row">

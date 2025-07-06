@@ -6,6 +6,8 @@
 
 // In processing ...
 
+@use "./media" as *;
+
 a,
 a:hover,
 a:visited,
@@ -47,6 +49,7 @@ input[type="number"]::-webkit-inner-spin-button {
     outline: none;
 }
 
+<<<<<<< HEAD
 .Toastify__toast {
     padding: 30px;
     border-radius: 18px;
@@ -62,6 +65,18 @@ input[type="number"]::-webkit-inner-spin-button {
 .Toastify__toast--error {
     .Toastify__toast-icon {
         color: var(--color-red);
+=======
+.Toastify__toast-container {}
+
+.Toastify__toast {
+    padding: 32px !important;
+    border-radius: 18px;
+
+    @include mobile-small {
+        width: 80%;
+        top: 20px;
+        right: 15px;
+>>>>>>> 69af3a6f7a90570b63ff6b2bb5ad4914f94291f4
     }
 }
 

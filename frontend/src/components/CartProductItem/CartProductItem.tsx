@@ -42,7 +42,7 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
         <article className="cart-item">
             <div className="cart-item__content">
                 <ProductCard isCartItem={true} productData={cartProduct} />
-            </div>
+            </div >
 
             <div className="cart-item__controls">
                 <label htmlFor="cartItemInputCount" className="cart-item__label">
@@ -54,7 +54,7 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
                     <img src={DeleteIcon} alt="Delete" width={45} height={45} />
                 </button>
             </div>
-        </article>
+        </article >
     )
 }
 
