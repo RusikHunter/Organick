@@ -148,6 +148,13 @@
     @include fluid-text(18, 16);
     @include font(var(--font-family), 600, 1);
     color: var(--color-blue);
+
+    &__text--error {
+        @include fluid-text(14, 12);
+        @include font(var(--font-family), 400, 1);
+        color: var(--color-red);
+        margin-left: 10px;
+    }
 }
 
 .input {

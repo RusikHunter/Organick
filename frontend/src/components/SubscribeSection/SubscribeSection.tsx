@@ -1,26 +1,21 @@
 import "./SubscribeSection.scss"
 import type { SubmitHandler } from "react-hook-form"
+import type { SubscribeFormValues } from "../../interfaces/subscribeFormValues"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from 'yup'
 import { toast } from "react-toastify"
 import emailjs from '@emailjs/browser'
-import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../../assets/emailjs_keys"
+import { SERVICE_ID, TEMPLATE_ID_SUBSCRIBE, PUBLIC_KEY } from "../../assets/emailjs_keys"
 
 function SubscribeSection() {
     const schema = yup.object().shape({
         email: yup.string().email().required()
     })
 
-    const { register, handleSubmit } = useForm({
+    const { register, handleSubmit, reset } = useForm({
         resolver: yupResolver(schema)
     })
-
-    // todo
-
-    interface SubscribeFormValues {
-        email: string
-    }
 
     const onSubmit: SubmitHandler<SubscribeFormValues> = async (data) => {
         console.log(data.email)
@@ -30,19 +25,19 @@ function SubscribeSection() {
         }
 
         try {
-            const response = await emailjs.send(
+            await emailjs.send(
                 SERVICE_ID,
-                TEMPLATE_ID,
+                TEMPLATE_ID_SUBSCRIBE,
                 templateParams,
                 PUBLIC_KEY
             )
-
-            console.log(response)
 
             toast.success("The letter has been sent to your email!")
         } catch (error) {
             toast.error("Error sending.")
         }
+
+        reset()
     }
 
     const onError = (): void => {
