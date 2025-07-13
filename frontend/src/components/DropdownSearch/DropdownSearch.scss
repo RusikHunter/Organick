@@ -112,7 +112,8 @@
     }
 
     &__list-wrap {
-        height: 160px;
+        height: max-content;
+        max-height: 160px;
         padding-right: 10px;
         overflow: auto;
 
@@ -130,10 +131,26 @@
         }
     }
 
+    // HACK: If there are no products found, the pop-up message
+    // "No results" inexplicably causes the scrollbar. This class deactivates it.
+
+    &__list-wrap--scrollbar-disabled {
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    &__text {
+        @include fluid-text(14, 12);
+        @include font(var(--font-family), 600, 1);
+        color: var(--color-blue);
+        text-align: center;
     }
 
     &__product-card {
