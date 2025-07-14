@@ -1,11 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { fetchProducts } from '../asyncActions/fetchProducts'
 import type { ClientState } from '../../interfaces/clientState'
+import { fetchPosts } from '../asyncActions/fetchPosts'
 
 const initialState: ClientState = {
     isBurgerMenuOpen: false,
     currentPage: null,
     products: [],
+    posts: [],
     cart: []
 }
 
@@ -38,9 +40,13 @@ const clientSlice = createSlice({
         }
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchProducts.fulfilled, (state, action) => {
-            state.products = action.payload
-        })
+        builder
+            .addCase(fetchProducts.fulfilled, (state, action) => {
+                state.products = action.payload
+            })
+            .addCase(fetchPosts.fulfilled, (state, action) => {
+                state.posts = action.payload
+            })
     }
 })
 

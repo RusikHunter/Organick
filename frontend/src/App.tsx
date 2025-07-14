@@ -26,28 +26,27 @@ import { useAppSelector } from './hooks/useAppSelector'
 import { useAppDispatch } from './hooks/useAppDispatch'
 import { useEffect } from 'react'
 import { fetchProducts } from './store/asyncActions/fetchProducts'
+import { fetchPosts } from './store/asyncActions/fetchPosts'
 import { setCart } from './store/reducers/clientReducer'
 import { ToastContainer } from 'react-toastify'
 
 function App() {
     const currentPage = useAppSelector(state => state.client.currentPage)
     const products = useAppSelector(state => state.client.products)
+    const posts = useAppSelector(state => state.client.posts)
     const cart = useAppSelector(state => state.client.cart)
 
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        if (!products.length) {
-            dispatch(fetchProducts())
-        }
-    }, [dispatch, products.length])
+        if (!products.length) dispatch(fetchProducts())
+        if (!posts.length) dispatch(fetchPosts())
+    }, [dispatch, products.length, posts.length])
 
     useEffect(() => {
         const cartItems = JSON.parse(localStorage.getItem("cartItems") as string)
 
-        if (cartItems !== null) {
-            dispatch(setCart(cartItems))
-        }
+        if (cartItems !== null) dispatch(setCart(cartItems))
     }, [])
 
     useEffect(() => {
