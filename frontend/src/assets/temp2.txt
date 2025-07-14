@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "title": "Why Organic Farming Matters",
+    "description": "Discover the benefits of organic farming and how it supports our health and planet.",
+    "author": "John Doe",
+    "date": "2025-07-14T00:00:00.000Z",
+    "content": "<p className=\"post-content__text text\">\nOrganic farming helps protect biodiversity, build healthy soil, and reduce pollution. It’s more than a trend—it's a commitment to a healthier future.\n</p>\n\n<h2 className=\"post-content__title h2\">Healthier Soil, Healthier Food</h2>\n\n<p className=\"post-content__text text\">\nBy avoiding synthetic chemicals, organic methods foster rich soil that grows nutrient-dense crops.\n</p>\n\n<ul className=\"post-content__unordered-list\">\n  <li className=\"post-content__unordered-list-item text\">No synthetic fertilizers</li>\n  <li className=\"post-content__unordered-list-item text\">Improved crop rotation</li>\n  <li className=\"post-content__unordered-list-item text\">Natural pest management</li>\n</ul>\n\n<blockquote className=\"post-content__blockquote\">\n“Organic farming doesn’t just feed people—it nourishes the earth too.”\n</blockquote>\n\n<h4 className=\"post-content__subtitle h4\">Support Local Organic Growers</h4>\n\n<p className=\"post-content__text text\">\nBuying organic supports small farmers, reduces your carbon footprint, and promotes ethical land stewardship.\n</p>\n\n<ol className=\"post-content__ordered-list\">\n  <li className=\"post-content__ordered-list-item text\">Shop at farmers markets</li>\n  <li className=\"post-content__ordered-list-item text\">Look for certified organic labels</li>\n  <li className=\"post-content__ordered-list-item text\">Ask how your food is grown</li>\n  <li className=\"post-content__ordered-list-item text\">Choose seasonal produce</li>\n</ol>",
+    "imageURL": ""
+  },
+  {
+    "id": 1,
+    "title": "Organic vs. Non-Organic: What’s the Difference?",
+    "description": "Learn how organic produce differs from conventionally grown foods.",
+    "author": "John Doe",
+    "date": "2025-07-14T00:00:00.000Z",
+    "content": "<p className=\"post-content__text text\">\nChoosing organic means choosing food grown without synthetic pesticides, fertilizers, or GMOs.\n</p>\n\n<h2 className=\"post-content__title h2\">Cleaner, Safer Food</h2>\n\n<p className=\"post-content__text text\">\nOrganic foods often contain fewer pesticide residues and are produced using more humane and eco-conscious farming practices.\n</p>\n\n<ul className=\"post-content__unordered-list\">\n  <li className=\"post-content__unordered-list-item text\">No artificial additives</li>\n  <li className=\"post-content__unordered-list-item text\">Better animal welfare</li>\n  <li className=\"post-content__unordered-list-item text\">Stricter regulations</li>\n</ul>\n\n<blockquote className=\"post-content__blockquote\">\n“Organic isn’t just what’s missing—it’s what’s added: care, quality, and sustainability.”\n</blockquote>\n\n<h4 className=\"post-content__subtitle h4\">Is It Worth It?</h4>\n\n<p className=\"post-content__text text\">\nFor many, the health and environmental benefits make organic worth the cost.\n</p>\n\n<ol className=\"post-content__ordered-list\">\n  <li className=\"post-content__ordered-list-item text\">Reduced exposure to toxins</li>\n  <li className=\"post-content__ordered-list-item text\">Better taste and freshness</li>\n  <li className=\"post-content__ordered-list-item text\">Greater transparency in production</li>\n  <li className=\"post-content__ordered-list-item text\">Improved nutrition profile</li>\n</ol>",
+    "imageURL": ""
+  },
+  {
+    "id": 2,
+    "title": "Top 5 Organic Superfoods to Try",
+    "description": "Boost your health with these top organic superfoods packed with nutrients.",
+    "author": "John Doe",
+    "date": "2025-07-14T00:00:00.000Z",
+    "content": "<p className=\"post-content__text text\">\nLooking to upgrade your diet? Add these organic superfoods to your shopping list.\n</p>\n\n<h2 className=\"post-content__title h2\">Organic Power Picks</h2>\n\n<p className=\"post-content__text text\">\nFrom antioxidants to anti-inflammatory properties, these foods offer a nutritional punch.\n</p>\n\n<ul className=\"post-content__unordered-list\">\n  <li className=\"post-content__unordered-list-item text\">Blueberries</li>\n  <li className=\"post-content__unordered-list-item text\">Chia seeds</li>\n  <li className=\"post-content__unordered-list-item text\">Spinach</li>\n</ul>\n\n<blockquote className=\"post-content__blockquote\">\n“Eat organic, live vibrant.”\n</blockquote>\n\n<h4 className=\"post-content__subtitle h4\">Quick Recipes</h4>\n\n<p className=\"post-content__text text\">\nIncorporate superfoods into smoothies, salads, and snacks with ease.\n</p>\n\n<ol className=\"post-content__ordered-list\">\n  <li className=\"post-content__ordered-list-item text\">Berry-chia smoothie</li>\n  <li className=\"post-content__ordered-list-item text\">Spinach quinoa salad</li>\n  <li className=\"post-content__ordered-list-item text\">Avocado toast with hemp seeds</li>\n  <li className=\"post-content__ordered-list-item text\">Kale chips with olive oil</li>\n</ol>",
+    "imageURL": ""
+  },
+  {
+    "id": 3,
+    "title": "Organic Gardening at Home",
+    "description": "Grow your own organic veggies and herbs with simple tips.",
+    "author": "John Doe",
+    "date": "2025-07-14T00:00:00.000Z",
+    "content": "<p className=\"post-content__text text\">\nBring the farm to your backyard with these easy organic gardening techniques.\n</p>\n\n<h2 className=\"post-content__title h2\">Start Small</h2>\n\n<p className=\"post-content__text text\">\nYou don’t need acres of land to grow organic. A few pots and good soil can go a long way.\n</p>\n\n<ul className=\"post-content__unordered-list\">\n  <li className=\"post-content__unordered-list-item text\">Use compost instead of chemical fertilizers</li>\n  <li className=\"post-content__unordered-list-item text\">Choose organic seeds</li>\n  <li className=\"post-content__unordered-list-item text\">Encourage pollinators</li>\n</ul>\n\n<blockquote className=\"post-content__blockquote\">\n“Gardening organically is cultivating health—plant by plant.”\n</blockquote>\n\n<h4 className=\"post-content__subtitle h4\">Beginner Picks</h4>\n\n<p className=\"post-content__text text\">\nStart with herbs and leafy greens—they’re fast-growing and forgiving.\n</p>\n\n<ol className=\"post-content__ordered-list\">\n  <li className=\"post-content__ordered-list-item text\">Basil</li>\n  <li className=\"post-content__ordered-list-item text\">Lettuce</li>\n  <li className=\"post-content__ordered-list-item text\">Tomatoes</li>\n  <li className=\"post-content__ordered-list-item text\">Cucumbers</li>\n</ol>",
+    "imageURL": ""
+  },
+  {
+    "id": 4,
+    "title": "The Dirty Dozen: What to Buy Organic",
+    "description": "Prioritize which produce to buy organic to reduce pesticide exposure.",
+    "author": "John Doe",
+    "date": "2025-07-14T00:00:00.000Z",
+    "content": "<p className=\"post-content__text text\">\nSome fruits and veggies carry more pesticide residue than others. Know where to spend wisely.\n</p>\n\n<h2 className=\"post-content__title h2\">The Worst Offenders</h2>\n\n<p className=\"post-content__text text\">\nThese commonly consumed items are best bought organic due to their high pesticide levels.\n</p>\n\n<ul className=\"post-content__unordered-list\">\n  <li className=\"post-content__unordered-list-item text\">Strawberries</li>\n  <li className=\"post-content__unordered-list-item text\">Spinach</li>\n  <li className=\"post-content__unordered-list-item text\">Apples</li>\n</ul>\n\n<blockquote className=\"post-content__blockquote\">\n“If you can’t buy all organic, buy smart.”\n</blockquote>\n\n<h4 className=\"post-content__subtitle h4\">Top Dirty Dozen</h4>\n\n<p className=\"post-content__text text\">\nHere’s the full list, updated yearly by the EWG.\n</p>\n\n<ol className=\"post-content__ordered-list\">\n  <li className=\"post-content__ordered-list-item text\">Strawberries</li>\n  <li className=\"post-content__ordered-list-item text\">Spinach</li>\n  <li className=\"post-content__ordered-list-item text\">Kale</li>\n  <li className=\"post-content__ordered-list-item text\">Grapes</li>\n</ol>",
+    "imageURL": ""
+  },
+  {
+    "id": 5,
+    "title": "Seasonal Organic Eating",
+    "description": "Why eating with the seasons supports health, flavor, and the environment.",
+    "author": "John Doe",
+    "date": "2025-07-14T00:00:00.000Z",
+    "content": "<p className=\"post-content__text text\">\nSeasonal eating ensures peak freshness and nutrition while reducing the environmental cost of food.\n</p>\n\n<h2 className=\"post-content__title h2\">Nature Knows Best</h2>\n\n<p className=\"post-content__text text\">\nEating seasonally means enjoying produce at its natural harvest time, when it's most flavorful and nutritious.\n</p>\n\n<ul className=\"post-content__unordered-list\">\n  <li className=\"post-content__unordered-list-item text\">Stronger local food economy</li>\n  <li className=\"post-content__unordered-list-item text\">Less environmental impact</li>\n  <li className=\"post-content__unordered-list-item text\">Richer taste and nutrients</li>\n</ul>\n\n<blockquote className=\"post-content__blockquote\">\n“Eat what’s ripe, fresh, and local—it’s nature’s plan.”\n</blockquote>\n\n<h4 className=\"post-content__subtitle h4\">In-Season Stars</h4>\n\n<p className=\"post-content__text text\">\nA few examples of organic produce by season.\n</p>\n\n<ol className=\"post-content__ordered-list\">\n  <li className=\"post-content__ordered-list-item text\">Spring: Asparagus, peas</li>\n  <li className=\"post-content__ordered-list-item text\">Summer: Tomatoes, berries</li>\n  <li className=\"post-content__ordered-list-item text\">Fall: Squash, apples</li>\n  <li className=\"post-content__ordered-list-item text\">Winter: Kale, citrus</li>\n</ol>",
+    "imageURL": ""
+  },
+  {
+    "id": 6,
+    "title": "The Truth About Organic Labels",
+    "description": "Decode what organic certifications really mean and how to trust them.",
+    "author": "John Doe",
+    "date": "2025-07-14T00:00:00.000Z",
+    "content": "<p className=\"post-content__text text\">\nWith so many labels on the market, it’s important to understand which ones guarantee organic practices and which are just marketing buzzwords.\n</p>\n\n<h2 className=\"post-content__title h2\">Certified Organic Explained</h2>\n\n<p className=\"post-content__text text\">\nWhen you see a product labeled “Certified Organic,” it means it meets strict farming and production standards, often verified by national or international bodies.\n</p>\n\n<ul className=\"post-content__unordered-list\">\n  <li className=\"post-content__unordered-list-item text\">No synthetic pesticides or fertilizers</li>\n  <li className=\"post-content__unordered-list-item text\">Non-GMO ingredients</li>\n  <li className=\"post-content__unordered-list-item text\">Environmentally friendly practices</li>\n</ul>\n\n<blockquote className=\"post-content__blockquote\">\n“Not all green labels mean organic — know what to look for.”\n</blockquote>\n\n<h4 className=\"post-content__subtitle h4\">Key Certifications to Trust</h4>\n\n<p className=\"post-content__text text\">\nHere are some globally recognized certifications you can rely on when choosing organic products.\n</p>\n\n<ol className=\"post-content__ordered-list\">\n  <li className=\"post-content__ordered-list-item text\">USDA Organic (United States)</li>\n  <li className=\"post-content__ordered-list-item text\">EU Organic (Europe)</li>\n  <li className=\"post-content__ordered-list-item text\">JAS Organic (Japan)</li>\n  <li className=\"post-content__ordered-list-item text\">IFOAM (Global)</li>\n</ol>",
+    "imageURL": ""
+  },
+  {
+    "id": 7,
+    "title": "How Organic Farming Fights Climate Change",
+    "description": "Explore how organic agriculture helps reduce emissions and build climate resilience.",
+    "author": "John Doe",
+    "date": "2025-07-14T00:00:00.000Z",
+    "content": "<p className=\"post-content__text text\">\nOrganic farming does more than grow clean food—it plays a vital role in mitigating climate change.\n</p>\n\n<h2 className=\"post-content__title h2\">Less Emissions, More Carbon Capture</h2>\n\n<p className=\"post-content__text text\">\nBy eliminating synthetic fertilizers and encouraging carbon-rich soil, organic farms help lower greenhouse gas emissions.\n</p>\n\n<ul className=\"post-content__unordered-list\">\n  <li className=\"post-content__unordered-list-item text\">No fossil fuel-based inputs</li>\n  <li className=\"post-content__unordered-list-item text\">Higher soil carbon sequestration</li>\n  <li className=\"post-content__unordered-list-item text\">Lower methane from livestock</li>\n</ul>\n\n<blockquote className=\"post-content__blockquote\">\n“Healthy soil is one of our best defenses against a warming planet.”\n</blockquote>\n\n<h4 className=\"post-content__subtitle h4\">Organic Practices That Help</h4>\n\n<p className=\"post-content__text text\">\nMany organic methods naturally support the planet’s resilience.\n</p>\n\n<ol className=\"post-content__ordered-list\">\n  <li className=\"post-content__ordered-list-item text\">Crop rotation to protect soil health</li>\n  <li className=\"post-content__ordered-list-item text\">Composting to reduce waste</li>\n  <li className=\"post-content__ordered-list-item text\">Cover cropping to prevent erosion</li>\n  <li className=\"post-content__ordered-list-item text\">Pasture-based livestock systems</li>\n</ol>",
+    "imageURL": ""
+  }
+]
