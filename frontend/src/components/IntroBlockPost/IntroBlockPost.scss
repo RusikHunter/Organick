@@ -29,6 +29,10 @@
         padding: 40px;
     }
 
+    @include mobile-small {
+        top: 250px;
+    }
+
     &__meta {
         display: flex;
         gap: 30px;
@@ -68,6 +72,10 @@
         @include font(var(--font-family), 800, 1.2);
         color: var(--color-blue);
         margin-block: 10px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
 
         @include tablet {
             width: 75%;
@@ -84,6 +92,10 @@
 
     &__text {
         width: 56%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
 
         @include mobile {
             width: 90%;

@@ -1,7 +1,6 @@
 @use "../../styles/index" as *;
 
 .news-card {
-    background-image: url("../../images/images/cabbage.png");
     width: calc(50% - 23px);
     border-radius: 30px;
     padding: 30px;
@@ -55,11 +54,19 @@
 
     &__news-title {
         margin-top: 15px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
     }
 
     &__news-text {
         width: 80%;
         margin-top: 5px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
 
         @include laptop {
             width: 100%;
