@@ -108,4 +108,13 @@
     &__button {
         margin-top: 30px;
     }
+
+    &__text--empty {
+        text-align: center;
+        padding-block: 150px;
+
+        @include mobile {
+            padding-block: 100px;
+        }
+    }
 }
