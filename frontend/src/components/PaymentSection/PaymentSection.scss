@@ -26,6 +26,11 @@
 
     &__row--1 {}
 
+    &__column--1 {
+        width: 100%;
+        justify-content: center;
+    }
+
     &__form {
         display: flex;
         flex-wrap: wrap;
@@ -69,12 +74,20 @@
     &__card-wrap {
         display: flex;
         flex-wrap: wrap;
-        width: 285px;
-        gap: 20px;
+        width: 100%;
+        gap: 50px;
+
+        @include mobile {
+            gap: 25px;
+        }
     }
 
     &__label--card-date {
-        width: 135px;
+        width: calc(50% - 25px);
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__input--card-date {
@@ -82,7 +95,11 @@
     }
 
     &__label--cvv {
-        width: 130px;
+        width: calc(50% - 25px);
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__input--cvv {
@@ -126,5 +143,27 @@
         border: none;
         cursor: pointer;
         margin-top: 30px;
+    }
+
+    &__text--empty {
+        text-align: center;
+        padding-block: 150px 50px;
+
+        @include mobile {
+            padding-block: 100px 30px;
+        }
+    }
+
+    &__link {
+        width: max-content;
+        margin-inline: auto;
+    }
+
+    &__button {
+        margin-bottom: 150px;
+
+        @include mobile {
+            margin-bottom: 100px;
+        }
     }
 }

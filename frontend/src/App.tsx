@@ -35,6 +35,7 @@ function App() {
     const products = useAppSelector(state => state.client.products)
     const posts = useAppSelector(state => state.client.posts)
     const cart = useAppSelector(state => state.client.cart)
+    const totalCount = useAppSelector(state => state.client.totalCount)
 
     const dispatch = useAppDispatch()
 
@@ -45,12 +46,11 @@ function App() {
 
     useEffect(() => {
         const cartItems = JSON.parse(localStorage.getItem("cartItems") as string)
-
         if (cartItems !== null) dispatch(setCart(cartItems))
     }, [])
 
     useEffect(() => {
-        if (!cart.length) return
+        if (!products.length) return
 
         const cartItemsToAdding: string = JSON.stringify(cart)
 
@@ -81,7 +81,11 @@ function App() {
                         <Route path="/changelog" element={<ChangelogPage />} />
                         <Route path="/protected" element={<ProtectedPage />} />
                         <Route path="/cart" element={<CartPage />} />
-                        <Route path="/payment" element={<PaymentPage />} />
+                        {/*
+                            HACK: if the user goes to the URL input, then it is redirected to MainPage.
+                            This happens because totalCount can only be a positive value when going from CartPage
+                        */}
+                        <Route path="/payment" element={totalCount > 0 ? <PaymentPage /> : <MainPage />} />
                         <Route path="/thankyou" element={<ThankYouPage />} />
                     </Routes>
                     {currentPage !== "services" && currentPage !== "notfound" && <SubscribeSection />}

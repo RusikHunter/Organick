@@ -10,7 +10,7 @@ import { toast } from "react-toastify"
 
 function ProductItemSection() {
     const [activeSide, setActiveSide] = useState<'left' | 'right'>('left')
-    const [productCount, setProductCount] = useState<string>('0')
+    const [productCount, setProductCount] = useState<string>('1')
 
     const dispatch = useAppDispatch()
     const cart = useAppSelector(state => state.client.cart)
@@ -19,7 +19,17 @@ function ProductItemSection() {
     const product: Product = useAppSelector(state => state.client.products[id])
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setProductCount(event.target.value)
+        const value = Number(event.target.value)
+
+        if (value >= 0 && value <= 100) {
+            setProductCount(value.toString())
+        } else if (value < 0) {
+            toast.error("Incorrect quality of product!")
+            setProductCount("0")
+        } else if (value > 100) {
+            toast.error("Incorrect quality of product!")
+            setProductCount("100")
+        }
     }
 
     const handleAdd = (event: React.MouseEvent<HTMLButtonElement>): void => {
