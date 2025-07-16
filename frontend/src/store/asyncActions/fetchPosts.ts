@@ -4,7 +4,7 @@ import { postsURL } from '../../assets/responseURLs'
 
 export const fetchPosts = createAsyncThunk(
     'client/fetchPosts',
-    async (arg, thunkAPI) => {
+    async (_, thunkAPI) => {
         try {
             const response = await axios.get(postsURL)
             return response.data

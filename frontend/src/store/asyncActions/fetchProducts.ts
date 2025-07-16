@@ -4,7 +4,7 @@ import { productsURL } from '../../assets/responseURLs'
 
 export const fetchProducts = createAsyncThunk(
     'client/fetchProducts',
-    async (arg, thunkAPI) => {
+    async (_, thunkAPI) => {
         try {
             const response = await axios.get(productsURL)
             return response.data
