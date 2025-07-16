@@ -1,23 +1,23 @@
 import "./TeamExpertCard.scss"
 import type { TeamExpert } from "../../interfaces/teamExpert"
 
-function TeamExpertCard(props: TeamExpert) {
+function TeamExpertCard(teamExpert: TeamExpert) {
     return (
         <article className="expert-card">
             <div className="expert-card__image-wrap">
-                <img src={props.imageURL} alt={`Expert ${props.name}`} className="expert-card__image" width={449} height={485} />
+                <img src={teamExpert.imageURL} alt={`Expert ${teamExpert.name}`} className="expert-card__image" width={449} height={485} />
             </div>
 
             <div className="expert-card__content-wrap">
                 <div className="expert-card__text-wrap">
-                    <h6 className="expert-card__name h6">{props.name}</h6>
+                    <h6 className="expert-card__name h6">{teamExpert.name}</h6>
 
-                    <span className="expert-card__job-title">{props.jobTitle}</span>
+                    <span className="expert-card__job-title">{teamExpert.jobTitle}</span>
                 </div>
 
                 <div className="expert-card__social-networks">
-                    {props.socialNetworksURLs.instagramURL !== undefined &&
-                        <a href={props.socialNetworksURLs.instagramURL} target="_blank" className="expert-card__social-network-link">
+                    {teamExpert.socialNetworksURLs.instagramURL !== undefined &&
+                        <a href={teamExpert.socialNetworksURLs.instagramURL} target="_blank" className="expert-card__social-network-link">
                             <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.4872 2.28838C17.72 2.29192 18.9012 2.76508 19.773 3.60451C20.6447 4.44395 21.136 5.58145 21.1397 6.76858V15.728C21.136 16.9152 20.6447 18.0527 19.773 18.8921C18.9012 19.7315 17.72 20.2047 16.4872 20.2082H7.18315C5.95036 20.2047 4.76911 19.7315 3.89739 18.8921C3.02567 18.0527 2.53431 16.9152 2.53063 15.728V6.76858C2.53431 5.58145 3.02567 4.44395 3.89739 3.60451C4.76911 2.76508 5.95036 2.29192 7.18315 2.28838H16.4872ZM16.4872 0.496582H7.18315C3.6008 0.496582 0.669922 3.31891 0.669922 6.76858V15.728C0.669922 19.1777 3.6008 22 7.18315 22H16.4872C20.0695 22 23.0004 19.1777 23.0004 15.728V6.76858C23.0004 3.31891 20.0695 0.496582 16.4872 0.496582Z" fill="#274C5B" />
                                 <path d="M17.8832 6.76923C17.6072 6.76923 17.3374 6.69041 17.1079 6.54273C16.8783 6.39506 16.6994 6.18516 16.5938 5.93958C16.4882 5.694 16.4605 5.42377 16.5144 5.16307C16.5682 4.90237 16.7012 4.66289 16.8964 4.47494C17.0915 4.28698 17.3402 4.15898 17.611 4.10712C17.8817 4.05527 18.1623 4.08188 18.4173 4.1836C18.6724 4.28532 18.8903 4.45758 19.0437 4.6786C19.197 4.89961 19.2789 5.15945 19.2789 5.42526C19.2793 5.60186 19.2435 5.7768 19.1735 5.94003C19.1035 6.10326 19.0007 6.25156 18.871 6.37644C18.7413 6.50131 18.5873 6.60029 18.4178 6.6677C18.2483 6.73511 18.0666 6.76961 17.8832 6.76923ZM11.8356 7.66489C12.5717 7.66489 13.2913 7.87509 13.9033 8.26891C14.5154 8.66273 14.9925 9.22249 15.2742 9.87739C15.5559 10.5323 15.6296 11.2529 15.486 11.9482C15.3423 12.6434 14.9879 13.282 14.4673 13.7833C13.9468 14.2845 13.2836 14.6259 12.5617 14.7642C11.8397 14.9024 11.0913 14.8315 10.4112 14.5602C9.73115 14.2889 9.14987 13.8296 8.7409 13.2402C8.33193 12.6508 8.11364 11.9578 8.11364 11.249C8.1147 10.2987 8.50716 9.38768 9.20493 8.71576C9.9027 8.04384 10.8488 7.6659 11.8356 7.66489ZM11.8356 5.87309C10.7314 5.87309 9.65207 6.18838 8.73402 6.77909C7.81596 7.3698 7.10042 8.20939 6.67788 9.1917C6.25535 10.174 6.14479 11.2549 6.3602 12.2977C6.57561 13.3406 7.1073 14.2984 7.88805 15.0503C8.66879 15.8021 9.66352 16.3141 10.7464 16.5215C11.8294 16.729 12.9518 16.6225 13.9719 16.2156C14.992 15.8087 15.8639 15.1197 16.4773 14.2356C17.0908 13.3516 17.4182 12.3122 17.4182 11.249C17.4182 9.82319 16.83 8.45582 15.7831 7.44765C14.7361 6.43948 13.3162 5.87309 11.8356 5.87309Z" fill="#274C5B" />
@@ -25,16 +25,16 @@ function TeamExpertCard(props: TeamExpert) {
                         </a>
                     }
 
-                    {props.socialNetworksURLs.facebookURL !== undefined &&
-                        <a href={props.socialNetworksURLs.facebookURL} target="_blank" className="expert-card__social-network-link">
+                    {teamExpert.socialNetworksURLs.facebookURL !== undefined &&
+                        <a href={teamExpert.socialNetworksURLs.facebookURL} target="_blank" className="expert-card__social-network-link">
                             <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.3305 11.3129C22.3305 5.37543 17.3311 0.561157 11.1653 0.561157C4.99944 0.561157 0 5.37543 0 11.3129C0 16.6791 4.08229 21.1272 9.42068 21.9345V14.4218H6.58501V11.3129H9.42068V8.94414C9.42068 6.24997 11.088 4.76057 13.6381 4.76057C14.8598 4.76057 16.1378 4.9708 16.1378 4.9708V7.61698H14.7292C13.343 7.61698 12.9093 8.44544 12.9093 9.29693V11.3129H16.0057L15.5112 14.4218H12.9098V21.9355C18.2482 21.1286 22.3305 16.6806 22.3305 11.3129Z" fill="#274C5B" />
+                                <path fillRule="evenodd" clipRule="evenodd" d="M22.3305 11.3129C22.3305 5.37543 17.3311 0.561157 11.1653 0.561157C4.99944 0.561157 0 5.37543 0 11.3129C0 16.6791 4.08229 21.1272 9.42068 21.9345V14.4218H6.58501V11.3129H9.42068V8.94414C9.42068 6.24997 11.088 4.76057 13.6381 4.76057C14.8598 4.76057 16.1378 4.9708 16.1378 4.9708V7.61698H14.7292C13.343 7.61698 12.9093 8.44544 12.9093 9.29693V11.3129H16.0057L15.5112 14.4218H12.9098V21.9355C18.2482 21.1286 22.3305 16.6806 22.3305 11.3129Z" fill="#274C5B" />
                             </svg>
                         </a>
                     }
 
-                    {props.socialNetworksURLs.twitterURL !== undefined &&
-                        <a href={props.socialNetworksURLs.twitterURL} target="_blank" className="expert-card__social-network-link">
+                    {teamExpert.socialNetworksURLs.twitterURL !== undefined &&
+                        <a href={teamExpert.socialNetworksURLs.twitterURL} target="_blank" className="expert-card__social-network-link">
                             <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24.2556 2.94605C23.3581 3.33601 22.4086 3.59293 21.4369 3.70868C22.458 3.11073 23.226 2.16078 23.5967 1.03699C22.6312 1.60153 21.5767 1.99764 20.4784 2.20835C20.0159 1.72362 19.4596 1.33801 18.8434 1.07495C18.2272 0.811885 17.564 0.676871 16.894 0.678109C14.1815 0.678109 11.9863 2.84138 11.9863 5.50808C11.9844 5.879 12.0269 6.24883 12.1129 6.60965C10.1678 6.51846 8.26315 6.02227 6.5208 5.15281C4.77845 4.28335 3.23677 3.05978 1.9944 1.56036C1.55854 2.29514 1.32804 3.13349 1.32698 3.98781C1.32698 5.6626 2.20076 7.14299 3.52015 8.01029C2.73845 7.99174 1.97276 7.78484 1.2881 7.40717V7.46698C1.2881 9.80969 2.98282 11.7586 5.22584 12.2022C4.80405 12.3147 4.36939 12.3717 3.93287 12.3717C3.62312 12.3723 3.31408 12.3422 3.01024 12.282C3.6338 14.201 5.44865 15.5967 7.59846 15.6366C5.85158 16.9828 3.70688 17.7105 1.50143 17.7051C1.10996 17.7045 0.718851 17.6812 0.330078 17.6353C2.57369 19.068 5.1817 19.8258 7.8437 19.8185C16.8836 19.8185 21.8222 12.4565 21.8222 6.07132C21.8222 5.86197 21.8167 5.65263 21.8067 5.44826C22.7653 4.76641 23.5946 3.91908 24.2556 2.94605Z" fill="#274C5B" />
                             </svg>

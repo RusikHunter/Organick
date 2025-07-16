@@ -15,8 +15,7 @@ function ContactUsSection() {
                     <div className="contact-us__column contact-us__column--2 column">
                         <h2 className="contact-us__title h2">We'd love to talk about how we can work together.</h2>
 
-                        <p className="contact-us__text text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                        <p className="contact-us__text text">Feel free to reach out to us anytime for inquiries, orders, or partnership opportunities. We're here to help and support your journey to organic living.</p>
 
                         <a href="mailto:support@saasflow.com" className="contact-us__link">
                             <img src={MailImage} alt="Mail" className="contact-us__link-icon" width={89} height={89} />
@@ -53,7 +52,7 @@ function ContactUsSection() {
                                 <a href="https://www.facebook.com/" target="_blank" className="contact-us__link--social-networks">
                                     <svg width="60" height="61" viewBox="0 0 60 61" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="30" cy="30.7158" r="30" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2828 31.0001C39.2828 25.873 34.9657 21.7158 29.6414 21.7158C24.3171 21.7158 20 25.873 20 31.0001C20 35.634 23.5251 39.475 28.1349 40.1721V33.6847H25.6863V31.0001H28.1349V28.9547C28.1349 26.6282 29.5747 25.3421 31.7767 25.3421C32.8317 25.3421 33.9353 25.5236 33.9353 25.5236V27.8087H32.7189C31.5219 27.8087 31.1475 28.524 31.1475 29.2593V31.0001H33.8212L33.3942 33.6847H31.1479V40.173C35.7577 39.4762 39.2828 35.6353 39.2828 31.0001Z" fill="#274C5B" />
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M39.2828 31.0001C39.2828 25.873 34.9657 21.7158 29.6414 21.7158C24.3171 21.7158 20 25.873 20 31.0001C20 35.634 23.5251 39.475 28.1349 40.1721V33.6847H25.6863V31.0001H28.1349V28.9547C28.1349 26.6282 29.5747 25.3421 31.7767 25.3421C32.8317 25.3421 33.9353 25.5236 33.9353 25.5236V27.8087H32.7189C31.5219 27.8087 31.1475 28.524 31.1475 29.2593V31.0001H33.8212L33.3942 33.6847H31.1479V40.173C35.7577 39.4762 39.2828 35.6353 39.2828 31.0001Z" fill="#274C5B" />
                                     </svg>
                                 </a>
                             </li>

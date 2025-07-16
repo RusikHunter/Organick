@@ -22,11 +22,9 @@
         }
     }
 
-    &__row {}
-
-    &__row--1 {}
-
-    &__column {}
+    &__row--1 {
+        justify-content: center !important;
+    }
 
     &__promo {
         margin-inline: auto;

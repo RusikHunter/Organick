@@ -7,7 +7,7 @@ import { useAppSelector } from "../../hooks/useAppSelector"
 import type { Product } from "../../interfaces/product"
 
 function DropdownSearch() {
-    const [isSearhDropdownShowed, setIsSearhDropdownShowed] = useState<boolean>(false)
+    const [isSearchDropdownShowed, setIsSearchDropdownShowed] = useState<boolean>(false)
     const [searchTerm, setSearchTerm] = useState<string>("")
     const [foundProducts, setFoundProducts] = useState<Product[]>([])
 
@@ -25,21 +25,21 @@ function DropdownSearch() {
     const handleSearchClick = (): void => {
         if (!searchTerm.length) return
 
-        setIsSearhDropdownShowed(true)
+        setIsSearchDropdownShowed(true)
 
         if (isBurgerMenuOpen) {
             dispatch(setIsBurgerMenuOpen())
         }
 
         const foundProducts = products.filter(product => {
-            return product.title?.toLowerCase().includes(searchTerm.toLowerCase())
+            return product.title?.toLowerCase().includes(searchTerm.toLowerCase().trim())
         })
 
         setFoundProducts(foundProducts)
     }
 
     const handleCloseClick = (): void => {
-        setIsSearhDropdownShowed(false)
+        setIsSearchDropdownShowed(false)
     }
 
     useEffect(() => {
@@ -52,7 +52,7 @@ function DropdownSearch() {
                 return
             }
 
-            setIsSearhDropdownShowed(false)
+            setIsSearchDropdownShowed(false)
         }
 
         window.addEventListener("click", handleOutsideClick)
@@ -60,7 +60,7 @@ function DropdownSearch() {
         return () => {
             window.removeEventListener("click", handleOutsideClick)
         }
-    }, [isSearhDropdownShowed])
+    }, [isSearchDropdownShowed])
 
     return (
         <div className="search-wrap" ref={searchWrapRef}>
@@ -81,14 +81,14 @@ function DropdownSearch() {
             </label>
 
             <div
-                className={`search__dropdown dropdown ${isSearhDropdownShowed ? 'dropdown--active ' : ''}overlay`}
+                className={`search__dropdown dropdown ${isSearchDropdownShowed ? 'dropdown--active ' : ''}overlay`}
                 ref={searchDropdownRef}
             >
                 <div className={`dropdown__list-wrap${foundProducts.length === 0 ? ` dropdown__list-wrap--scrollbar-disabled` : ``}`}>
                     <ul className="dropdown__list">
-                        {foundProducts.length === 0 ? <span className="dropdown__text">No results</span> : foundProducts.map((product, index) => (
-                            <li className="dropdown__list-item" key={index}>
-                                <Link to={`/shop/${product.id}`} className="dropdown__product-card" tabIndex={isSearhDropdownShowed ? 0 : -1}>
+                        {foundProducts.length === 0 ? <span className="dropdown__text">No results</span> : foundProducts.map((product) => (
+                            <li className="dropdown__list-item" key={product.id}>
+                                <Link to={`/shop/${product.id}`} className="dropdown__product-card" tabIndex={isSearchDropdownShowed ? 0 : -1}>
                                     <img src={product.imageURL} alt={product.title} className="dropdown__product-image" width={40} height={40} />
 
                                     <h6 className="dropdown__product-title">{product.title}</h6>
@@ -100,7 +100,7 @@ function DropdownSearch() {
                     </ul>
                 </div>
 
-                <button className="dropdown__button--close" onClick={handleCloseClick} tabIndex={-1}>
+                <button className="dropdown__button--close" type="button" onClick={handleCloseClick} tabIndex={-1}>
                     <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
                         <line x1="0" y1="0" x2="10" y2="10" stroke="black" strokeWidth="2" />
                         <line x1="0" y1="10" x2="10" y2="0" stroke="black" strokeWidth="2" />

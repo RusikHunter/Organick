@@ -28,7 +28,7 @@ function GrowSection() {
 
                             <h6 className="grow__feature-title h6">Dairy Products</h6>
 
-                            <p className="grow__feature-description text">Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis</p>
+                            <p className="grow__feature-description text">Fresh, organic dairy made without hormones or antibiotics.</p>
                         </div>
 
                         <div className="grow__feature grow__grid-column grow__grid-column--b">
@@ -36,7 +36,7 @@ function GrowSection() {
 
                             <h6 className="grow__feature-title h6">Store Services</h6>
 
-                            <p className="grow__feature-description text">Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis</p>
+                            <p className="grow__feature-description text">Convenient access to fresh, organic products with excellent customer care.</p>
                         </div>
 
                         <div className="grow__feature grow__grid-column grow__grid-column--c">
@@ -44,7 +44,7 @@ function GrowSection() {
 
                             <h6 className="grow__feature-title h6">Delivery Services</h6>
 
-                            <p className="grow__feature-description text">Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis</p>
+                            <p className="grow__feature-description text">Fast and reliable delivery of fresh organic products right to your door.</p>
                         </div>
 
                         <div className="grow__grid-column grow__grid-column--g">
@@ -56,7 +56,7 @@ function GrowSection() {
 
                             <h6 className="grow__feature-title h6">Agricultural Services</h6>
 
-                            <p className="grow__feature-description text">Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis</p>
+                            <p className="grow__feature-description text">Supporting sustainable farming with modern, eco-friendly solutions.</p>
                         </div>
 
                         <div className="grow__feature grow__grid-column grow__grid-column--e">
@@ -64,7 +64,7 @@ function GrowSection() {
 
                             <h6 className="grow__feature-title h6">Organic Products</h6>
 
-                            <p className="grow__feature-description text">Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis</p>
+                            <p className="grow__feature-description text">Pure, natural, and certified organic goods for a healthier lifestyle.</p>
                         </div>
 
                         <div className="grow__feature grow__grid-column grow__grid-column--f">
@@ -72,7 +72,7 @@ function GrowSection() {
 
                             <h6 className="grow__feature-title h6">Fresh Vegetables</h6>
 
-                            <p className="grow__feature-description text">Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis</p>
+                            <p className="grow__feature-description text">Crisp, nutrient-rich vegetables harvested at peak freshness from organic farms.</p>
                         </div>
                     </div>
                 </div>

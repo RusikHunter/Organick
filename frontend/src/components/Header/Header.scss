@@ -30,10 +30,6 @@
         }
     }
 
-    &__column {}
-
-    &__column--1 {}
-
     &__logo-link {
         transition: transform var(--transition);
 
@@ -72,8 +68,6 @@
         }
     }
 
-    &__navigation {}
-
     &__navigation-list {
         display: flex;
         gap: 40px;
@@ -82,8 +76,6 @@
             gap: 30px;
         }
     }
-
-    &__navigation-list-item {}
 
     &__navigation-link {
         @include fluid-text(20, 16);
@@ -111,8 +103,6 @@
             }
         }
     }
-
-    &__dropdown {}
 
     &__column--3 {
         flex-direction: row !important;
@@ -215,6 +205,4 @@
             display: none;
         }
     }
-
-    &__dropdown--cart {}
 }

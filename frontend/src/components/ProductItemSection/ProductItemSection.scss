@@ -22,8 +22,6 @@
         }
     }
 
-    &__row {}
-
     &__row--1 {
         @include laptop {
             gap: 5%;
@@ -33,8 +31,6 @@
             flex-direction: column !important;
         }
     }
-
-    &__column {}
 
     &__column--1 {
         width: 48%;
@@ -140,10 +136,6 @@
         }
     }
 
-    &__label--count {}
-
-    &__input {}
-
     &__input--count {
         border: var(--border-bold);
         height: 80px;
@@ -158,8 +150,6 @@
             width: 220px;
         }
     }
-
-    &__input--submit {}
 
     &__row--2 {
         margin-top: 90px;
@@ -220,10 +210,6 @@
             width: 90%;
         }
     }
-
-    &__button--description {}
-
-    &__button--additional {}
 
     &__button--active {
         width: 55%;

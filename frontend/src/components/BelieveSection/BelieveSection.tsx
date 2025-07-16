@@ -15,14 +15,13 @@ function BelieveSection() {
                     <div className="believe__column believe__column--2 column">
                         <span className="believe__promo promo">About Us</span>
                         <h2 className="believe__title h2">We Believe in Working Accredited Farmers</h2>
-                        <p className="believe__text text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                        <p className="believe__text text">We partner only with trusted and certified farmers to ensure every product meets high-quality and sustainability standards.</p>
 
                         <div className="believe__feature-wrap">
                             <img src={OrganicFoodsImage} alt="Organic Foods" className="believe__icon" width={101} height={101} />
                             <div className="believe__feature-text-wrap">
                                 <h6 className="believe__feature-title h6">Organic Foods Only</h6>
-                                <p className="believe__feature-text text">Simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+                                <p className="believe__feature-text text">All our food is grown naturally, free from harmful chemicals, supporting both your health and the environment.</p>
                             </div>
                         </div>
 
@@ -30,7 +29,7 @@ function BelieveSection() {
                             <img src={QualityStandardsImage} alt="Organic Foods" className="believe__icon" width={101} height={101} />
                             <div className="believe__feature-text-wrap">
                                 <h6 className="believe__feature-title h6">Quality Standards</h6>
-                                <p className="believe__feature-text text">Simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+                                <p className="believe__feature-text text">We follow strict quality guidelines and work with top producers to bring you fresh, organic, and responsibly sourced products.</p>
                             </div>
                         </div>
 

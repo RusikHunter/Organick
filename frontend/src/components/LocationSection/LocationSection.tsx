@@ -61,7 +61,7 @@ function LocationSection() {
 
                                 <h2 className="location__title h2">Our Farms</h2>
 
-                                <p className="location__text text">Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using.</p>
+                                <p className="location__text text">We work with organic farms dedicated to sustainable and eco-friendly practices, ensuring the highest quality products from soil to table.</p>
 
                                 <ul className="location__list">
                                     <li className="location__list-item">

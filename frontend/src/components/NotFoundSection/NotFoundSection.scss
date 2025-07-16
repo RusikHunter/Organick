@@ -30,8 +30,6 @@
         justify-content: end !important;
     }
 
-    &__column {}
-
     &__text-wrap {
         display: flex;
         flex-direction: column;
@@ -72,6 +70,4 @@
             margin-top: 25px;
         }
     }
-
-    &__button {}
 }

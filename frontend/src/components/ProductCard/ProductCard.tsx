@@ -7,7 +7,7 @@ function ProductCard({ isCartItem, productData }: ProductCardProps) {
         <Link
             to={`/shop/${productData.id}`}
             className={`product-card${isCartItem ? ' product-card--cart-item' : ''}`}
-            tabIndex={isCartItem ? -1 : 1}
+            tabIndex={isCartItem ? -1 : 0}
             style={{ ...(isCartItem ? { transform: "none" } : {}) }}
         >
             <span className="product-card__category">{productData.type}</span>

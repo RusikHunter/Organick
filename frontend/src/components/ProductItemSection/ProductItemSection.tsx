@@ -7,10 +7,11 @@ import { useAppDispatch } from "../../hooks/useAppDispatch"
 import { addCartItem } from "../../store/reducers/clientReducer"
 import type { CartItem } from "../../interfaces/cartItem"
 import { toast } from "react-toastify"
+import { MIN_PRODUCT_COUNT, MAX_PRODUCT_COUNT } from "../../assets/product-settings"
 
 function ProductItemSection() {
     const [activeSide, setActiveSide] = useState<'left' | 'right'>('left')
-    const [productCount, setProductCount] = useState<string>('1')
+    const [productCount, setProductCount] = useState<string>('0')
 
     const dispatch = useAppDispatch()
     const cart = useAppSelector(state => state.client.cart)
@@ -21,14 +22,12 @@ function ProductItemSection() {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const value = Number(event.target.value)
 
-        if (value >= 0 && value <= 100) {
+        if (value >= MIN_PRODUCT_COUNT && value <= MAX_PRODUCT_COUNT) {
             setProductCount(value.toString())
-        } else if (value < 0) {
-            toast.error("Incorrect quality of product!")
-            setProductCount("0")
-        } else if (value > 100) {
-            toast.error("Incorrect quality of product!")
-            setProductCount("100")
+        } else if (value < MIN_PRODUCT_COUNT) {
+            setProductCount(`${MIN_PRODUCT_COUNT}`)
+        } else if (value > MAX_PRODUCT_COUNT) {
+            setProductCount(`${MAX_PRODUCT_COUNT}`)
         }
     }
 
@@ -61,8 +60,6 @@ function ProductItemSection() {
     return (
         <section className="product-item">
             <div className="product-item__inner container">
-
-
                 {product
                     ?
                     <div className="product-item__row product-item__row--1 row">

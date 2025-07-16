@@ -22,10 +22,6 @@
         }
     }
 
-    &__row {}
-
-    &__row--1 {}
-
     &__product-list {
         display: flex;
         flex-direction: column;
@@ -76,6 +72,13 @@
         margin-bottom: 15px;
     }
 
+    &__count--any {
+        position: relative;
+        top: -3px;
+        padding-left: 15px;
+        color: var(--color-red) !important;
+    }
+
     &__details {
         @include fluid-text(25, 18);
         @include font(var(--font-family), 400, 1.2);
@@ -116,5 +119,9 @@
         @include mobile {
             padding-block: 100px;
         }
+    }
+
+    &__link {
+        width: max-content;
     }
 }

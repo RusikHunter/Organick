@@ -22,12 +22,6 @@
         }
     }
 
-    &__row {}
-
-    &__row--1 {}
-
-    &__column {}
-
     &__column--1 {
         width: 100%;
     }
@@ -51,10 +45,6 @@
             width: 90%;
         }
     }
-
-    &__row--2 {}
-
-    &__futures-wrap {}
 
     &__grid {
         width: 100%;
@@ -82,8 +72,6 @@
             gap: 20px;
         }
     }
-
-    &__feature {}
 
     &__grid-column {
         display: flex;
@@ -170,12 +158,6 @@
         width: 55px;
         height: 55px;
     }
-
-    &__feature-title {}
-
-    &__feature-description {}
-
-    &__row--3 {}
 
     &__column--2 {
         width: 100%;

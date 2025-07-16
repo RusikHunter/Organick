@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Header from './components/Header/Header'
 import BurgerMenu from './components/BurgerMenu/BurgerMenu'
 import MainPage from './pages/MainPage/MainPage'
@@ -37,6 +38,9 @@ function App() {
     const cart = useAppSelector(state => state.client.cart)
     const totalCount = useAppSelector(state => state.client.totalCount)
 
+    const TITLE_PAGE_SERVICES = "services"
+    const TITLE_PAGE_NOT_FOUND = "notfound"
+
     const dispatch = useAppDispatch()
 
     useEffect(() => {
@@ -60,6 +64,7 @@ function App() {
     return (
         <Router>
             <div className="app">
+                <ScrollToTop />
                 <Header />
                 <BurgerMenu />
                 <main className="main">
@@ -88,7 +93,7 @@ function App() {
                         <Route path="/payment" element={totalCount > 0 ? <PaymentPage /> : <MainPage />} />
                         <Route path="/thankyou" element={<ThankYouPage />} />
                     </Routes>
-                    {currentPage !== "services" && currentPage !== "notfound" && <SubscribeSection />}
+                    {currentPage !== TITLE_PAGE_SERVICES && currentPage !== TITLE_PAGE_NOT_FOUND && <SubscribeSection />}
                 </main>
                 <Footer />
                 <ToastContainer />

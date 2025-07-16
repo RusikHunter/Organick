@@ -22,16 +22,6 @@
         }
     }
 
-    &__row {}
-
-    &__row--1 {}
-
-    &__column {}
-
-    &__column--1 {}
-
-    &__image {}
-
     &__row--2 {
         margin-top: 80px;
     }
@@ -109,13 +99,9 @@
         }
     }
 
-    &__feature-title {}
-
     &__feature-description {
         margin-top: 8px;
     }
-
-    &__subtitle {}
 
     &__advantages {
         margin-top: 60px;
@@ -157,6 +143,4 @@
             height: 50px;
         }
     }
-
-    &__advantage-text {}
 }

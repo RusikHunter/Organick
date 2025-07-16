@@ -15,7 +15,7 @@ function TeamSection({ defaultExpertsCount }: TeamSectionProps) {
 
                         <h2 className="team__title h2">Our Organic Experts</h2>
 
-                        <p className="team__description text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                        <p className="team__description text">Our team works closely with experienced farmers and producers who are passionate about organic and sustainable agriculture.</p>
                     </div>
                 </div>
 

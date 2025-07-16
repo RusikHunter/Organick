@@ -2,8 +2,6 @@
 
 .coupons {
 
-    &__inner {}
-
     &__row {
         gap: 36px;
         padding-block: 155px 190px;
@@ -29,10 +27,6 @@
             width: 100%;
         }
     }
-
-    &__column--1 {}
-
-    &__column--2 {}
 
     &__coupon {
         width: 100%;
@@ -114,6 +108,4 @@
         @include fluid-text(36, 32);
         @include font(var(--third-family), 400, 1);
     }
-
-    &__title {}
 }

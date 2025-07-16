@@ -56,10 +56,6 @@
         }
     }
 
-    &__text-wrap {}
-
-    &__name {}
-
     &__job-title {
         display: block;
         @include fluid-text(22, 18);

@@ -39,8 +39,7 @@ function Footer() {
                     <div className="footer__column footer__column--2 column">
                         <img src={Logo} alt="Organick" className="footer__logo" width={199} height={53} />
 
-                        <p className="footer__description text">Simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum simply dummy text of the printing </p>
+                        <p className="footer__description text">Organick. Grown with care, delivered with purpose.</p>
 
                         <ul className="footer__list footer__list--social-networks">
                             <li className="footer__list-item footer__list-item--social-networks">

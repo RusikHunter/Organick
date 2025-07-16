@@ -74,10 +74,6 @@
         }
     }
 
-    // ! todo --> boxshadow
-
-    &__image {}
-
     &__column--2 {
         @include tablet {
             width: 100%;
@@ -140,22 +136,14 @@
         }
     }
 
-    &__icon {}
-
     &__feature-text-wrap {
         display: flex;
         flex-direction: column;
         gap: 7px;
     }
 
-    &__feature-title {}
-
-    &__feature-text {}
-
     &__link {
         margin-top: 46px;
         width: max-content;
     }
-
-    &__button {}
 }

@@ -24,12 +24,6 @@
         }
     }
 
-    &__row {}
-
-    &__row--1 {}
-
-    &__column {}
-
     &__column--1 {
         margin-inline: auto;
         gap: 10px;
@@ -157,8 +151,6 @@
         }
     }
 
-    &__feature-title {}
-
     &__feature-text {
         font-weight: 600 !important;
         color: var(--color-blue) !important;
@@ -170,6 +162,11 @@
     .swiper-slide,
     .swiper-wrapper {
         width: 100% !important;
+        padding-bottom: 10px;
+
+        @include mobile {
+            padding-bottom: 0;
+        }
     }
 
     .swiper {

@@ -41,8 +41,6 @@
         }
     }
 
-    &__row {}
-
     &__column {
         width: 50%;
 
@@ -71,12 +69,6 @@
         align-items: end;
         padding-right: 40px;
     }
-
-    &__image {}
-
-    &__column--2 {}
-
-    &__promo {}
 
     &__title {
         margin-block: 10px;
@@ -171,6 +163,4 @@
         margin-top: 58px;
         width: max-content;
     }
-
-    &__button {}
 }

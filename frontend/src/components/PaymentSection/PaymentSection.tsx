@@ -107,7 +107,7 @@ function PaymentSection() {
                         </label>
 
                         <label htmlFor="paymentInputCompany" className="payment__label payment__label--company label">
-                            Company*
+                            <span className="label__text">Company* <span className="label__text--error">{errors.company?.message}</span></span>
 
                             <input
                                 type="text"
