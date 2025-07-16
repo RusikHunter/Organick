@@ -24,10 +24,8 @@ function ProductItemSection() {
         if (value >= 0 && value <= 100) {
             setProductCount(value.toString())
         } else if (value < 0) {
-            toast.error("Incorrect quality of product!")
             setProductCount("0")
         } else if (value > 100) {
-            toast.error("Incorrect quality of product!")
             setProductCount("100")
         }
     }

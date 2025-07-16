@@ -10,7 +10,7 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: 0,
         title: "Green & Tasty Lemon",
-        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
+        description: "Bursting with natural flavor, our green lemons are grown organically and handpicked for maximum freshness and zesty taste.",
         date: "December 5, 2022",
         client: "John Davis",
         category: "Agriculture, Eco",
@@ -21,7 +21,7 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: 1,
         title: "Organic Carrot",
-        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
+        description: "Rich in vitamins and grown without synthetic chemicals, these organic carrots are crisp, sweet, and perfect for healthy meals.",
         date: "June 29, 2023",
         client: "Kevin Martin",
         category: "Agriculture, Eco",
@@ -32,7 +32,7 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: 2,
         title: "Organic Betel Leaf",
-        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
+        description: "Our organic betel leaves are naturally grown and carefully harvested, offering a refreshing aroma and traditional wellness benefits.",
         date: "September 13, 2022",
         client: "Adnrew McTavish",
         category: "Agriculture, Eco",
@@ -43,7 +43,7 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: 3,
         title: "Natural Tommato",
-        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
+        description: "Juicy and full of flavor, our organically grown tomatoes are nurtured in chemical-free soil for the purest taste.",
         date: "May 27, 2024",
         client: "Adnrew McTavish",
         category: "Agriculture, Eco",
@@ -54,7 +54,7 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: 4,
         title: "Black Raspberry",
-        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
+        description: "These antioxidant-rich black raspberries are cultivated naturally to bring you bold flavor and powerful health benefits.",
         date: "December 4, 2022",
         client: "Kevin Martin",
         category: "Agriculture, Eco",
@@ -65,7 +65,7 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: 5,
         title: "Honey Orange",
-        description: "Established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed ",
+        description: "Naturally sweet and rich in vitamin C, our honey oranges are grown on sustainable farms and harvested at peak ripeness.",
         date: "July 3, 2025",
         client: "John Davis",
         category: "Agriculture, Eco",

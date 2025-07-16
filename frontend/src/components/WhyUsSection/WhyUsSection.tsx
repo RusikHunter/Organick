@@ -16,7 +16,7 @@ function WhyUsSection() {
                         <h2 className="whyus__title h2">We do not buy from the
                             open market & traders.</h2>
 
-                        <p className="whyus__description text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard  the 1500s, when an unknown</p>
+                        <p className="whyus__description text">Our products never pass through middlemen or open markets, guaranteeing top quality for you.</p>
 
                         <dl className="whyus__description-list">
                             <dt className="whyus__description-term">
@@ -27,7 +27,7 @@ function WhyUsSection() {
 
                                 100% Natural Product
                             </dt>
-                            <dd className="whyus__description-definition text">Simply dummy text of the printing and typesetting industry Lorem Ipsum</dd>
+                            <dd className="whyus__description-definition text">Our Biona Organic Granola with Wild Berries boosts immunity and keeps you energized.</dd>
 
                             <dt className="whyus__description-term">
                                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,7 @@ function WhyUsSection() {
 
                                     <h6 className="feature__title h6">Return Policy</h6>
 
-                                    <p className="feature__description text">Simply dummy text of the printintypesetting industry.</p>
+                                    <p className="feature__description text">We offer hassle-free returns to ensure your complete satisfaction with every purchase.</p>
                                 </div>
                             </li>
 
@@ -69,7 +69,7 @@ function WhyUsSection() {
 
                                     <h6 className="feature__title h6">100% Fresh</h6>
 
-                                    <p className="feature__description text">Simply dummy text of the printintypesetting industry.</p>
+                                    <p className="feature__description text">We carefully select and deliver fresh organic products to ensure the highest quality.</p>
                                 </div>
                             </li>
 
@@ -81,7 +81,7 @@ function WhyUsSection() {
 
                                     <h6 className="feature__title h6">Support 24/7</h6>
 
-                                    <p className="feature__description text">Simply dummy text of the printintypesetting industry.</p>
+                                    <p className="feature__description text">Our customer service team is available around the clock to assist you with any questions.</p>
                                 </div>
                             </li>
 
@@ -93,7 +93,7 @@ function WhyUsSection() {
 
                                     <h6 className="feature__title h6">Secured Payment</h6>
 
-                                    <p className="feature__description text">Simply dummy text of the printintypesetting industry.</p>
+                                    <p className="feature__description text">All transactions are protected with advanced security measures for your peace of mind.</p>
                                 </div>
                             </li>
                         </ul>

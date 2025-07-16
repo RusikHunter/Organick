@@ -171,7 +171,13 @@
         }
     }
 
-    &__feature {}
+    &__feature {
+        height: 350px;
+
+        @include mobile-small {
+            height: 320px;
+        }
+    }
 }
 
 .feature {

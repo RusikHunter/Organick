@@ -13,7 +13,7 @@ function MoreNewsSection() {
                     </div>
 
                     <div className="morenews__column morenews__column--2 column">
-                        <Link to="/blog" className="morenews__link">
+                        <Link to="/blog" className="morenews__link" tabIndex={-1}>
                             <button className="morenews__button morenews__button--more button button--transparent">
                                 More News
 

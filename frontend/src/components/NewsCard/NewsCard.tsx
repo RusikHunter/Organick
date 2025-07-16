@@ -24,7 +24,7 @@ function NewsCard({ post }: NewsCardProps) {
                 </span>
                 <h6 className="news-card__news-title h6">{post.title}</h6>
                 <p className="news-card__news-text text">{post.description}</p>
-                <Link to={`/blog/${post.id}`} className="news-card__link">
+                <Link to={`/blog/${post.id}`} className="news-card__link" tabIndex={-1}>
                     <button className="news-card__button news-card__button--read button button--yellow">
                         Read More
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">

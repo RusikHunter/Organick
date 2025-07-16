@@ -15,8 +15,7 @@ function ContactUsSection() {
                     <div className="contact-us__column contact-us__column--2 column">
                         <h2 className="contact-us__title h2">We'd love to talk about how we can work together.</h2>
 
-                        <p className="contact-us__text text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                        <p className="contact-us__text text">Feel free to reach out to us anytime for inquiries, orders, or partnership opportunities. We're here to help and support your journey to organic living.</p>
 
                         <a href="mailto:support@saasflow.com" className="contact-us__link">
                             <img src={MailImage} alt="Mail" className="contact-us__link-icon" width={89} height={89} />

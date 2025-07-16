@@ -24,7 +24,9 @@
 
     &__row {}
 
-    &__row--1 {}
+    &__row--1 {
+        justify-content: center !important;
+    }
 
     &__column {}
 

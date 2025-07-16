@@ -23,11 +23,11 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         let value = Number(event.target.value)
 
-        if (value > 0 && value <= 100) {
+        if (value >= 0 && value <= 100) {
             setProductCount(value.toString())
-        } else if (value <= 0) {
+        } else if (value < 0) {
             toast.error("Incorrect quality of product!")
-            value = 1
+            value = 0
             setProductCount("1")
         } else if (value > 100) {
             toast.error("Incorrect quality of product!")

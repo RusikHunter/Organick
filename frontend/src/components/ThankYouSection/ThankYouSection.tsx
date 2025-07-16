@@ -11,7 +11,7 @@ function ThankYouSection() {
                             Thank you for <span className="thank-you__title--green">your order</span>!
                         </h4>
 
-                        <Link to="/" className="thank-you__link">
+                        <Link to="/" className="thank-you__link" tabIndex={-1}>
                             <button className="thank-you__button button button--blue">
                                 Go to Homepage
 

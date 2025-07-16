@@ -17,9 +17,9 @@ function CreativeSection() {
                         <h2 className="creative__title h2">We do Creative
                             Things for Success</h2>
 
-                        <p className="creative__description text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                        <p className="creative__description text">We deliver fresh, organic products directly from trusted farms committed to sustainable and eco-friendly practices. Our selection ensures that all items are free from harmful chemicals, pesticides, and growth hormones, supporting your health and the environment.</p>
 
-                        <p className="creative__description text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                        <p className="creative__description text">Our goal is to make organic living easy and accessible through reliable delivery services. We work closely with local growers who use modern, environmentally responsible farming methods to bring you the best natural food.</p>
 
                         <ul className="creative__list">
                             <li className="creative__list-item h6">Modern Agriculture
