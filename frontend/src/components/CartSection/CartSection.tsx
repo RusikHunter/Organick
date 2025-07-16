@@ -10,13 +10,17 @@ import { setTotalCount, setTotalPrice } from "../../store/reducers/clientReducer
 function CartSection() {
     const [promocode, setPromocode] = useState<string>("")
     const [discount, setDiscount] = useState<number>(0)
-    const [totalCountState, setTotalCountState] = useState<number>(0)
-    const [totalPriceState, setTotalPriceState] = useState<number>(0)
+
+    const totalCount = useAppSelector(state => state.client.totalCount)
+    const totalPrice = useAppSelector(state => state.client.totalPrice)
 
     const dispatch = useAppDispatch()
 
     const cart = useAppSelector(state => state.client.cart)
     const products = useAppSelector(state => state.client.products)
+
+    const TAXES_VALUE = 2
+    const DELIVERY_VALUE = 5
 
     const handlePromocodeChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const value = event.target.value
@@ -44,15 +48,12 @@ function CartSection() {
                     const product = products.find(product => product.id === item.id)
                     if (!product) return accumulator
                     return accumulator + (item.count * product.discountPrice)
-                }, 0) + 2 + 5 - discount
+                }, 0) + TAXES_VALUE + DELIVERY_VALUE - discount
                 : 0)
-
-        setTotalCountState(totalCount)
-        setTotalPriceState(totalPrice)
 
         dispatch(setTotalCount(totalCount))
         dispatch(setTotalPrice(totalPrice.toFixed(2)))
-    }, [cart])
+    }, [cart, discount])
 
     return (
         <section className="cart">
@@ -64,8 +65,8 @@ function CartSection() {
                         <div className="cart__inner container">
                             <div className="cart__row cart__row--1 row">
                                 <div className="cart__product-list">
-                                    {cart.map((cartItem, index) => (
-                                        <CartProductItem key={index} cartItem={cartItem} />
+                                    {cart.map((cartItem) => (
+                                        <CartProductItem key={cartItem.id} cartItem={cartItem} />
                                     ))}
                                 </div>
                             </div>
@@ -73,13 +74,13 @@ function CartSection() {
                             <div className="cart__row cart__row--2 row">
                                 <div className="cart__column column">
                                     <div className="cart__order-details-wrap">
-                                        <h5 className="cart__count h5">Total products quantity: {totalCountState}
-                                            {!totalCountState ? <span className="cart__count cart__count--any text">You have not selected any items</span> : null}
+                                        <h5 className="cart__count h5">Total products quantity: {totalCount}
+                                            {!totalCount ? <span className="cart__count cart__count--any text">You have not selected any items</span> : null}
                                         </h5>
-                                        {totalCountState ? <h6 className="cart__details">Taxes: 2.00$</h6> : null}
-                                        {totalCountState ? <h6 className="cart__details">Delivery: 5.00$</h6> : null}
+                                        {totalCount ? <h6 className="cart__details">Taxes: 2.00$</h6> : null}
+                                        {totalCount ? <h6 className="cart__details">Delivery: 5.00$</h6> : null}
 
-                                        {totalCountState ? <label htmlFor="cartInputPromocode" className="cart__label label">
+                                        {totalCount ? <label htmlFor="cartInputPromocode" className="cart__label label">
                                             Do you have Promocode?
 
                                             <input
@@ -92,10 +93,10 @@ function CartSection() {
                                             />
                                         </label> : null}
 
-                                        <h3 className="cart__price h3">Total price: ${totalPriceState.toFixed(2)}$</h3>
+                                        <h3 className="cart__price h3">Total price: {Number(totalPrice).toFixed(2)}$</h3>
                                     </div>
 
-                                    {totalCountState ? <Link to="/payment" className="cart__link" tabIndex={-1}>
+                                    {totalPrice ? <Link to="/payment" className="cart__link" tabIndex={-1}>
                                         <button className="cart__button morenews__button--more button button--blue">
                                             For Payment
 

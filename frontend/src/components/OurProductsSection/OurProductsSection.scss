@@ -22,15 +22,9 @@
         }
     }
 
-    &__row {}
-
-    &__row--1 {}
-
     &__column {
         width: 100%;
     }
-
-    &__column--1 {}
 
     &__promo {
         margin-inline: auto;
@@ -49,6 +43,4 @@
         margin-top: 120px;
         margin-inline: auto;
     }
-
-    &__button--more {}
 }

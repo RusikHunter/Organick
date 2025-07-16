@@ -22,8 +22,6 @@
         }
     }
 
-    &__row {}
-
     &__column {
         gap: 30px;
         width: 70%;
@@ -38,10 +36,6 @@
         }
     }
 
-    &__text {}
-
-    &__title {}
-
     &__unordered-list,
     &__ordered-list {
         display: flex;
@@ -53,8 +47,6 @@
     &__unordered-list {
         list-style: disc;
     }
-
-    &__unordered-list-item {}
 
     &__blockquote {
         @include fluid-text(20, 16);
@@ -69,8 +61,4 @@
             padding: 40px 30px;
         }
     }
-
-    &__subtitle {}
-
-    &__ordered-list-item {}
 }

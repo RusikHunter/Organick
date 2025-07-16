@@ -8,7 +8,7 @@ import { useAppSelector } from "../../hooks/useAppSelector"
 import { useAppDispatch } from "../../hooks/useAppDispatch"
 import { addCartItem } from "../../store/reducers/clientReducer"
 import { removeCartItem } from "../../store/reducers/clientReducer"
-import { toast } from "react-toastify"
+import { MIN_PRODUCT_COUNT, MAX_PRODUCT_COUNT } from "../../assets/product-settings"
 
 function CartProductItem({ cartItem }: CartProductItemProps) {
     const [productCount, setProductCount] = useState<string>(cartItem.count.toString())
@@ -23,16 +23,14 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         let value = Number(event.target.value)
 
-        if (value >= 0 && value <= 100) {
+        if (value >= 0 && value <= MAX_PRODUCT_COUNT) {
             setProductCount(value.toString())
         } else if (value < 0) {
-            toast.error("Incorrect quality of product!")
-            value = 0
-            setProductCount("1")
-        } else if (value > 100) {
-            toast.error("Incorrect quality of product!")
-            value = 100
-            setProductCount("100")
+            value = MIN_PRODUCT_COUNT
+            setProductCount(`${MIN_PRODUCT_COUNT}`)
+        } else if (value > MAX_PRODUCT_COUNT) {
+            value = MAX_PRODUCT_COUNT
+            setProductCount(`${MAX_PRODUCT_COUNT}`)
         }
 
         const cartItemToChange = {
@@ -58,7 +56,7 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
             <div className="cart-item__controls">
                 <label htmlFor="cartItemInputCount" className="cart-item__label">
                     Quantity:
-                    <input type="number" className="cart-item__input" id="cartItemInputCount" value={productCount} onChange={handleChange} />
+                    <input type="number" className="cart-item__input" id={`cartItemInputCount-${cartItem.id}`} value={productCount} onChange={handleChange} />
                 </label>
 
                 <button className="cart-item__button--delete" onClick={handleDelete}>

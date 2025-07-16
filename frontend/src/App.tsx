@@ -38,6 +38,9 @@ function App() {
     const cart = useAppSelector(state => state.client.cart)
     const totalCount = useAppSelector(state => state.client.totalCount)
 
+    const TITLE_PAGE_SERVICES = "services"
+    const TITLE_PAGE_NOT_FOUND = "notfound"
+
     const dispatch = useAppDispatch()
 
     useEffect(() => {
@@ -90,7 +93,7 @@ function App() {
                         <Route path="/payment" element={totalCount > 0 ? <PaymentPage /> : <MainPage />} />
                         <Route path="/thankyou" element={<ThankYouPage />} />
                     </Routes>
-                    {currentPage !== "services" && currentPage !== "notfound" && <SubscribeSection />}
+                    {currentPage !== TITLE_PAGE_SERVICES && currentPage !== TITLE_PAGE_NOT_FOUND && <SubscribeSection />}
                 </main>
                 <Footer />
                 <ToastContainer />

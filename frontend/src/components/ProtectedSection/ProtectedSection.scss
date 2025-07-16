@@ -22,8 +22,6 @@
         }
     }
 
-    &__row {}
-
     &__column {
         width: 100%;
         align-items: center;
@@ -68,12 +66,6 @@
         justify-content: center;
         flex: 1;
     }
-
-    &__label {}
-
-    &__input {}
-
-    &__input--password {}
 
     &__input--submit {
         margin-top: 25px;

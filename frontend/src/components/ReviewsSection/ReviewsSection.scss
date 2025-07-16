@@ -24,12 +24,6 @@
         }
     }
 
-    &__row {}
-
-    &__row--1 {}
-
-    &__column {}
-
     &__column--1 {
         margin-inline: auto;
         gap: 10px;
@@ -156,8 +150,6 @@
             width: 60%;
         }
     }
-
-    &__feature-title {}
 
     &__feature-text {
         font-weight: 600 !important;

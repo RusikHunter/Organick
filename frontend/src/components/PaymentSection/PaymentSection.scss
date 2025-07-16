@@ -22,10 +22,6 @@
         }
     }
 
-    &__row {}
-
-    &__row--1 {}
-
     &__column--1 {
         width: 100%;
         justify-content: center;
@@ -56,20 +52,6 @@
             width: 100%;
         }
     }
-
-    &__label--name {}
-
-    &__input {}
-
-    &__input--name {}
-
-    &__label--company {}
-
-    &__input--company {}
-
-    &__label--address {}
-
-    &__input--address {}
 
     &__card-wrap {
         display: flex;
@@ -109,8 +91,6 @@
     &__label--card-number {
         width: 100%;
     }
-
-    &__input--card-number {}
 
     &__details-wrap {
         width: 100%;

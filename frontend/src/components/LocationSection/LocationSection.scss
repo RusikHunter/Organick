@@ -22,15 +22,9 @@
         }
     }
 
-    &__row {}
-
-    &__row--1 {}
-
     &__column {
         width: 100%;
     }
-
-    &__column--1 {}
 
     &__block {
         display: flex;
@@ -67,10 +61,6 @@
             padding: 20px 25px;
         }
     }
-
-    &__promo {}
-
-    &__title {}
 
     &__text {
         margin-top: 15px;
@@ -110,8 +100,6 @@
         color: var(--color-blue);
     }
 
-    &__city {}
-
     &__street {
         font-weight: 400;
     }
@@ -141,20 +129,6 @@
             width: 100%;
         }
     }
-
-    &__label--name {}
-
-    &__input {}
-
-    &__input--name {}
-
-    &__label--company {}
-
-    &__input--company {}
-
-    &__label--subject {}
-
-    &__input--subject {}
 
     &__label--message {
         width: 100% !important;

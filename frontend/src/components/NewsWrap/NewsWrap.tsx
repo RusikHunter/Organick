@@ -7,6 +7,7 @@ function NewsWrap({ defaultNewsCount }: NewsWrapProps) {
     const posts = useAppSelector(state => state.client.posts)
 
     // if the specified default count is greater than the number of posts
+
     defaultNewsCount = defaultNewsCount > posts.length ? posts.length : defaultNewsCount
 
     const slisedPosts = posts.slice(0, defaultNewsCount)
