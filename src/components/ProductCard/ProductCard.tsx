@@ -2,6 +2,10 @@ import "./ProductCard.scss"
 import { Link } from "react-router-dom"
 import type { ProductCardProps } from "../../interfaces/productCardProps"
 
+import ProductBlurredImage from "../../assets/images/background/product-blurred.webp"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
+
 function ProductCard({ isCartItem, productData }: ProductCardProps) {
     return (
         <Link
@@ -12,7 +16,15 @@ function ProductCard({ isCartItem, productData }: ProductCardProps) {
         >
             <span className="product-card__category">{productData.type}</span>
 
-            <img src={productData.imageURL} alt="Fresh Banana" className="product-card__image" width={336} height={375} />
+            <LazyLoadImage
+                src={productData.imageURL}
+                alt="Fresh Banana"
+                className="product-card__image"
+                width={336}
+                height={375}
+                effect="blur"
+                placeholderSrc={ProductBlurredImage}
+            />
 
             <h6 className="product-card__title">{productData.title}</h6>
 

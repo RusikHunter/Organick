@@ -1,5 +1,8 @@
 import "./FarmSection.scss"
-import CarrotImage from "../../images/images/carrot.png"
+import CarrotImage from "../../assets/images/decorative/carrot.webp"
+import CarrotBlurredImage from "../../assets/images/decorative/carrot-blurred.webp"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 function FarmSection() {
     return (
@@ -13,7 +16,15 @@ function FarmSection() {
 
                         <p className="farm__description text">Over the years, we’ve adopted modern farming techniques that align with traditional wisdom, helping us maintain the quality and integrity of every harvest.</p>
 
-                        <img src={CarrotImage} alt="Carrot from the farm" className="farm__image" width={936} height={426} />
+                        <LazyLoadImage
+                            src={CarrotImage}
+                            alt="Carrot from the farm"
+                            className="farm__image"
+                            width={936}
+                            height={426}
+                            effect="blur"
+                            placeholderSrc={CarrotBlurredImage}
+                        />
 
                         <span className="farm__image-title text">The Organic Products</span>
 

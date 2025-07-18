@@ -8,4 +8,5 @@ export interface PortfolioItem {
     service: string
     type: string
     imageURL: string
+    blurredImageURL: string
 }

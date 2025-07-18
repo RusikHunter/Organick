@@ -1,7 +1,8 @@
 export interface Review {
-    avatarURL: string,
-    rating: number,
-    text: string,
-    name: string,
+    avatarURL: string
+    blurredAvatarURL: string
+    rating: number
+    text: string
+    name: string
     post: string
 }

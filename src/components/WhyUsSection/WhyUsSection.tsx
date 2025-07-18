@@ -1,9 +1,14 @@
 import "./WhyUsSection.scss"
-import GreenVegetablesImage from "../../images/images/green-vegetables.png"
+import GreenVegetablesImage from "../../assets/images/decorative/green-vegetables.webp"
+import GreenVegetablesBlurredImage from "../../assets/images/decorative/green-vegetables-blurred.webp"
+
 import ReturnPolicyIcon from "../../images/icons/return-policy.svg"
 import FreshIcon from "../../images/icons/fresh.svg"
 import SupportIcon from "../../images/icons/support.svg"
 import PaymentIcon from "../../images/icons/payment.svg"
+
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 function WhyUsSection() {
     return (
@@ -42,7 +47,15 @@ function WhyUsSection() {
                     </div>
 
                     <div className="whyus__column whyus__column--2 column">
-                        <img src={GreenVegetablesImage} alt="Green vegetables and fruits" className="whyus__image" width={678} height={579} />
+                        <LazyLoadImage
+                            src={GreenVegetablesImage}
+                            alt="Green vegetables and fruits"
+                            className="whyus__image"
+                            width={678}
+                            height={579}
+                            effect="blur"
+                            placeholderSrc={GreenVegetablesBlurredImage}
+                        />
                     </div>
                 </div>
 
@@ -52,7 +65,7 @@ function WhyUsSection() {
                             <li className="whyus__feature-list-item">
                                 <div className="whyus__feature feature">
                                     <div className="feature__icon-wrap">
-                                        <img className="feature__icon" src={ReturnPolicyIcon} alt="Return Policy" width={46} height={50} />
+                                        <img className="feature__icon" src={ReturnPolicyIcon} alt="Return Policy" width={46} height={50} loading="lazy" />
                                     </div>
 
                                     <h6 className="feature__title h6">Return Policy</h6>
@@ -64,7 +77,7 @@ function WhyUsSection() {
                             <li className="whyus__feature-list-item">
                                 <div className="whyus__feature feature">
                                     <div className="feature__icon-wrap">
-                                        <img className="feature__icon" src={FreshIcon} alt="Fresh" width={45} height={48} />
+                                        <img className="feature__icon" src={FreshIcon} alt="Fresh" width={45} height={48} loading="lazy" />
                                     </div>
 
                                     <h6 className="feature__title h6">100% Fresh</h6>
@@ -76,7 +89,7 @@ function WhyUsSection() {
                             <li className="whyus__feature-list-item">
                                 <div className="whyus__feature feature">
                                     <div className="feature__icon-wrap">
-                                        <img className="feature__icon" src={SupportIcon} alt="Support" width={44} height={47} />
+                                        <img className="feature__icon" src={SupportIcon} alt="Support" width={44} height={47} loading="lazy" />
                                     </div>
 
                                     <h6 className="feature__title h6">Support 24/7</h6>
@@ -88,7 +101,7 @@ function WhyUsSection() {
                             <li className="whyus__feature-list-item">
                                 <div className="whyus__feature feature">
                                     <div className="feature__icon-wrap">
-                                        <img className="feature__icon" src={PaymentIcon} alt="Payment" width={51} height={44} />
+                                        <img className="feature__icon" src={PaymentIcon} alt="Payment" width={51} height={44} loading="lazy" />
                                     </div>
 
                                     <h6 className="feature__title h6">Secured Payment</h6>

@@ -1,14 +1,27 @@
-import GiovaniImage from "../images/images/giovani.png"
-import MarianneImage from "../images/images/marianne.png"
-import RigaImage from "../images/images/riga.png"
-import KeiraImage from "../images/images/keira.png"
-import ScottImage from "../images/images/scott.png"
-import KarenImage from "../images/images/karen.png"
+import GiovaniImage from "../assets/images/team/giovani.png"
+import GiovaniBlurredImage from "../assets/images/team/giovani-blurred.png"
+
+import MarianneImage from "../assets/images/team/marianne.png"
+import MarianneBlurredImage from "../assets/images/team/marianne-blurred.png"
+
+import RigaImage from "../assets/images/team/riga.png"
+import RigaBlurredImage from "../assets/images/team/riga-blurred.png"
+
+import KeiraImage from "../assets/images/team/keira.png"
+import KeiraBlurredImage from "../assets/images/team/keira-blurred.png"
+
+import ScottImage from "../assets/images/team/scott.png"
+import ScottBlurredImage from "../assets/images/team/scott-blurred.png"
+
+import KarenImage from "../assets/images/team/karen.png"
+import KarenBlurredImage from "../assets/images/team/karen-blurred.png"
+
 import type { TeamExpert } from "../interfaces/teamExpert"
 
 const teamExperts: TeamExpert[] = [
     {
         imageURL: GiovaniImage,
+        blurredImageURL: GiovaniBlurredImage,
         name: "Giovani Bacardo",
         jobTitle: "Farmer",
         socialNetworksURLs: {
@@ -18,6 +31,7 @@ const teamExperts: TeamExpert[] = [
     },
     {
         imageURL: MarianneImage,
+        blurredImageURL: MarianneBlurredImage,
         name: "Marianne Loreno",
         jobTitle: "Designer",
         socialNetworksURLs: {
@@ -28,6 +42,7 @@ const teamExperts: TeamExpert[] = [
     },
     {
         imageURL: RigaImage,
+        blurredImageURL: RigaBlurredImage,
         name: "Riga Pelore",
         jobTitle: "Farmer",
         socialNetworksURLs: {
@@ -38,6 +53,7 @@ const teamExperts: TeamExpert[] = [
     },
     {
         imageURL: KeiraImage,
+        blurredImageURL: KeiraBlurredImage,
         name: "Keira Knightley",
         jobTitle: "Farmer",
         socialNetworksURLs: {
@@ -48,6 +64,7 @@ const teamExperts: TeamExpert[] = [
     },
     {
         imageURL: ScottImage,
+        blurredImageURL: ScottBlurredImage,
         name: "Scott Lawrence",
         jobTitle: "Designer",
         socialNetworksURLs: {
@@ -58,6 +75,7 @@ const teamExperts: TeamExpert[] = [
     },
     {
         imageURL: KarenImage,
+        blurredImageURL: KarenBlurredImage,
         name: "Karen Allen",
         jobTitle: "Farmer",
         socialNetworksURLs: {

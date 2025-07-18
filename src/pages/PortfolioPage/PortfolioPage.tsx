@@ -1,11 +1,14 @@
 import SubIntroBlock from "../../components/SubIntroBlock/SubIntroBlock"
-import PortfolioBackgroundImage from "../../images/images/background-portfolio.png"
+
+import PortfolioBackgroundImage from "../../assets/images/background/background-portfolio.webp"
+import PortfolioBackgroundBlurredImage from "../../assets/images/background/background-portfolio-blurred.webp"
+
 import PortfolioSection from "../../components/PortfolioSection/PortfolioSection"
 
 function PortfolioPage() {
     return (
         <>
-            <SubIntroBlock title="Portfolio Standard" backgroundImageURL={PortfolioBackgroundImage} />
+            <SubIntroBlock title="Portfolio Standard" backgroundImageURL={PortfolioBackgroundImage} blurredBackgroundImageURL={PortfolioBackgroundBlurredImage} />
             <PortfolioSection />
         </>
     )

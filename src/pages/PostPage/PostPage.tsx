@@ -3,6 +3,7 @@ import IntroBlockPost from "../../components/IntroBlockPost/IntroBlockPost"
 import PostContentSection from "../../components/PostContentSection/PostContentSection"
 import { useParams } from "react-router-dom"
 import { useAppSelector } from "../../hooks/useAppSelector"
+import PostBlurredImage from "../../assets/images/background/post-blurred.png"
 
 function PostPage() {
     const { id } = useParams<{ id: string }>()
@@ -11,7 +12,7 @@ function PostPage() {
 
     return (
         <>
-            {post && <IntroBlock content={<IntroBlockPost />} backgroundImageURL={post.imageURL} />}
+            {post && <IntroBlock content={<IntroBlockPost />} backgroundImageURL={post.imageURL} blurredBackgroundImageURL={PostBlurredImage} />}
             <PostContentSection />
         </>
     )

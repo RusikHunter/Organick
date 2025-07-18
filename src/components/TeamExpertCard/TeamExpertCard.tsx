@@ -1,11 +1,22 @@
 import "./TeamExpertCard.scss"
 import type { TeamExpert } from "../../interfaces/teamExpert"
 
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
+
 function TeamExpertCard(teamExpert: TeamExpert) {
     return (
         <article className="expert-card">
             <div className="expert-card__image-wrap">
-                <img src={teamExpert.imageURL} alt={`Expert ${teamExpert.name}`} className="expert-card__image" width={449} height={485} />
+                <LazyLoadImage
+                    src={teamExpert.imageURL}
+                    alt={`Expert ${teamExpert.name}`}
+                    className="expert-card__image"
+                    width={449}
+                    height={485}
+                    effect="blur"
+                    placeholderSrc={teamExpert.blurredImageURL}
+                />
             </div>
 
             <div className="expert-card__content-wrap">
