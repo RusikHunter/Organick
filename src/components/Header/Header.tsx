@@ -15,7 +15,7 @@ function Header() {
                 <div className="header__row row">
                     <div className="header__column header__column--1 column">
                         <Link to="/" className="header__logo-link">
-                            <img className="header__logo" src={Logo} alt="Organick" width={199} height={54} />
+                            <img className="header__logo" src={Logo} alt="Organick" width={199} height={54} loading="lazy" />
                         </Link>
                     </div>
                     <div className="header__column header__column--2 column">

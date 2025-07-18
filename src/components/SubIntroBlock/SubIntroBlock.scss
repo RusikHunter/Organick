@@ -3,6 +3,7 @@
 .subintro {
     background-repeat: no-repeat;
     background-size: cover;
+    transition: filter 0.5s ease;
 
     &__row {
         padding-block: 195px;

@@ -1,9 +1,21 @@
-import GreenAndTastyLemonImage from "../images/images/green-and-tasty-lemon.png"
-import OrganicCarrotImage from "../images/images/organic-carrot.png"
-import OrganicBetelLeafImage from "../images/images/organic-betel-leaf.png"
-import NaturalTommatoImage from "../images/images/natural-tommato.png"
-import BlackRaspberryImage from "../images/images/black-raspberry.png"
-import HoneyOrangeImage from "../images/images/honey-orange.png"
+import GreenAndTastyLemonImage from "../assets/images/portfolio/green-and-tasty-lemon.webp"
+import GreenAndTastyLemonBlurredImage from "../assets/images/portfolio/green-and-tasty-lemon-blurred.webp"
+
+import OrganicCarrotImage from "../assets/images/portfolio/organic-carrot.webp"
+import OrganicCarrotBlurredImage from "../assets/images/portfolio/organic-carrot-blurred.webp"
+
+import OrganicBetelLeafImage from "../assets/images/portfolio/organic-betel-leaf.webp"
+import OrganicBetelLeafBlurredImage from "../assets/images/portfolio/organic-betel-leaf-blurred.webp"
+
+import NaturalTommatoImage from "../assets/images/portfolio/natural-tommato.webp"
+import NaturalTommatoBlurredImage from "../assets/images/portfolio/natural-tommato-blurred.webp"
+
+import BlackRaspberryImage from "../assets/images/portfolio/black-raspberry.webp"
+import BlackRaspberryBlurredImage from "../assets/images/portfolio/black-raspberry-blurred.webp"
+
+import HoneyOrangeImage from "../assets/images/portfolio/honey-orange.webp"
+import HoneyOrangeBlurredImage from "../assets/images/portfolio/honey-orange-blurred.webp"
+
 import type { PortfolioItem } from "../interfaces/portfolioItem"
 
 const portfolioItems: PortfolioItem[] = [
@@ -16,7 +28,8 @@ const portfolioItems: PortfolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Fruits",
-        imageURL: GreenAndTastyLemonImage
+        imageURL: GreenAndTastyLemonImage,
+        blurredImageURL: GreenAndTastyLemonBlurredImage
     },
     {
         id: 1,
@@ -27,7 +40,8 @@ const portfolioItems: PortfolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Farmer",
-        imageURL: OrganicCarrotImage
+        imageURL: OrganicCarrotImage,
+        blurredImageURL: OrganicCarrotBlurredImage
     },
     {
         id: 2,
@@ -38,7 +52,8 @@ const portfolioItems: PortfolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Leaf",
-        imageURL: OrganicBetelLeafImage
+        imageURL: OrganicBetelLeafImage,
+        blurredImageURL: OrganicBetelLeafBlurredImage
     },
     {
         id: 3,
@@ -49,7 +64,8 @@ const portfolioItems: PortfolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Fruits",
-        imageURL: NaturalTommatoImage
+        imageURL: NaturalTommatoImage,
+        blurredImageURL: NaturalTommatoBlurredImage
     },
     {
         id: 4,
@@ -60,7 +76,8 @@ const portfolioItems: PortfolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Farmer",
-        imageURL: BlackRaspberryImage
+        imageURL: BlackRaspberryImage,
+        blurredImageURL: BlackRaspberryBlurredImage
     },
     {
         id: 5,
@@ -71,7 +88,8 @@ const portfolioItems: PortfolioItem[] = [
         category: "Agriculture, Eco",
         service: "Organic Products",
         type: "Farmer",
-        imageURL: HoneyOrangeImage
+        imageURL: HoneyOrangeImage,
+        blurredImageURL: HoneyOrangeBlurredImage
     }
 ]
 

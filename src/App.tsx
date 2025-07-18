@@ -21,9 +21,6 @@ function App() {
     const posts = useAppSelector(state => state.client.posts)
     const cart = useAppSelector(state => state.client.cart)
 
-    const TITLE_PAGE_SERVICES = "services"
-    const TITLE_PAGE_NOT_FOUND = "notfound"
-
     const dispatch = useAppDispatch()
 
     useEffect(() => {

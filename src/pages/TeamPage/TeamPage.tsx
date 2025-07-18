@@ -1,11 +1,14 @@
 import SubIntroBlock from "../../components/SubIntroBlock/SubIntroBlock"
-import OurTeamBackgroundmage from "../../images/images/background-our-team.png"
+
+import OurTeamBackground from "../../assets/images/background/background-our-team.webp"
+import OurTeamBlurredBackground from "../../assets/images/background/background-our-team-blurred.webp"
+
 import TeamSection from "../../components/TeamSection/TeamSection"
 
 function TeamPage() {
     return (
         <>
-            <SubIntroBlock title="Our Team" backgroundImageURL={OurTeamBackgroundmage} />
+            <SubIntroBlock title="Our Team" backgroundImageURL={OurTeamBackground} blurredBackgroundImageURL={OurTeamBlurredBackground} />
             <TeamSection defaultExpertsCount={6} />
         </>
     )

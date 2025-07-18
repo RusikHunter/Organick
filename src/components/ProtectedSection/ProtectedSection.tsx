@@ -1,5 +1,8 @@
 import "./ProtectedSection.scss"
-import BranchImage from "../../images/images/branch.png"
+import BranchImage from "../../assets/images/decorative/branch.webp"
+import BranchBlurredImage from "../../assets/images/decorative/branch-blurred.webp"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 function ProtectedSection() {
     return (
@@ -9,7 +12,15 @@ function ProtectedSection() {
                     <div className="protected__column column">
                         <div className="protected__form-wrap">
                             <div className="protected__image-wrap">
-                                <img src={BranchImage} alt="Branch" className="protected__image" width={193} height={281} />
+                                <LazyLoadImage
+                                    src={BranchImage}
+                                    alt="Branch"
+                                    className="protected__image"
+                                    width={193}
+                                    height={281}
+                                    effect="blur"
+                                    placeholderSrc={BranchBlurredImage}
+                                />
                             </div>
 
                             <form className="protected__form">

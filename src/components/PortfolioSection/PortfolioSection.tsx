@@ -1,6 +1,6 @@
 import "./PortfolioSection.scss"
 import PortfolioItemCard from "../PortfolioItemCard/PortfolioItemCard"
-import portfolioItems from "../../assets/portfolio-items"
+import portfolioItems from "../../mocks/portfolio-items"
 
 function PortfolioSection() {
     return (
@@ -17,6 +17,7 @@ function PortfolioSection() {
                                         id={item.id}
                                         title={item.title}
                                         backgroundImageURL={item.imageURL}
+                                        backgroundBlurredImageURL={item.blurredImageURL}
                                         type={item.type}
                                     />
                                 )

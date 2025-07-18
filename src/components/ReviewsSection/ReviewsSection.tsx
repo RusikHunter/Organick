@@ -3,8 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import reviewsJSON from "../../assets/reviews"
+import reviewsJSON from "../../mocks/reviews"
 import type { Review } from "../../interfaces/review"
+
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 function ReviewsSection() {
     const reviews: Review[] = reviewsJSON
@@ -31,7 +34,13 @@ function ReviewsSection() {
                             {reviews.map((review, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="reviews__review">
-                                        <img src={review.avatarURL} alt="Avatar" className="reviews__avatar" />
+                                        <LazyLoadImage
+                                            src={review.avatarURL}
+                                            alt="Avatar"
+                                            className="reviews__avatar"
+                                            effect="blur"
+                                            placeholderSrc={review.blurredAvatarURL}
+                                        />
                                         <div className="reviews__rating-wrap">
                                             {Array(5).fill(null).map((_, i) => (
                                                 <svg className={`reviews__star ${i < review.rating ? `` : `reviews__star--empty`}`} width="21" height="21" key={i} viewBox="0 0 23 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

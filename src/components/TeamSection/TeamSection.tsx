@@ -1,6 +1,6 @@
 import "./TeamSection.scss"
 import TeamExpertCard from "../TeamExpertCard/TeamExpertCard"
-import teamExperts from "../../assets/team-experts"
+import teamExperts from "../../mocks/team-experts"
 import type { TeamSectionProps } from "../../interfaces/teamSectionProps"
 
 function TeamSection({ defaultExpertsCount }: TeamSectionProps) {

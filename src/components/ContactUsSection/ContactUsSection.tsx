@@ -1,7 +1,12 @@
 import "./ContactUsSection.scss"
-import BananaOrangeImage from "../../images/images/banana-orange.png"
+import BananaOrangeImage from "../../assets/images/decorative/banana-orange.webp"
+import BananaOrangeBlurredImage from "../../assets/images/decorative/banana-orange-blurred.webp"
+
 import MailImage from "../../images/icons/mail.svg"
 import PhoneImage from "../../images/icons/phone.svg"
+
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 function ContactUsSection() {
     return (
@@ -9,7 +14,15 @@ function ContactUsSection() {
             <div className="contact-us__inner container">
                 <div className="contact-us__row row">
                     <div className="contact-us__column contact-us__column--1 column">
-                        <img src={BananaOrangeImage} alt="Banana and Orange" className="contact-us__image" width={623} height={640} />
+                        <LazyLoadImage
+                            src={BananaOrangeImage}
+                            alt="Banana and Orange"
+                            className="contact-us__image"
+                            width={623}
+                            height={640}
+                            effect="blur"
+                            placeholderSrc={BananaOrangeBlurredImage}
+                        />
                     </div>
 
                     <div className="contact-us__column contact-us__column--2 column">
@@ -18,7 +31,7 @@ function ContactUsSection() {
                         <p className="contact-us__text text">Feel free to reach out to us anytime for inquiries, orders, or partnership opportunities. We're here to help and support your journey to organic living.</p>
 
                         <a href="mailto:support@saasflow.com" className="contact-us__link">
-                            <img src={MailImage} alt="Mail" className="contact-us__link-icon" width={89} height={89} />
+                            <img src={MailImage} alt="Mail" className="contact-us__link-icon" width={89} height={89} loading="lazy" />
 
                             <div className="contact-us__link-text-wrap">
                                 <h6 className="contact-us__link-title h6">Message</h6>
@@ -28,7 +41,7 @@ function ContactUsSection() {
                         </a>
 
                         <a href="tel:01123456789" className="contact-us__link">
-                            <img src={PhoneImage} alt="Phone" className="contact-us__link-icon" width={89} height={89} />
+                            <img src={PhoneImage} alt="Phone" className="contact-us__link-icon" width={89} height={89} loading="lazy" />
 
                             <div className="contact-us__link-text-wrap">
                                 <h6 className="contact-us__link-title h6">Contact Us</h6>

@@ -1,7 +1,16 @@
 import "./QualitySection.scss"
-import ManInGargenImage from "../../images/images/man-in-garden.png"
-import PlantingImage from "../../images/images/planting.png"
-import PlantImage from "../../images/images/plant.png"
+import ManInGargenImage from "../../assets/images/decorative/man-in-garden.webp"
+import ManInGargenBlurredImage from "../../assets/images/decorative/man-in-garden-blurred.webp"
+
+
+import PlantingImage from "../../assets/images/decorative/planting.webp"
+import PlantingBlurredImage from "../../assets/images/decorative/planting-blurred.webp"
+
+import PlantImage from "../../assets/images/decorative/plant.webp"
+import PlantBlurredImage from "../../assets/images/decorative/plant-blurred.webp"
+
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 function QualitySection() {
     return (
@@ -9,7 +18,15 @@ function QualitySection() {
             <div className="quality__inner container">
                 <div className="quality__row quality__row--1 row">
                     <div className="quality__column quality__column--1 column">
-                        <img className="quality__image" src={ManInGargenImage} alt="Man in garden" width={1400} height={742} />
+                        <LazyLoadImage
+                            className="quality__image"
+                            src={ManInGargenImage}
+                            alt="Man in garden"
+                            width={1400}
+                            height={742}
+                            effect="blur"
+                            placeholderSrc={ManInGargenBlurredImage}
+                        />
                     </div>
                 </div>
 
@@ -23,7 +40,15 @@ function QualitySection() {
 
                         <div className="quality__features">
                             <div className="quality__feature">
-                                <img className="quality__feature-image" src={PlantingImage} alt="Planting" width={379} height={252} />
+                                <LazyLoadImage
+                                    className="quality__feature-image"
+                                    src={PlantingImage}
+                                    alt="Planting"
+                                    width={379}
+                                    height={252}
+                                    effect="blur"
+                                    placeholderSrc={PlantingBlurredImage}
+                                />
 
                                 <div className="quality__feature-content">
                                     <h6 className="quality__feature-title h6">Why Organic</h6>
@@ -33,7 +58,15 @@ function QualitySection() {
                             </div>
 
                             <div className="quality__feature">
-                                <img className="quality__feature-image" src={PlantImage} alt="Plant" width={379} height={252} />
+                                <LazyLoadImage
+                                    className="quality__feature-image"
+                                    src={PlantImage}
+                                    alt="Plant"
+                                    width={379}
+                                    height={252}
+                                    effect="blur"
+                                    placeholderSrc={PlantBlurredImage}
+                                />
 
                                 <div className="quality__feature-content">
                                     <h6 className="quality__feature-title h6">Speciality Produce</h6>

@@ -1,5 +1,10 @@
 import "./CreativeSection.scss"
-import PlateImage from "../../images/images/plate-vegetables.png"
+import PlateImage from "../../assets/images/decorative/plate-vegetables.webp"
+import PlateBlurredImage from "../../assets/images/decorative/plate-vegetables-blurred.webp"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
+
+
 import { Link } from "react-router-dom"
 
 function CreativeSection() {
@@ -8,7 +13,14 @@ function CreativeSection() {
             <div className="creative__inner container">
                 <div className="creative__row row">
                     <div className="creative__column creative__column--1 column">
-                        <img src={PlateImage} alt="Plate with vegetables and fruits" className="creative__image" width={914} height={776} />
+                        <LazyLoadImage
+                            src={PlateImage}
+                            alt="Plate with vegetables and fruits"
+                            className="creative__image"
+                            width={914}
+                            effect="blur"
+                            placeholderSrc={PlateBlurredImage}
+                        />
                     </div>
 
                     <div className="creative__column creative__column--2 column">
