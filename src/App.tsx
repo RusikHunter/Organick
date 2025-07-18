@@ -17,7 +17,6 @@ import Loader from './components/Loader/Loader'
 import { routes } from './config/routes'
 
 function App() {
-    const currentPage = useAppSelector(state => state.client.currentPage)
     const products = useAppSelector(state => state.client.products)
     const posts = useAppSelector(state => state.client.posts)
     const cart = useAppSelector(state => state.client.cart)
@@ -58,7 +57,7 @@ function App() {
                                 <Route key={path} path={path} element={<Component />} />
                             ))}
                         </Routes>
-                        {currentPage !== TITLE_PAGE_SERVICES && currentPage !== TITLE_PAGE_NOT_FOUND && <SubscribeSection />}
+                        <SubscribeSection />
                     </Suspense>
                 </main>
                 <Footer />
