@@ -1,10 +1,9 @@
 import { useEffect } from "react"
-import type { AppDispatch } from "../store/index"
 import { setCurrentPage } from "../store/reducers/clientReducer"
-import { useDispatch } from "react-redux"
+import { useAppDispatch } from "./useAppDispatch"
 
 export const useSetCurrentPage = (pageName: string) => {
-    const dispatch = useDispatch<AppDispatch>()
+    const dispatch = useAppDispatch()
 
     useEffect(() => {
         dispatch(setCurrentPage(pageName))
