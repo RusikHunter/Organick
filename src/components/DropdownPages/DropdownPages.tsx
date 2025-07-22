@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import { useEffect, useState, useRef } from "react"
 import "./DropdownPages.scss"
+import type { RouteLink } from "../../interfaces/routeLink"
+import { Routes } from "../../config/routes"
 
 function DropdownPages() {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -8,6 +10,12 @@ function DropdownPages() {
 
     const wrapperRef = useRef<HTMLDivElement | null>(null)
     const navigationButtonRef = useRef<HTMLButtonElement | null>(null)
+
+    const links: RouteLink[] = [
+        { path: Routes.SERVICES, content: "Services" },
+        { path: Routes.TEAM, content: "Team" },
+        { path: Routes.CONTACT, content: "Contact Us" }
+    ]
 
     const handleClick = (): void => {
         setIsOpen(prev => !prev)
@@ -86,15 +94,11 @@ function DropdownPages() {
 
             <div className={`header__dropdown header__dropdown--pages ${isOpen ? `header__dropdown--pages--active` : ''}`}>
                 <ul className="header__dropdown-list">
-                    <li className="header__dropdown-list-item">
-                        <Link className="header__navigation-link" to="/services">Services</Link>
-                    </li>
-                    <li className="header__dropdown-list-item">
-                        <Link className="header__navigation-link" to="/team">Team</Link>
-                    </li>
-                    <li className="header__dropdown-list-item">
-                        <Link className="header__navigation-link" to="/contact">Contact Us</Link>
-                    </li>
+                    {links.map((link, index) => (
+                        <li key={index} className="header__navigation-list-item">
+                            <Link className="header__navigation-link" to={link.path}>{link.content}</Link>
+                        </li>
+                    ))}
                 </ul >
             </div >
         </div >

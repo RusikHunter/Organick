@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 import { Routes } from "../../config/routes"
-import type { FooterLinkInterface } from "../../interfaces/footerLinkInterface"
+import type { RouteLink } from "../../interfaces/routeLink"
 
 function FooterLinks() {
-    const links: FooterLinkInterface[] = [
+    const links: RouteLink[] = [
         { path: Routes.MAIN, text: "Style Guide" },
         { path: Routes.NOT_FOUND, text: "404 Not Found" },
         { path: Routes.PROTECTED, text: "Password Protected" },
