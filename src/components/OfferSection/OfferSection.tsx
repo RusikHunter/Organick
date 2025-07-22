@@ -16,8 +16,85 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
 import { Link } from "react-router-dom"
+import { Routes } from "../../config/routes"
+import type { RouteLink } from "../../interfaces/routeLink"
 
 function OfferSection() {
+    const links: RouteLink[] = [
+        {
+            path: Routes.SHOP,
+            content: (
+                <>
+                    <LazyLoadImage
+                        className="offer__product-image"
+                        src={CurryImage}
+                        alt="Curry"
+                        width={334}
+                        height={314}
+                        effect="blur"
+                        placeholderSrc={CurryBlurredImage}
+                    />
+
+                    <h6 className="offer__product-title h6">Spicy</h6>
+                </>
+            )
+        },
+        {
+            path: Routes.SHOP,
+            content: (
+                <>
+                    <LazyLoadImage
+                        className="offer__product-image"
+                        src={NutsImage}
+                        alt="Nuts and Feesd"
+                        width={334}
+                        height={314}
+                        effect="blur"
+                        placeholderSrc={NutsBlurredImage}
+                    />
+
+                    <h6 className="offer__product-title h6">Nuts & Feesd</h6>
+                </>
+            )
+        },
+        {
+            path: Routes.SHOP,
+            content: (
+                <>
+                    <LazyLoadImage
+                        className="offer__product-image"
+                        src={AppleImage}
+                        alt="Apple"
+                        width={334}
+                        height={314}
+                        effect="blur"
+                        placeholderSrc={AppleBlurredImage}
+                    />
+
+                    <h6 className="offer__product-title h6">Fruits</h6>
+                </>
+            )
+        },
+        {
+            path: Routes.SHOP,
+            content: (
+                <>
+                    <LazyLoadImage
+                        className="offer__product-image"
+                        src={GingerImage}
+                        alt="Ginger"
+                        width={334}
+                        height={314}
+                        effect="blur"
+                        placeholderSrc={GingerBlurredImage}
+                    />
+
+                    <h6 className="offer__product-title h6">Vegetable</h6>
+                </>
+            )
+        },
+    ]
+
     return (
         <section className="offer">
             <div className="offer__inner container">
@@ -28,69 +105,13 @@ function OfferSection() {
                         <h2 className="offer__title h2">What We Offer for You</h2>
 
                         <ul className="offer__list">
-                            <li className="offer__list-item">
-                                <Link to="/shop" className="offer__product">
-                                    <LazyLoadImage
-                                        className="offer__product-image"
-                                        src={CurryImage}
-                                        alt="Curry"
-                                        width={334}
-                                        height={314}
-                                        effect="blur"
-                                        placeholderSrc={CurryBlurredImage}
-                                    />
-
-                                    <h6 className="offer__product-title h6">Spicy</h6>
-                                </Link>
-                            </li>
-
-                            <li className="offer__list-item">
-                                <Link to="/shop" className="offer__product">
-                                    <LazyLoadImage
-                                        className="offer__product-image"
-                                        src={NutsImage}
-                                        alt="Nuts and Feesd"
-                                        width={334}
-                                        height={314}
-                                        effect="blur"
-                                        placeholderSrc={NutsBlurredImage}
-                                    />
-
-                                    <h6 className="offer__product-title h6">Nuts & Feesd</h6>
-                                </Link>
-                            </li>
-
-                            <li className="offer__list-item">
-                                <Link to="/shop" className="offer__product">
-                                    <LazyLoadImage
-                                        className="offer__product-image"
-                                        src={AppleImage}
-                                        alt="Apple"
-                                        width={334}
-                                        height={314}
-                                        effect="blur"
-                                        placeholderSrc={AppleBlurredImage}
-                                    />
-
-                                    <h6 className="offer__product-title h6">Fruits</h6>
-                                </Link>
-                            </li>
-
-                            <li className="offer__list-item">
-                                <Link to="/shop" className="offer__product">
-                                    <LazyLoadImage
-                                        className="offer__product-image"
-                                        src={GingerImage}
-                                        alt="Ginger"
-                                        width={334}
-                                        height={314}
-                                        effect="blur"
-                                        placeholderSrc={GingerBlurredImage}
-                                    />
-
-                                    <h6 className="offer__product-title h6">Vegetable</h6>
-                                </Link>
-                            </li>
+                            {links.map((link, index) => (
+                                <li className="offer__list-item">
+                                    <Link to={link.path} className="offer__product" key={index}>
+                                        {link.content}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>

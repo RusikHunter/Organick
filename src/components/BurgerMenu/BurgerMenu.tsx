@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react"
 import { useAppSelector } from "../../hooks/useAppSelector"
 import { useAppDispatch } from "../../hooks/useAppDispatch"
 import { setIsBurgerMenuOpen } from "../../store/reducers/clientReducer"
+import type { RouteLink } from "../../interfaces/routeLink"
+import { Routes } from "../../config/routes"
 
 function BurgerMenu() {
     const MAX_TABLET_VIEWPORT_WIDTH: number = 1024
@@ -13,6 +15,17 @@ function BurgerMenu() {
     const isBurgerMenuOpen = useAppSelector(state => state.client.isBurgerMenuOpen)
 
     const burgerMenuRef = useRef<HTMLDivElement | null>(null)
+
+    const links: RouteLink[] = [
+        { path: Routes.MAIN, content: "Home" },
+        { path: Routes.ABOUT, content: "About" },
+        { path: Routes.SERVICES, content: "Services" },
+        { path: Routes.TEAM, content: "Team" },
+        { path: Routes.CONTACT, content: "Contact Us" },
+        { path: Routes.SHOP, content: "Shop" },
+        { path: Routes.PORTFOLIO, content: "Projects" },
+        { path: Routes.BLOG, content: "Blog" }
+    ]
 
     const handleBurgerClick = (event: React.MouseEvent): void => {
         if (burgerMenuRef.current && isBurgerMenuOpen) {
@@ -58,30 +71,11 @@ function BurgerMenu() {
             <div className="burger-menu__wrap">
                 <nav className="burger-menu__navigation">
                     <ul className="burger-menu__navigation-list">
-                        <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/" tabIndex={-1}>Home</Link>
-                        </li>
-                        <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/about" tabIndex={-1}>About</Link>
-                        </li>
-                        <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/services" tabIndex={-1}>Services</Link>
-                        </li>
-                        <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/team" tabIndex={-1}>Team</Link>
-                        </li>
-                        <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/contact" tabIndex={-1}>Contact Us</Link>
-                        </li>
-                        <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/shop" tabIndex={-1}>Shop</Link>
-                        </li>
-                        <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/portfolio" tabIndex={-1}>Projects</Link>
-                        </li>
-                        <li className="burger-menu__navigation-list-item">
-                            <Link className="burger-menu__navigation-link" to="/blog" tabIndex={-1}>News</Link>
-                        </li>
+                        {links.map((link, index) => (
+                            <li key={index} className="burger-menu__navigation-list-item">
+                                <Link className="burger-menu__navigation-link" to={link.path} tabIndex={-1}>{link.content}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
             </div>

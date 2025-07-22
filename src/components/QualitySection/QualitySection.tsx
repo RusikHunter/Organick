@@ -12,7 +12,26 @@ import PlantBlurredImage from "../../assets/images/decorative/plant-blurred.webp
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
+import type { QualityFeature } from "../../interfaces/qualityFeature"
+
 function QualitySection() {
+    const features: QualityFeature[] = [
+        {
+            imageURL: PlantingImage,
+            blurredImageURL: PlantingBlurredImage,
+            alt: "Planting",
+            title: "Why Organic",
+            description: "Organic methods preserve soil fertility, reduce pollution, and avoid harmful pesticides. It’s a natural way to grow food that’s better for the planet and safer for your family."
+        },
+        {
+            imageURL: PlantImage,
+            blurredImageURL: PlantBlurredImage,
+            alt: "Plant",
+            title: "Speciality Produce",
+            description: "Our produce includes rare and seasonal varieties grown with care. Each harvest is packed with flavor and nutrition—fresh from our fields to your table."
+        },
+    ]
+
     return (
         <section className="quality">
             <div className="quality__inner container">
@@ -34,51 +53,37 @@ function QualitySection() {
                     <div className="quality__column quality__column--2 column">
                         <h2 className="quality__title h2">Organic Store Services</h2>
 
-                        <p className="quality__description text">It is a long established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
+                        <p className="quality__description text">Organic farming is gaining global attention as people seek healthier, safer food. Our approach focuses on sustainability, soil health, and chemical-free cultivation to protect nature and nourish communities.</p>
 
-                        <p className="quality__description text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and auncover many web sites still in their infancy. Various versions have evolved over the years</p>
+                        <p className="quality__description text">Today, more producers adopt eco-friendly practices to meet rising demand. We offer high-quality organic goods that support well-being and help build a cleaner, greener future for everyone.</p>
 
                         <div className="quality__features">
-                            <div className="quality__feature">
-                                <LazyLoadImage
-                                    className="quality__feature-image"
-                                    src={PlantingImage}
-                                    alt="Planting"
-                                    width={379}
-                                    height={252}
-                                    effect="blur"
-                                    placeholderSrc={PlantingBlurredImage}
-                                />
 
-                                <div className="quality__feature-content">
-                                    <h6 className="quality__feature-title h6">Why Organic</h6>
 
-                                    <p className="quality__feature-description text">Sed ut perspiciatis unde omnis iste natus error sit voluptat. page editors now use Lorem Ipsum as their default model text, and auncover.</p>
+                            {features.map((feature, index) => (
+                                <div className="quality__feature" key={index}>
+                                    <LazyLoadImage
+                                        className="quality__feature-image"
+                                        src={feature.imageURL}
+                                        alt={feature.alt}
+                                        width={379}
+                                        height={252}
+                                        effect="blur"
+                                        placeholderSrc={feature.blurredImageURL}
+                                    />
+
+                                    <div className="quality__feature-content">
+                                        <h6 className="quality__feature-title h6">{feature.title}</h6>
+
+                                        <p className="quality__feature-description text">{feature.description}</p>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div className="quality__feature">
-                                <LazyLoadImage
-                                    className="quality__feature-image"
-                                    src={PlantImage}
-                                    alt="Plant"
-                                    width={379}
-                                    height={252}
-                                    effect="blur"
-                                    placeholderSrc={PlantBlurredImage}
-                                />
-
-                                <div className="quality__feature-content">
-                                    <h6 className="quality__feature-title h6">Speciality Produce</h6>
-
-                                    <p className="quality__feature-description text">Sed ut perspiciatis unde omnis iste natus error sit voluptat. page editors now use Lorem Ipsum as their default model text, and auncover.</p>
-                                </div>
-                            </div>
+                            ))}
                         </div>
 
                         <h4 className="quality__subtitle h4">We farm your land</h4>
 
-                        <p className="quality__description text">It is a long established fact that a reader will be distracted by the readable content of a page when looking a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <p className="quality__description text">We partner with landowners to cultivate organic crops using proven techniques. Our team ensures every field is productive, eco-friendly, and aligned with sustainable farming goals.</p>
 
                         <div className="quality__advantages">
                             <span className="quality__advantage">

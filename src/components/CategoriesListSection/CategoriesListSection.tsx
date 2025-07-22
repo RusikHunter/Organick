@@ -1,29 +1,27 @@
 import { Link } from "react-router-dom"
 import "./CategoriesListSection.scss"
+import { Routes } from "../../config/routes"
+import type { RouteLink } from "../../interfaces/routeLink"
 
 function CategoriesListSection() {
+    const links: RouteLink[] = [
+        { path: Routes.SHOP, content: "Organic Juice" },
+        { path: Routes.SHOP, content: "Organic Food" },
+        { path: Routes.SHOP, content: "Nuts Cookies" }
+    ]
+
     return (
         <section className="categories-list">
             <div className="categories-list__inner container">
                 <div className="categories-list__row row">
                     <div className="categories-list__column column">
-                        <Link className="categories-list__link" to="/shop">
-                            <div className="categories-list__category categories-list__category--1">
-                                <button className="categories-list__button button" tabIndex={-1}>Organic Juice</button>
-                            </div>
-                        </Link>
-
-                        <Link className="categories-list__link" to="/shop">
-                            <div className="categories-list__category categories-list__category--2">
-                                <button className="categories-list__button button" tabIndex={-1}>Organic Food</button>
-                            </div>
-                        </Link>
-
-                        <Link className="categories-list__link" to="/shop">
-                            <div className="categories-list__category categories-list__category--3">
-                                <button className="categories-list__button button" tabIndex={-1}>Nuts Cookis</button>
-                            </div>
-                        </Link>
+                        {links.map((link, index) => (
+                            <Link key={index} className="categories-list__link" to={link.path}>
+                                <div className={`categories-list__category categories-list__category--${index + 1}`}>
+                                    <button className="categories-list__button button" tabIndex={-1}>{link.content}</button>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </div>

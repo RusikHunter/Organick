@@ -1,17 +1,5 @@
 import "./GrowSection.scss"
-import DairyImage from "../../assets/icons/dairy.svg"
-import StoreImage from "../../assets/icons/store.svg"
-import DeliveryImage from "../../assets/icons/delivery.svg"
-
-
-import NutsPackageImage from "../../assets/images/decorative/nuts-package.webp"
-import NutsPackageBlurredImage from "../../assets/images/decorative/nuts-package-blurred.webp"
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
-
-import AgriculturalImage from "../../assets/icons/agricultural.svg"
-import OrganicProductsImage from "../../assets/icons/organic-product.svg"
-import FreshVegetablesImage from "../../assets/icons/fresh-vegetables.svg"
+import GrowSectionGridContent from "./GrowSectionGridContent"
 import { Link } from "react-router-dom"
 
 function GrowSection() {
@@ -28,67 +16,7 @@ function GrowSection() {
                     </div>
                 </div>
                 <div className="grow__row grow__row--2 row">
-                    <div className="grow__futures-wrap grow__grid">
-                        <div className="grow__feature grow__grid-column grow__grid-column--a">
-                            <img className="grow__feature-icon" src={DairyImage} alt="Dairy Products" width={52} height={55} loading="lazy" />
-
-                            <h6 className="grow__feature-title h6">Dairy Products</h6>
-
-                            <p className="grow__feature-description text">Fresh, organic dairy made without hormones or antibiotics.</p>
-                        </div>
-
-                        <div className="grow__feature grow__grid-column grow__grid-column--b">
-                            <img className="grow__feature-icon" src={StoreImage} alt="Store Services" width={52} height={55} loading="lazy" />
-
-                            <h6 className="grow__feature-title h6">Store Services</h6>
-
-                            <p className="grow__feature-description text">Convenient access to fresh, organic products with excellent customer care.</p>
-                        </div>
-
-                        <div className="grow__feature grow__grid-column grow__grid-column--c">
-                            <img className="grow__feature-icon" src={DeliveryImage} alt="Delivery Services" width={54} height={51} loading="lazy" />
-
-                            <h6 className="grow__feature-title h6">Delivery Services</h6>
-
-                            <p className="grow__feature-description text">Fast and reliable delivery of fresh organic products right to your door.</p>
-                        </div>
-
-                        <div className="grow__grid-column grow__grid-column--g">
-                            <LazyLoadImage
-                                src={NutsPackageImage}
-                                alt="Nuts Package"
-                                className="grow__image"
-                                width={743}
-                                height={990}
-                                effect="blur"
-                                placeholderSrc={NutsPackageBlurredImage}
-                            />
-                        </div>
-
-                        <div className="grow__feature grow__grid-column grow__grid-column--d">
-                            <img className="grow__feature-icon" src={AgriculturalImage} alt="Agricultural Services" width={61} height={62} loading="lazy" />
-
-                            <h6 className="grow__feature-title h6">Agricultural Services</h6>
-
-                            <p className="grow__feature-description text">Supporting sustainable farming with modern, eco-friendly solutions.</p>
-                        </div>
-
-                        <div className="grow__feature grow__grid-column grow__grid-column--e">
-                            <img className="grow__feature-icon" src={OrganicProductsImage} alt="Organic Products" width={58} height={56} loading="lazy" />
-
-                            <h6 className="grow__feature-title h6">Organic Products</h6>
-
-                            <p className="grow__feature-description text">Pure, natural, and certified organic goods for a healthier lifestyle.</p>
-                        </div>
-
-                        <div className="grow__feature grow__grid-column grow__grid-column--f">
-                            <img className="grow__feature-icon" src={FreshVegetablesImage} alt="Fresh Vegetables" width={61} height={62} loading="lazy" />
-
-                            <h6 className="grow__feature-title h6">Fresh Vegetables</h6>
-
-                            <p className="grow__feature-description text">Crisp, nutrient-rich vegetables harvested at peak freshness from organic farms.</p>
-                        </div>
-                    </div>
+                    <GrowSectionGridContent />
                 </div>
                 <div className="grow__row grow__row--3 row">
                     <div className="grow__column grow__column--2">

@@ -10,7 +10,44 @@ import PaymentIcon from "../../assets/icons/payment.svg"
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
+import type { WhyUsFeature } from "../../interfaces/whyUsFeature"
+
 function WhyUsSection() {
+    const features: WhyUsFeature[] = [
+        {
+            imageURL: ReturnPolicyIcon,
+            alt: "Return Policy",
+            width: 46,
+            height: 50,
+            title: "Return Policy",
+            description: "We offer hassle-free returns to ensure your complete satisfaction with every purchase.",
+        },
+        {
+            imageURL: FreshIcon,
+            alt: "Fresh",
+            width: 45,
+            height: 48,
+            title: "100% Fresh",
+            description: "We carefully select and deliver fresh organic products to ensure the highest quality.",
+        },
+        {
+            imageURL: SupportIcon,
+            alt: "Support",
+            width: 44,
+            height: 47,
+            title: "Support 24/7",
+            description: "Our customer service team is available around the clock to assist you with any questions.",
+        },
+        {
+            imageURL: PaymentIcon,
+            alt: "Payment",
+            width: 51,
+            height: 44,
+            title: "Secured Payment",
+            description: "All transactions are protected with advanced security measures for your peace of mind.",
+        },
+    ]
+
     return (
         <section className="whyus">
             <div className="whyus__inner container">
@@ -62,53 +99,26 @@ function WhyUsSection() {
                 <div className="whyus__row whyus__row--2 row">
                     <div className="whyus__column whyus__column--3 column">
                         <ul className="whyus__features-list">
-                            <li className="whyus__feature-list-item">
-                                <div className="whyus__feature feature">
-                                    <div className="feature__icon-wrap">
-                                        <img className="feature__icon" src={ReturnPolicyIcon} alt="Return Policy" width={46} height={50} loading="lazy" />
+                            {features.map((feature, index) => (
+                                <li className="whyus__feature-list-item" key={index}>
+                                    <div className="whyus__feature feature">
+                                        <div className="feature__icon-wrap">
+                                            <img
+                                                className="feature__icon"
+                                                src={feature.imageURL}
+                                                alt={feature.alt}
+                                                width={feature.width}
+                                                height={feature.height}
+                                                loading="lazy"
+                                            />
+                                        </div>
+
+                                        <h6 className="feature__title h6">{feature.title}</h6>
+
+                                        <p className="feature__description text">{feature.description}</p>
                                     </div>
-
-                                    <h6 className="feature__title h6">Return Policy</h6>
-
-                                    <p className="feature__description text">We offer hassle-free returns to ensure your complete satisfaction with every purchase.</p>
-                                </div>
-                            </li>
-
-                            <li className="whyus__feature-list-item">
-                                <div className="whyus__feature feature">
-                                    <div className="feature__icon-wrap">
-                                        <img className="feature__icon" src={FreshIcon} alt="Fresh" width={45} height={48} loading="lazy" />
-                                    </div>
-
-                                    <h6 className="feature__title h6">100% Fresh</h6>
-
-                                    <p className="feature__description text">We carefully select and deliver fresh organic products to ensure the highest quality.</p>
-                                </div>
-                            </li>
-
-                            <li className="whyus__feature-list-item">
-                                <div className="whyus__feature feature">
-                                    <div className="feature__icon-wrap">
-                                        <img className="feature__icon" src={SupportIcon} alt="Support" width={44} height={47} loading="lazy" />
-                                    </div>
-
-                                    <h6 className="feature__title h6">Support 24/7</h6>
-
-                                    <p className="feature__description text">Our customer service team is available around the clock to assist you with any questions.</p>
-                                </div>
-                            </li>
-
-                            <li className="whyus__feature-list-item">
-                                <div className="whyus__feature feature">
-                                    <div className="feature__icon-wrap">
-                                        <img className="feature__icon" src={PaymentIcon} alt="Payment" width={51} height={44} loading="lazy" />
-                                    </div>
-
-                                    <h6 className="feature__title h6">Secured Payment</h6>
-
-                                    <p className="feature__description text">All transactions are protected with advanced security measures for your peace of mind.</p>
-                                </div>
-                            </li>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>

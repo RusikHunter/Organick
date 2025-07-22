@@ -1,0 +1,43 @@
+@use "../../styles/index" as *;
+
+.social-networks {
+    &__list {
+        margin-top: 50px;
+        display: flex;
+        margin-inline: auto;
+        gap: 15px;
+    }
+
+    &__link {
+        & svg {
+            color: var(--color-blue);
+            fill: #EFF6F1;
+            transition: fill var(--transition);
+
+            @include tablet {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @include desktop-screen {
+
+            &:hover,
+            &:focus-visible {
+                & svg {
+                    fill: #E4E7E5;
+                }
+            }
+        }
+
+        @include touch-screen {
+
+            &:hover,
+            &:focus-visible {
+                & svg {
+                    fill: #EFF6F1;
+                }
+            }
+        }
+    }
+}

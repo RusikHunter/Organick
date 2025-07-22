@@ -1,10 +1,6 @@
 import "./CreativeSection.scss"
-import PlateImage from "../../assets/images/decorative/plate-vegetables.webp"
-import PlateBlurredImage from "../../assets/images/decorative/plate-vegetables-blurred.webp"
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
-
-
+import CreativeSectionImage from "./CreativeSectionImage"
+import CreativeSectionContent from "./CreativeSectionContent"
 import { Link } from "react-router-dom"
 
 function CreativeSection() {
@@ -13,33 +9,11 @@ function CreativeSection() {
             <div className="creative__inner container">
                 <div className="creative__row row">
                     <div className="creative__column creative__column--1 column">
-                        <LazyLoadImage
-                            src={PlateImage}
-                            alt="Plate with vegetables and fruits"
-                            className="creative__image"
-                            width={914}
-                            effect="blur"
-                            placeholderSrc={PlateBlurredImage}
-                        />
+                        <CreativeSectionImage />
                     </div>
 
                     <div className="creative__column creative__column--2 column">
-                        <span className="creative__promo promo">About Us</span>
-
-                        <h2 className="creative__title h2">We do Creative
-                            Things for Success</h2>
-
-                        <p className="creative__description text">We deliver fresh, organic products directly from trusted farms committed to sustainable and eco-friendly practices. Our selection ensures that all items are free from harmful chemicals, pesticides, and growth hormones, supporting your health and the environment.</p>
-
-                        <p className="creative__description text">Our goal is to make organic living easy and accessible through reliable delivery services. We work closely with local growers who use modern, environmentally responsible farming methods to bring you the best natural food.</p>
-
-                        <ul className="creative__list">
-                            <li className="creative__list-item h6">Modern Agriculture
-                                Equipment
-                            </li>
-
-                            <li className="creative__list-item h6">No growth hormones are used</li>
-                        </ul>
+                        <CreativeSectionContent />
 
                         <Link to="/blog" className="creative__link" tabIndex={-1}>
                             <button className="creative__button button button--blue">
