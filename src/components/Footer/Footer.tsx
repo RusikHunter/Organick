@@ -1,6 +1,5 @@
 import "./Footer.scss"
-import Logo from "../../images/icons/logo.svg"
-import { Link } from "react-router-dom"
+import Logo from "../../assets/icons/logo.svg"
 import FooterAddress from "./FooterAddress"
 import FooterLinks from "./FooterLinks"
 

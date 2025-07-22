@@ -1,4 +1,4 @@
-export interface FooterLinksInterFace {
+export interface FooterLinkInterface {
     path: string,
     text: string
 }

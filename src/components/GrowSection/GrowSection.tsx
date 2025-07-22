@@ -1,7 +1,7 @@
 import "./GrowSection.scss"
-import DairyImage from "../../images/icons/dairy.svg"
-import StoreImage from "../../images/icons/store.svg"
-import DeliveryImage from "../../images/icons/delivery.svg"
+import DairyImage from "../../assets/icons/dairy.svg"
+import StoreImage from "../../assets/icons/store.svg"
+import DeliveryImage from "../../assets/icons/delivery.svg"
 
 
 import NutsPackageImage from "../../assets/images/decorative/nuts-package.webp"
@@ -9,9 +9,9 @@ import NutsPackageBlurredImage from "../../assets/images/decorative/nuts-package
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
-import AgriculturalImage from "../../images/icons/agricultural.svg"
-import OrganicProductsImage from "../../images/icons/organic-product.svg"
-import FreshVegetablesImage from "../../images/icons/fresh-vegetables.svg"
+import AgriculturalImage from "../../assets/icons/agricultural.svg"
+import OrganicProductsImage from "../../assets/icons/organic-product.svg"
+import FreshVegetablesImage from "../../assets/icons/fresh-vegetables.svg"
 import { Link } from "react-router-dom"
 
 function GrowSection() {

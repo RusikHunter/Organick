@@ -2,8 +2,8 @@ import "./ContactUsSection.scss"
 import BananaOrangeImage from "../../assets/images/decorative/banana-orange.webp"
 import BananaOrangeBlurredImage from "../../assets/images/decorative/banana-orange-blurred.webp"
 
-import MailImage from "../../images/icons/mail.svg"
-import PhoneImage from "../../images/icons/phone.svg"
+import MailImage from "../../assets/icons/mail.svg"
+import PhoneImage from "../../assets/icons/phone.svg"
 
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'

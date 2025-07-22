@@ -4,7 +4,7 @@ import AccreditedFarmersFruitsImage from "../../assets/images/decorative/accredi
 import AccreditedFarmersFruitsBlurredImage from "../../assets/images/decorative/accredited-farmers-fruits-blurred.webp"
 
 import OrganicFoodsImage from "../../assets/icons/organic-foods.svg"
-import QualityStandardsImage from "../../images/icons/quality-standards.svg"
+import QualityStandardsImage from "../../assets/icons/quality-standards.svg"
 
 
 import { LazyLoadImage } from 'react-lazy-load-image-component'

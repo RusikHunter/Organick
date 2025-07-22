@@ -1,20 +1,20 @@
-import GiovaniImage from "../assets/images/team/giovani.png"
-import GiovaniBlurredImage from "../assets/images/team/giovani-blurred.png"
+import GiovaniImage from "../assets/images/team/giovani.webp"
+import GiovaniBlurredImage from "../assets/images/team/giovani-blurred.webp"
 
-import MarianneImage from "../assets/images/team/marianne.png"
-import MarianneBlurredImage from "../assets/images/team/marianne-blurred.png"
+import MarianneImage from "../assets/images/team/marianne.webp"
+import MarianneBlurredImage from "../assets/images/team/marianne-blurred.webp"
 
-import RigaImage from "../assets/images/team/riga.png"
-import RigaBlurredImage from "../assets/images/team/riga-blurred.png"
+import RigaImage from "../assets/images/team/riga.webp"
+import RigaBlurredImage from "../assets/images/team/riga-blurred.webp"
 
-import KeiraImage from "../assets/images/team/keira.png"
-import KeiraBlurredImage from "../assets/images/team/keira-blurred.png"
+import KeiraImage from "../assets/images/team/keira.webp"
+import KeiraBlurredImage from "../assets/images/team/keira-blurred.webp"
 
-import ScottImage from "../assets/images/team/scott.png"
-import ScottBlurredImage from "../assets/images/team/scott-blurred.png"
+import ScottImage from "../assets/images/team/scott.webp"
+import ScottBlurredImage from "../assets/images/team/scott-blurred.webp"
 
-import KarenImage from "../assets/images/team/karen.png"
-import KarenBlurredImage from "../assets/images/team/karen-blurred.png"
+import KarenImage from "../assets/images/team/karen.webp"
+import KarenBlurredImage from "../assets/images/team/karen-blurred.webp"
 
 import type { TeamExpert } from "../interfaces/teamExpert"
 

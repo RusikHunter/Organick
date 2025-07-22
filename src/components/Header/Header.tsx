@@ -2,7 +2,7 @@ import "./Header.scss"
 import BurgerButton from "../BurgerButton/BurgerButton"
 import { Link } from "react-router-dom"
 import DropdownPages from "../DropdownPages/DropdownPages"
-import Logo from "../../images/icons/logo.svg"
+import Logo from "../../assets/icons/logo.svg"
 import DropdownSearch from "../DropdownSearch/DropdownSearch"
 import { useAppSelector } from "../../hooks/useAppSelector"
 
