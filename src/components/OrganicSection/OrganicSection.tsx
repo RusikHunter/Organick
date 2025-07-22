@@ -1,5 +1,5 @@
 import "./OrganicSection.scss"
-import ProductsWrap from "../ProductsWrap/ProductsWrap"
+import ProductsWrap from "@components/ProductsWrap/ProductsWrap"
 import { Link } from "react-router-dom"
 
 function OrganicSection() {

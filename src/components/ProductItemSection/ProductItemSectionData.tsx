@@ -1,11 +1,11 @@
 import { useState } from "react"
-import { useAppDispatch } from "../../hooks/useAppDispatch"
-import { useAppSelector } from "../../hooks/useAppSelector"
-import { addCartItem } from "../../store/reducers/clientReducer"
-import type { CartItem } from "../../interfaces/cartItem"
+import { useAppDispatch } from "@hooks/useAppDispatch"
+import { useAppSelector } from "@hooks/useAppSelector"
+import { addCartItem } from "@store/reducers/clientReducer"
+import type { CartItem } from "@interfaces/cartItem"
 import { toast } from "react-toastify"
-import { MIN_PRODUCT_COUNT, MAX_PRODUCT_COUNT } from "../../config/product-settings"
-import type { ProductItemSectionProps } from "../../interfaces/productItemSectionProps"
+import { MIN_PRODUCT_COUNT, MAX_PRODUCT_COUNT } from "@config/product-settings"
+import type { ProductItemSectionProps } from "@interfaces/productItemSectionProps"
 
 function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
     const [productCount, setProductCount] = useState<string>('0')

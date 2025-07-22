@@ -1,8 +1,8 @@
-import IntroBlock from "../../components/IntroBlock/IntroBlock"
-import IntroBlockPortfolioItem from "../../components/IntroBlockPortfolioItem/IntroBlockPortfolioItem"
+import IntroBlock from "@components/IntroBlock/IntroBlock"
+import IntroBlockPortfolioItem from "@components/IntroBlockPortfolioItem/IntroBlockPortfolioItem"
 import { useParams } from "react-router-dom"
-import portfolioItems from "../../mocks/portfolio-items"
-import FarmSection from "../../components/FarmSection/FarmSection"
+import portfolioItems from "@mocks/portfolio-items"
+import FarmSection from "@components/FarmSection/FarmSection"
 
 function PortfolioItemPage() {
     const { id } = useParams<{ id: string }>()

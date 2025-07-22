@@ -1,18 +1,13 @@
 import "./QualitySection.scss"
-import ManInGargenImage from "../../assets/images/decorative/man-in-garden.webp"
-import ManInGargenBlurredImage from "../../assets/images/decorative/man-in-garden-blurred.webp"
-
-
-import PlantingImage from "../../assets/images/decorative/planting.webp"
-import PlantingBlurredImage from "../../assets/images/decorative/planting-blurred.webp"
-
-import PlantImage from "../../assets/images/decorative/plant.webp"
-import PlantBlurredImage from "../../assets/images/decorative/plant-blurred.webp"
-
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
-
-import type { QualityFeature } from "../../interfaces/qualityFeature"
+import ManInGardenImage from "@assets/images/decorative/man-in-garden.webp"
+import ManInGardenBlurredImage from "@assets/images/decorative/man-in-garden-blurred.webp"
+import PlantingImage from "@assets/images/decorative/planting.webp"
+import PlantingBlurredImage from "@assets/images/decorative/planting-blurred.webp"
+import PlantImage from "@assets/images/decorative/plant.webp"
+import PlantBlurredImage from "@assets/images/decorative/plant-blurred.webp"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/blur.css"
+import type { QualityFeature } from "@interfaces/qualityFeature"
 
 function QualitySection() {
     const features: QualityFeature[] = [
@@ -39,12 +34,12 @@ function QualitySection() {
                     <div className="quality__column quality__column--1 column">
                         <LazyLoadImage
                             className="quality__image"
-                            src={ManInGargenImage}
+                            src={ManInGardenImage}
                             alt="Man in garden"
                             width={1400}
                             height={742}
                             effect="blur"
-                            placeholderSrc={ManInGargenBlurredImage}
+                            placeholderSrc={ManInGardenBlurredImage}
                         />
                     </div>
                 </div>

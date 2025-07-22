@@ -1,5 +1,5 @@
 import "./TeamExpertCard.scss"
-import type { TeamExpert } from "../../interfaces/teamExpert"
+import type { TeamExpert } from "@interfaces/teamExpert"
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 

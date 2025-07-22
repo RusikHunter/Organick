@@ -1,10 +1,10 @@
 import "./ProductsWrap.scss"
 import ProductCard from "../ProductCard/ProductCard"
-import type { ProductWrapProps } from "../../interfaces/productWrapProps"
-import { useAppSelector } from "../../hooks/useAppSelector"
+import type { ProductWrapProps } from "@interfaces/productWrapProps"
+import { useAppSelector } from "@hooks/useAppSelector"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
-import type { Product } from "../../interfaces/product"
+import type { Product } from "@interfaces/product"
 
 function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: ProductWrapProps) {
     const [iteration, setIteration] = useState<number>(1)

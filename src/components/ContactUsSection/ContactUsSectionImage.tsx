@@ -1,5 +1,5 @@
-import BananaOrangeImage from "../../assets/images/decorative/banana-orange.webp"
-import BananaOrangeBlurredImage from "../../assets/images/decorative/banana-orange-blurred.webp"
+import BananaOrangeImage from "@assets/images/decorative/banana-orange.webp"
+import BananaOrangeBlurredImage from "@assets/images/decorative/banana-orange-blurred.webp"
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 

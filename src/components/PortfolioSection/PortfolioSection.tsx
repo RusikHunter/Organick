@@ -1,6 +1,6 @@
 import "./PortfolioSection.scss"
-import PortfolioItemCard from "../PortfolioItemCard/PortfolioItemCard"
-import portfolioItems from "../../mocks/portfolio-items"
+import PortfolioItemCard from "@components/PortfolioItemCard/PortfolioItemCard"
+import portfolioItems from "@mocks/portfolio-items"
 
 function PortfolioSection() {
     return (

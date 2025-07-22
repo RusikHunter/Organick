@@ -1,5 +1,5 @@
 import "./RecentSection.scss"
-import NewsWrap from "../NewsWrap/NewsWrap"
+import NewsWrap from "@components/NewsWrap/NewsWrap"
 
 function RecentSection() {
     return (

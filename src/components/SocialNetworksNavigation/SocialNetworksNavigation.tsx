@@ -1,5 +1,5 @@
 import "./SocialNetworksNavigation.scss"
-import type { SocialNetworkLink } from "../../interfaces/socialNetworkLink"
+import type { SocialNetworkLink } from "@interfaces/socialNetworkLink"
 
 function SocialNetworksNavigation() {
     const links: SocialNetworkLink[] = [

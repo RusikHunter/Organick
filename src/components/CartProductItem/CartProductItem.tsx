@@ -1,14 +1,13 @@
 import "./CartProductItem.scss"
 import ProductCard from "../ProductCard/ProductCard"
 import { useState } from "react"
-import DeleteIcon from "../../assets/icons/delete.svg"
-import type { CartProductItemProps } from "../../interfaces/cartProductItemProps"
-import type { Product } from "../../interfaces/product"
-import { useAppSelector } from "../../hooks/useAppSelector"
-import { useAppDispatch } from "../../hooks/useAppDispatch"
-import { addCartItem } from "../../store/reducers/clientReducer"
-import { removeCartItem } from "../../store/reducers/clientReducer"
-import { MIN_PRODUCT_COUNT, MAX_PRODUCT_COUNT } from "../../config/product-settings"
+import DeleteIcon from "@assets/icons/delete.svg"
+import type { CartProductItemProps } from "@interfaces/cartProductItemProps"
+import type { Product } from "@interfaces/product"
+import { useAppSelector } from "@hooks/useAppSelector"
+import { useAppDispatch } from "@hooks/useAppDispatch"
+import { addCartItem, removeCartItem } from "@store/reducers/clientReducer"
+import { MIN_PRODUCT_COUNT, MAX_PRODUCT_COUNT } from "@config/product-settings"
 
 function CartProductItem({ cartItem }: CartProductItemProps) {
     const [productCount, setProductCount] = useState<string>(cartItem.count.toString())

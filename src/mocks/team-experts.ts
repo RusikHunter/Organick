@@ -1,22 +1,16 @@
-import GiovaniImage from "../assets/images/team/giovani.webp"
-import GiovaniBlurredImage from "../assets/images/team/giovani-blurred.webp"
-
-import MarianneImage from "../assets/images/team/marianne.webp"
-import MarianneBlurredImage from "../assets/images/team/marianne-blurred.webp"
-
-import RigaImage from "../assets/images/team/riga.webp"
-import RigaBlurredImage from "../assets/images/team/riga-blurred.webp"
-
-import KeiraImage from "../assets/images/team/keira.webp"
-import KeiraBlurredImage from "../assets/images/team/keira-blurred.webp"
-
-import ScottImage from "../assets/images/team/scott.webp"
-import ScottBlurredImage from "../assets/images/team/scott-blurred.webp"
-
-import KarenImage from "../assets/images/team/karen.webp"
-import KarenBlurredImage from "../assets/images/team/karen-blurred.webp"
-
-import type { TeamExpert } from "../interfaces/teamExpert"
+import GiovaniImage from "@assets/images/team/giovani.webp"
+import GiovaniBlurredImage from "@assets/images/team/giovani-blurred.webp"
+import MarianneImage from "@assets/images/team/marianne.webp"
+import MarianneBlurredImage from "@assets/images/team/marianne-blurred.webp"
+import RigaImage from "@assets/images/team/riga.webp"
+import RigaBlurredImage from "@assets/images/team/riga-blurred.webp"
+import KeiraImage from "@assets/images/team/keira.webp"
+import KeiraBlurredImage from "@assets/images/team/keira-blurred.webp"
+import ScottImage from "@assets/images/team/scott.webp"
+import ScottBlurredImage from "@assets/images/team/scott-blurred.webp"
+import KarenImage from "@assets/images/team/karen.webp"
+import KarenBlurredImage from "@assets/images/team/karen-blurred.webp"
+import type { TeamExpert } from "@interfaces/teamExpert"
 
 const teamExperts: TeamExpert[] = [
     {

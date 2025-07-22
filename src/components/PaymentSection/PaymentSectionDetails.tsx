@@ -1,4 +1,4 @@
-import type { PaymentSectionDetailsProps } from "../../interfaces/paymentSectionDetailsProps"
+import type { PaymentSectionDetailsProps } from "@interfaces/paymentSectionDetailsProps"
 
 function PaymentSectionDetails({ full_name, email, company, address, card, totalCount, totalPrice }: PaymentSectionDetailsProps) {
     return (

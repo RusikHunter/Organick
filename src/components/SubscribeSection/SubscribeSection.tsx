@@ -1,12 +1,12 @@
 import "./SubscribeSection.scss"
 import type { SubmitHandler } from "react-hook-form"
-import type { SubscribeFormValues } from "../../interfaces/subscribeFormValues"
+import type { SubscribeFormValues } from "@interfaces/subscribeFormValues"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from 'yup'
 import { toast } from "react-toastify"
 import emailjs from '@emailjs/browser'
-import { SERVICE_ID, TEMPLATE_ID_SUBSCRIBE, PUBLIC_KEY } from "../../config/emailjs_keys"
+import { SERVICE_ID, TEMPLATE_ID_SUBSCRIBE, PUBLIC_KEY } from "@config/emailjs_keys"
 
 function SubscribeSection() {
     const schema = yup.object().shape({

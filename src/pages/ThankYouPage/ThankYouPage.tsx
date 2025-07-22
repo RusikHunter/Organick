@@ -1,4 +1,4 @@
-import ThankYouSection from "../../components/ThankYouSection/ThankYouSection"
+import ThankYouSection from "@components/ThankYouSection/ThankYouSection"
 
 function ThankYouPage() {
     return (

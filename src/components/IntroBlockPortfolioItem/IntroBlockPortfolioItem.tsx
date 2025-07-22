@@ -1,6 +1,6 @@
 import "./IntroBlockPortfolioItem.scss"
-import type { PortfolioItem } from "../../interfaces/portfolioItem"
-import type { DescriptionListItem } from "../../interfaces/descriptionListItem"
+import type { PortfolioItem } from "@interfaces/portfolioItem"
+import type { DescriptionListItem } from "@interfaces/descriptionListItem"
 
 function IntroBlockPortfolioItem(content: PortfolioItem) {
     const descriptionListItems: DescriptionListItem[] = [

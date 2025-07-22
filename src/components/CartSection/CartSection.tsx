@@ -1,11 +1,11 @@
 import "./CartSection.scss"
-import CartProductItem from "../CartProductItem/CartProductItem"
+import CartProductItem from "@components/CartProductItem/CartProductItem"
 import { Link } from "react-router-dom"
-import { useAppSelector } from "../../hooks/useAppSelector"
+import { useAppSelector } from "@hooks/useAppSelector"
 import { useEffect, useState } from "react"
-import { promocodes } from "../../mocks/promocodes"
-import { useAppDispatch } from "../../hooks/useAppDispatch"
-import { setTotalCount, setTotalPrice } from "../../store/reducers/clientReducer"
+import { promocodes } from "@mocks/promocodes"
+import { useAppDispatch } from "@hooks/useAppDispatch"
+import { setTotalCount, setTotalPrice } from "@store/reducers/clientReducer"
 
 function CartSection() {
     const [promocode, setPromocode] = useState<string>("")

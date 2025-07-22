@@ -1,5 +1,5 @@
-import MailImage from "../../assets/icons/mail.svg"
-import PhoneImage from "../../assets/icons/phone.svg"
+import MailImage from "@assets/icons/mail.svg"
+import PhoneImage from "@assets/icons/phone.svg"
 
 function ContactUsSectionContent() {
     return (

@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../hooks/useAppSelector"
+import { useAppSelector } from "@hooks/useAppSelector"
 import "./IntroBlockPost.scss"
 import { useParams } from "react-router-dom"
 

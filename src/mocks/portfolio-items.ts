@@ -1,22 +1,16 @@
-import GreenAndTastyLemonImage from "../assets/images/portfolio/green-and-tasty-lemon.webp"
-import GreenAndTastyLemonBlurredImage from "../assets/images/portfolio/green-and-tasty-lemon-blurred.webp"
-
-import OrganicCarrotImage from "../assets/images/portfolio/organic-carrot.webp"
-import OrganicCarrotBlurredImage from "../assets/images/portfolio/organic-carrot-blurred.webp"
-
-import OrganicBetelLeafImage from "../assets/images/portfolio/organic-betel-leaf.webp"
-import OrganicBetelLeafBlurredImage from "../assets/images/portfolio/organic-betel-leaf-blurred.webp"
-
-import NaturalTommatoImage from "../assets/images/portfolio/natural-tommato.webp"
-import NaturalTommatoBlurredImage from "../assets/images/portfolio/natural-tommato-blurred.webp"
-
-import BlackRaspberryImage from "../assets/images/portfolio/black-raspberry.webp"
-import BlackRaspberryBlurredImage from "../assets/images/portfolio/black-raspberry-blurred.webp"
-
-import HoneyOrangeImage from "../assets/images/portfolio/honey-orange.webp"
-import HoneyOrangeBlurredImage from "../assets/images/portfolio/honey-orange-blurred.webp"
-
-import type { PortfolioItem } from "../interfaces/portfolioItem"
+import GreenAndTastyLemonImage from "@assets/images/portfolio/green-and-tasty-lemon.webp"
+import GreenAndTastyLemonBlurredImage from "@assets/images/portfolio/green-and-tasty-lemon-blurred.webp"
+import OrganicCarrotImage from "@assets/images/portfolio/organic-carrot.webp"
+import OrganicCarrotBlurredImage from "@assets/images/portfolio/organic-carrot-blurred.webp"
+import OrganicBetelLeafImage from "@assets/images/portfolio/organic-betel-leaf.webp"
+import OrganicBetelLeafBlurredImage from "@assets/images/portfolio/organic-betel-leaf-blurred.webp"
+import NaturalTommatoImage from "@assets/images/portfolio/natural-tommato.webp"
+import NaturalTommatoBlurredImage from "@assets/images/portfolio/natural-tommato-blurred.webp"
+import BlackRaspberryImage from "@assets/images/portfolio/black-raspberry.webp"
+import BlackRaspberryBlurredImage from "@assets/images/portfolio/black-raspberry-blurred.webp"
+import HoneyOrangeImage from "@assets/images/portfolio/honey-orange.webp"
+import HoneyOrangeBlurredImage from "@assets/images/portfolio/honey-orange-blurred.webp"
+import type { PortfolioItem } from "@interfaces/portfolioItem"
 
 const portfolioItems: PortfolioItem[] = [
     {

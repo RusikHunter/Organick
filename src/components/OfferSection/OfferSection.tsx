@@ -1,23 +1,17 @@
 import "./OfferSection.scss"
-import CurryImage from "../../assets/images/decorative/curry.webp"
-import CurryBlurredImage from "../../assets/images/decorative/curry-blurred.webp"
-
-import NutsImage from "../../assets/images/decorative/nuts.webp"
-import NutsBlurredImage from "../../assets/images/decorative/nuts-blurred.webp"
-
-
-import AppleImage from "../../assets/images/decorative/apple.webp"
-import AppleBlurredImage from "../../assets/images/decorative/apple-blurred.webp"
-
-import GingerImage from "../../assets/images/decorative/ginger.webp"
-import GingerBlurredImage from "../../assets/images/decorative/ginger-blurred.webp"
-
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
-
+import CurryImage from "@assets/images/decorative/curry.webp"
+import CurryBlurredImage from "@assets/images/decorative/curry-blurred.webp"
+import NutsImage from "@assets/images/decorative/nuts.webp"
+import NutsBlurredImage from "@assets/images/decorative/nuts-blurred.webp"
+import AppleImage from "@assets/images/decorative/apple.webp"
+import AppleBlurredImage from "@assets/images/decorative/apple-blurred.webp"
+import GingerImage from "@assets/images/decorative/ginger.webp"
+import GingerBlurredImage from "@assets/images/decorative/ginger-blurred.webp"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/blur.css"
 import { Link } from "react-router-dom"
-import { Routes } from "../../config/routes"
-import type { RouteLink } from "../../interfaces/routeLink"
+import { Routes } from "@config/routes"
+import type { RouteLink } from "@interfaces/routeLink"
 
 function OfferSection() {
     const links: RouteLink[] = [

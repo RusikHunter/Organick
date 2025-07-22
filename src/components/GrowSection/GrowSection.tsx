@@ -1,5 +1,5 @@
 import "./GrowSection.scss"
-import GrowSectionGridContent from "./GrowSectionGridContent"
+import GrowSectionGridContent from "@components/GrowSection/GrowSectionGridContent"
 import { Link } from "react-router-dom"
 
 function GrowSection() {

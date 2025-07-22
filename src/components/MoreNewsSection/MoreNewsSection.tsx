@@ -1,6 +1,6 @@
 import "./MoreNewsSection.scss"
 import { Link } from "react-router-dom"
-import NewsWrap from "../NewsWrap/NewsWrap"
+import NewsWrap from "@components/NewsWrap/NewsWrap"
 
 function MoreNewsSection() {
     return (

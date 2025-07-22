@@ -1,5 +1,5 @@
 import "./RelatedSection.scss"
-import ProductsWrap from "../ProductsWrap/ProductsWrap"
+import ProductsWrap from "@components/ProductsWrap/ProductsWrap"
 
 function RelatedSection() {
     return (

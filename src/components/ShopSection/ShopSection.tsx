@@ -1,5 +1,5 @@
 import "./ShopSection.scss"
-import ProductsWrap from "../ProductsWrap/ProductsWrap"
+import ProductsWrap from "@components/ProductsWrap/ProductsWrap"
 
 function ShopSection() {
     return (

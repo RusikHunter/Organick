@@ -3,7 +3,7 @@
 // 
 
 @use 'sass:math';
-@use "media" as *;
+@use "@styles/media" as *;
 
 //
 // Mixin calculates adaptive font size in rem units

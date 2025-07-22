@@ -1,6 +1,6 @@
-import type { Product } from "./product"
-import type { Post } from "./post"
-import type { CartItem } from "./cartItem"
+import type { Product } from "@interfaces/product"
+import type { Post } from "@interfaces/post"
+import type { CartItem } from "@interfaces/cartItem"
 
 export interface ClientState {
     isBurgerMenuOpen: boolean

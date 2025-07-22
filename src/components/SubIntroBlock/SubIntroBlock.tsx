@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import "./SubIntroBlock.scss"
-import type { SubIntroBlockProps } from "../../interfaces/subIntroBlockProps"
+import type { SubIntroBlockProps } from "@interfaces/subIntroBlockProps"
 
 function SubIntroBlock({ title, backgroundImageURL, blurredBackgroundImageURL }: SubIntroBlockProps) {
     const ref = useRef<HTMLElement>(null)

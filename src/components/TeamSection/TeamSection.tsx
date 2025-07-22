@@ -1,7 +1,7 @@
 import "./TeamSection.scss"
-import TeamExpertCard from "../TeamExpertCard/TeamExpertCard"
-import teamExperts from "../../mocks/team-experts"
-import type { TeamSectionProps } from "../../interfaces/teamSectionProps"
+import TeamExpertCard from "@components/TeamExpertCard/TeamExpertCard"
+import teamExperts from "@mocks/team-experts"
+import type { TeamSectionProps } from "@interfaces/teamSectionProps"
 
 function TeamSection({ defaultExpertsCount }: TeamSectionProps) {
     const expertsCount = Array.from({ length: defaultExpertsCount }, (_, i) => i)
