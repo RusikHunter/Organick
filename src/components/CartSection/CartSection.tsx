@@ -3,7 +3,7 @@ import CartProductItem from "../CartProductItem/CartProductItem"
 import { Link } from "react-router-dom"
 import { useAppSelector } from "../../hooks/useAppSelector"
 import { useEffect, useState } from "react"
-import { promocodes } from "../../assets/promocodes"
+import { promocodes } from "../../mocks/promocodes"
 import { useAppDispatch } from "../../hooks/useAppDispatch"
 import { setTotalCount, setTotalPrice } from "../../store/reducers/clientReducer"
 

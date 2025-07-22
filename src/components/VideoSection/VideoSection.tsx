@@ -1,4 +1,4 @@
-import FruitsMovie from "../../assets/fruits.mp4"
+import FruitsMovie from "../../assets/movies/fruits.mp4"
 import "./VideoSection.scss"
 import { useState, useRef } from "react"
 

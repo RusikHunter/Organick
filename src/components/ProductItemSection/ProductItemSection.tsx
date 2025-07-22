@@ -7,7 +7,7 @@ import { useAppDispatch } from "../../hooks/useAppDispatch"
 import { addCartItem } from "../../store/reducers/clientReducer"
 import type { CartItem } from "../../interfaces/cartItem"
 import { toast } from "react-toastify"
-import { MIN_PRODUCT_COUNT, MAX_PRODUCT_COUNT } from "../../assets/product-settings"
+import { MIN_PRODUCT_COUNT, MAX_PRODUCT_COUNT } from "../../config/product-settings"
 
 function ProductItemSection() {
     const [activeSide, setActiveSide] = useState<'left' | 'right'>('left')

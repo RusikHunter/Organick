@@ -9,7 +9,7 @@ import type { SubmitHandler } from "react-hook-form"
 import type { PaymentFormValues } from "../../interfaces/paymentFormValues"
 import { toast } from "react-toastify"
 import emailjs from '@emailjs/browser'
-import { SERVICE_ID_ORDERS, TEMPLATE_ID_ORDERS, PUBLIC_KEY_ORDERS } from "../../assets/emailjs_keys"
+import { SERVICE_ID_ORDERS, TEMPLATE_ID_ORDERS, PUBLIC_KEY_ORDERS } from "../../config/emailjs_keys"
 import { setCart } from "../../store/reducers/clientReducer"
 import { useAppDispatch } from "../../hooks/useAppDispatch"
 
