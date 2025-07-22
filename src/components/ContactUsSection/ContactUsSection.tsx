@@ -1,7 +1,7 @@
 import "./ContactUsSection.scss"
 import ContactUsSectionImage from "./ContactUsSectionImage"
 import ContactUsSectionContent from "./ContactUsSectionContent"
-import SocialNetworksNavigation from "../SocialNetworksNavigation/SocialNetworksNavigation"
+import SocialNetworksNavigation from "@components/SocialNetworksNavigation/SocialNetworksNavigation"
 
 function ContactUsSection() {
     return (

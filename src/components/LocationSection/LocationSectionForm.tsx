@@ -1,6 +1,6 @@
 import "./LocationSection.scss"
 import type { SubmitHandler } from "react-hook-form"
-import type { LocationFormValues } from "../../interfaces/locationFormValues"
+import type { LocationFormValues } from "@interfaces/locationFormValues"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from 'yup'

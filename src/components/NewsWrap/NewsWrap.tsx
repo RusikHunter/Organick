@@ -1,7 +1,7 @@
 import "./NewsWrap.scss"
-import NewsCard from "../NewsCard/NewsCard"
-import type { NewsWrapProps } from "../../interfaces/newsWrapProps"
-import { useAppSelector } from "../../hooks/useAppSelector"
+import NewsCard from "@components/NewsCard/NewsCard"
+import type { NewsWrapProps } from "@interfaces/newsWrapProps"
+import { useAppSelector } from "@hooks/useAppSelector"
 
 function NewsWrap({ defaultNewsCount }: NewsWrapProps) {
     const posts = useAppSelector(state => state.client.posts)

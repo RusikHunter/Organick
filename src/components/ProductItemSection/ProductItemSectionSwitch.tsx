@@ -1,8 +1,10 @@
 import { useState } from "react"
-import type { ProductItemSectionProps } from "../../interfaces/productItemSectionProps"
+import type { ProductItemSectionProps } from "@interfaces/productItemSectionProps"
 
 function ProductItemSectionSwitch({ product, id }: ProductItemSectionProps) {
     const [activeSide, setActiveSide] = useState<'left' | 'right'>('left')
+
+    void id
 
     return (
         <>

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 import { useEffect, useState, useRef } from "react"
 import "./DropdownPages.scss"
-import type { RouteLink } from "../../interfaces/routeLink"
-import { Routes } from "../../config/routes"
+import type { RouteLink } from "@interfaces/routeLink"
+import { Routes } from "@config/routes"
 
 function DropdownPages() {
     const [isOpen, setIsOpen] = useState<boolean>(false)

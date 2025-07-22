@@ -1,8 +1,8 @@
 import "./Footer.scss"
-import Logo from "../../assets/icons/logo.svg"
+import Logo from "@assets/icons/logo.svg"
 import FooterAddress from "./FooterAddress"
 import FooterLinks from "./FooterLinks"
-import SocialNetworksNavigation from "../SocialNetworksNavigation/SocialNetworksNavigation"
+import SocialNetworksNavigation from "@components/SocialNetworksNavigation/SocialNetworksNavigation"
 
 function Footer() {
     return (

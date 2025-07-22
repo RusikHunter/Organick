@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 import "./BurgerMenu.scss"
 import { useEffect, useRef } from "react"
-import { useAppSelector } from "../../hooks/useAppSelector"
-import { useAppDispatch } from "../../hooks/useAppDispatch"
-import { setIsBurgerMenuOpen } from "../../store/reducers/clientReducer"
-import type { RouteLink } from "../../interfaces/routeLink"
-import { Routes } from "../../config/routes"
+import { useAppSelector } from "@hooks/useAppSelector"
+import { useAppDispatch } from "@hooks/useAppDispatch"
+import { setIsBurgerMenuOpen } from "@store/reducers/clientReducer"
+import type { RouteLink } from "@interfaces/routeLink"
+import { Routes } from "@config/routes"
 
 function BurgerMenu() {
     const MAX_TABLET_VIEWPORT_WIDTH: number = 1024

@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom"
 import "./BelieveSection.scss"
-import AccreditedFarmersFruitsImage from "../../assets/images/decorative/accredited-farmers-fruits.webp"
-import AccreditedFarmersFruitsBlurredImage from "../../assets/images/decorative/accredited-farmers-fruits-blurred.webp"
-
-import OrganicFoodsImage from "../../assets/icons/organic-foods.svg"
-import QualityStandardsImage from "../../assets/icons/quality-standards.svg"
-
-
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
+import AccreditedFarmersFruitsImage from "@assets/images/decorative/accredited-farmers-fruits.webp"
+import AccreditedFarmersFruitsBlurredImage from "@assets/images/decorative/accredited-farmers-fruits-blurred.webp"
+import OrganicFoodsImage from "@assets/icons/organic-foods.svg"
+import QualityStandardsImage from "@assets/icons/quality-standards.svg"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/blur.css"
 
 function BelieveSection() {
     return (

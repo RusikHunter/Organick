@@ -1,5 +1,5 @@
-import UtilsIntroBlock from "../../components/UtilsIntroBlock/UtilsIntroBlock"
-import ChangelogSection from "../../components/ChangelogSection/ChangelogSection"
+import UtilsIntroBlock from "@components/UtilsIntroBlock/UtilsIntroBlock"
+import ChangelogSection from "@components/ChangelogSection/ChangelogSection"
 
 function ChangelogPage() {
     return (

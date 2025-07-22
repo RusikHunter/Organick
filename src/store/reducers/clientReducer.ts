@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { fetchProducts } from '../asyncActions/fetchProducts'
-import type { ClientState } from '../../interfaces/clientState'
-import { fetchPosts } from '../asyncActions/fetchPosts'
+import { fetchProducts } from '@store/asyncActions/fetchProducts'
+import type { ClientState } from '@interfaces/clientState'
+import { fetchPosts } from '@store/asyncActions/fetchPosts'
 
 const initialState: ClientState = {
     isBurgerMenuOpen: false,

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import "./PostContentSection.scss"
-import { useAppSelector } from "../../hooks/useAppSelector"
+import { useAppSelector } from "@hooks/useAppSelector"
 import parse from 'html-react-parser'
 
 function PostContentSection() {

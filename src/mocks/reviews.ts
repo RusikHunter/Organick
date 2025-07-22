@@ -1,14 +1,10 @@
-import userSaraAvatarURL from '../assets/images/reviews/sara.webp'
-import userSaraAvatarBlurredURL from '../assets/images/reviews/sara-blurred.webp'
-
-import userJamesAvatarURL from '../assets/images/reviews/james.webp'
-import userJamesAvatarBlurredURL from '../assets/images/reviews/james-blurred.webp'
-
-import userRobertAvatarURL from '../assets/images/reviews/robert.webp'
-import userRobertAvatarBlurredURL from '../assets/images/reviews/robert-blurred.webp'
-
-
-import type { Review } from '../interfaces/review'
+import userSaraAvatarURL from "@assets/images/reviews/sara.webp"
+import userSaraAvatarBlurredURL from "@assets/images/reviews/sara-blurred.webp"
+import userJamesAvatarURL from "@assets/images/reviews/james.webp"
+import userJamesAvatarBlurredURL from "@assets/images/reviews/james-blurred.webp"
+import userRobertAvatarURL from "@assets/images/reviews/robert.webp"
+import userRobertAvatarBlurredURL from "@assets/images/reviews/robert-blurred.webp"
+import type { Review } from "@interfaces/review"
 
 const reviews: Review[] = [
     {

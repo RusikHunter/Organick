@@ -1,5 +1,5 @@
 import "./LicensesSection.scss"
-import type { LicensesCondition } from "../../interfaces/licensesCondition"
+import type { LicensesCondition } from "@interfaces/licensesCondition"
 
 function LicensesSection() {
     const conditions: LicensesCondition[] = [

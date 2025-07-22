@@ -1,7 +1,7 @@
-import { setIsBurgerMenuOpen } from "../../store/reducers/clientReducer"
+import { setIsBurgerMenuOpen } from "@store/reducers/clientReducer"
 import "./BurgerButton.scss"
-import { useAppDispatch } from "../../hooks/useAppDispatch"
-import { useAppSelector } from "../../hooks/useAppSelector"
+import { useAppDispatch } from "@hooks/useAppDispatch"
+import { useAppSelector } from "@hooks/useAppSelector"
 
 function BurgerButton() {
     const dispatch = useAppDispatch()

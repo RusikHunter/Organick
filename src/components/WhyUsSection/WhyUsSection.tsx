@@ -1,16 +1,13 @@
 import "./WhyUsSection.scss"
-import GreenVegetablesImage from "../../assets/images/decorative/green-vegetables.webp"
-import GreenVegetablesBlurredImage from "../../assets/images/decorative/green-vegetables-blurred.webp"
-
-import ReturnPolicyIcon from "../../assets/icons/return-policy.svg"
-import FreshIcon from "../../assets/icons/fresh.svg"
-import SupportIcon from "../../assets/icons/support.svg"
-import PaymentIcon from "../../assets/icons/payment.svg"
-
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
-
-import type { WhyUsFeature } from "../../interfaces/whyUsFeature"
+import GreenVegetablesImage from "@assets/images/decorative/green-vegetables.webp"
+import GreenVegetablesBlurredImage from "@assets/images/decorative/green-vegetables-blurred.webp"
+import ReturnPolicyIcon from "@assets/icons/return-policy.svg"
+import FreshIcon from "@assets/icons/fresh.svg"
+import SupportIcon from "@assets/icons/support.svg"
+import PaymentIcon from "@assets/icons/payment.svg"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/blur.css"
+import type { WhyUsFeature } from "@interfaces/whyUsFeature"
 
 function WhyUsSection() {
     const features: WhyUsFeature[] = [

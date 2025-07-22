@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import type { RouteLink } from "../../interfaces/routeLink"
-import { Routes } from "../../config/routes"
-import DropdownPages from "../DropdownPages/DropdownPages"
+import type { RouteLink } from "@interfaces/routeLink"
+import { Routes } from "@config/routes"
+import DropdownPages from "@components/DropdownPages/DropdownPages"
 
 function HeaderNavigation() {
     const links: RouteLink[] = [

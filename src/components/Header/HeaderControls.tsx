@@ -1,7 +1,7 @@
-import BurgerButton from "../BurgerButton/BurgerButton"
-import DropdownSearch from "../DropdownSearch/DropdownSearch"
+import BurgerButton from "@components/BurgerButton/BurgerButton"
+import DropdownSearch from "@components/DropdownSearch/DropdownSearch"
 import { Link } from "react-router-dom"
-import { useAppSelector } from "../../hooks/useAppSelector"
+import { useAppSelector } from "@hooks/useAppSelector"
 
 function HeaderControls() {
     const cart = useAppSelector(state => state.client.cart)

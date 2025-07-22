@@ -3,8 +3,8 @@
 // 
 
 @use 'sass:math';
-@use "media" as *;
-@use "mixins" as *;
+@use "@styles/media" as *;
+@use "@styles/mixins" as *;
 
 .container {
     display: flex;

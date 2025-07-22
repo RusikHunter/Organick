@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import "./CategoriesListSection.scss"
-import { Routes } from "../../config/routes"
-import type { RouteLink } from "../../interfaces/routeLink"
+import { Routes } from "@config/routes"
+import type { RouteLink } from "@interfaces/routeLink"
 
 function CategoriesListSection() {
     const links: RouteLink[] = [

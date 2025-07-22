@@ -2,11 +2,11 @@
 // File with styles for selectors with tag names and global elements 
 //
 
-@use "media" as *;
+@use "@styles/media" as *;
 
 // In processing ...
 
-@use "./media" as *;
+@use "@styles/media" as *;
 
 a,
 a:hover,

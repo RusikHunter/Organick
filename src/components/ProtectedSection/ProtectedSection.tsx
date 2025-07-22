@@ -1,6 +1,6 @@
 import "./ProtectedSection.scss"
-import BranchImage from "../../assets/images/decorative/branch.webp"
-import BranchBlurredImage from "../../assets/images/decorative/branch-blurred.webp"
+import BranchImage from "@assets/images/decorative/branch.webp"
+import BranchBlurredImage from "@assets/images/decorative/branch-blurred.webp"
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 

@@ -1,10 +1,10 @@
 import "./DropdownSearch.scss"
 import { Link } from "react-router-dom"
 import { useState, useRef, useEffect } from "react"
-import { setIsBurgerMenuOpen } from "../../store/reducers/clientReducer"
-import { useAppDispatch } from "../../hooks/useAppDispatch"
-import { useAppSelector } from "../../hooks/useAppSelector"
-import type { Product } from "../../interfaces/product"
+import { setIsBurgerMenuOpen } from "@store/reducers/clientReducer"
+import { useAppDispatch } from "@hooks/useAppDispatch"
+import { useAppSelector } from "@hooks/useAppSelector"
+import type { Product } from "@interfaces/product"
 
 function DropdownSearch() {
     const [isSearchDropdownShowed, setIsSearchDropdownShowed] = useState<boolean>(false)

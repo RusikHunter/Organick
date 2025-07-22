@@ -1,4 +1,4 @@
-import type { PaymentSectionDeliveryProps } from "../../interfaces/paymentSectionDeliveryProps"
+import type { PaymentSectionDeliveryProps } from "@interfaces/paymentSectionDeliveryProps"
 
 function PaymentSectionDelivery({ register, errors }: PaymentSectionDeliveryProps) {
     return (

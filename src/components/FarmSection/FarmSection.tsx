@@ -1,8 +1,8 @@
 import "./FarmSection.scss"
-import CarrotImage from "../../assets/images/decorative/carrot.webp"
-import CarrotBlurredImage from "../../assets/images/decorative/carrot-blurred.webp"
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
+import CarrotImage from "@assets/images/decorative/carrot.webp"
+import CarrotBlurredImage from "@assets/images/decorative/carrot-blurred.webp"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/blur.css"
 
 function FarmSection() {
     return (

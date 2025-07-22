@@ -1,18 +1,14 @@
-import DairyImage from "../../assets/icons/dairy.svg"
-import StoreImage from "../../assets/icons/store.svg"
-import DeliveryImage from "../../assets/icons/delivery.svg"
-
-
-import NutsPackageImage from "../../assets/images/decorative/nuts-package.webp"
-import NutsPackageBlurredImage from "../../assets/images/decorative/nuts-package-blurred.webp"
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
-
-import AgriculturalImage from "../../assets/icons/agricultural.svg"
-import OrganicProductsImage from "../../assets/icons/organic-product.svg"
-import FreshVegetablesImage from "../../assets/icons/fresh-vegetables.svg"
-
-import type { GrowSectionColumnContent } from "../../interfaces/growSectionColumnContent"
+import DairyImage from "@assets/icons/dairy.svg"
+import StoreImage from "@assets/icons/store.svg"
+import DeliveryImage from "@assets/icons/delivery.svg"
+import NutsPackageImage from "@assets/images/decorative/nuts-package.webp"
+import NutsPackageBlurredImage from "@assets/images/decorative/nuts-package-blurred.webp"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/blur.css"
+import AgriculturalImage from "@assets/icons/agricultural.svg"
+import OrganicProductsImage from "@assets/icons/organic-product.svg"
+import FreshVegetablesImage from "@assets/icons/fresh-vegetables.svg"
+import type { GrowSectionColumnContent } from "@interfaces/growSectionColumnContent"
 
 function GrowSectionGridContent() {
     const columns: GrowSectionColumnContent[] = [

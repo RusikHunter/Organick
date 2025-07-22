@@ -1,10 +1,9 @@
 import "./ProductCard.scss"
 import { Link } from "react-router-dom"
-import type { ProductCardProps } from "../../interfaces/productCardProps"
-
-import ProductBlurredImage from "../../assets/images/background/product-blurred.webp"
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
+import type { ProductCardProps } from "@interfaces/productCardProps"
+import ProductBlurredImage from "@assets/images/background/product-blurred.webp"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/blur.css"
 
 function ProductCard({ isCartItem, productData }: ProductCardProps) {
     return (

@@ -1,9 +1,9 @@
-import IntroBlock from "../../components/IntroBlock/IntroBlock"
-import IntroBlockPost from "../../components/IntroBlockPost/IntroBlockPost"
-import PostContentSection from "../../components/PostContentSection/PostContentSection"
+import IntroBlock from "@components/IntroBlock/IntroBlock"
+import IntroBlockPost from "@components/IntroBlockPost/IntroBlockPost"
+import PostContentSection from "@components/PostContentSection/PostContentSection"
 import { useParams } from "react-router-dom"
-import { useAppSelector } from "../../hooks/useAppSelector"
-import PostBlurredImage from "../../assets/images/background/post-blurred.png"
+import { useAppSelector } from "@hooks/useAppSelector"
+import PostBlurredImage from "@assets/images/background/post-blurred.webp"
 
 function PostPage() {
     const { id } = useParams<{ id: string }>()

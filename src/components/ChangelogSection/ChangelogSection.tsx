@@ -1,8 +1,8 @@
 import "./ChangelogSection.scss"
-import BouquetImage from "../../assets/images/decorative/bouquet.webp"
-import BouquetBlurredImage from "../../assets/images/decorative/bouquet-blurred.webp"
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
+import BouquetImage from "@assets/images/decorative/bouquet.webp"
+import BouquetBlurredImage from "@assets/images/decorative/bouquet-blurred.webp"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/blur.css"
 
 function ChangelogSection() {
     return (

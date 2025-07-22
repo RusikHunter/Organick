@@ -1,4 +1,4 @@
-import type { PaymentSectionCardProps } from "../../interfaces/paymentSectionCardProps"
+import type { PaymentSectionCardProps } from "@interfaces/paymentSectionCardProps"
 import { Controller } from "react-hook-form"
 
 function PaymentSectionCard({ control, register, errors }: PaymentSectionCardProps) {

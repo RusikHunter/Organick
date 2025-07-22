@@ -1,9 +1,7 @@
-import PaymentSection from "../../components/PaymentSection/PaymentSection"
-import SubIntroBlock from "../../components/SubIntroBlock/SubIntroBlock"
-
-import PaymentBackground from "../../assets/images/background/background-our-team.webp"
-import PaymentBlurredBackground from "../../assets/images/background/background-our-team-blurred.webp"
-
+import PaymentSection from "@components/PaymentSection/PaymentSection"
+import SubIntroBlock from "@components/SubIntroBlock/SubIntroBlock"
+import PaymentBackground from "@assets/images/background/background-our-team.webp"
+import PaymentBlurredBackground from "@assets/images/background/background-our-team-blurred.webp"
 
 function PaymentPage() {
     return (

@@ -1,5 +1,5 @@
-import "./EcoSection.scss"
-import type { DescriptionListItem } from "../../interfaces/descriptionListItem"
+import "@styles/EcoSection.scss"
+import type { DescriptionListItem } from "@interfaces/descriptionListItem"
 
 function EcoSection() {
     const descriptionListItems: DescriptionListItem[] = [
