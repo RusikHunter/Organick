@@ -4,8 +4,6 @@ import type { CartItem } from "@interfaces/cartItem"
 
 export interface ClientState {
     isBurgerMenuOpen: boolean
-    totalCount: number,
-    totalPrice: number,
     products: Product[],
     posts: Post[],
     cart: CartItem[]

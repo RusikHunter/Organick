@@ -1,3 +1,4 @@
+import React, { useCallback } from "react"
 import "./DropdownSearch.scss"
 import { Link } from "react-router-dom"
 import { useState, useRef, useEffect } from "react"
@@ -18,11 +19,11 @@ function DropdownSearch() {
     const isBurgerMenuOpen = useAppSelector(state => state.client.isBurgerMenuOpen)
     const products: Product[] = useAppSelector(state => state.client.products)
 
-    const handleChangeSearchTerm = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const handleChangeSearchTerm = useCallback((event: React.ChangeEvent<HTMLInputElement>): void => {
         setSearchTerm(event.target.value)
-    }
+    }, [])
 
-    const handleSearchClick = (): void => {
+    const handleSearchClick = useCallback((): void => {
         if (!searchTerm.length) return
 
         setIsSearchDropdownShowed(true)
@@ -36,11 +37,11 @@ function DropdownSearch() {
         })
 
         setFoundProducts(foundProducts)
-    }
+    }, [])
 
-    const handleCloseClick = (): void => {
+    const handleCloseClick = useCallback((): void => {
         setIsSearchDropdownShowed(false)
-    }
+    }, [])
 
     useEffect(() => {
         const handleOutsideClick = (e: MouseEvent): void => {
@@ -111,4 +112,4 @@ function DropdownSearch() {
     )
 }
 
-export default DropdownSearch
+export default React.memo(DropdownSearch)

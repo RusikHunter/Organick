@@ -1,3 +1,4 @@
+import React, { useCallback } from "react"
 import "./ProductsWrap.scss"
 import ProductCard from "../ProductCard/ProductCard"
 import type { ProductWrapProps } from "@interfaces/productWrapProps"
@@ -9,13 +10,18 @@ import type { Product } from "@interfaces/product"
 function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: ProductWrapProps) {
     const [iteration, setIteration] = useState<number>(1)
 
-    let products = useAppSelector(state => state.client.products)
+    const productsAll = useAppSelector(state => state.client.products)
+    const { id: idParam } = useParams()
+    const id = Number(idParam ?? '')
 
-    if (isRelatedProducts) {
-        const id = Number(useParams().id ?? '')
-        const productOfCurrentPage: Product = useAppSelector(state => state.client.products[id])
+    const isValidId = !isNaN(id) && id >= 0 && id < productsAll.length
 
-        const productsSortedByType = products.filter(product => {
+    let products = productsAll
+
+    if (isRelatedProducts && isValidId) {
+        const productOfCurrentPage: Product = productsAll[id]
+
+        const productsSortedByType = productsAll.filter(product => {
             return product.type === productOfCurrentPage.type && product.id !== productOfCurrentPage.id
         })
 
@@ -24,13 +30,13 @@ function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: P
         products = productsSortedByType
     }
 
-    let cardsCount = isRelatedProducts && products.length < 4
+    const cardsCount = isRelatedProducts && products.length < 4
         ? Array.from({ length: products.length }, (_, i) => i)
         : Array.from({ length: defaultCardsCount * iteration }, (_, i) => i)
 
-    const handleMoreClick = (): void => {
+    const handleMoreClick = useCallback((): void => {
         setIteration(prev => prev + 1)
-    }
+    }, [])
 
     return (
         products.length
@@ -64,4 +70,4 @@ function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: P
     )
 }
 
-export default ProductsWrap
+export default React.memo(ProductsWrap)

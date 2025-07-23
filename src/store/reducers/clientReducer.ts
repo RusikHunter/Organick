@@ -5,8 +5,6 @@ import { fetchPosts } from '@store/asyncActions/fetchPosts'
 
 const initialState: ClientState = {
     isBurgerMenuOpen: false,
-    totalCount: 0,
-    totalPrice: 0,
     products: [],
     posts: [],
     cart: []
@@ -18,12 +16,6 @@ const clientSlice = createSlice({
     reducers: {
         setIsBurgerMenuOpen: (state) => {
             state.isBurgerMenuOpen = state.isBurgerMenuOpen === false ? true : false
-        },
-        setTotalCount: (state, action) => {
-            state.totalCount = action.payload
-        },
-        setTotalPrice: (state, action) => {
-            state.totalPrice = action.payload
         },
         setCart: (state, action) => {
             state.cart = action.payload
@@ -54,5 +46,5 @@ const clientSlice = createSlice({
     }
 })
 
-export const { setIsBurgerMenuOpen, setTotalCount, setTotalPrice, setCart, addCartItem, removeCartItem } = clientSlice.actions
+export const { setIsBurgerMenuOpen, setCart, addCartItem, removeCartItem } = clientSlice.actions
 export default clientSlice.reducer

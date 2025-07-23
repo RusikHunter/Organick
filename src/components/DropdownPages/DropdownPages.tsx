@@ -1,3 +1,4 @@
+import React, { useCallback } from "react"
 import { Link } from "react-router-dom"
 import { useEffect, useState, useRef } from "react"
 import "./DropdownPages.scss"
@@ -17,9 +18,23 @@ function DropdownPages() {
         { path: Routes.CONTACT, content: "Contact Us" }
     ]
 
-    const handleClick = (): void => {
+    const handleClick = useCallback((): void => {
         setIsOpen(prev => !prev)
-    }
+    }, [])
+
+    const handleFocus = useCallback(() => {
+        if (isKeyboard) {
+            setIsOpen(true)
+        }
+    }, [])
+
+    const handleBlur = useCallback(() => {
+        setTimeout(() => {
+            if (wrapperRef.current && !wrapperRef.current.contains(document.activeElement)) {
+                setIsOpen(false)
+            }
+        }, 0)
+    }, [])
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -61,20 +76,6 @@ function DropdownPages() {
         }
     }, [isOpen])
 
-    const handleFocus = () => {
-        if (isKeyboard) {
-            setIsOpen(true)
-        }
-    }
-
-    const handleBlur = () => {
-        setTimeout(() => {
-            if (wrapperRef.current && !wrapperRef.current.contains(document.activeElement)) {
-                setIsOpen(false)
-            }
-        }, 0)
-    }
-
     return (
         <div className="header__dropdown-wrap"
             onFocus={handleFocus}
@@ -105,4 +106,4 @@ function DropdownPages() {
     )
 }
 
-export default DropdownPages
+export default React.memo(DropdownPages)

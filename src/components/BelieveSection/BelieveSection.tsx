@@ -6,8 +6,24 @@ import OrganicFoodsImage from "@assets/icons/organic-foods.svg"
 import QualityStandardsImage from "@assets/icons/quality-standards.svg"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
+import type { BelieveSectionFeatures } from "@interfaces/believeSectionFeatures"
 
 function BelieveSection() {
+    const features: BelieveSectionFeatures[] = [
+        {
+            imageURL: OrganicFoodsImage,
+            alt: "Organic Foods",
+            title: "Organic Foods Only",
+            text: "All our food is grown naturally..."
+        },
+        {
+            imageURL: QualityStandardsImage,
+            alt: "Quality Standards",
+            title: "Quality Standards",
+            text: "We follow strict quality guidelines..."
+        }
+    ]
+
     return (
         <section className="believe">
             <div className="believe__inner container">
@@ -28,35 +44,15 @@ function BelieveSection() {
                         <h2 className="believe__title h2">We Believe in Working Accredited Farmers</h2>
                         <p className="believe__text text">We partner only with trusted and certified farmers to ensure every product meets high-quality and sustainability standards.</p>
 
-                        <div className="believe__feature-wrap">
-                            <img
-                                src={OrganicFoodsImage}
-                                alt="Organic Foods"
-                                className="believe__icon"
-                                width={101}
-                                height={101}
-                                loading="lazy"
-                            />
-                            <div className="believe__feature-text-wrap">
-                                <h6 className="believe__feature-title h6">Organic Foods Only</h6>
-                                <p className="believe__feature-text text">All our food is grown naturally, free from harmful chemicals, supporting both your health and the environment.</p>
+                        {features.map((feature, index) => (
+                            <div className="believe__feature-wrap" key={index}>
+                                <img src={feature.imageURL} alt={feature.alt} className="believe__icon" width={101} height={101} loading="lazy" />
+                                <div className="believe__feature-text-wrap">
+                                    <h6 className="believe__feature-title h6">{feature.title}</h6>
+                                    <p className="believe__feature-text text">{feature.text}</p>
+                                </div>
                             </div>
-                        </div>
-
-                        <div className="believe__feature-wrap">
-                            <img
-                                src={QualityStandardsImage}
-                                alt="Organic Foods"
-                                className="believe__icon"
-                                width={101}
-                                height={101}
-                                loading="lazy"
-                            />
-                            <div className="believe__feature-text-wrap">
-                                <h6 className="believe__feature-title h6">Quality Standards</h6>
-                                <p className="believe__feature-text text">We follow strict quality guidelines and work with top producers to bring you fresh, organic, and responsibly sourced products.</p>
-                            </div>
-                        </div>
+                        ))}
 
                         <Link to="/shop" className="believe__link" tabIndex={-1}>
                             <button className="believe__button button button--blue">

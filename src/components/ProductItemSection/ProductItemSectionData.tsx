@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useCallback, useState } from "react"
 import { useAppDispatch } from "@hooks/useAppDispatch"
 import { useAppSelector } from "@hooks/useAppSelector"
 import { addCartItem } from "@store/reducers/clientReducer"
@@ -13,7 +13,7 @@ function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
     const dispatch = useAppDispatch()
     const cart = useAppSelector(state => state.client.cart)
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
         const value = Number(event.target.value)
 
         if (value >= MIN_PRODUCT_COUNT && value <= MAX_PRODUCT_COUNT) {
@@ -23,9 +23,9 @@ function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
         } else if (value > MAX_PRODUCT_COUNT) {
             setProductCount(`${MAX_PRODUCT_COUNT}`)
         }
-    }
+    }, [])
 
-    const handleAdd = (event: React.MouseEvent<HTMLButtonElement>): void => {
+    const handleAdd = useCallback((event: React.MouseEvent<HTMLButtonElement>): void => {
         event.preventDefault()
 
         if (productCount === "0") {
@@ -49,7 +49,7 @@ function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
         setProductCount("0")
 
         toast.success("Product added to the cart!")
-    }
+    }, [productCount, cart, dispatch, id])
 
     return (
         <>
@@ -126,4 +126,4 @@ function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
     )
 }
 
-export default ProductItemSectionData
+export default React.memo(ProductItemSectionData)

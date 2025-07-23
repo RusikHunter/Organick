@@ -1,7 +1,27 @@
+import React, { useCallback } from "react"
 import type { PaymentSectionCardProps } from "@interfaces/paymentSectionCardProps"
 import { Controller } from "react-hook-form"
 
 function PaymentSectionCard({ control, register, errors }: PaymentSectionCardProps) {
+    const handleDateChange = useCallback(
+        (fieldOnChange: (value: string) => void) => (e: React.ChangeEvent<HTMLInputElement>) => {
+            let value = e.target.value.replace(/[^\d]/g, "")
+            if (value.length > 4) value = value.slice(0, 4)
+            if (value.length > 2) value = value.slice(0, 2) + "/" + value.slice(2)
+            fieldOnChange(value)
+        },
+        []
+    )
+
+    const handleCardChange = useCallback(
+        (fieldOnChange: (value: string) => void) => (e: React.ChangeEvent<HTMLInputElement>) => {
+            let rawValue = e.target.value.replace(/[^\d]/g, "").slice(0, 16)
+            const formatted = rawValue.match(/.{1,4}/g)?.join(" ") || ""
+            fieldOnChange(formatted)
+        },
+        []
+    )
+
     return (
         <>
             <h4 className="payment__title payment__title--card h4">Card</h4>
@@ -24,12 +44,7 @@ function PaymentSectionCard({ control, register, errors }: PaymentSectionCardPro
                                 className="payment__input payment__input--card-date input"
                                 id="paymentInputCardDate"
                                 value={field.value}
-                                onChange={(e) => {
-                                    let value = e.target.value.replace(/[^\d]/g, "")
-                                    if (value.length > 4) value = value.slice(0, 4)
-                                    if (value.length > 2) value = value.slice(0, 2) + "/" + value.slice(2)
-                                    field.onChange(value)
-                                }}
+                                onChange={handleDateChange(field.onChange)}
                             />
                         )}
                     />
@@ -65,13 +80,7 @@ function PaymentSectionCard({ control, register, errors }: PaymentSectionCardPro
                                 className="payment__input payment__input--card-number input"
                                 id="paymentInputCardNumber"
                                 value={field.value}
-                                onChange={(e) => {
-                                    let rawValue = e.target.value.replace(/[^\d]/g, "").slice(0, 16)
-
-                                    const formatted = rawValue.match(/.{1,4}/g)?.join(" ") || ""
-
-                                    field.onChange(formatted)
-                                }}
+                                onChange={handleCardChange(field.onChange)}
                             />
                         )}
                     />
@@ -81,4 +90,4 @@ function PaymentSectionCard({ control, register, errors }: PaymentSectionCardPro
     )
 }
 
-export default PaymentSectionCard
+export default React.memo(PaymentSectionCard)

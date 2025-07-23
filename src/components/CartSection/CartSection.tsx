@@ -1,59 +1,41 @@
+import React from "react"
 import "./CartSection.scss"
 import CartProductItem from "@components/CartProductItem/CartProductItem"
 import { Link } from "react-router-dom"
 import { useAppSelector } from "@hooks/useAppSelector"
-import { useEffect, useState } from "react"
+import { useMemo, useState } from "react"
 import { promocodes } from "@mocks/promocodes"
-import { useAppDispatch } from "@hooks/useAppDispatch"
-import { setTotalCount, setTotalPrice } from "@store/reducers/clientReducer"
+import { TAXES_VALUE, DELIVERY_VALUE } from "@config/product-settings"
 
 function CartSection() {
     const [promocode, setPromocode] = useState<string>("")
     const [discount, setDiscount] = useState<number>(0)
 
-    const totalCount = useAppSelector(state => state.client.totalCount)
-    const totalPrice = useAppSelector(state => state.client.totalPrice)
-
-    const dispatch = useAppDispatch()
-
     const cart = useAppSelector(state => state.client.cart)
     const products = useAppSelector(state => state.client.products)
 
-    const TAXES_VALUE = 2
-    const DELIVERY_VALUE = 5
-
-    const handlePromocodeChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        const value = event.target.value
+    const handlePromocodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value
         setPromocode(value)
 
-        if (event.target.value.length === 8) {
-            const isActivePromocode: boolean = promocodes.includes(event.target.value)
-
-            if (isActivePromocode) {
-                setDiscount(5)
-            } else {
-                setDiscount(0)
-            }
-        } else {
-            setDiscount(0)
-        }
+        setDiscount(value.length === 8 && promocodes.includes(value) ? 5 : 0)
     }
 
-    useEffect(() => {
-        const totalCount = cart.reduce((accumulator, item) => accumulator + item.count, 0)
-        const totalPrice = totalCount === 0
-            ? 0
-            : (products.length > 0
-                ? cart.reduce((accumulator, item) => {
-                    const product = products.find(product => product.id === item.id)
-                    if (!product) return accumulator
-                    return accumulator + (item.count * product.discountPrice)
-                }, 0) + TAXES_VALUE + DELIVERY_VALUE - discount
-                : 0)
+    const totalCount = useMemo(() => cart.reduce((acc, item) => acc + item.count, 0), [cart])
 
-        dispatch(setTotalCount(totalCount))
-        dispatch(setTotalPrice(totalPrice.toFixed(2)))
-    }, [cart, discount])
+    const totalPrice = useMemo(() => {
+        if (totalCount === 0) return 0
+
+        const sum = cart.reduce((acc, item) => {
+            const product = products.find(p => p.id === item.id)
+            if (!product) return acc
+            return acc + item.count * product.discountPrice
+        }, 0)
+
+        return sum + TAXES_VALUE + DELIVERY_VALUE - discount
+    }, [cart, products, totalCount, discount])
+
+    const displayTotalPrice = totalPrice.toFixed(2)
 
     return (
         <section className="cart">
@@ -93,10 +75,10 @@ function CartSection() {
                                             />
                                         </label> : null}
 
-                                        <h3 className="cart__price h3">Total price: {Number(totalPrice).toFixed(2)}$</h3>
+                                        <h3 className="cart__price h3">Total price: {Number(displayTotalPrice)}$</h3>
                                     </div>
 
-                                    {totalPrice ? <Link to="/payment" className="cart__link" tabIndex={-1}>
+                                    {totalPrice ? <Link to="/payment" className="cart__link" tabIndex={-1} state={{ totalPrice, totalCount }}>
                                         <button className="cart__button morenews__button--more button button--blue">
                                             For Payment
 
@@ -125,4 +107,4 @@ function CartSection() {
     )
 }
 
-export default CartSection
+export default React.memo(CartSection)

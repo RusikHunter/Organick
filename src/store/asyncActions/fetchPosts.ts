@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
-import { postsURL } from '@config/responseURLs'
+import { postsURL } from '@config/response-URLs'
 
 export const fetchPosts = createAsyncThunk(
     'client/fetchPosts',

@@ -63,6 +63,10 @@
         }
     }
 
+    &__content-wrap--hidden {
+        display: none;
+    }
+
     &__promo,
     &__title,
     &__description {
