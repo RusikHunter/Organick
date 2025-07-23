@@ -33,7 +33,7 @@
         border-radius: 36px;
         background-size: cover;
         background-position: center;
-        transition: transform var(--transition);
+        transition: box-shadow var(--transition);
 
         @include tablet {
             width: 682px;
@@ -52,7 +52,7 @@
 
             &:hover,
             &:focus-visible {
-                transform: scale(1.02);
+                box-shadow: var(--box-shadow);
             }
         }
 
@@ -60,7 +60,7 @@
 
             &:hover,
             &:focus-visible {
-                transform: none;
+                box-shadow: none;
             }
         }
     }

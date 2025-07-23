@@ -30,26 +30,6 @@
         }
     }
 
-    &__logo-link {
-        transition: transform var(--transition);
-
-        @include desktop-screen {
-
-            &:hover,
-            &:focus-visible {
-                transform: scale(1.03);
-            }
-        }
-
-        @include touch-screen {
-
-            &:hover,
-            &:focus-visible {
-                transform: none;
-            }
-        }
-    }
-
     &__logo {
         @media (max-width: 1644px) {
             width: 169px;
@@ -81,7 +61,7 @@
         @include fluid-text(20, 16);
         @include font(var(--font-family), 700, 1);
         color: var(--color-blue);
-        transition: transform var(--transition);
+        transition: color var(--transition);
 
         @media (max-width: 1170px) {
             @include fluid-text(16, 14);
@@ -91,7 +71,7 @@
 
             &:hover,
             &:focus-visible {
-                transform: scale(1.05);
+                color: var(--color-darkblue);
             }
         }
 
@@ -99,7 +79,7 @@
 
             &:hover,
             &:focus-visible {
-                transform: none;
+                color: var(--color-blue);
             }
         }
     }

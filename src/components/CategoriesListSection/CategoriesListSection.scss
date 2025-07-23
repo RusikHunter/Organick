@@ -52,10 +52,6 @@
                 & .categories-list__category::after {
                     opacity: 0.5;
                 }
-
-                & .categories-list__button {
-                    transform: scale(1.02);
-                }
             }
         }
 
@@ -65,10 +61,6 @@
             &:focus-visible {
                 & .categories-list__category::after {
                     opacity: 0;
-                }
-
-                & .categories-list__button {
-                    transform: none;
                 }
             }
         }
@@ -85,10 +77,6 @@
 
         &>* {
             z-index: 99;
-        }
-
-        & .categories-list__button {
-            transition: transform var(--transition);
         }
 
         &::after {

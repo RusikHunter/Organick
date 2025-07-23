@@ -72,13 +72,14 @@
 
     &__product {
         display: block;
-        transition: transform var(--transition);
 
         @include desktop-screen {
 
             &:hover,
             &:focus-visible {
-                transform: scale(1.02);
+                .offer__product-image {
+                    box-shadow: var(--box-shadow-dark);
+                }
             }
         }
 
@@ -86,7 +87,9 @@
 
             &:hover,
             &:focus-visible {
-                transform: none;
+                .offer__product-image {
+                    box-shadow: none;
+                }
             }
         }
     }
@@ -94,6 +97,7 @@
     &__product-image {
         border-radius: 30px;
         width: 100%;
+        transition: box-shadow var(--transition) !important;
     }
 
     &__product-title {

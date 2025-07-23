@@ -30,8 +30,8 @@ function CouponsSection() {
             <div className="coupons__inner container">
                 <div className="coupons__row row">
                     {links.map((link, index) => (
-                        <div className="coupons__column coupons__column--2 column" key={index}>
-                            <Link to={link.path} className="coupons__coupon coupons__coupon--2">
+                        <div className={`coupons__column coupons__column--${index + 1} column`} key={index}>
+                            <Link to={link.path} className={`coupons__coupon coupons__coupon--${index + 1}`}>
                                 <div className="coupons__coupon-content">
                                     {link.content}
                                 </div>

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import "./NewsCard.scss"
 import { Link } from "react-router-dom"
 import type { NewsCardProps } from "@interfaces/newsCardProps"
-import PostBlurredBackground from "@assets/images/background/post-blurred.png"
+import PostBlurredBackground from "@assets/images/background/post-blurred.webp"
 
 function NewsCard({ post }: NewsCardProps) {
     const ref = useRef<HTMLElement>(null)

@@ -11,7 +11,7 @@
         &:hover,
         &:focus-visible {
             background-color: var(--color-white);
-            box-shadow: 0 29px 44px 0 rgba(150, 150, 150, 0.25);
+            box-shadow: var(--box-shadow);
         }
     }
 
@@ -72,14 +72,14 @@
 
     &__social-network-link {
         color: var(--color-blue);
-        transition: color var(--transition), transform var(--transition);
+        transition: color var(--transition), filter var(--transition);
 
         @include desktop-screen {
 
             &:hover,
             &:focus-visible {
                 color: var(--color-darkblue);
-                transform: scale(1.05);
+                filter: brightness(0.5);
             }
         }
 
@@ -88,7 +88,7 @@
             &:hover,
             &:focus-visible {
                 color: var(--color-blue);
-                transform: none;
+                filter: none;
             }
         }
     }

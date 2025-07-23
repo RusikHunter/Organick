@@ -14,6 +14,7 @@
     --color-yellow: #EFD372;
     --color-darkyellow: #E7CD6E;
     --color-red: #C95F5F;
+    --color-darkred: #AA4A4A;
     --color-orange: #FFA858;
     --color-gray: #D4D4D4;
     --color-darkgray: #525C60;
@@ -30,6 +31,13 @@
     // border radii are not set
     // because in the layout these values ​​are unique for each component
     //
+
+    // Box shadow
+
+    --box-shadow: 0 29px 44px 0 rgba(150, 150, 150, 0.25);
+    --box-shadow-medium: 0 15px 22px 0 rgba(150, 150, 150, 0.25);
+    --box-shadow-small: 0 5px 7px 0 rgba(150, 150, 150, 0.25);
+    --box-shadow-dark: 0 29px 44px 0 rgba(31, 31, 31, 0.25);
 
     // Fonts
 

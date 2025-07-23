@@ -156,13 +156,13 @@
     &__product-card {
         display: flex;
         align-items: center;
-        transition: transform var(--transition);
+        transition: box-shadow var(--transition);
 
         @include desktop-screen {
 
             &:hover,
             &:focus-visible {
-                transform: scale(1.01);
+                box-shadow: var(--box-shadow-small);
             }
         }
 
@@ -170,7 +170,7 @@
 
             &:hover,
             &:focus-visible {
-                transform: none;
+                box-shadow: none;
             }
         }
     }

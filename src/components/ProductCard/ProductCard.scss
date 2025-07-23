@@ -7,13 +7,13 @@
     border-radius: 30px;
     background-color: var(--color-lightgray);
     position: relative;
-    transition: transform var(--transition);
+    transition: box-shadow var(--transition);
 
     @include desktop-screen {
 
         &:hover,
         &:focus-visible {
-            transform: scale(1.03);
+            box-shadow: var(--box-shadow-medium);
         }
     }
 
@@ -21,7 +21,7 @@
 
         &:hover,
         &:focus-visible {
-            transform: none;
+            box-shadow: none;
         }
     }
 
