@@ -71,7 +71,7 @@
         border: var(--border-default);
         width: 352px;
         padding: 12px;
-        transition: transform var(--transition);
+        transition: box-shadow var(--transition);
 
         &:first-child {
             margin-top: 35px;
@@ -81,7 +81,7 @@
 
             &:hover,
             &:focus-visible {
-                transform: scale(1.02);
+                box-shadow: var(--box-shadow-medium);
             }
         }
 
@@ -89,9 +89,7 @@
 
             &:hover,
             &:focus-visible {
-                & svg {
-                    transform: none;
-                }
+                box-shadow: none;
             }
         }
 

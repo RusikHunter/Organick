@@ -1,4 +1,4 @@
-import "@styles/EcoSection.scss"
+import "./EcoSection.scss"
 import type { DescriptionListItem } from "@interfaces/descriptionListItem"
 
 function EcoSection() {

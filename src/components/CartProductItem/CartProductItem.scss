@@ -81,13 +81,13 @@
     }
 
     &__button--delete {
-        transition: transform var(--transition);
+        transition: filter var(--transition);
 
         @include desktop-screen {
 
             &:hover,
             &:focus-visible {
-                transform: scale(1.05);
+                filter: brightness(0.8);
             }
         }
 
@@ -95,7 +95,7 @@
 
             &:hover,
             &:focus-visible {
-                transform: none;
+                filter: brightness(1);
             }
         }
     }
