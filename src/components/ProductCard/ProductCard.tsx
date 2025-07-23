@@ -1,3 +1,4 @@
+import React from "react"
 import "./ProductCard.scss"
 import { Link } from "react-router-dom"
 import type { ProductCardProps } from "@interfaces/productCardProps"
@@ -52,4 +53,4 @@ function ProductCard({ isCartItem, productData }: ProductCardProps) {
     )
 }
 
-export default ProductCard
+export default React.memo(ProductCard)

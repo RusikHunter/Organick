@@ -1,33 +1,22 @@
 import FruitsMovie from "@assets/movies/fruits.mp4"
 import "./VideoSection.scss"
-import { useState, useRef } from "react"
+import React, { useState, useRef, useEffect, useCallback } from "react"
 
 function VideoSection() {
-    const [isPlaying, setIsPlaying] = useState<boolean>(false)
-    const contentWrapRef = useRef<HTMLDivElement | null>(null)
+    const [isPlaying, setIsPlaying] = useState(false)
     const videoPlayerRef = useRef<HTMLVideoElement | null>(null)
 
-    const handleClick = (): void => {
-        setIsPlaying(prev => {
-            const newState = !prev
+    const handleClick = useCallback(() => {
+        setIsPlaying(prev => !prev)
+    }, [])
 
-            if (!isPlaying) {
-                videoPlayerRef.current?.play()
-
-                if (contentWrapRef.current) {
-                    contentWrapRef.current.style.display = "none"
-                }
-            } else {
-                videoPlayerRef.current?.pause()
-
-                if (contentWrapRef.current) {
-                    contentWrapRef.current.style.display = "block"
-                }
-            }
-
-            return newState
-        })
-    }
+    useEffect(() => {
+        if (isPlaying) {
+            videoPlayerRef.current?.play()
+        } else {
+            videoPlayerRef.current?.pause()
+        }
+    }, [isPlaying])
 
     return (
         <section className="video" onClick={handleClick}>
@@ -36,7 +25,7 @@ function VideoSection() {
                     <div className="video__column column">
                         <video src={FruitsMovie} className="video__movie" ref={videoPlayerRef}></video>
 
-                        <div className="video__content-wrap" ref={contentWrapRef}>
+                        <div className={`video__content-wrap ${isPlaying ? 'video__content-wrap--hidden' : ''}`}>
                             <span className="video__promo promo">Organic Only</span>
 
                             <h2 className="video__title h2">Everyday Fresh & Clean</h2>
@@ -56,4 +45,4 @@ function VideoSection() {
     )
 }
 
-export default VideoSection
+export default React.memo(VideoSection)

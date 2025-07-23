@@ -5,7 +5,7 @@
 // background image, and full-width content.
 //
 
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import "./IntroBlock.scss"
 import type { IntroBlockProps } from "@interfaces/introBlockProps"
 
@@ -48,4 +48,4 @@ function IntroBlock({ content, backgroundImageURL, blurredBackgroundImageURL }: 
     )
 }
 
-export default IntroBlock
+export default React.memo(IntroBlock)

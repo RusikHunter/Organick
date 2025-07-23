@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
-import { productsURL } from '@config/responseURLs'
+import { productsURL } from '@config/response-URLs'
 
 export const fetchProducts = createAsyncThunk(
     'client/fetchProducts',

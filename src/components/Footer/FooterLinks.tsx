@@ -14,8 +14,8 @@ function FooterLinks() {
     return (
         <ul className="footer__list footer__list--utility-pages">
             {links.map((link, index) => (
-                <li className="footer__list-item footer__list-item--utility-pages">
-                    <Link key={index} to={link.path} className="footer__link text">{link.content}</Link>
+                <li className="footer__list-item footer__list-item--utility-pages" key={index}>
+                    <Link to={link.path} className="footer__link text">{link.content}</Link>
                 </li>
             ))}
         </ul>

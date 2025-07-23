@@ -1,3 +1,4 @@
+import React from "react"
 import { useEffect, useRef, useState } from "react"
 import "./NewsCard.scss"
 import { Link } from "react-router-dom"
@@ -67,4 +68,4 @@ function NewsCard({ post }: NewsCardProps) {
     )
 }
 
-export default NewsCard
+export default React.memo(NewsCard)

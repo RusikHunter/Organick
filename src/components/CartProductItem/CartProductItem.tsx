@@ -1,3 +1,4 @@
+import React, { useCallback } from "react"
 import "./CartProductItem.scss"
 import ProductCard from "../ProductCard/ProductCard"
 import { useState } from "react"
@@ -19,7 +20,7 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
 
     const cartProduct: Product = products.find(product => product.id === cartItem.id) as Product
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>): void => {
         let value = Number(event.target.value)
 
         if (value >= 0 && value <= MAX_PRODUCT_COUNT) {
@@ -38,13 +39,13 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
         }
 
         dispatch(addCartItem(cartItemToChange))
-    }
+    }, [dispatch, cartItem.id])
 
-    const handleDelete = (): void => {
+    const handleDelete = useCallback((): void => {
         const index = cart.findIndex(item => item.id === cartItem.id)
 
         dispatch(removeCartItem(index))
-    }
+    }, [dispatch, cartItem.id, cart])
 
     return (
         <article className="cart-item">
@@ -66,4 +67,4 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
     )
 }
 
-export default CartProductItem
+export default React.memo(CartProductItem)

@@ -1,3 +1,4 @@
+import React, { useCallback } from "react"
 import { setIsBurgerMenuOpen } from "@store/reducers/clientReducer"
 import "./BurgerButton.scss"
 import { useAppDispatch } from "@hooks/useAppDispatch"
@@ -8,9 +9,9 @@ function BurgerButton() {
 
     const isBurgerMenuOpen = useAppSelector(state => state.client.isBurgerMenuOpen)
 
-    const handleClick = (): void => {
+    const handleClick = useCallback(() => {
         dispatch(setIsBurgerMenuOpen())
-    }
+    }, [dispatch])
 
     return (
         <button className={`burger-button${isBurgerMenuOpen ? ` burger-button--active` : ''}`} onClick={handleClick}>
@@ -23,4 +24,4 @@ function BurgerButton() {
     )
 }
 
-export default BurgerButton
+export default React.memo(BurgerButton)
