@@ -13,6 +13,7 @@ import { useAppDispatch } from "@hooks/useAppDispatch"
 import PaymentSectionDelivery from "./PaymentSectionDelivery"
 import PaymentSectionCard from "./PaymentSectionCard"
 import PaymentSectionDetails from "./PaymentSectionDetails"
+import { Routes } from "@config/routes"
 
 const schema = yup.object().shape({
     full_name: yup.string().required("This field is required"),
@@ -66,11 +67,11 @@ function PaymentSection() {
             toast.success("Order created!")
             reset()
             dispatch(setCart([]))
-            navigate("/thankyou")
+            navigate(Routes.THANK_YOU)
         } catch (error) {
             toast.error("Error creating.")
             reset()
-            navigate("/cart")
+            navigate(Routes.CART)
         }
     }, [])
 
