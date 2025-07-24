@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 import "./CategoriesListSection.scss"
 import { Routes } from "@config/routes"
-import type { RouteLink } from "@interfaces/routeLink"
+import type { RouteLinkObject } from "@interfaces/routeLinkObject"
 
 function CategoriesListSection() {
-    const links: RouteLink[] = [
+    const links: RouteLinkObject[] = [
         { path: Routes.SHOP, content: "Organic Juice" },
         { path: Routes.SHOP, content: "Organic Food" },
         { path: Routes.SHOP, content: "Nuts Cookies" }

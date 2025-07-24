@@ -2,6 +2,7 @@ import BurgerButton from "@components/BurgerButton/BurgerButton"
 import DropdownSearch from "@components/DropdownSearch/DropdownSearch"
 import { Link } from "react-router-dom"
 import { useAppSelector } from "@hooks/useAppSelector"
+import { Routes } from "@config/routes"
 
 function HeaderControls() {
     const cart = useAppSelector(state => state.client.cart)
@@ -10,7 +11,7 @@ function HeaderControls() {
         <>
             <DropdownSearch />
 
-            <Link to="/cart" className="header__link--cart" tabIndex={-1}>
+            <Link to={Routes.CART} className="header__link--cart" tabIndex={-1}>
                 <button className="header__button--cart">
                     <span className="header__button--cart-decoration">
                         <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">

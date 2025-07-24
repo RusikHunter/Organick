@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import "./BelieveSection.scss"
 import AccreditedFarmersFruitsImage from "@assets/images/decorative/accredited-farmers-fruits.webp"
 import AccreditedFarmersFruitsBlurredImage from "@assets/images/decorative/accredited-farmers-fruits-blurred.webp"
@@ -7,6 +6,10 @@ import QualityStandardsImage from "@assets/icons/quality-standards.svg"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
 import type { BelieveSectionFeatures } from "@interfaces/believeSectionFeatures"
+import RouteLink from "@components/RouteLink/RouteLink"
+import { RouteLinkColor } from "@interfaces/routeLink"
+import { Routes } from "@config/routes"
+// import RouteLink from "@components/RouteLink/RouteLink"
 
 function BelieveSection() {
     const features: BelieveSectionFeatures[] = [
@@ -54,16 +57,7 @@ function BelieveSection() {
                             </div>
                         ))}
 
-                        <Link to="/shop" className="believe__link" tabIndex={-1}>
-                            <button className="believe__button button button--blue">
-                                Shop now
-
-                                <svg width="20" height="19" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="9.5" r="9.5" fill="#335B6B" />
-                                    <path className="button__svg-arrow" d="M9.97641 6.12891L13.371 9.19342L9.97641 12.2579M12.8995 9.19342H6.01611" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                        </Link>
+                        <RouteLink color={RouteLinkColor.BLUE} path={Routes.SHOP} text={"Shop now"} className="believe__link" />
                     </div>
                 </div>
             </div>

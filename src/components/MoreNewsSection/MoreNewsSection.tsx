@@ -1,6 +1,9 @@
 import "./MoreNewsSection.scss"
 import { Link } from "react-router-dom"
 import NewsWrap from "@components/NewsWrap/NewsWrap"
+import RouteLink from "@components/RouteLink/RouteLink"
+import { RouteLinkColor } from "@interfaces/routeLink"
+import { Routes } from "@config/routes"
 
 function MoreNewsSection() {
     return (
@@ -23,6 +26,8 @@ function MoreNewsSection() {
                                 </svg>
                             </button>
                         </Link>
+
+                        <RouteLink color={RouteLinkColor.TRANSPARENT} path={Routes.BLOG} text="More News" className="morenews__link" />
                     </div>
                 </div>
 

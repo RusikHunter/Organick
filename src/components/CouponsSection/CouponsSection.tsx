@@ -1,10 +1,10 @@
 import "./CouponsSection.scss"
 import { Link } from "react-router-dom"
 import { Routes } from "@config/routes"
-import type { RouteLink } from "@interfaces/routeLink"
+import type { RouteLinkObject } from "@interfaces/routeLinkObject"
 
 function CouponsSection() {
-    const links: RouteLink[] = [
+    const links: RouteLinkObject[] = [
         {
             path: Routes.SHOP,
             content: (

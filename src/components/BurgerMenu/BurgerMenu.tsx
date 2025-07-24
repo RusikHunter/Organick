@@ -5,7 +5,7 @@ import { useRef } from "react"
 import { useAppSelector } from "@hooks/useAppSelector"
 import { useAppDispatch } from "@hooks/useAppDispatch"
 import { setIsBurgerMenuOpen } from "@store/reducers/clientReducer"
-import type { RouteLink } from "@interfaces/routeLink"
+import type { RouteLinkObject } from "@interfaces/routeLinkObject"
 import { Routes } from "@config/routes"
 
 function BurgerMenu() {
@@ -15,7 +15,7 @@ function BurgerMenu() {
 
     const burgerMenuRef = useRef<HTMLDivElement | null>(null)
 
-    const links: RouteLink[] = useMemo(() => [
+    const links: RouteLinkObject[] = useMemo(() => [
         { path: Routes.MAIN, content: "Home" },
         { path: Routes.ABOUT, content: "About" },
         { path: Routes.SERVICES, content: "Services" },

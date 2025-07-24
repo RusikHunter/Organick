@@ -108,10 +108,6 @@
         margin-top: 30px;
     }
 
-    &__button {
-        margin-top: 30px;
-    }
-
     &__text--empty {
         text-align: center;
         padding-block: 150px;
@@ -123,5 +119,6 @@
 
     &__link {
         width: max-content;
+        margin-top: 30px;
     }
 }

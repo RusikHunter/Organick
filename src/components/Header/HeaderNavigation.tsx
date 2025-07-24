@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
-import type { RouteLink } from "@interfaces/routeLink"
+import type { RouteLinkObject } from "@interfaces/routeLinkObject"
 import { Routes } from "@config/routes"
 import DropdownPages from "@components/DropdownPages/DropdownPages"
 
 function HeaderNavigation() {
-    const links: RouteLink[] = [
+    const links: RouteLinkObject[] = [
         { path: Routes.MAIN, content: "Home" },
         { path: Routes.ABOUT, content: "About" },
         // HACK: this list item is not a route link

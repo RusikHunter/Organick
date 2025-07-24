@@ -2,7 +2,7 @@ import React, { useCallback } from "react"
 import { Link } from "react-router-dom"
 import { useEffect, useState, useRef } from "react"
 import "./DropdownPages.scss"
-import type { RouteLink } from "@interfaces/routeLink"
+import type { RouteLinkObject } from "@interfaces/routeLinkObject"
 import { Routes } from "@config/routes"
 
 function DropdownPages() {
@@ -12,7 +12,7 @@ function DropdownPages() {
     const wrapperRef = useRef<HTMLDivElement | null>(null)
     const navigationButtonRef = useRef<HTMLButtonElement | null>(null)
 
-    const links: RouteLink[] = [
+    const links: RouteLinkObject[] = [
         { path: Routes.SERVICES, content: "Services" },
         { path: Routes.TEAM, content: "Team" },
         { path: Routes.CONTACT, content: "Contact Us" }
