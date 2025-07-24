@@ -1,9 +1,11 @@
 import React from "react"
 import { useEffect, useRef, useState } from "react"
 import "./NewsCard.scss"
-import { Link } from "react-router-dom"
 import type { NewsCardProps } from "@interfaces/newsCardProps"
 import PostBlurredBackground from "@assets/images/background/post-blurred.webp"
+import RouteLink from "@components/RouteLink/RouteLink"
+import { RouteLinkColor } from "@interfaces/routeLink"
+import { Routes } from "@config/routes"
 
 function NewsCard({ post }: NewsCardProps) {
     const ref = useRef<HTMLElement>(null)
@@ -54,15 +56,8 @@ function NewsCard({ post }: NewsCardProps) {
                 </span>
                 <h6 className="news-card__news-title h6">{post.title}</h6>
                 <p className="news-card__news-text text">{post.description}</p>
-                <Link to={`/blog/${post.id}`} className="news-card__link" tabIndex={-1}>
-                    <button className="news-card__button news-card__button--read button button--yellow">
-                        Read More
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9.5" cy="9.5" r="9.5" fill="currentColor" />
-                            <path className="button__svg-arrow" d="M9.47641 6.12891L12.871 9.19342L9.47641 12.2579M12.3995 9.19342H5.51611" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </button>
-                </Link>
+
+                <RouteLink color={RouteLinkColor.YELLOW} path={`${Routes.BLOG}/${post.id}`} text="Read More" className="news-card__link" />
             </div>
         </article>
     )

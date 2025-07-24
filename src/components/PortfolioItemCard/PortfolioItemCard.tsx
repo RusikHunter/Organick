@@ -3,10 +3,11 @@ import { Link } from "react-router-dom"
 import type { PortfolioItemCardProps } from "@interfaces/portfolioItemCardProps"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
+import { Routes } from "@config/routes"
 
 function PortfolioItemCard({ id, title, type, backgroundImageURL, backgroundBlurredImageURL, className }: PortfolioItemCardProps) {
     return (
-        <Link to={`/portfolio/${id}`} className={`${className} portfolio-item-card`} >
+        <Link to={`${Routes.PORTFOLIO}/${id}`} className={`${className} portfolio-item-card`} >
             <div className="portfolio-item-card__image-wrap">
                 <LazyLoadImage
                     src={backgroundImageURL}

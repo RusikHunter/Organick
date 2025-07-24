@@ -5,11 +5,12 @@ import type { ProductCardProps } from "@interfaces/productCardProps"
 import ProductBlurredImage from "@assets/images/background/product-blurred.webp"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
+import { Routes } from "@config/routes"
 
 function ProductCard({ isCartItem, productData }: ProductCardProps) {
     return (
         <Link
-            to={`/shop/${productData.id}`}
+            to={`${Routes.SHOP}/${productData.id}`}
             className={`product-card${isCartItem ? ' product-card--cart-item' : ''}`}
             tabIndex={isCartItem ? -1 : 0}
             style={{ ...(isCartItem ? { transform: "none" } : {}) }}

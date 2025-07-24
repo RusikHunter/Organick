@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 import Logo from "@assets/icons/logo.svg"
+import { Routes } from "@config/routes"
 
 function HeaderLogo() {
     return (
-        <Link to="/" className="header__logo-link">
+        <Link to={Routes.MAIN} className="header__logo-link">
             <img className="header__logo" src={Logo} alt="Organick" width={199} height={54} loading="lazy" />
         </Link>
     )

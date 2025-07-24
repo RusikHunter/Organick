@@ -50,7 +50,13 @@
     @include overlay;
 }
 
+.route-link {
+    width: max-content;
+}
+
 .button {
+    display: flex;
+    justify-content: center;
     @include fluid-text(20, 20);
     @include font(var(--font-family), 700, 1);
     border-radius: 16px;
@@ -59,7 +65,7 @@
 
     & svg {
         position: relative;
-        top: 3px;
+        top: -1px;
         left: 7px;
 
         color: #335B6B;
