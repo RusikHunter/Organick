@@ -11,13 +11,13 @@ import type { IntroBlockProps } from "@interfaces/introBlockProps"
 
 function IntroBlock({ content, backgroundImageURL, blurredBackgroundImageURL }: IntroBlockProps) {
     const ref = useRef<HTMLElement>(null)
-    const [isVisible, setIsVisible] = useState(false)
+    const [isVisible, setIsVisible] = useState<boolean>(false)
 
     useEffect(() => {
-        const section = ref.current
+        const section: HTMLElement | null = ref.current
         if (!section) return
 
-        const observer = new IntersectionObserver(([entry], obs) => {
+        const observer: IntersectionObserver = new IntersectionObserver(([entry], obs) => {
             if (entry.isIntersecting) {
                 setIsVisible(true)
                 obs.unobserve(section)
@@ -26,7 +26,7 @@ function IntroBlock({ content, backgroundImageURL, blurredBackgroundImageURL }: 
 
         observer.observe(section)
 
-        return () => observer.disconnect()
+        return (): void => observer.disconnect()
     }, [])
 
     return (

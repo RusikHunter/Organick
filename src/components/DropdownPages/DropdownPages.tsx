@@ -22,13 +22,13 @@ function DropdownPages() {
         setIsOpen(prev => !prev)
     }, [])
 
-    const handleFocus = useCallback(() => {
+    const handleFocus = useCallback((): void => {
         if (isKeyboard) {
             setIsOpen(true)
         }
     }, [])
 
-    const handleBlur = useCallback(() => {
+    const handleBlur = useCallback((): void => {
         setTimeout(() => {
             if (wrapperRef.current && !wrapperRef.current.contains(document.activeElement)) {
                 setIsOpen(false)
@@ -37,13 +37,13 @@ function DropdownPages() {
     }, [])
 
     useEffect(() => {
-        const handleKeyDown = (e: KeyboardEvent) => {
+        const handleKeyDown = (e: KeyboardEvent): void => {
             if (e.key === 'Tab') {
                 setIsKeyboard(true)
             }
         }
 
-        const handleMouseDown = () => {
+        const handleMouseDown = (): void => {
             setIsKeyboard(false)
         }
 

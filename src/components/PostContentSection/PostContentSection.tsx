@@ -3,11 +3,12 @@ import "./PostContentSection.scss"
 import { useAppSelector } from "@hooks/useAppSelector"
 import parse from 'html-react-parser'
 import Loader from "@components/Loader/Loader"
+import type { Post } from "@interfaces/post"
 
 function PostContentSection() {
     const { id } = useParams<{ id: string }>()
 
-    const post = useAppSelector(state => state.client.posts[Number(id)])
+    const post: Post = useAppSelector(state => state.client.posts[Number(id)])
 
     return (
         <>

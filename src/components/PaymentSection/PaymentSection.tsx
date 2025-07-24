@@ -15,6 +15,25 @@ import PaymentSectionCard from "./PaymentSectionCard"
 import PaymentSectionDetails from "./PaymentSectionDetails"
 import { Routes } from "@config/routes"
 
+type PaymentTemplateParams = {
+    id: string,
+    full_name: string,
+    to_email: string,
+    email: string,
+    company: string,
+    address: string,
+    card: string,
+    products_count: number,
+    total_price: number
+}
+
+type PaymentState = {
+    state: {
+        totalCount: number,
+        totalPrice: number
+    }
+}
+
 const schema = yup.object().shape({
     full_name: yup.string().required("This field is required"),
     email: yup.string().email("Enter correct email").required("This field is required"),
@@ -29,22 +48,22 @@ function PaymentSection() {
     const navigate: NavigateFunction = useNavigate()
     const dispatch = useAppDispatch()
 
-    const { state } = useLocation()
+    const { state } = useLocation() as PaymentState
 
     const { totalPrice, totalCount } = state || {}
 
-    const { register, control, watch, handleSubmit, formState: { errors }, reset } = useForm({
+    const { register, control, watch, handleSubmit, formState: { errors }, reset } = useForm<PaymentFormValues>({
         resolver: yupResolver(schema)
     })
 
-    const full_name = watch("full_name")
-    const email = watch("email")
-    const company = watch("company")
-    const address = watch("address")
-    const card = watch("card")
+    const full_name: string = watch("full_name")
+    const email: string = watch("email")
+    const company: string = watch("company")
+    const address: string = watch("address")
+    const card: string = watch("card")
 
     const onSubmit: SubmitHandler<PaymentFormValues> = useCallback(async (data) => {
-        const templateParams = {
+        const templateParams: PaymentTemplateParams = {
             id: Math.floor(10000000 + Math.random() * 90000000).toString(),
             full_name: data.full_name,
             to_email: data.email,
@@ -73,11 +92,11 @@ function PaymentSection() {
             reset()
             navigate(Routes.CART)
         }
-    }, [])
+    }, [dispatch, navigate, reset, totalCount, totalPrice])
 
     const onError = useCallback((): void => {
         toast.error("Incorrect form data!")
-    }, [])
+    }, [dispatch, navigate, reset, totalCount, totalPrice])
 
     return (
         <section className="payment">

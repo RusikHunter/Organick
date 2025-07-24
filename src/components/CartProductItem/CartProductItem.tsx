@@ -10,6 +10,11 @@ import { useAppDispatch } from "@hooks/useAppDispatch"
 import { addCartItem, removeCartItem } from "@store/reducers/clientReducer"
 import { validateProductCount } from "@utils/validateProductCount"
 
+type CartItemToChange = {
+    id: number,
+    count: number
+}
+
 function CartProductItem({ cartItem }: CartProductItemProps) {
     const [productCount, setProductCount] = useState<string>(cartItem.count.toString())
 
@@ -25,7 +30,7 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
 
         value = validateProductCount(setProductCount, value)
 
-        const cartItemToChange = {
+        const cartItemToChange: CartItemToChange = {
             id: cartItem.id,
             count: value
         }

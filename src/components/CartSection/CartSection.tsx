@@ -17,16 +17,16 @@ function CartSection() {
     const cart = useAppSelector(state => state.client.cart)
     const products = useAppSelector(state => state.client.products)
 
-    const handlePromocodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handlePromocodeChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
         const value = e.target.value
         setPromocode(value)
 
         setDiscount(value.length === 8 && promocodes.includes(value) ? 5 : 0)
     }
 
-    const totalCount = useMemo(() => cart.reduce((acc, item) => acc + item.count, 0), [cart])
+    const totalCount: number = useMemo(() => cart.reduce((acc, item) => acc + item.count, 0), [cart])
 
-    const totalPrice = useMemo(() => {
+    const totalPrice: number = useMemo(() => {
         if (totalCount === 0) return 0
 
         const sum = cart.reduce((acc, item) => {
@@ -38,7 +38,7 @@ function CartSection() {
         return sum + TAXES_VALUE + DELIVERY_VALUE - discount
     }, [cart, products, totalCount, discount])
 
-    const displayTotalPrice = totalPrice.toFixed(2)
+    const displayTotalPrice: string = totalPrice.toFixed(2)
 
     return (
         <section className="cart">

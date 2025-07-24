@@ -9,11 +9,11 @@ import { Routes } from "@config/routes"
 
 function ProductItemSection() {
     const navigate = useNavigate()
-    const id = useParams()
-    const parsedId = Number(id)
-    const products = useAppSelector(state => state.client.products)
+    const { id } = useParams<{ id: string }>()
+    const parsedId: number = Number(id)
+    const products: Product[] = useAppSelector(state => state.client.products)
 
-    const isValidId = !isNaN(parsedId) && Number.isInteger(parsedId) && parsedId >= 0 && parsedId < products.length
+    const isValidId: boolean = !isNaN(parsedId) && Number.isInteger(parsedId) && parsedId >= 0 && parsedId < products.length
 
     useEffect(() => {
         if (products.length === 0) return

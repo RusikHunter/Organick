@@ -17,7 +17,7 @@ function DropdownSearch() {
     const searchWrapRef = useRef<HTMLDivElement | null>(null)
 
     const dispatch = useAppDispatch()
-    const isBurgerMenuOpen = useAppSelector(state => state.client.isBurgerMenuOpen)
+    const isBurgerMenuOpen: boolean = useAppSelector(state => state.client.isBurgerMenuOpen)
     const products: Product[] = useAppSelector(state => state.client.products)
 
     const handleChangeSearchTerm = useCallback((event: React.ChangeEvent<HTMLInputElement>): void => {

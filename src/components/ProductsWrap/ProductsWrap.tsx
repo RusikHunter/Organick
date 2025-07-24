@@ -11,17 +11,18 @@ import Loader from "@components/Loader/Loader"
 function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: ProductWrapProps) {
     const [iteration, setIteration] = useState<number>(1)
 
-    const productsAll = useAppSelector(state => state.client.products)
-    const id = Number(useParams())
+    const productsAll: Product[] = useAppSelector(state => state.client.products)
+    const { id } = useParams<{ id: string }>()
+    const parsedID: number = Number(id)
 
-    const isValidId = !isNaN(id) && id >= 0 && id < productsAll.length
+    const isValidId: boolean = !isNaN(parsedID) && parsedID >= 0 && parsedID < productsAll.length
 
-    let products = productsAll
+    let products: Product[] = productsAll
 
     if (isRelatedProducts && isValidId) {
-        const productOfCurrentPage: Product = productsAll[id]
+        const productOfCurrentPage: Product = productsAll[parsedID]
 
-        const productsSortedByType = productsAll.filter(product => {
+        const productsSortedByType: Product[] = productsAll.filter(product => {
             return product.type === productOfCurrentPage.type && product.id !== productOfCurrentPage.id
         })
 
@@ -30,7 +31,7 @@ function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: P
         products = productsSortedByType
     }
 
-    const cardsCount = isRelatedProducts && products.length < 4
+    const cardsCount: number[] = isRelatedProducts && products.length < 4
         ? Array.from({ length: products.length }, (_, i) => i)
         : Array.from({ length: defaultCardsCount * iteration }, (_, i) => i)
 

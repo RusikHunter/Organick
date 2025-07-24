@@ -3,15 +3,16 @@ import NewsCard from "@components/NewsCard/NewsCard"
 import type { NewsWrapProps } from "@interfaces/newsWrapProps"
 import { useAppSelector } from "@hooks/useAppSelector"
 import Loader from "@components/Loader/Loader"
+import type { Post } from "@interfaces/post"
 
 function NewsWrap({ defaultNewsCount }: NewsWrapProps) {
-    const posts = useAppSelector(state => state.client.posts)
+    const posts: Post[] = useAppSelector(state => state.client.posts)
 
     // if the specified default count is greater than the number of posts
 
     defaultNewsCount = defaultNewsCount > posts.length ? posts.length : defaultNewsCount
 
-    const slisedPosts = posts.slice(0, defaultNewsCount)
+    const slisedPosts: Post[] = posts.slice(0, defaultNewsCount)
 
     return (
         <>

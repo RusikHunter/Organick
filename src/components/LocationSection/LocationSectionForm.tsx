@@ -8,6 +8,14 @@ import { toast } from "react-toastify"
 import emailjs from '@emailjs/browser'
 import { SERVICE_ID, TEMPLATE_ID_LOCATION, PUBLIC_KEY } from "../../config/emailjs-keys"
 
+type LocationTemplateParams = {
+    full_name: string
+    to_email: string
+    company: string
+    subject: string
+    message: string
+}
+
 const schema = yup.object().shape({
     full_name: yup.string().required("This field is required"),
     email: yup.string().email("Enter correct email").required("This field is required"),
@@ -17,12 +25,12 @@ const schema = yup.object().shape({
 })
 
 function LocationSectionForm() {
-    const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<LocationFormValues>({
         resolver: yupResolver(schema)
     })
 
     const onSubmit: SubmitHandler<LocationFormValues> = async (data) => {
-        const templateParams = {
+        const templateParams: LocationTemplateParams = {
             full_name: data.full_name,
             to_email: data.email,
             company: data.company,

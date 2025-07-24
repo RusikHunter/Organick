@@ -48,7 +48,7 @@ function App() {
                 <Header />
                 <BurgerMenu />
                 <main className="main">
-                    <Suspense fallback={<Loader />}>
+                    <Suspense fallback={<Loader text="Loading..." />}>
                         <Routes>
                             {routes.map(({ path, component: Component }) => (
                                 <Route key={path} path={path} element={<Component />} />

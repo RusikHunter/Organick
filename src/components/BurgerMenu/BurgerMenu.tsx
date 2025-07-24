@@ -11,7 +11,7 @@ import { Routes } from "@config/routes"
 function BurgerMenu() {
     const dispatch = useAppDispatch()
 
-    const isBurgerMenuOpen = useAppSelector(state => state.client.isBurgerMenuOpen)
+    const isBurgerMenuOpen: boolean = useAppSelector(state => state.client.isBurgerMenuOpen)
 
     const burgerMenuRef = useRef<HTMLDivElement | null>(null)
 
@@ -26,7 +26,7 @@ function BurgerMenu() {
         { path: Routes.BLOG, content: "Blog" }
     ], [])
 
-    const handleBurgerClick = useCallback((event: React.MouseEvent) => {
+    const handleBurgerClick = useCallback((event: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
         if (burgerMenuRef.current && isBurgerMenuOpen && burgerMenuRef.current.contains(event.target as Node)) {
             dispatch(setIsBurgerMenuOpen())
         }

@@ -8,19 +8,23 @@ import { toast } from "react-toastify"
 import emailjs from '@emailjs/browser'
 import { SERVICE_ID, TEMPLATE_ID_SUBSCRIBE, PUBLIC_KEY } from "@config/emailjs-keys"
 
-function SubscribeSection() {
-    const schema = yup.object().shape({
-        email: yup.string().email().required()
-    })
+type SubscribeTemplateParams = {
+    to_email: string
+}
 
-    const { register, handleSubmit, reset } = useForm({
+const schema = yup.object().shape({
+    email: yup.string().email().required()
+})
+
+function SubscribeSection() {
+    const { register, handleSubmit, reset } = useForm<SubscribeFormValues>({
         resolver: yupResolver(schema)
     })
 
     const onSubmit: SubmitHandler<SubscribeFormValues> = async (data) => {
         console.log(data.email)
 
-        const templateParams = {
+        const templateParams: SubscribeTemplateParams = {
             to_email: data.email
         }
 
