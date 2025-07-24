@@ -2,6 +2,7 @@ import "./NewsWrap.scss"
 import NewsCard from "@components/NewsCard/NewsCard"
 import type { NewsWrapProps } from "@interfaces/newsWrapProps"
 import { useAppSelector } from "@hooks/useAppSelector"
+import Loader from "@components/Loader/Loader"
 
 function NewsWrap({ defaultNewsCount }: NewsWrapProps) {
     const posts = useAppSelector(state => state.client.posts)
@@ -22,7 +23,7 @@ function NewsWrap({ defaultNewsCount }: NewsWrapProps) {
                     ))}
                 </article>
                 :
-                <h5 className="news-wrap__text--loading h5">Loading...</h5>
+                <Loader text={"Loading..."} />
             }
         </>
     )

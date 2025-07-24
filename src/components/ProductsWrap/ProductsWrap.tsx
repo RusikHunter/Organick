@@ -6,6 +6,7 @@ import { useAppSelector } from "@hooks/useAppSelector"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import type { Product } from "@interfaces/product"
+import Loader from "@components/Loader/Loader"
 
 function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: ProductWrapProps) {
     const [iteration, setIteration] = useState<number>(1)
@@ -66,7 +67,7 @@ function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: P
                 </div>
             </article >
             :
-            <h5 className="product-wrap--loading h5">Loading...</h5>
+            <Loader text={"Loading..."} />
     )
 }
 

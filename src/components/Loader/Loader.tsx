@@ -1,7 +1,8 @@
-function Loader() {
-    // todo --> styles
+import type { LoaderProps } from "@interfaces/loaderProps"
+
+function Loader({ text }: LoaderProps) {
     return (
-        <p>Loading...</p>
+        <h5 className="loader h5">{text}</h5>
     )
 }
 

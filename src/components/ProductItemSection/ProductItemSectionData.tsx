@@ -6,6 +6,7 @@ import type { CartItem } from "@interfaces/cartItem"
 import { toast } from "react-toastify"
 import { MIN_PRODUCT_COUNT, MAX_PRODUCT_COUNT } from "@config/product-settings"
 import type { ProductItemSectionProps } from "@interfaces/productItemSectionProps"
+import Loader from "@components/Loader/Loader"
 
 function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
     const [productCount, setProductCount] = useState<string>('0')
@@ -120,7 +121,7 @@ function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
                     </div>
                 </ >
                 :
-                <h5 className="product__title--loading h5">Loading...</h5>
+                <Loader text={"Loading..."} />
             }
         </>
     )
