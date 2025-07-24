@@ -6,6 +6,7 @@ import { useAppSelector } from "@hooks/useAppSelector"
 import { useMemo, useState } from "react"
 import { promocodes } from "@mocks/promocodes"
 import { TAXES_VALUE, DELIVERY_VALUE } from "@config/product-settings"
+import Loader from "@components/Loader/Loader"
 
 function CartSection() {
     const [promocode, setPromocode] = useState<string>("")
@@ -99,7 +100,7 @@ function CartSection() {
                 :
                 (
                     <div className="cart__inner container">
-                        <h5 className="cart__title--loading h5">Loading...</h5>
+                        <Loader text={"Loading..."} />
                     </div>
                 )
             }

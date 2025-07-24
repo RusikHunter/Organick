@@ -1,5 +1,6 @@
 import { useState } from "react"
 import type { ProductItemSectionProps } from "@interfaces/productItemSectionProps"
+import Loader from "@components/Loader/Loader"
 
 function ProductItemSectionSwitch({ product, id }: ProductItemSectionProps) {
     const [activeSide, setActiveSide] = useState<'left' | 'right'>('left')
@@ -27,14 +28,16 @@ function ProductItemSectionSwitch({ product, id }: ProductItemSectionProps) {
                 </button>
             </div>
 
-            <p className="product-item__info text">
-                {activeSide === 'left'
+            {activeSide === 'left'
+                ?
+                product
                     ?
-                    product
-                        ? product.description
-                        : 'Loading...'
-                    : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam voluptatem ex nobis adipisci maxime doloribus neque aut, possimus odit tempora repellat quae ducimus. Est, iusto? Laudantium beatae accusantium recusandae omnis. Est, iusto? Laudantium beatae accusantium recusandae omnis.'}
-            </p>
+                    <p className="product-item__info text">{product.description}</p>
+                    :
+                    <Loader text={"Loading..."} />
+                :
+                <p className="product-item__info text">This product is grown by our accredited farmers and is 100% organic.</p>
+            }
         </>
     )
 }

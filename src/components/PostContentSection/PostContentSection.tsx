@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import "./PostContentSection.scss"
 import { useAppSelector } from "@hooks/useAppSelector"
 import parse from 'html-react-parser'
+import Loader from "@components/Loader/Loader"
 
 function PostContentSection() {
     const { id } = useParams<{ id: string }>()
@@ -19,7 +20,7 @@ function PostContentSection() {
                                 {parse(post.content)}
                             </div>
                             :
-                            <h5 className="post-content__text--loading h5">Loading...</h5>
+                            <Loader text={"Loading..."} />
                         }
                     </div>
                 </div>
