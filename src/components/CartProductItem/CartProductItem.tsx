@@ -8,7 +8,7 @@ import type { Product } from "@interfaces/product"
 import { useAppSelector } from "@hooks/useAppSelector"
 import { useAppDispatch } from "@hooks/useAppDispatch"
 import { addCartItem, removeCartItem } from "@store/reducers/clientReducer"
-import { MIN_PRODUCT_COUNT, MAX_PRODUCT_COUNT } from "@config/product-settings"
+import { validateProductCount } from "@utils/validateProductCount"
 
 function CartProductItem({ cartItem }: CartProductItemProps) {
     const [productCount, setProductCount] = useState<string>(cartItem.count.toString())
@@ -23,23 +23,15 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
     const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>): void => {
         let value = Number(event.target.value)
 
-        if (value >= MIN_PRODUCT_COUNT && value <= MAX_PRODUCT_COUNT) {
-            setProductCount(value.toString())
-        } else if (value < MIN_PRODUCT_COUNT) {
-            value = MIN_PRODUCT_COUNT
-            setProductCount(`${MIN_PRODUCT_COUNT}`)
-        } else if (value > MAX_PRODUCT_COUNT) {
-            value = MAX_PRODUCT_COUNT
-            setProductCount(`${MAX_PRODUCT_COUNT}`)
-        }
+        value = validateProductCount(setProductCount, value)
 
         const cartItemToChange = {
             id: cartItem.id,
-            count: Number(value)
+            count: value
         }
 
         dispatch(addCartItem(cartItemToChange))
-    }, [dispatch, cartItem.id])
+    }, [dispatch, cartItem.id, setProductCount])
 
     const handleDelete = useCallback((): void => {
         const index = cart.findIndex(item => item.id === cartItem.id)

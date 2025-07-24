@@ -47,6 +47,9 @@
       ],
       "@config/*": [
         "config/*"
+      ],
+      "@utils/*": [
+        "utils/*"
       ]
     }
   },

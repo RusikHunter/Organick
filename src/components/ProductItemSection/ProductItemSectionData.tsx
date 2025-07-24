@@ -4,10 +4,10 @@ import { useAppSelector } from "@hooks/useAppSelector"
 import { addCartItem } from "@store/reducers/clientReducer"
 import type { CartItem } from "@interfaces/cartItem"
 import { toast } from "react-toastify"
-import { MIN_PRODUCT_COUNT, MAX_PRODUCT_COUNT } from "@config/product-settings"
 import type { ProductItemSectionProps } from "@interfaces/productItemSectionProps"
 import Loader from "@components/Loader/Loader"
 import RatingSVG from "@components/RatingSVG/RatingSVG"
+import { validateProductCount } from "@utils/validateProductCount"
 
 function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
     const [productCount, setProductCount] = useState<string>('0')
@@ -18,14 +18,8 @@ function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
     const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
         const value = Number(event.target.value)
 
-        if (value >= MIN_PRODUCT_COUNT && value <= MAX_PRODUCT_COUNT) {
-            setProductCount(value.toString())
-        } else if (value < MIN_PRODUCT_COUNT) {
-            setProductCount(`${MIN_PRODUCT_COUNT}`)
-        } else if (value > MAX_PRODUCT_COUNT) {
-            setProductCount(`${MAX_PRODUCT_COUNT}`)
-        }
-    }, [])
+        validateProductCount(setProductCount, value)
+    }, [setProductCount])
 
     const handleAdd = useCallback((event: React.MouseEvent<HTMLButtonElement>): void => {
         event.preventDefault()
