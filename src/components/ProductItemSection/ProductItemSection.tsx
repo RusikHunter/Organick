@@ -5,24 +5,21 @@ import type { Product } from "@interfaces/product"
 import ProductItemSectionSwitch from "./ProductItemSectionSwitch"
 import ProductItemSectionData from "./ProductItemSectionData"
 import { useEffect } from "react"
+import { Routes } from "@config/routes"
 
 function ProductItemSection() {
     const navigate = useNavigate()
-    const { id: idParam } = useParams()
+    const id = useParams()
+    const parsedId = Number(id)
     const products = useAppSelector(state => state.client.products)
 
-    const parsedId = Number(idParam)
-    const isValidId =
-        !isNaN(parsedId) &&
-        Number.isInteger(parsedId) &&
-        parsedId >= 0 &&
-        parsedId < products.length
+    const isValidId = !isNaN(parsedId) && Number.isInteger(parsedId) && parsedId >= 0 && parsedId < products.length
 
     useEffect(() => {
         if (products.length === 0) return
 
         if (!isValidId) {
-            navigate("/notfound", { replace: true })
+            navigate(Routes.NOT_FOUND)
         }
     }, [products, isValidId, navigate])
 

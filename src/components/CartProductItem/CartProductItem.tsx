@@ -23,9 +23,9 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
     const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>): void => {
         let value = Number(event.target.value)
 
-        if (value >= 0 && value <= MAX_PRODUCT_COUNT) {
+        if (value >= MIN_PRODUCT_COUNT && value <= MAX_PRODUCT_COUNT) {
             setProductCount(value.toString())
-        } else if (value < 0) {
+        } else if (value < MIN_PRODUCT_COUNT) {
             value = MIN_PRODUCT_COUNT
             setProductCount(`${MIN_PRODUCT_COUNT}`)
         } else if (value > MAX_PRODUCT_COUNT) {

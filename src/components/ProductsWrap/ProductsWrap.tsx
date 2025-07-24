@@ -12,8 +12,7 @@ function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: P
     const [iteration, setIteration] = useState<number>(1)
 
     const productsAll = useAppSelector(state => state.client.products)
-    const { id: idParam } = useParams()
-    const id = Number(idParam ?? '')
+    const id = Number(useParams())
 
     const isValidId = !isNaN(id) && id >= 0 && id < productsAll.length
 
