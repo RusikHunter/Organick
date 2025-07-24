@@ -1,15 +1,16 @@
 import { useAppSelector } from "@hooks/useAppSelector"
 import "./IntroBlockPost.scss"
 import { useParams } from "react-router-dom"
+import type { Post } from "@interfaces/post"
 
 function IntroBlockPost() {
     const { id } = useParams<{ id: string }>()
 
-    const post = useAppSelector(state => state.client.posts[Number(id)])
+    const post: Post = useAppSelector(state => state.client.posts[Number(id)])
 
-    const date = new Date(post.date)
+    const date: Date = new Date(post.date)
 
-    const formattedDate = date.toLocaleDateString("en-US", {
+    const formattedDate: string = date.toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric",

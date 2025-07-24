@@ -4,7 +4,7 @@ import { Controller } from "react-hook-form"
 
 function PaymentSectionCard({ control, register, errors }: PaymentSectionCardProps) {
     const handleDateChange = useCallback(
-        (fieldOnChange: (value: string) => void) => (e: React.ChangeEvent<HTMLInputElement>) => {
+        (fieldOnChange: (value: string) => void) => (e: React.ChangeEvent<HTMLInputElement>): void => {
             let value = e.target.value.replace(/[^\d]/g, "")
             if (value.length > 4) value = value.slice(0, 4)
             if (value.length > 2) value = value.slice(0, 2) + "/" + value.slice(2)
@@ -14,7 +14,7 @@ function PaymentSectionCard({ control, register, errors }: PaymentSectionCardPro
     )
 
     const handleCardChange = useCallback(
-        (fieldOnChange: (value: string) => void) => (e: React.ChangeEvent<HTMLInputElement>) => {
+        (fieldOnChange: (value: string) => void) => (e: React.ChangeEvent<HTMLInputElement>): void => {
             let rawValue = e.target.value.replace(/[^\d]/g, "").slice(0, 16)
             const formatted = rawValue.match(/.{1,4}/g)?.join(" ") || ""
             fieldOnChange(formatted)

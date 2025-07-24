@@ -13,10 +13,10 @@ function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
     const [productCount, setProductCount] = useState<string>('0')
 
     const dispatch = useAppDispatch()
-    const cart = useAppSelector(state => state.client.cart)
+    const cart: CartItem[] = useAppSelector(state => state.client.cart)
 
     const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-        const value = Number(event.target.value)
+        const value: number = Number(event.target.value)
 
         validateProductCount(setProductCount, value)
     }, [setProductCount])

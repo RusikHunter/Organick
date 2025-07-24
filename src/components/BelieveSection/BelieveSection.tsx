@@ -9,7 +9,6 @@ import type { BelieveSectionFeatures } from "@interfaces/believeSectionFeatures"
 import RouteLink from "@components/RouteLink/RouteLink"
 import { RouteLinkColor } from "@interfaces/routeLink"
 import { Routes } from "@config/routes"
-// import RouteLink from "@components/RouteLink/RouteLink"
 
 function BelieveSection() {
     const features: BelieveSectionFeatures[] = [

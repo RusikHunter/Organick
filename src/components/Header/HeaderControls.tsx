@@ -4,9 +4,10 @@ import { Link } from "react-router-dom"
 import { useAppSelector } from "@hooks/useAppSelector"
 import { Routes } from "@config/routes"
 import HeaderSVGDecoration from "./HeaderSVGDecoration"
+import type { CartItem } from "@interfaces/cartItem"
 
 function HeaderControls() {
-    const cart = useAppSelector(state => state.client.cart)
+    const cart: CartItem[] = useAppSelector(state => state.client.cart)
 
     return (
         <>

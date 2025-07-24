@@ -4,13 +4,13 @@ import type { SubIntroBlockProps } from "@interfaces/subIntroBlockProps"
 
 function SubIntroBlock({ title, backgroundImageURL, blurredBackgroundImageURL }: SubIntroBlockProps) {
     const ref = useRef<HTMLElement>(null)
-    const [isVisible, setIsVisible] = useState(false)
+    const [isVisible, setIsVisible] = useState<boolean>(false)
 
     useEffect(() => {
-        const section = ref.current
+        const section: HTMLElement | null = ref.current
         if (!section) return
 
-        const observer = new IntersectionObserver(([entry], obs) => {
+        const observer: IntersectionObserver = new IntersectionObserver(([entry], obs) => {
             if (entry.isIntersecting) {
                 setIsVisible(true)
                 obs.unobserve(section)
@@ -19,7 +19,7 @@ function SubIntroBlock({ title, backgroundImageURL, blurredBackgroundImageURL }:
 
         observer.observe(section)
 
-        return () => observer.disconnect()
+        return (): void => observer.disconnect()
     }, [])
 
     return (

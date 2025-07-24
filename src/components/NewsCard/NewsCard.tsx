@@ -9,18 +9,18 @@ import { Routes } from "@config/routes"
 
 function NewsCard({ post }: NewsCardProps) {
     const ref = useRef<HTMLElement>(null)
-    const [isVisible, setIsVisible] = useState(false)
+    const [isVisible, setIsVisible] = useState<boolean>(false)
 
-    const date = new Date(post.date)
+    const date: Date = new Date(post.date)
 
-    const day = date.getDate()
-    const monthShort = date.toLocaleString("en-US", { month: "short" })
+    const day: number = date.getDate()
+    const monthShort: string = date.toLocaleString("en-US", { month: "short" })
 
     useEffect(() => {
-        const section = ref.current
+        const section: HTMLElement | null = ref.current
         if (!section) return
 
-        const observer = new IntersectionObserver(([entry], obs) => {
+        const observer: IntersectionObserver = new IntersectionObserver(([entry], obs) => {
             if (entry.isIntersecting) {
                 setIsVisible(true)
                 obs.unobserve(section)
@@ -29,7 +29,7 @@ function NewsCard({ post }: NewsCardProps) {
 
         observer.observe(section)
 
-        return () => observer.disconnect()
+        return (): void => observer.disconnect()
     }, [])
 
     return (

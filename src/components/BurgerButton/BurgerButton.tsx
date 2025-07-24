@@ -9,7 +9,7 @@ function BurgerButton() {
 
     const isBurgerMenuOpen = useAppSelector(state => state.client.isBurgerMenuOpen)
 
-    const handleClick = useCallback(() => {
+    const handleClick = useCallback((): void => {
         dispatch(setIsBurgerMenuOpen())
     }, [dispatch])
 

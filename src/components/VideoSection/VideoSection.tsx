@@ -3,10 +3,10 @@ import "./VideoSection.scss"
 import React, { useState, useRef, useEffect, useCallback } from "react"
 
 function VideoSection() {
-    const [isPlaying, setIsPlaying] = useState(false)
+    const [isPlaying, setIsPlaying] = useState<boolean>(false)
     const videoPlayerRef = useRef<HTMLVideoElement | null>(null)
 
-    const handleClick = useCallback(() => {
+    const handleClick = useCallback((): void => {
         setIsPlaying(prev => !prev)
     }, [])
 

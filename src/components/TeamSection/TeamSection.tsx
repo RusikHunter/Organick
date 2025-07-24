@@ -4,7 +4,7 @@ import teamExperts from "@mocks/team-experts"
 import type { TeamSectionProps } from "@interfaces/teamSectionProps"
 
 function TeamSection({ defaultExpertsCount }: TeamSectionProps) {
-    const expertsCount = Array.from({ length: defaultExpertsCount }, (_, i) => i)
+    const expertsCount: number[] = Array.from({ length: defaultExpertsCount }, (_, i) => i)
 
     return (
         <section className="team">
