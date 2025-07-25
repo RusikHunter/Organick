@@ -6,7 +6,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
 import { Routes } from "@config/routes"
 import RatingSVG from "@components/RatingSVG/RatingSVG"
-import type { Product } from "@interfaces/product"
+import type { Product } from "@entities/product"
 
 type ProductCardProps = {
     isCartItem?: boolean

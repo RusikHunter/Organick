@@ -1,4 +1,4 @@
-export interface Review {
+export type Review = {
     avatarURL: string
     blurredAvatarURL: string
     rating: number

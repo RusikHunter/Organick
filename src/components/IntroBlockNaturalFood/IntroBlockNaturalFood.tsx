@@ -1,6 +1,6 @@
 import "./IntroBlockNaturalFood.scss"
 import RouteLink from "@components/RouteLink/RouteLink"
-import { RouteLinkColor } from "@interfaces/routeLinkColorEnum"
+import { RouteLinkColor } from "@entities/routeLinkColorEnum"
 import { Routes } from "@config/routes"
 
 function IntroBlockNaturalFood() {

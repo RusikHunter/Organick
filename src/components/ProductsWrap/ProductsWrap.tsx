@@ -4,7 +4,7 @@ import ProductCard from "../ProductCard/ProductCard"
 import { useAppSelector } from "@hooks/useAppSelector"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
-import type { Product } from "@interfaces/product"
+import type { Product } from "@entities/product"
 import Loader from "@components/Loader/Loader"
 
 //

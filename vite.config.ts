@@ -12,7 +12,7 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, 'src/hooks'),
       '@mocks': path.resolve(__dirname, 'src/mocks'),
       '@assets': path.resolve(__dirname, 'src/assets'),
-      '@interfaces': path.resolve(__dirname, 'src/interfaces'),
+      '@entities': path.resolve(__dirname, 'src/entities'),
       '@store': path.resolve(__dirname, 'src/store'),
       '@config': path.resolve(__dirname, 'src/config'),
       '@utils': path.resolve(__dirname, 'src/utils')

@@ -10,7 +10,7 @@ import BlackRaspberryImage from "@assets/images/portfolio/black-raspberry.webp"
 import BlackRaspberryBlurredImage from "@assets/images/portfolio/black-raspberry-blurred.webp"
 import HoneyOrangeImage from "@assets/images/portfolio/honey-orange.webp"
 import HoneyOrangeBlurredImage from "@assets/images/portfolio/honey-orange-blurred.webp"
-import type { PortfolioItem } from "@interfaces/portfolioItem"
+import type { PortfolioItem } from "entities/portfolioItem"
 
 const portfolioItems: PortfolioItem[] = [
     {

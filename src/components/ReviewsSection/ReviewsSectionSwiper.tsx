@@ -6,7 +6,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import reviewsJSON from "@mocks/reviews"
-import type { Review } from "@interfaces/review"
+import type { Review } from "@entities/review"
 
 function ReviewsSectionSwiper() {
     const reviews: Review[] = reviewsJSON

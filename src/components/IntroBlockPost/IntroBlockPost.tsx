@@ -1,7 +1,7 @@
 import { useAppSelector } from "@hooks/useAppSelector"
 import "./IntroBlockPost.scss"
 import { useParams } from "react-router-dom"
-import type { Post } from "@interfaces/post"
+import type { Post } from "@entities/post"
 
 function IntroBlockPost() {
     const { id } = useParams<{ id: string }>()

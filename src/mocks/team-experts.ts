@@ -10,7 +10,7 @@ import ScottImage from "@assets/images/team/scott.webp"
 import ScottBlurredImage from "@assets/images/team/scott-blurred.webp"
 import KarenImage from "@assets/images/team/karen.webp"
 import KarenBlurredImage from "@assets/images/team/karen-blurred.webp"
-import type { TeamExpert } from "@interfaces/teamExpert"
+import type { TeamExpert } from "entities/teamExpert"
 
 const teamExperts: TeamExpert[] = [
     {

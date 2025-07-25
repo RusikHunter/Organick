@@ -4,7 +4,7 @@ import userJamesAvatarURL from "@assets/images/reviews/james.webp"
 import userJamesAvatarBlurredURL from "@assets/images/reviews/james-blurred.webp"
 import userRobertAvatarURL from "@assets/images/reviews/robert.webp"
 import userRobertAvatarBlurredURL from "@assets/images/reviews/robert-blurred.webp"
-import type { Review } from "@interfaces/review"
+import type { Review } from "entities/review"
 
 const reviews: Review[] = [
     {

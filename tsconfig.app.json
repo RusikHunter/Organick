@@ -39,8 +39,8 @@
       "@assets/*": [
         "assets/*"
       ],
-      "@interfaces/*": [
-        "interfaces/*"
+      "@entities/*": [
+        "entities/*"
       ],
       "@store/*": [
         "store/*"

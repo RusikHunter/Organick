@@ -4,7 +4,7 @@ import PostContentSection from "@components/PostContentSection/PostContentSectio
 import { useParams } from "react-router-dom"
 import { useAppSelector } from "@hooks/useAppSelector"
 import PostBlurredImage from "@assets/images/background/post-blurred.webp"
-import type { Post } from "@interfaces/post"
+import type { Post } from "entities/post"
 
 function PostPage() {
     const { id } = useParams<{ id: string }>()

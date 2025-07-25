@@ -2,7 +2,7 @@ import React, { useCallback } from "react"
 import { Link } from "react-router-dom"
 import { useEffect, useState, useRef } from "react"
 import "./DropdownPages.scss"
-import type { RouteLinkObject } from "@interfaces/routeLinkObject"
+import type { RouteLinkObject } from "@entities/routeLinkObject"
 import { Routes } from "@config/routes"
 
 function DropdownPages() {
