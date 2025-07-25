@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from "react"
 import "./NewsCard.scss"
 import PostBlurredBackground from "@assets/images/background/post-blurred.webp"
 import RouteLink from "@components/RouteLink/RouteLink"
-import { RouteLinkColor } from "@interfaces/routeLinkColorEnum"
+import { RouteLinkColor } from "@entities/routeLinkColorEnum"
 import { Routes } from "@config/routes"
-import type { Post } from "@interfaces/post"
+import type { Post } from "@entities/post"
 
 type NewsCardProps = {
     post: Post

@@ -1,4 +1,4 @@
-export interface PortfolioItem {
+export type PortfolioItem = {
     id: number,
     title: string
     description: string

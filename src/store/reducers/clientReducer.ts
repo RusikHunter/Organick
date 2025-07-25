@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { fetchProducts } from '@store/asyncActions/fetchProducts'
 import { fetchPosts } from '@store/asyncActions/fetchPosts'
-import type { Product } from "@interfaces/product"
-import type { Post } from "@interfaces/post"
-import type { CartItem } from "@interfaces/cartItem"
+import type { Product } from "entities/product"
+import type { Post } from "entities/post"
+import type { CartItem } from "entities/cartItem"
 
 interface ClientState {
     isBurgerMenuOpen: boolean

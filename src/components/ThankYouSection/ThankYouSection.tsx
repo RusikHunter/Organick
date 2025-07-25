@@ -1,7 +1,7 @@
 import "./ThankYouSection.scss"
 import RouteLink from "@components/RouteLink/RouteLink"
 import { Routes } from "@config/routes"
-import { RouteLinkColor } from "@interfaces/routeLinkColorEnum"
+import { RouteLinkColor } from "@entities/routeLinkColorEnum"
 
 function ThankYouSection() {
     return (

@@ -11,7 +11,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
 import { Link } from "react-router-dom"
 import { Routes } from "@config/routes"
-import type { RouteLinkObject } from "@interfaces/routeLinkObject"
+import type { RouteLinkObject } from "@entities/routeLinkObject"
 
 function OfferSection() {
     const links: RouteLinkObject[] = [

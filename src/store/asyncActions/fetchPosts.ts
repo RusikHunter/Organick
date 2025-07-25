@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { postsURL } from '@config/response-URLs'
-import type { Post } from '@interfaces/post'
+import type { Post } from 'entities/post'
 
 export const fetchPosts = createAsyncThunk<Post[], void, { rejectValue: string }>(
     'client/fetchPosts',

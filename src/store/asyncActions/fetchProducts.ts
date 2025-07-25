@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { productsURL } from '@config/response-URLs'
-import type { Product } from '@interfaces/product'
+import type { Product } from 'entities/product'
 
 export const fetchProducts = createAsyncThunk<Product[], void, { rejectValue: string }>(
     'client/fetchProducts',

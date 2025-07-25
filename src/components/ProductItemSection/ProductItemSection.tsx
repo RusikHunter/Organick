@@ -1,7 +1,7 @@
 import "./ProductItemSection.scss"
 import { useAppSelector } from "@hooks/useAppSelector"
 import { useNavigate, useParams } from "react-router-dom"
-import type { Product } from "@interfaces/product"
+import type { Product } from "@entities/product"
 import ProductItemSectionSwitch from "./ProductItemSectionSwitch"
 import ProductItemSectionData from "./ProductItemSectionData"
 import { useEffect } from "react"

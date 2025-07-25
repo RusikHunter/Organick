@@ -2,7 +2,7 @@ import "./NewsWrap.scss"
 import NewsCard from "@components/NewsCard/NewsCard"
 import { useAppSelector } from "@hooks/useAppSelector"
 import Loader from "@components/Loader/Loader"
-import type { Post } from "@interfaces/post"
+import type { Post } from "@entities/post"
 
 type NewsWrapProps = {
     defaultNewsCount: number

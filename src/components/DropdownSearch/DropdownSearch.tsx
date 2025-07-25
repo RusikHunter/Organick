@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from "react"
 import { setIsBurgerMenuOpen } from "@store/reducers/clientReducer"
 import { useAppDispatch } from "@hooks/useAppDispatch"
 import { useAppSelector } from "@hooks/useAppSelector"
-import type { Product } from "@interfaces/product"
+import type { Product } from "@entities/product"
 import { Routes } from "@config/routes"
 
 function DropdownSearch() {

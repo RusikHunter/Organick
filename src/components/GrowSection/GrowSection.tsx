@@ -1,7 +1,7 @@
 import "./GrowSection.scss"
 import GrowSectionGridContent from "@components/GrowSection/GrowSectionGridContent"
 import RouteLink from "@components/RouteLink/RouteLink"
-import { RouteLinkColor } from "@interfaces/routeLinkColorEnum"
+import { RouteLinkColor } from "@entities/routeLinkColorEnum"
 import { Routes } from "@config/routes"
 
 function GrowSection() {

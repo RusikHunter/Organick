@@ -1,7 +1,7 @@
 import "./MoreNewsSection.scss"
 import NewsWrap from "@components/NewsWrap/NewsWrap"
 import RouteLink from "@components/RouteLink/RouteLink"
-import { RouteLinkColor } from "@interfaces/routeLinkColorEnum"
+import { RouteLinkColor } from "@entities/routeLinkColorEnum"
 import { Routes } from "@config/routes"
 
 function MoreNewsSection() {

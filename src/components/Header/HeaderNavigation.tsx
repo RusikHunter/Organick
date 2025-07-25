@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import type { RouteLinkObject } from "@interfaces/routeLinkObject"
+import type { RouteLinkObject } from "@entities/routeLinkObject"
 import { Routes } from "@config/routes"
 import DropdownPages from "@components/DropdownPages/DropdownPages"
 

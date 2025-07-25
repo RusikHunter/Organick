@@ -4,7 +4,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css'
 import TeamExpertSVGInstagram from "./TeamExpertSVGInstagram"
 import TeamExpertSVGFacebook from "./TeamExpertSVGFacebook"
 import TeamExpertSVGTwitter from "./TeamExpertSVGTwitter"
-import type { TeamExpert } from "@interfaces/teamExpert"
+import type { TeamExpert } from "@entities/teamExpert"
 
 type TeamExpertCardSocialLinks = {
     key: string,

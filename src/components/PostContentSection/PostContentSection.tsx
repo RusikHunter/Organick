@@ -3,7 +3,7 @@ import "./PostContentSection.scss"
 import { useAppSelector } from "@hooks/useAppSelector"
 import parse from 'html-react-parser'
 import Loader from "@components/Loader/Loader"
-import type { Post } from "@interfaces/post"
+import type { Post } from "@entities/post"
 
 function PostContentSection() {
     const { id } = useParams<{ id: string }>()

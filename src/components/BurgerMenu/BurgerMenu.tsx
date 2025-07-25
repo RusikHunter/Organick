@@ -5,7 +5,7 @@ import { useRef } from "react"
 import { useAppSelector } from "@hooks/useAppSelector"
 import { useAppDispatch } from "@hooks/useAppDispatch"
 import { setIsBurgerMenuOpen } from "@store/reducers/clientReducer"
-import type { RouteLinkObject } from "@interfaces/routeLinkObject"
+import type { RouteLinkObject } from "@entities/routeLinkObject"
 import { Routes } from "@config/routes"
 
 function BurgerMenu() {

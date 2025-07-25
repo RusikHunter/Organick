@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import ButtonSVGArrow from "@components/ButtonSVGArrow/ButtonSVGArrow"
-import { RouteLinkColor } from "@interfaces/routeLinkColorEnum"
+import { RouteLinkColor } from "@entities/routeLinkColorEnum"
 
 type RouteLinkProps = {
     color: RouteLinkColor
