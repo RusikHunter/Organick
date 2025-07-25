@@ -4,7 +4,6 @@ import { useLocation, useNavigate, type NavigateFunction } from "react-router-do
 import { useForm, type SubmitHandler } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
-import type { PaymentFormValues } from "@interfaces/paymentFormValues"
 import { toast } from "react-toastify"
 import emailjs from "@emailjs/browser"
 import { SERVICE_ID_ORDERS, TEMPLATE_ID_ORDERS, PUBLIC_KEY_ORDERS } from "@config/emailjs-keys"
@@ -14,6 +13,16 @@ import PaymentSectionDelivery from "./PaymentSectionDelivery"
 import PaymentSectionCard from "./PaymentSectionCard"
 import PaymentSectionDetails from "./PaymentSectionDetails"
 import { Routes } from "@config/routes"
+
+export type PaymentFormValues = {
+    full_name: string
+    email: string
+    company: string
+    address: string,
+    card: string,
+    date: string,
+    cvv: string
+}
 
 type PaymentTemplateParams = {
     id: string,

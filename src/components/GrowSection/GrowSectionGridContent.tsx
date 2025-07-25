@@ -8,7 +8,16 @@ import "react-lazy-load-image-component/src/effects/blur.css"
 import AgriculturalImage from "@assets/icons/agricultural.svg"
 import OrganicProductsImage from "@assets/icons/organic-product.svg"
 import FreshVegetablesImage from "@assets/icons/fresh-vegetables.svg"
-import type { GrowSectionColumnContent } from "@interfaces/growSectionColumnContent"
+
+type GrowSectionColumnContent = {
+    className: string
+    imageURL: string
+    alt: string
+    width: number
+    height: number
+    title: string
+    description: string
+}
 
 function GrowSectionGridContent() {
     const columns: GrowSectionColumnContent[] = [

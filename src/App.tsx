@@ -11,7 +11,6 @@ import { fetchProducts } from './store/asyncActions/fetchProducts'
 import { fetchPosts } from './store/asyncActions/fetchPosts'
 import { setCart } from './store/reducers/clientReducer'
 import { ToastContainer } from 'react-toastify'
-
 import { Suspense } from 'react'
 import Loader from './components/Loader/Loader'
 import { routes } from './config/routes'

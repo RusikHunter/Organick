@@ -4,10 +4,10 @@ import { useAppSelector } from "@hooks/useAppSelector"
 import { addCartItem } from "@store/reducers/clientReducer"
 import type { CartItem } from "@interfaces/cartItem"
 import { toast } from "react-toastify"
-import type { ProductItemSectionProps } from "@interfaces/productItemSectionProps"
 import Loader from "@components/Loader/Loader"
 import RatingSVG from "@components/RatingSVG/RatingSVG"
 import { validateProductCount } from "@utils/validateProductCount"
+import type { ProductItemSectionProps } from "./ProductItemSection"
 
 function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
     const [productCount, setProductCount] = useState<string>('0')

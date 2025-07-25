@@ -1,9 +1,12 @@
 import "./NewsWrap.scss"
 import NewsCard from "@components/NewsCard/NewsCard"
-import type { NewsWrapProps } from "@interfaces/newsWrapProps"
 import { useAppSelector } from "@hooks/useAppSelector"
 import Loader from "@components/Loader/Loader"
 import type { Post } from "@interfaces/post"
+
+type NewsWrapProps = {
+    defaultNewsCount: number
+}
 
 function NewsWrap({ defaultNewsCount }: NewsWrapProps) {
     const posts: Post[] = useAppSelector(state => state.client.posts)

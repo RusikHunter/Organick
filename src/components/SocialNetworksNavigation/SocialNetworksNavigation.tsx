@@ -1,5 +1,9 @@
 import "./SocialNetworksNavigation.scss"
-import type { SocialNetworkLink } from "@interfaces/socialNetworkLink"
+
+type SocialNetworkLink = {
+    url: string,
+    svg: React.ReactNode
+}
 
 function SocialNetworksNavigation() {
     const links: SocialNetworkLink[] = [

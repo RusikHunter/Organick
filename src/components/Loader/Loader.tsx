@@ -1,4 +1,6 @@
-import type { LoaderProps } from "@interfaces/loaderProps"
+type LoaderProps = {
+    text: React.ReactNode
+}
 
 function Loader({ text }: LoaderProps) {
     return (

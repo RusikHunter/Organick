@@ -1,5 +1,9 @@
 import "./LicensesSection.scss"
-import type { LicensesCondition } from "@interfaces/licensesCondition"
+
+type LicensesCondition = {
+    title: string,
+    content: React.ReactNode
+}
 
 function LicensesSection() {
     const conditions: LicensesCondition[] = [

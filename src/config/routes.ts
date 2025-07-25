@@ -1,5 +1,10 @@
 import React from 'react'
 
+type Route = {
+    path: string
+    component: React.LazyExoticComponent<React.ComponentType<any>>
+}
+
 export enum Routes {
     MAIN = "/",
     ABOUT = "/about",
@@ -22,7 +27,7 @@ export enum Routes {
     NOT_FOUND = "*"
 }
 
-export const routes = [
+export const routes: Route[] = [
     { path: Routes.MAIN, component: React.lazy(() => import('../pages/MainPage/MainPage')) },
     { path: Routes.ABOUT, component: React.lazy(() => import('../pages/AboutPage/AboutPage')) },
     { path: Routes.SHOP, component: React.lazy(() => import('../pages/ShopPage/ShopPage')) },

@@ -5,10 +5,16 @@ import OrganicFoodsImage from "@assets/icons/organic-foods.svg"
 import QualityStandardsImage from "@assets/icons/quality-standards.svg"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
-import type { BelieveSectionFeatures } from "@interfaces/believeSectionFeatures"
 import RouteLink from "@components/RouteLink/RouteLink"
-import { RouteLinkColor } from "@interfaces/routeLink"
+import { RouteLinkColor } from "@interfaces/routeLinkColorEnum"
 import { Routes } from "@config/routes"
+
+type BelieveSectionFeatures = {
+    imageURL: string
+    alt: string
+    title: string
+    text: string
+}
 
 function BelieveSection() {
     const features: BelieveSectionFeatures[] = [

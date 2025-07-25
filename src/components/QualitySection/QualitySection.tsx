@@ -7,7 +7,14 @@ import PlantImage from "@assets/images/decorative/plant.webp"
 import PlantBlurredImage from "@assets/images/decorative/plant-blurred.webp"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
-import type { QualityFeature } from "@interfaces/qualityFeature"
+
+type QualityFeature = {
+    imageURL: string,
+    blurredImageURL: string,
+    alt: string,
+    title: string,
+    description: string
+}
 
 function QualitySection() {
     const features: QualityFeature[] = [

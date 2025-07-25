@@ -1,6 +1,14 @@
 import React, { useCallback } from "react"
-import type { PaymentSectionCardProps } from "@interfaces/paymentSectionCardProps"
+import type { Control } from "react-hook-form"
+import type { FieldErrors, UseFormRegister } from "react-hook-form"
+import type { PaymentFormValues } from "./PaymentSection"
 import { Controller } from "react-hook-form"
+
+type PaymentSectionCardProps = {
+    control: Control<PaymentFormValues>
+    register: UseFormRegister<PaymentFormValues>
+    errors: FieldErrors<PaymentFormValues>
+}
 
 function PaymentSectionCard({ control, register, errors }: PaymentSectionCardProps) {
     const handleDateChange = useCallback(

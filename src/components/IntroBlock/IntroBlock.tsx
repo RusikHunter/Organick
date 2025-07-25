@@ -7,7 +7,12 @@
 
 import React, { useEffect, useRef, useState } from "react"
 import "./IntroBlock.scss"
-import type { IntroBlockProps } from "@interfaces/introBlockProps"
+
+type IntroBlockProps = {
+    content: React.ReactNode
+    backgroundImageURL: string
+    blurredBackgroundImageURL: string
+}
 
 function IntroBlock({ content, backgroundImageURL, blurredBackgroundImageURL }: IntroBlockProps) {
     const ref = useRef<HTMLElement>(null)

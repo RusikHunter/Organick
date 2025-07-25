@@ -1,12 +1,19 @@
 import "./LocationSection.scss"
 import type { SubmitHandler } from "react-hook-form"
-import type { LocationFormValues } from "@interfaces/locationFormValues"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from 'yup'
 import { toast } from "react-toastify"
 import emailjs from '@emailjs/browser'
 import { SERVICE_ID, TEMPLATE_ID_LOCATION, PUBLIC_KEY } from "../../config/emailjs-keys"
+
+type LocationFormValues = {
+    full_name: string
+    email: string
+    company: string
+    subject: string
+    message: string
+}
 
 type LocationTemplateParams = {
     full_name: string

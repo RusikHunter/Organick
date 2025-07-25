@@ -1,5 +1,8 @@
 import "./UtilsIntroBlock.scss"
-import type { UtilsIntroBlockProps } from "@interfaces/utilsIntroBlockProps"
+
+type UtilsIntroBlockProps = {
+    title: string
+}
 
 function UtilsIntroBlock({ title }: UtilsIntroBlockProps) {
     return (

@@ -1,4 +1,4 @@
-export interface TeamExpert {
+export type TeamExpert = {
     imageURL: string
     blurredImageURL: string
     name: string

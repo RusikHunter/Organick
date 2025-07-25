@@ -7,11 +7,11 @@ import FarmSection from "@components/FarmSection/FarmSection"
 function PortfolioItemPage() {
     const { id } = useParams<{ id: string }>()
 
-    const numericID = Number(id)
+    const numericID: number = Number(id)
 
-    const backgroundImageURL = portfolioItems[numericID].imageURL
+    const backgroundImageURL: string = portfolioItems[numericID].imageURL
 
-    const blurredBackgroundImageURL = portfolioItems[numericID].blurredImageURL
+    const blurredBackgroundImageURL: string = portfolioItems[numericID].blurredImageURL
 
     return (
         <>

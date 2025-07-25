@@ -1,11 +1,15 @@
 import React from "react"
 import { useEffect, useRef, useState } from "react"
 import "./NewsCard.scss"
-import type { NewsCardProps } from "@interfaces/newsCardProps"
 import PostBlurredBackground from "@assets/images/background/post-blurred.webp"
 import RouteLink from "@components/RouteLink/RouteLink"
-import { RouteLinkColor } from "@interfaces/routeLink"
+import { RouteLinkColor } from "@interfaces/routeLinkColorEnum"
 import { Routes } from "@config/routes"
+import type { Post } from "@interfaces/post"
+
+type NewsCardProps = {
+    post: Post
+}
 
 function NewsCard({ post }: NewsCardProps) {
     const ref = useRef<HTMLElement>(null)
