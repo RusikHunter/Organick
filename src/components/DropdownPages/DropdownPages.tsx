@@ -20,13 +20,13 @@ function DropdownPages() {
 
     const handleClick = useCallback((): void => {
         setIsOpen(prev => !prev)
-    }, [])
+    }, [isOpen, isKeyboard])
 
     const handleFocus = useCallback((): void => {
         if (isKeyboard) {
             setIsOpen(true)
         }
-    }, [])
+    }, [isOpen, isKeyboard])
 
     const handleBlur = useCallback((): void => {
         setTimeout(() => {
@@ -34,7 +34,7 @@ function DropdownPages() {
                 setIsOpen(false)
             }
         }, 0)
-    }, [])
+    }, [isOpen, isKeyboard])
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent): void => {

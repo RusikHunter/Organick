@@ -22,7 +22,7 @@ function DropdownSearch() {
 
     const handleChangeSearchTerm = useCallback((event: React.ChangeEvent<HTMLInputElement>): void => {
         setSearchTerm(event.target.value)
-    }, [])
+    }, [isSearchDropdownShowed, searchTerm, foundProducts, isBurgerMenuOpen])
 
     const handleSearchClick = useCallback((): void => {
         if (!searchTerm.length) return
@@ -38,11 +38,11 @@ function DropdownSearch() {
         })
 
         setFoundProducts(foundProducts)
-    }, [])
+    }, [isSearchDropdownShowed, searchTerm, foundProducts, isBurgerMenuOpen])
 
     const handleCloseClick = useCallback((): void => {
         setIsSearchDropdownShowed(false)
-    }, [])
+    }, [isSearchDropdownShowed, searchTerm, foundProducts, isBurgerMenuOpen])
 
     useEffect(() => {
         const handleOutsideClick = (e: MouseEvent): void => {

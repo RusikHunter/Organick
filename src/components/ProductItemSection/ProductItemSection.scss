@@ -59,6 +59,8 @@
     }
 
     &__image {
+        width: 591px;
+        aspect-ratio: 336/375;
         filter: brightness(0.97);
         border-radius: 30px;
     }

@@ -41,7 +41,7 @@ function NewsCard({ post }: NewsCardProps) {
             ref={ref}
             className="news-card"
             style={{
-                backgroundImage: `url(${isVisible ? post.imageURL : PostBlurredBackground ?? ""})`,
+                backgroundImage: `url(${isVisible ? post.imageURL : PostBlurredBackground})`,
                 filter: isVisible ? "none" : "blur(15px)",
                 transition: "filter 0.5s ease",
             }}
