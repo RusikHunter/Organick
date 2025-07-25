@@ -3,16 +3,20 @@ import "./CartProductItem.scss"
 import ProductCard from "../ProductCard/ProductCard"
 import { useState } from "react"
 import DeleteIcon from "@assets/icons/delete.svg"
-import type { CartProductItemProps } from "@interfaces/cartProductItemProps"
 import type { Product } from "@interfaces/product"
 import { useAppSelector } from "@hooks/useAppSelector"
 import { useAppDispatch } from "@hooks/useAppDispatch"
 import { addCartItem, removeCartItem } from "@store/reducers/clientReducer"
 import { validateProductCount } from "@utils/validateProductCount"
+import type { CartItem } from "@interfaces/cartItem"
 
 type CartItemToChange = {
     id: number,
     count: number
+}
+
+type CartProductItemProps = {
+    cartItem: CartItem
 }
 
 function CartProductItem({ cartItem }: CartProductItemProps) {

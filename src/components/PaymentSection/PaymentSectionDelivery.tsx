@@ -1,4 +1,10 @@
-import type { PaymentSectionDeliveryProps } from "@interfaces/paymentSectionDeliveryProps"
+import type { FieldErrors, UseFormRegister } from "react-hook-form"
+import type { PaymentFormValues } from "./PaymentSection"
+
+type PaymentSectionDeliveryProps = {
+    register: UseFormRegister<PaymentFormValues>
+    errors: FieldErrors<PaymentFormValues>
+}
 
 function PaymentSectionDelivery({ register, errors }: PaymentSectionDeliveryProps) {
     return (

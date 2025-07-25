@@ -7,6 +7,11 @@ import ProductItemSectionData from "./ProductItemSectionData"
 import { useEffect } from "react"
 import { Routes } from "@config/routes"
 
+export type ProductItemSectionProps = {
+    product: Product,
+    id: number
+}
+
 function ProductItemSection() {
     const navigate = useNavigate()
     const { id } = useParams<{ id: string }>()

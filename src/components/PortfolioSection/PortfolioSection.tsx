@@ -1,8 +1,11 @@
 import "./PortfolioSection.scss"
 import PortfolioItemCard from "@components/PortfolioItemCard/PortfolioItemCard"
-import portfolioItems from "@mocks/portfolio-items"
+import portfolioItemsJSON from "@mocks/portfolio-items"
+import type { PortfolioItem } from "@interfaces/portfolioItem"
 
 function PortfolioSection() {
+    const portfolioItems: PortfolioItem[] = portfolioItemsJSON
+
     return (
         <section className="portfolio">
             <div className="portfolio__inner container">

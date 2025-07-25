@@ -7,7 +7,7 @@ import { promocodes } from "@mocks/promocodes"
 import { TAXES_VALUE, DELIVERY_VALUE } from "@config/product-settings"
 import Loader from "@components/Loader/Loader"
 import RouteLink from "@components/RouteLink/RouteLink"
-import { RouteLinkColor } from "@interfaces/routeLink"
+import { RouteLinkColor } from "@interfaces/routeLinkColorEnum"
 import { Routes } from "@config/routes"
 
 function CartSection() {

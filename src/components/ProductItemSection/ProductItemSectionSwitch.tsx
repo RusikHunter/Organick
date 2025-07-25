@@ -1,5 +1,5 @@
 import { useState } from "react"
-import type { ProductItemSectionProps } from "@interfaces/productItemSectionProps"
+import type { ProductItemSectionProps } from "./ProductItemSection"
 import Loader from "@components/Loader/Loader"
 
 function ProductItemSectionSwitch({ product, id }: ProductItemSectionProps) {

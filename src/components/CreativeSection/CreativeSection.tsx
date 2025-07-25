@@ -2,7 +2,7 @@ import "./CreativeSection.scss"
 import CreativeSectionImage from "./CreativeSectionImage"
 import CreativeSectionContent from "./CreativeSectionContent"
 import RouteLink from "@components/RouteLink/RouteLink"
-import { RouteLinkColor } from "@interfaces/routeLink"
+import { RouteLinkColor } from "@interfaces/routeLinkColorEnum"
 import { Routes } from "@config/routes"
 
 function CreativeSection() {

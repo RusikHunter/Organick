@@ -1,7 +1,7 @@
 import "./OurProductsSection.scss"
 import ProductsWrap from "@components/ProductsWrap/ProductsWrap"
 import RouteLink from "@components/RouteLink/RouteLink"
-import { RouteLinkColor } from "@interfaces/routeLink"
+import { RouteLinkColor } from "@interfaces/routeLinkColorEnum"
 import { Routes } from "@config/routes"
 
 function OurProductsSection() {

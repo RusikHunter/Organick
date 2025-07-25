@@ -8,8 +8,16 @@ import SupportIcon from "@assets/icons/support.svg"
 import PaymentIcon from "@assets/icons/payment.svg"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
-import type { WhyUsFeature } from "@interfaces/whyUsFeature"
 import WhyUsSVGDecoration from "./WhyUsSVGDecoration"
+
+type WhyUsFeature = {
+    imageURL: string
+    alt: string
+    width: number
+    height: number
+    title: string
+    description: string
+}
 
 type WhyUsDescriptionListItem = {
     term: string,

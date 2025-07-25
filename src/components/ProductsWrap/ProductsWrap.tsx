@@ -1,12 +1,24 @@
 import React, { useCallback } from "react"
 import "./ProductsWrap.scss"
 import ProductCard from "../ProductCard/ProductCard"
-import type { ProductWrapProps } from "@interfaces/productWrapProps"
 import { useAppSelector } from "@hooks/useAppSelector"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import type { Product } from "@interfaces/product"
 import Loader from "@components/Loader/Loader"
+
+//
+// In this case, the hasButtonMore prop defines the presence
+// of a button that loads additional product cards.
+// Not to be confused with the LoadMore button in some
+// component sections that redirect the user to the ShopPage.
+//
+
+type ProductWrapProps = {
+    defaultCardsCount: number
+    hasButtonMore?: boolean
+    isRelatedProducts?: boolean
+}
 
 function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: ProductWrapProps) {
     const [iteration, setIteration] = useState<number>(1)
