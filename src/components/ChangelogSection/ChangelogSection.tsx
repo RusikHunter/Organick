@@ -16,8 +16,6 @@ function ChangelogSection() {
                                     src={BouquetImage}
                                     alt="Bouquet"
                                     className="changelog__image"
-                                    width={164}
-                                    height={164}
                                     effect="blur"
                                     placeholderSrc={BouquetBlurredImage}
                                 />

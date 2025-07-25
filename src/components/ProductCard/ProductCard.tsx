@@ -27,8 +27,6 @@ function ProductCard({ isCartItem, productData }: ProductCardProps) {
                 src={productData.imageURL}
                 alt="Fresh Banana"
                 className="product-card__image"
-                width={336}
-                height={375}
                 effect="blur"
                 placeholderSrc={ProductBlurredImage}
             />

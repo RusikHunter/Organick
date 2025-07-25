@@ -55,7 +55,7 @@ function ProductItemSectionData({ product, id }: ProductItemSectionProps) {
                     <div className="product-item__column product-item__column--1 column">
                         <span className="product-item__category">{product.type}</span>
 
-                        <img src={product.imageURL} alt="Nuts" className="product-item__image" width={591} height={563} loading="lazy" />
+                        <img src={product.imageURL} alt="Nuts" className="product-item__image" loading="lazy" />
                     </div>
 
                     <div className="product-item__column product-item__column--2 column">

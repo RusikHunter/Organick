@@ -9,7 +9,6 @@ function CreativeSectionImage() {
             src={PlateImage}
             alt="Plate with vegetables and fruits"
             className="creative__image"
-            width={914}
             effect="blur"
             placeholderSrc={PlateBlurredImage}
         />

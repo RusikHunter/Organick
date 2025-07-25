@@ -20,8 +20,6 @@ function FarmSection() {
                             src={CarrotImage}
                             alt="Carrot from the farm"
                             className="farm__image"
-                            width={936}
-                            height={426}
                             effect="blur"
                             placeholderSrc={CarrotBlurredImage}
                         />

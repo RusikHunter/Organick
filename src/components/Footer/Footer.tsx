@@ -14,7 +14,7 @@ function Footer() {
                     </div>
 
                     <div className="footer__column footer__column--2 column">
-                        <img src={Logo} alt="Organick" className="footer__logo" width={199} height={53} loading="lazy" />
+                        <img src={Logo} alt="Organick" className="footer__logo" loading="lazy" />
 
                         <p className="footer__description text">Organick. Grown with care, delivered with purpose.</p>
 
