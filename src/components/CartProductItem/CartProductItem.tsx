@@ -61,7 +61,7 @@ function CartProductItem({ cartItem }: CartProductItemProps) {
                 </label>
 
                 <button className="cart-item__button--delete" onClick={handleDelete}>
-                    <img src={DeleteIcon} alt="Delete" loading="lazy" />
+                    <img src={DeleteIcon} width={50} height={50} alt="Delete" loading="lazy" />
                 </button>
             </div>
         </article >

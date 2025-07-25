@@ -59,6 +59,10 @@ function PaymentSection() {
 
     const { state } = useLocation() as PaymentState
 
+    if (state === null) {
+        navigate(Routes.CART)
+    }
+
     const { totalPrice, totalCount } = state || {}
 
     const { register, control, watch, handleSubmit, formState: { errors }, reset } = useForm<PaymentFormValues>({

@@ -49,7 +49,7 @@ function ProductsWrap({ defaultCardsCount, hasButtonMore, isRelatedProducts }: P
 
     const handleMoreClick = useCallback((): void => {
         setIteration(prev => prev + 1)
-    }, [])
+    }, [iteration])
 
     return (
         products.length

@@ -55,6 +55,8 @@
         filter: brightness(97%);
         border-radius: 30px;
         margin-inline: auto;
+        width: 336px;
+        aspect-ratio: 336/375;
     }
 
     &__title {
