@@ -1,0 +1,90 @@
+//
+// File with styles for selectors with tag names and global elements 
+//
+
+@use "@styles/media" as *;
+
+// In processing ...
+
+@use "@styles/media" as *;
+
+a,
+a:hover,
+a:visited,
+a:active,
+a:focus {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+*:focus,
+*:focus-visible {
+    outline: none;
+}
+
+.Toastify__toast {
+    padding: 30px;
+    border-radius: 18px;
+
+    @include mobile-small {
+        width: 90%;
+        padding: 35px;
+        top: 12px;
+        right: 12px;
+    }
+}
+
+.Toastify__toast--error {
+    .Toastify__toast-icon {
+        color: var(--color-red);
+    }
+}
+
+.Toastify__toast-icon {
+    color: var(--color-green);
+}
+
+.Toastify__close-button {
+    top: 12px;
+    right: 12px;
+}
+
+.Toastify__progress-bar--wrp {
+    opacity: 0;
+}
+
+// *:focus,
+// *:focus-visible {
+//     outline: 1px solid green;
+// }
+
+// * {
+//     outline: 1px solid green;
+// }

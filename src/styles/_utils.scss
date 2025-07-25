@@ -1,0 +1,204 @@
+//
+// utils file
+// 
+
+@use 'sass:math';
+@use "@styles/media" as *;
+@use "@styles/mixins" as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--container-width-default);
+    width: 100%;
+    margin-inline: auto;
+
+    @include laptop {
+        padding-inline: var(--container-padding-inline);
+    }
+
+    @include mobile-small {
+        padding-inline: var(--container-padding-inline-small);
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}
+
+.mobile-hidden {
+    @include mobile-hidden;
+}
+
+.mobile-visible {
+    @include mobile-visible;
+}
+
+.overlay {
+    @include overlay;
+}
+
+.route-link {
+    width: max-content;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    @include fluid-text(20, 20);
+    @include font(var(--font-family), 700, 1);
+    border-radius: 16px;
+    padding-block: var(--button-padding-block);
+    transition: background-color var(--transition);
+
+    & svg {
+        position: relative;
+        top: -1px;
+        left: 7px;
+
+        color: #335B6B;
+
+        .button__svg-arrow {
+            color: var(--color-white);
+        }
+    }
+}
+
+.button--blue {
+    width: 220px;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+
+    @include desktop-screen {
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-darkblue);
+        }
+    }
+
+    @include touch-screen {
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-blue);
+        }
+    }
+}
+
+.button--yellow {
+    width: 220px;
+    background-color: var(--color-yellow);
+    color: var(--color-blue);
+
+    @include desktop-screen {
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-darkyellow);
+        }
+    }
+
+    @include touch-screen {
+
+        &:hover,
+        &:focus-visible {
+            background-color: var(--color-yellow);
+        }
+    }
+}
+
+.button--transparent {
+    width: 220px;
+    border: var(--border-bold);
+    color: var(--color-blue);
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    @include fluid-text(18, 16);
+    @include font(var(--font-family), 600, 1);
+    color: var(--color-blue);
+
+    &__text--error {
+        @include fluid-text(14, 12);
+        @include font(var(--font-family), 400, 1);
+        color: var(--color-red);
+        margin-left: 10px;
+    }
+}
+
+.input {
+    padding: 28px 23px;
+    border-radius: 16px;
+    border: var(--border-green);
+    @include fluid-text(18, 14);
+    @include font(var(--second-family), 400, 1);
+    color: var(--color-darkgray);
+
+    &::placeholder {
+        font-style: italic;
+    }
+}
+
+.h1 {
+    @include fluid-text(70, 50);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.h2 {
+    @include fluid-text(50, 40);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.h3 {
+    @include fluid-text(40, 32);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.h4 {
+    @include fluid-text(35, 28);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.h5 {
+    @include fluid-text(30, 24);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.h6 {
+    @include fluid-text(25, 18);
+    @include font(var(--font-family), 800, 1.2);
+    color: var(--color-blue);
+}
+
+.text {
+    @include fluid-text(18, 14);
+    @include font(var(--second-family), 400, 1.65);
+    color: var(--color-darkgray);
+}
+
+.promo {
+    @include fluid-text(36, 28);
+    @include font(var(--third-family), 400, 1);
+    color: var(--color-green);
+}
