@@ -13,8 +13,6 @@ import WhyUsSVGDecoration from "./WhyUsSVGDecoration"
 type WhyUsFeature = {
     imageURL: string
     alt: string
-    width: number
-    height: number
     title: string
     description: string
 }
@@ -29,32 +27,24 @@ function WhyUsSection() {
         {
             imageURL: ReturnPolicyIcon,
             alt: "Return Policy",
-            width: 46,
-            height: 50,
             title: "Return Policy",
             description: "We offer hassle-free returns to ensure your complete satisfaction with every purchase.",
         },
         {
             imageURL: FreshIcon,
             alt: "Fresh",
-            width: 45,
-            height: 48,
             title: "100% Fresh",
             description: "We carefully select and deliver fresh organic products to ensure the highest quality.",
         },
         {
             imageURL: SupportIcon,
             alt: "Support",
-            width: 44,
-            height: 47,
             title: "Support 24/7",
             description: "Our customer service team is available around the clock to assist you with any questions.",
         },
         {
             imageURL: PaymentIcon,
             alt: "Payment",
-            width: 51,
-            height: 44,
             title: "Secured Payment",
             description: "All transactions are protected with advanced security measures for your peace of mind.",
         },
@@ -96,8 +86,6 @@ function WhyUsSection() {
                             src={GreenVegetablesImage}
                             alt="Green vegetables and fruits"
                             className="whyus__image"
-                            width={678}
-                            height={579}
                             effect="blur"
                             placeholderSrc={GreenVegetablesBlurredImage}
                         />
@@ -115,8 +103,6 @@ function WhyUsSection() {
                                                 className="feature__icon"
                                                 src={feature.imageURL}
                                                 alt={feature.alt}
-                                                width={feature.width}
-                                                height={feature.height}
                                                 loading="lazy"
                                             />
                                         </div>

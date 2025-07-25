@@ -26,8 +26,6 @@ function TeamExpertCard(teamExpert: TeamExpert) {
                     src={teamExpert.imageURL}
                     alt={`Expert ${teamExpert.name}`}
                     className="expert-card__image"
-                    width={449}
-                    height={485}
                     effect="blur"
                     placeholderSrc={teamExpert.blurredImageURL}
                 />

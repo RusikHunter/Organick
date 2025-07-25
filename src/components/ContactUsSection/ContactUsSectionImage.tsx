@@ -9,8 +9,6 @@ function ContactUsSectionImage() {
             src={BananaOrangeImage}
             alt="Banana and Orange"
             className="contact-us__image"
-            width={623}
-            height={640}
             effect="blur"
             placeholderSrc={BananaOrangeBlurredImage}
         />

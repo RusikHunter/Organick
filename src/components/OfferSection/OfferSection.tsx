@@ -23,8 +23,6 @@ function OfferSection() {
                         className="offer__product-image"
                         src={CurryImage}
                         alt="Curry"
-                        width={334}
-                        height={314}
                         effect="blur"
                         placeholderSrc={CurryBlurredImage}
                     />
@@ -41,8 +39,6 @@ function OfferSection() {
                         className="offer__product-image"
                         src={NutsImage}
                         alt="Nuts and Feesd"
-                        width={334}
-                        height={314}
                         effect="blur"
                         placeholderSrc={NutsBlurredImage}
                     />
@@ -59,8 +55,6 @@ function OfferSection() {
                         className="offer__product-image"
                         src={AppleImage}
                         alt="Apple"
-                        width={334}
-                        height={314}
                         effect="blur"
                         placeholderSrc={AppleBlurredImage}
                     />
@@ -77,8 +71,6 @@ function OfferSection() {
                         className="offer__product-image"
                         src={GingerImage}
                         alt="Ginger"
-                        width={334}
-                        height={314}
                         effect="blur"
                         placeholderSrc={GingerBlurredImage}
                     />

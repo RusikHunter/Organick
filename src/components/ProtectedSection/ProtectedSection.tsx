@@ -17,8 +17,6 @@ function ProtectedSection() {
                                     src={BranchImage}
                                     alt="Branch"
                                     className="protected__image"
-                                    width={193}
-                                    height={281}
                                     effect="blur"
                                     placeholderSrc={BranchBlurredImage}
                                 />

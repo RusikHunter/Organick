@@ -41,8 +41,6 @@ function BelieveSection() {
                             src={AccreditedFarmersFruitsImage}
                             alt="Accredited farmers fruits"
                             className="believe__image"
-                            width={790}
-                            height={778}
                             effect="blur"
                             placeholderSrc={AccreditedFarmersFruitsBlurredImage}
                         />
@@ -54,7 +52,7 @@ function BelieveSection() {
 
                         {features.map((feature, index) => (
                             <div className="believe__feature-wrap" key={index}>
-                                <img src={feature.imageURL} alt={feature.alt} className="believe__icon" width={101} height={101} loading="lazy" />
+                                <img src={feature.imageURL} alt={feature.alt} className="believe__icon" loading="lazy" />
                                 <div className="believe__feature-text-wrap">
                                     <h6 className="believe__feature-title h6">{feature.title}</h6>
                                     <p className="believe__feature-text text">{feature.text}</p>

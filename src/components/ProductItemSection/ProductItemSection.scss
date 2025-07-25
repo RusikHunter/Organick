@@ -112,6 +112,7 @@
 
     &__form {
         margin-top: 35px;
+        display: flex;
 
         @include tablet {
             display: flex;

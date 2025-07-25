@@ -5,7 +5,7 @@ import { Routes } from "@config/routes"
 function HeaderLogo() {
     return (
         <Link to={Routes.MAIN} className="header__logo-link">
-            <img className="header__logo" src={Logo} alt="Organick" width={199} height={54} loading="lazy" />
+            <img className="header__logo" src={Logo} alt="Organick" loading="lazy" />
         </Link>
     )
 }

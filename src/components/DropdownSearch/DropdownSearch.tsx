@@ -91,7 +91,7 @@ function DropdownSearch() {
                         {foundProducts.length === 0 ? <span className="dropdown__text">No results</span> : foundProducts.map((product) => (
                             <li className="dropdown__list-item" key={product.id}>
                                 <Link to={`${Routes.SHOP}/${product.id}`} className="dropdown__product-card" tabIndex={isSearchDropdownShowed ? 0 : -1}>
-                                    <img src={product.imageURL} alt={product.title} className="dropdown__product-image" width={40} height={40} loading="lazy" />
+                                    <img src={product.imageURL} alt={product.title} className="dropdown__product-image" loading="lazy" />
 
                                     <h6 className="dropdown__product-title">{product.title}</h6>
 

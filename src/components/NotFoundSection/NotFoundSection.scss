@@ -5,6 +5,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-bottom: 120px;
+
+    @include mobile {
+        margin-bottom: 60px;
+    }
+
+    @include mobile-small {
+        background-position: -400px center;
+    }
 
     &__inner {
         padding-block: 210px;
@@ -58,9 +67,8 @@
     }
 
     &__link {
-        display: block;
         margin-top: 40px;
-        width: max-content;
+        width: 250px;
 
         @include mobile {
             margin-inline: auto;

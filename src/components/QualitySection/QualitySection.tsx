@@ -43,8 +43,6 @@ function QualitySection() {
                             className="quality__image"
                             src={ManInGardenImage}
                             alt="Man in garden"
-                            width={1400}
-                            height={742}
                             effect="blur"
                             placeholderSrc={ManInGardenBlurredImage}
                         />
@@ -68,8 +66,6 @@ function QualitySection() {
                                         className="quality__feature-image"
                                         src={feature.imageURL}
                                         alt={feature.alt}
-                                        width={379}
-                                        height={252}
                                         effect="blur"
                                         placeholderSrc={feature.blurredImageURL}
                                     />
