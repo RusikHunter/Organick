@@ -50,11 +50,11 @@ This project was created as part of my developer portfolio. While not intended f
 
 \- \*\*Libraries:\*\*  
 
-&nbsp; `emailjs`, `react-hook-form`, `yup`, `html-react-parser`,  
+&nbsp; `emailjs`, `axios`, `react-hook-form`, `yup`,
 
-&nbsp; `react-lazy-load-image-component`, `react-redux`,  
+&nbsp; `html-react-parser`, `react-lazy-load-image-component`,
 
-&nbsp; `react-router-dom`, `react-toastify`, `swiper`
+&nbsp; `react-redux`, `react-router-dom`, `react-toastify`, `swiper`
 
 
 
@@ -133,6 +133,18 @@ You can then preview the build locally with:
 Completed
 
 I may fix any bugs or issues if reported. Feedback and constructive criticism are always welcome.
+
+
+
+---
+
+
+
+\##📎 Links
+
+
+
+Website - \[Organick](https://organick-nu.vercel.app/)
 
 
 
