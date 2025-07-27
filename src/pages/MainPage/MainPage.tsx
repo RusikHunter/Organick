@@ -1,7 +1,6 @@
 import IntroBlock from "@components/IntroBlock/IntroBlock"
 import IntroBlockNaturalFood from "@components/IntroBlockNaturalFood/IntroBlockNaturalFood"
 import NaturalFoodImage from "@assets/images/background/natural-food.webp"
-import NaturalFoodBlurredImage from "@assets/images/background/natural-food-blurred.webp"
 import CouponsSection from "@components/CouponsSection/CouponsSection"
 import BelieveSection from "@components/BelieveSection/BelieveSection"
 import OurProductsSection from "@components/OurProductsSection/OurProductsSection"
@@ -14,7 +13,7 @@ import MoreNewsSection from "@components/MoreNewsSection/MoreNewsSection"
 function MainPage() {
     return (
         <>
-            <IntroBlock content={<IntroBlockNaturalFood />} backgroundImageURL={NaturalFoodImage} blurredBackgroundImageURL={NaturalFoodBlurredImage} />
+            <IntroBlock content={<IntroBlockNaturalFood />} backgroundImageURL={NaturalFoodImage} />
             <CouponsSection />
             <BelieveSection />
             <OurProductsSection />

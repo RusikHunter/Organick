@@ -11,14 +11,11 @@ function PortfolioItemPage() {
 
     const backgroundImageURL: string = portfolioItems[numericID].imageURL
 
-    const blurredBackgroundImageURL: string = portfolioItems[numericID].blurredImageURL
-
     return (
         <>
             <IntroBlock
                 content={<IntroBlockPortfolioItem {...portfolioItems[numericID]} />}
                 backgroundImageURL={backgroundImageURL}
-                blurredBackgroundImageURL={blurredBackgroundImageURL}
             />
             <FarmSection />
         </>
