@@ -28,7 +28,8 @@ This project was created as part of my developer portfolio. While not intended f
 - **Libraries:**  
     `emailjs`, `axios`, `react-hook-form`, `yup`,
     `html-react-parser`, `react-lazy-load-image-component`,
-    `react-redux`, `react-router-dom`, `react-toastify`, `swiper`
+    `react-redux`, `@reduxjs/toolkit`, `react-router-dom`,
+    `react-toastify`, `swiper`
 
 ---
 
