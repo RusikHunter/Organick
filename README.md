@@ -79,7 +79,7 @@ I may fix any bugs or issues if reported. Feedback and constructive criticism ar
 
 ---
 
-##📎 Links
+## 📎 Links
 
 Website - [Organick](https://organick-nu.vercel.app/)
 
