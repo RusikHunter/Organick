@@ -44,6 +44,8 @@
     }
 
     &__image {
+        border-radius: 30px;
+
         @include mobile {
             width: 80%;
             margin-inline: auto;
