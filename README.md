@@ -1,6 +1,6 @@
 # Organick
 
-Organick is a mock e-commerce website for organic products, built to demonstrate my skills in front-end development using the React framework.
+Organick is a mock e-commerce website for organic products, built to demonstrate my skills in frontend development using the React framework.
 
 ---
 
