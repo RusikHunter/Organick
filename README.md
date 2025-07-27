@@ -34,29 +34,27 @@ This project was created as part of my developer portfolio. While not intended f
 
 ## 📦 Installation
 
-To run the project locally:
+Clone the repository:
 
 ```bash
 
 git clone git@github.com:RusikHunter/Organick.git
 cd organick
 npm install
+```
+
+To run the project in development mode:
+
+```bash
+
 npm run dev
 ```
 
-To build the production version:
+To build and preview the production version locally:
 
 ```bash
 
 npm run build
-cd dist
-run on your local server (for example live-server)
-```
-
-You can then preview the build locally with:
-
-```bash
-
 npm run preview
 ```
 
