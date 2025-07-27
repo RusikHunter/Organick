@@ -55,7 +55,9 @@ run on your local server (for example live-server)
 
 You can then preview the build locally with:
 
-```npm run preview
+```bash
+
+npm run preview
 ```
 
 ---
@@ -70,47 +72,23 @@ You can then preview the build locally with:
 
 - [Imgur](https://imgur.com/) – used to host the logo image for the email
 
-
-
 ---
 
-
-
-\## 🚀 Project Status
-
-
+## 🚀 Project Status
 
 Completed
-
 I may fix any bugs or issues if reported. Feedback and constructive criticism are always welcome.
 
+---
 
+##📎 Links
+
+Website - [Organick](https://organick-nu.vercel.app/)
 
 ---
 
+## 🙏 Acknowledgements
 
+Special thanks to [aleksanderlamkov](https://github.com/aleksanderlamkov) and his community for their helpful feedback and for providing a CSS normalize file used in this project.
 
-\##📎 Links
-
-
-
-Website - \[Organick](https://organick-nu.vercel.app/)
-
-
-
----
-
-
-
-\## 🙏 Acknowledgements
-
-
-
-Special thanks to \[aleksanderlamkov](https://github.com/aleksanderlamkov) and his community for their helpful feedback and for providing a CSS normalize file used in this project.
-
-
-
-Thanks also to \[ChatGPT](https://openai.com/chatgpt) for assistance during development and documentation.
-
-
-
+Thanks also to [ChatGPT](https://openai.com/chatgpt) for assistance during development and documentation.
