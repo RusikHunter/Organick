@@ -1,7 +1,5 @@
 import React from "react"
-import { useEffect, useRef, useState } from "react"
 import "./NewsCard.scss"
-import PostBlurredBackground from "@assets/images/background/post-blurred.webp"
 import RouteLink from "@components/RouteLink/RouteLink"
 import { RouteLinkColor } from "@entities/routeLinkColorEnum"
 import { Routes } from "@config/routes"
@@ -12,40 +10,13 @@ type NewsCardProps = {
 }
 
 function NewsCard({ post }: NewsCardProps) {
-    const ref = useRef<HTMLElement>(null)
-    const [isVisible, setIsVisible] = useState<boolean>(false)
-
     const date: Date = new Date(post.date)
 
     const day: number = date.getDate()
     const monthShort: string = date.toLocaleString("en-US", { month: "short" })
 
-    useEffect(() => {
-        const section: HTMLElement | null = ref.current
-        if (!section) return
-
-        const observer: IntersectionObserver = new IntersectionObserver(([entry], obs) => {
-            if (entry.isIntersecting) {
-                setIsVisible(true)
-                obs.unobserve(section)
-            }
-        }, { threshold: 0.1 })
-
-        observer.observe(section)
-
-        return (): void => observer.disconnect()
-    }, [])
-
     return (
-        <article
-            ref={ref}
-            className="news-card"
-            style={{
-                backgroundImage: `url(${isVisible ? post.imageURL : PostBlurredBackground})`,
-                filter: isVisible ? "none" : "blur(15px)",
-                transition: "filter 0.5s ease",
-            }}
-        >
+        <article className="news-card" style={{ backgroundImage: `url(${post.imageURL})` }}>
             <div className="news-card__date">
                 <span className="news-card__number h6">{day}</span>
                 <span className="news-card__month h6">{monthShort}</span>

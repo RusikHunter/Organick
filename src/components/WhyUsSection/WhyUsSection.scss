@@ -113,6 +113,8 @@
     }
 
     &__image {
+        border-radius: 32px;
+
         @include mobile {
             width: 75%;
             margin-inline: auto;
