@@ -76,7 +76,7 @@ npm run preview
 
 ## 🚀 Project Status
 
-Completed
+Completed  
 I may fix any bugs or issues if reported. Feedback and constructive criticism are always welcome.
 
 ---
