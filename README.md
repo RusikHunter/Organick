@@ -69,6 +69,7 @@ This project was created as part of my developer portfolio. While not intended f
 To run the project locally:
 
 
+>>>>>>> main
 
 ```bash
 
@@ -85,6 +86,7 @@ npm run dev```
 To build the production version:
 
 
+>>>>>>> main
 
 ```bash
 
@@ -152,3 +154,4 @@ Thanks also to \[ChatGPT](https://openai.com/chatgpt) for assistance during deve
 
 
 
+>>>>>>> main
