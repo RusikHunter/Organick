@@ -5,5 +5,5 @@ export const TEMPLATE_ID_SUBSCRIBE: string = "template_jlxi2uz"
 export const TEMPLATE_ID_LOCATION: string = "template_oeeuum3"
 export const TEMPLATE_ID_ORDERS: string = "template_8d0jzcf"
 
-export const PUBLIC_KEY: string = "Mvb1CzSkGl7ku8kuQ"
+export const PUBLIC_KEY: string = "amqTaqsFFr12mbOgx"
 export const PUBLIC_KEY_ORDERS: string = "VBiChuXn3PIuChD8o"
